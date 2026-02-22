@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Admin - KangkungKu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee4b",
+                        "secondary": "#111812",
+                        "background-light": "#f6f8f6",
+                        "surface-light": "#ffffff",
+                        "border-light": "#dbe6dd",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-secondary">
+    <div class="flex h-screen bg-gray-50">
+        <aside class="w-64 bg-white border-r border-gray-200 hidden lg:flex flex-col">
+            <div class="p-6">
+                <h1 class="font-bold text-lg">Panel Admin</h1>
+            </div>
+            <nav class="flex-1 px-4 space-y-1">
+                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-100 text-gray-900 font-medium">Dasbor</a>
+                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50">Pengguna</a>
+                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50">Laporan</a>
+                <a href="/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 mt-10">
+                    <span class="material-symbols-outlined">logout</span> Keluar
+                </a>
+            </nav>
+        </aside>
+        <main class="flex-1 p-8 overflow-y-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-2xl font-bold text-gray-900">Tinjauan Sistem</h1>
+                <button class="bg-primary text-white px-4 py-2 rounded-lg font-bold">Laporan Baru</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-xl border border-gray-200">
+                    <p class="text-gray-500 text-sm">Total Pengguna</p>
+                    <h3 class="text-2xl font-bold">1,248</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200">
+                    <p class="text-gray-500 text-sm">Aktif Hari Ini</p>
+                    <h3 class="text-2xl font-bold">342</h3>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 p-6">
+                <h3 class="font-bold mb-4">Log Sistem Terbaru</h3>
+                <div class="space-y-4">
+                    <div class="flex justify-between border-b pb-2">
+                        <span>Pengguna #2942 menyelesaikan diagnosa</span>
+                        <span class="text-gray-500 text-sm">2 menit lalu</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-2">
+                        <span>Pendaftaran pengguna baru</span>
+                        <span class="text-gray-500 text-sm">15 menit lalu</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Kalkulator - KangkungKu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee4b",
+                        "secondary": "#111812",
+                        "background-light": "#f6f8f6",
+                        "surface-light": "#ffffff",
+                        "border-light": "#dbe6dd",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-secondary">
+    <div class="px-4 lg:px-40 py-8 w-full max-w-[1440px] mx-auto">
+        <a href="/" class="mb-8 inline-block text-primary font-bold">Kembali ke Beranda</a>
+        <div class="mb-8">
+            <h1 class="text-[#111812] text-4xl lg:text-5xl font-black leading-tight tracking-[-0.033em] mb-2">Pengoptimal Nutrisi</h1>
+            <p class="text-text-muted text-lg font-normal leading-normal max-w-2xl">
+                Dapatkan rekomendasi pupuk yang tepat berdasarkan metode budidaya dan luas lahan Anda.
+            </p>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-8 items-start">
+            <div class="flex-1 w-full flex flex-col gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-bold uppercase tracking-wide text-[#111812] mb-4">Parameter</h3>
+                    <div class="mb-8 group">
+                        <div class="flex justify-between items-end mb-4">
+                            <label class="text-[#111812] font-medium text-base flex flex-col">
+                                <span class="text-sm text-text-muted font-normal mb-1">Ukuran Lahan Budidaya</span>
+                                Luas Permukaan Tanah
+                            </label>
+                            <div class="bg-green-50 px-3 py-1 rounded-lg text-[#111812] font-bold font-mono text-xl border border-primary/20">
+                                <span id="luas-val">50</span> <span class="text-sm font-normal text-text-muted">m²</span>
+                            </div>
+                        </div>
+                        <input id="luas-input" class="w-full z-20 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-full" type="range" min="10" max="500" value="50" oninput="updateKalkulator(this.value)" />
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-[480px] flex flex-col gap-6">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-primary/30 relative">
+                    <div class="h-2 w-full bg-gradient-to-r from-primary to-[#21b83a]"></div>
+                    <div class="p-6 md:p-8">
+                        <h2 class="text-2xl font-black text-[#111812] uppercase tracking-tight mb-6">Rekomendasi</h2>
+                        <div class="bg-[#fcfdfc] rounded-xl border border-dashed border-gray-300 p-6 mb-6">
+                            <div class="flex flex-col gap-4">
+                                <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">N</div>
+                                        <div>
+                                            <p class="text-sm font-bold text-[#111812]">Urea (Nitrogen)</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-2xl font-black text-[#111812]"><span id="hasil-urea">250</span><span class="text-sm font-normal text-text-muted ml-1">g</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function updateKalkulator(val) {
+            document.getElementById('luas-val').innerText = val;
+            document.getElementById('hasil-urea').innerText = val * 5;
+        }
+    </script>
+</body>
+</html>
