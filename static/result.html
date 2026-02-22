@@ -40,7 +40,7 @@
                     <span class="material-symbols-outlined text-[20px]">print</span>
                     Cetak Laporan
                 </button>
-                <a href="/diagnosa.html" class="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors shadow-lg shadow-primary/20">
+                <a href="/diagnosis.html" class="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors shadow-lg shadow-primary/20">
                     <span class="material-symbols-outlined text-[20px]">add</span>
                     Diagnosa Baru
                 </a>
@@ -109,7 +109,7 @@
         <div id="no-result" class="hidden p-10 bg-white rounded-xl text-center border border-slate-200">
             <h3 class="text-xl font-bold">Tidak ada penyakit yang teridentifikasi.</h3>
             <p class="text-slate-500 mb-4">Gejala yang diberikan tidak cocok dengan penyakit yang diketahui secara kuat.</p>
-            <a href="/diagnosa.html" class="text-primary font-bold">Coba Lagi</a>
+            <a href="/diagnosis.html" class="text-primary font-bold">Coba Lagi</a>
         </div>
     </div>
 
@@ -155,7 +155,7 @@
                 document.getElementById('no-result').classList.remove('hidden');
             }
         } else {
-            window.location.href = '/diagnosa.html';
+            window.location.href = '/diagnosis.html';
         }
     </script>
 </body>
