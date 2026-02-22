@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>KangkungKu - Water Spinach Expert System</title>
+    <title>KangkungKu - Sistem Pakar Kangkung Air</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -23,7 +22,6 @@
                         "surface-dark": "#1a2e1d",
                         "text-main": "#111812",
                         "text-muted": "#618968",
-                        "accent-green": "#618968",
                         "border-light": "#dbe6dd",
                     },
                     fontFamily: {
@@ -47,26 +45,96 @@
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-
-        input[type=range] { -webkit-appearance: none; background: transparent; }
-        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 16px; width: 16px; border-radius: 50%; background: #2bee4b; cursor: pointer; margin-top: -6px; box-shadow: 0 0 0 4px rgba(43, 238, 75, 0.2); }
-        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; cursor: pointer; background: #e2e8e3; border-radius: 2px; }
     </style>
 </head>
-<body>
-    <div id="root"></div>
+<body class="flex flex-col min-h-screen bg-background-light text-secondary">
 
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/history@5/umd/history.development.js"></script>
-    <script src="https://unpkg.com/react-router@6.3.0/umd/react-router.development.js"></script>
-    <script src="https://unpkg.com/react-router-dom@6.3.0/umd/react-router-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-border-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <div class="p-1.5 bg-primary rounded-lg text-secondary">
+                        <span class="material-symbols-outlined text-[20px] font-bold">eco</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-secondary">KangkungKu</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/" class="text-sm font-medium hover:text-primary transition-colors">Beranda</a>
+                    <a href="/diagnosa.html" class="text-sm font-medium hover:text-primary transition-colors">Diagnosa</a>
+                    <a href="/ensiklopedia.html" class="text-sm font-medium hover:text-primary transition-colors">Ensiklopedia</a>
+                    <a href="/kalkulator.html" class="text-sm font-medium hover:text-primary transition-colors">Kalkulator</a>
+                    <a href="/komunitas.html" class="text-sm font-medium hover:text-primary transition-colors">Komunitas</a>
+                    <a href="/blog.html" class="text-sm font-medium hover:text-primary transition-colors">Blog</a>
+                </div>
+                <div class="flex items-center gap-4">
+                        <a href="/dasbor.html" class="hidden md:flex items-center justify-center h-10 px-5 rounded-lg bg-secondary text-white text-sm font-bold hover:bg-opacity-90 transition-all">
+                        Dasbor Pengguna
+                    </a>
+                    <a href="/admin.html" class="text-sm font-medium text-gray-500 hover:text-primary">Admin</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Load scripts in order -->
-    <script type="text/babel" src="/js/components.js"></script>
-    <script type="text/babel" src="/js/pages.js"></script>
-    <script type="text/babel" src="/js/diagnosis.js"></script>
-    <script type="text/babel" src="/js/app.js"></script>
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <section class="relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="flex flex-col gap-6 max-w-2xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                            </span>
+                            <span class="text-xs font-semibold text-green-800 tracking-wide uppercase">Diagnosa Berbasis AI</span>
+                        </div>
+                        <h1 class="text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-secondary">
+                            Lindungi Panen Anda dengan <span class="text-green-600">Percaya Diri</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 leading-relaxed max-w-lg">
+                            Sistem pakar cerdas menggunakan metode Certainty Factor untuk mendiagnosa dan mengobati penyakit kangkung air secara akurat dalam hitungan detik. Jaga tanaman Anda tetap sehat dan produktif.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a href="/diagnosa.html" class="flex items-center justify-center h-12 px-8 rounded-lg bg-primary text-secondary text-base font-bold hover:bg-[#25d642] transition-colors shadow-lg shadow-green-200">
+                                Mulai Diagnosa
+                                <span class="material-symbols-outlined ml-2 text-[20px]">stethoscope</span>
+                            </a>
+                            <a href="/ensiklopedia.html" class="flex items-center justify-center h-12 px-8 rounded-lg bg-white border border-border-light text-secondary text-base font-bold hover:bg-gray-50 transition-colors">
+                                Lihat Ensiklopedia
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-4 mt-6 pt-6 border-t border-gray-100">
+                            <div class="flex -space-x-3">
+                                <img alt="Pakar 1" class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_T8UAtf7a2S9hze-9G8JKHLX-XnTcP63l8UNasCEZzjbZnFCJlvw2W5pfK8bk-uc95DJmMsVeibgpeeLEcIbnK2WMJIHTpBqZdSFY5pQtLsxzfQKq51A2HtWEWPQlnSeogfUSRyldaNxBLcS4LSk6IGzeG1zKM9Vtn0kcnV3CXDQE9ojG5DCPQqea2cC5cupzwjXoZ-LMljkvEZkpjxMaWGt4iGgdQ7eQryNxB-wehqqZv1ZiXQhiNkrZGIK4nirkWpqo5SVd12I"/>
+                                <img alt="Pakar 2" class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW977hWNxyrVMBhuPKyR0J5hUi7YN5GdvyLieZjErJCtppHGJdSWAgNspXUVbMrJxE23vl8zbkyF7sc9jPqkbt4EkVK9hO2rNv1zNzh7zPHVCuLLrxqSqlNPb1vm3h11YrlZkhKqsKC4hTm-VA41AQgtWw-1fzL959s0N_Y0Y2yXSchuXzFj05IKY5vhbpGv3THA2G_6_mo_AdhhSZupAp4VzYWuR15RUCN__abENA-8oTraFPr77-B9vFWxsQkp3le32r0xdXcT8"/>
+                                <img alt="Pakar 3" class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhH17UbER_H7aZtYrQkts9TSvSdXSzKk6OoazMJcFsEEIaLQSRiOYK8gNgMiakei1qfBDJlsnn07G-xpruUWElkp6OGljzAuapsETKzSEx51v4wo10hGxf1JdP5sEqb8awmVt4XqjfpPz6tOL54r1XnL4iPFRsFz_9QeU9SBRVmFHGhdo13hNAcVOe8rMfwmpzIf8LyydXoxPbrNcWD7L2ts2xB5w9TB9Elw04PIv3vg_ZhMoLaxUXVdNhAjn4QBJorft4xqBJtkI"/>
+                            </div>
+                            <p class="text-sm font-medium text-gray-500">Divalidasi oleh Ahli Pertanian</p>
+                        </div>
+                    </div>
+                    <div class="relative lg:h-auto">
+                        <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-green-100/50 via-primary/10 to-transparent rounded-full blur-3xl"></div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50 aspect-[4/3] group">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
+                            <img alt="Kangkung Segar" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoxurf_A0WkXlownxTFbXYXgfRlMi4xxVqIgtU5fg37YNZN7INsZZWERGw71oNMa62PcJVvgkviunBaqotZkSt0OF4mc1bmD3kPY-EFe5ExXFPF9kJoLVZpUIiqWeef0PdbwyqgxPQjBm-rgrcB81O8Uoojk1rhqYqCiCTFFBi4A7ELH6khluOg99HoI-J1xMNXMaKtEWoSy1zDuZ_ageC1xSNhLv54Lr2F-_7OgP39uppOWliFyroEgYy2qmUh99JKORsfuzKjJQ"/>
+                            <div class="absolute bottom-6 left-6 right-6 z-20 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-green-100 flex items-start gap-4">
+                                <div class="bg-green-50 p-3 rounded-lg text-green-700">
+                                    <span class="material-symbols-outlined">health_and_safety</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-secondary">Analisis Instan</h3>
+                                    <p class="text-sm text-gray-500">Pilih gejala untuk mendapatkan hasil diagnosa segera.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/js/skrip.js"></script>
 </body>
 </html>

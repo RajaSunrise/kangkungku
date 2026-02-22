@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Blog - KangkungKu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee4b",
+                        "secondary": "#111812",
+                        "background-light": "#f6f8f6",
+                        "surface-light": "#ffffff",
+                        "border-light": "#dbe6dd",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-secondary">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <a href="/" class="mb-8 inline-block text-primary font-bold">Kembali ke Beranda</a>
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <div class="w-full lg:w-3/5 aspect-video rounded-xl bg-gray-200 relative overflow-hidden group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_cd5wLfQrpkUL630iLHiz7W9b8yAW3K5eiZewInvx1gQHlnqxFg7XUfFmQpKA2-4BQwnY4-ebbgXMblwD3sEmCUadjFnmp03s1SudLFtCHiaF5Oe0XXQQWVmdc78rzNw_cb_K-5m3Tqj7c4aBeb1t4tYPmeI95mBPMGyf7v9FHY0BMDVNif7u7xKuFzxdeaPKF46yS7fKeHk-gS6iPKa-uv1kbqzCi7v_IGuxSija9Cdk3YsWrXL5yaWTmZVZgCQoGG5b5MvUnPc" class="w-full h-full object-cover"/>
+                <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent w-full">
+                    <span class="bg-primary text-black text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Unggulan</span>
+                    <h1 class="text-3xl text-white font-bold mb-2">Memahami Karat Putih: Pembunuh Senyap</h1>
+                    <p class="text-gray-200 text-sm">Penelitian baru mengungkapkan bagaimana deteksi dini menggunakan AI dapat menyelamatkan 80% tanaman Anda.</p>
+                </div>
+            </div>
+            <div class="w-full lg:w-2/5 flex flex-col justify-center gap-6">
+                <div class="p-6 bg-white border border-gray-200 rounded-xl">
+                    <h2 class="text-xl font-bold mb-2">Sedang Tren</h2>
+                    <h3 class="text-lg font-bold mb-2">Bagaimana Kami Menghitung Probabilitas Penyakit</h3>
+                    <p class="text-gray-600 text-sm mb-4">Analisis mendalam tentang matematika di balik sistem pakar kami.</p>
+                    <a href="#" class="text-primary font-bold text-sm flex items-center gap-1">Baca Analisis Lengkap <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group cursor-pointer">
+                <div class="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd9qUTRB-1fzSXFk9Nx1UB1PyNhb_BL2iNuCduMGi5h_nH1k2R8lXppj6h_-1ptF2sqKatoRn6Ey0X5A-NcRE3FsBvz8w76WpByMqhIY_1bkWvLumoN0ulo-pM7-SMHrsFQhwhwFwMtTzzRuWMEphcLgbAOdj9afpn3-VRvws7p3arduYY800qPNRBKM29VH-788p8c0-TfhZbDJp_omeDuZQAn0l7kTQa51z662KmqwBM3TCJQ9vzOlKYmZMeaZUz7PhUf0dKW8M" class="w-full h-full object-cover group-hover:scale-105 transition-transform"/>
+                </div>
+                <div class="text-xs font-bold text-gray-500 uppercase mb-2">Tips Bertani • 08 Okt</div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Tingkat pH Optimal untuk Kangkung Hidroponik</h3>
+                <p class="text-gray-600 text-sm line-clamp-2">Kangkung tumbuh subur dalam kondisi tertentu. Kami merinci keasaman larutan nutrisi yang ideal.</p>
+            </div>
+             <div class="group cursor-pointer">
+                <div class="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd9qUTRB-1fzSXFk9Nx1UB1PyNhb_BL2iNuCduMGi5h_nH1k2R8lXppj6h_-1ptF2sqKatoRn6Ey0X5A-NcRE3FsBvz8w76WpByMqhIY_1bkWvLumoN0ulo-pM7-SMHrsFQhwhwFwMtTzzRuWMEphcLgbAOdj9afpn3-VRvws7p3arduYY800qPNRBKM29VH-788p8c0-TfhZbDJp_omeDuZQAn0l7kTQa51z662KmqwBM3TCJQ9vzOlKYmZMeaZUz7PhUf0dKW8M" class="w-full h-full object-cover group-hover:scale-105 transition-transform"/>
+                </div>
+                <div class="text-xs font-bold text-gray-500 uppercase mb-2">Tips Bertani • 08 Okt</div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Cara Mencegah Serangan Hama Kutu Daun</h3>
+                <p class="text-gray-600 text-sm line-clamp-2">Kutu daun sering menyerang kangkung muda. Berikut cara pencegahannya.</p>
+            </div>
+             <div class="group cursor-pointer">
+                <div class="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd9qUTRB-1fzSXFk9Nx1UB1PyNhb_BL2iNuCduMGi5h_nH1k2R8lXppj6h_-1ptF2sqKatoRn6Ey0X5A-NcRE3FsBvz8w76WpByMqhIY_1bkWvLumoN0ulo-pM7-SMHrsFQhwhwFwMtTzzRuWMEphcLgbAOdj9afpn3-VRvws7p3arduYY800qPNRBKM29VH-788p8c0-TfhZbDJp_omeDuZQAn0l7kTQa51z662KmqwBM3TCJQ9vzOlKYmZMeaZUz7PhUf0dKW8M" class="w-full h-full object-cover group-hover:scale-105 transition-transform"/>
+                </div>
+                <div class="text-xs font-bold text-gray-500 uppercase mb-2">Tips Bertani • 08 Okt</div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Panen Kangkung Berkualitas Ekspor</h3>
+                <p class="text-gray-600 text-sm line-clamp-2">Standar kualitas yang harus dipenuhi untuk pasar ekspor.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

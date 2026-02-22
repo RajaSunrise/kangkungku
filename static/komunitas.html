@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Komunitas - KangkungKu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee4b",
+                        "secondary": "#111812",
+                        "background-light": "#f6f8f6",
+                        "surface-light": "#ffffff",
+                        "border-light": "#dbe6dd",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-secondary">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <a href="/" class="mb-8 inline-block text-primary font-bold">Kembali ke Beranda</a>
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h1 class="text-3xl font-bold mb-2">Forum Komunitas</h1>
+                <p class="text-gray-500">Bergabunglah dalam percakapan dengan sesama petani.</p>
+            </div>
+            <button class="bg-primary px-6 py-2 rounded-lg font-bold">Ajukan Pertanyaan</button>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-4">
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md cursor-pointer">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-red-50 text-red-700 text-xs px-2 py-1 rounded font-bold">Penyakit</span>
+                        <span class="text-xs text-gray-400">• Diposting 2 jam yang lalu</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Daun menguning setelah hujan deras?</h3>
+                    <p class="text-gray-600 text-sm mb-4">Kangkung saya tumbuh bagus sampai badai tadi malam. Sekarang daun bagian bawah menguning...</p>
+                    <div class="flex gap-4 text-sm text-gray-500">
+                        <span>24 Suka</span>
+                        <span>12 Balasan</span>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md cursor-pointer">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded font-bold">Hidroponik</span>
+                        <span class="text-xs text-gray-400">• Diposting 5 jam yang lalu</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Campuran pupuk terbaik untuk kangkung hidroponik</h3>
+                    <p class="text-gray-600 text-sm mb-4">Saya sedang bereksperimen dengan rasio AB Mix. Saat ini menggunakan 5ml/L tapi pertumbuhannya lambat...</p>
+                    <div class="flex gap-4 text-sm text-gray-500">
+                        <span>34 Suka</span>
+                        <span>8 Balasan</span>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-gradient-to-br from-[#102213] to-[#1a3821] p-6 rounded-xl text-white">
+                    <h3 class="font-bold text-lg mb-2">Ada masalah?</h3>
+                    <p class="text-sm text-gray-300 mb-4">Gunakan alat diagnosa pakar kami.</p>
+                    <a href="/diagnosa.html" class="inline-block w-full bg-primary text-black font-bold py-2 rounded-lg text-sm text-center">Mulai Diagnosa</a>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200">
+                    <h4 class="font-bold mb-4">Topik Populer</h4>
+                    <div class="flex flex-col gap-2 text-sm text-gray-600">
+                        <a href="#" class="flex justify-between"><span>#BusukDaun</span> <span>124 posting</span></a>
+                        <a href="#" class="flex justify-between"><span>#Hidroponik</span> <span>65 posting</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

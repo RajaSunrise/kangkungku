@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Dasbor - KangkungKu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee4b",
+                        "secondary": "#111812",
+                        "background-light": "#f6f8f6",
+                        "surface-light": "#ffffff",
+                        "border-light": "#dbe6dd",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-secondary">
+    <div class="flex h-screen bg-background-light">
+        <aside class="w-64 bg-white border-r border-slate-200 hidden md:flex flex-col">
+            <div class="p-6 flex items-center gap-3">
+                <div class="h-10 w-10 rounded-xl bg-primary flex items-center justify-center text-slate-900 shadow-lg shadow-primary/20">
+                    <span class="material-symbols-outlined text-2xl font-bold">eco</span>
+                </div>
+                <h1 class="text-lg font-bold tracking-tight">KangkungKu</h1>
+            </div>
+            <nav class="flex-1 px-4 space-y-2 mt-4">
+                <a href="/dasbor.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary text-slate-900 font-semibold shadow-md shadow-primary/20">
+                    <span class="material-symbols-outlined">dashboard</span> Dasbor
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-100">
+                    <span class="material-symbols-outlined">history</span> Riwayat
+                </a>
+                <a href="/" class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-100 mt-auto">
+                    <span class="material-symbols-outlined">logout</span> Keluar
+                </a>
+            </nav>
+        </aside>
+        <main class="flex-1 p-8 overflow-y-auto">
+            <h1 class="text-3xl font-bold text-slate-900 mb-8">Dasbor Pengguna</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <p class="text-sm font-medium text-slate-500">Total Diagnosa</p>
+                    <h3 class="text-3xl font-bold text-slate-900">24</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <p class="text-sm font-medium text-slate-500">Rata-rata Keyakinan</p>
+                    <h3 class="text-3xl font-bold text-slate-900">82%</h3>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                <div class="px-6 py-4 border-b border-slate-100 bg-slate-50">
+                    <h3 class="font-bold text-slate-700">Aktivitas Terbaru</h3>
+                </div>
+                <table class="w-full text-left text-sm">
+                    <thead class="bg-slate-50 text-slate-500">
+                        <tr>
+                            <th class="px-6 py-3">Tanggal</th>
+                            <th class="px-6 py-3">Hasil</th>
+                            <th class="px-6 py-3">Keyakinan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="px-6 py-4">24 Okt 2023</td>
+                            <td class="px-6 py-4 font-bold text-red-600">Karat Putih</td>
+                            <td class="px-6 py-4">85%</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">22 Okt 2023</td>
+                            <td class="px-6 py-4 font-bold text-orange-600">Bercak Daun</td>
+                            <td class="px-6 py-4">62%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hasil Diagnosa - KangkungKu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee4b",
+                        "secondary": "#111812",
+                        "background-light": "#f6f8f6",
+                        "surface-light": "#ffffff",
+                        "border-light": "#dbe6dd",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-secondary">
+    <div class="w-full max-w-[1440px] mx-auto p-4 md:px-10 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+            <div>
+                <p class="text-sm text-slate-500 mb-1">Sesi Diagnosa • <span id="tanggal"></span></p>
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight">Hasil Diagnosa</h2>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="window.print()" class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">print</span>
+                    Cetak Laporan
+                </button>
+                <a href="/diagnosa.html" class="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors shadow-lg shadow-primary/20">
+                    <span class="material-symbols-outlined text-[20px]">add</span>
+                    Diagnosa Baru
+                </a>
+            </div>
+        </div>
+
+        <div id="hasil-container" class="grid grid-cols-1 lg:grid-cols-12 gap-6 hidden">
+            <!-- Konten Utama -->
+            <div class="lg:col-span-8 flex flex-col gap-6">
+                <div class="bg-surface-light rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <div class="p-6 md:p-8 border-b border-slate-100 bg-gradient-to-r from-primary/10 via-transparent to-transparent">
+                        <div class="flex flex-col md:flex-row gap-6 justify-between items-start">
+                            <div>
+                                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider mb-3">
+                                    <span class="size-2 rounded-full bg-red-600 animate-pulse"></span>
+                                    Diagnosa Utama
+                                </div>
+                                <h3 id="nama-penyakit" class="text-3xl font-bold text-slate-900 mb-2"></h3>
+                                <p id="nama-ilmiah" class="text-slate-600 text-lg italic"></p>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-100">
+                                <div class="relative size-20 flex items-center justify-center">
+                                    <svg class="size-full -rotate-90 transform" viewBox="0 0 36 36">
+                                        <path class="text-slate-200" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="3"></path>
+                                        <path id="circle-progress" class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeDasharray="0, 100" strokeLinecap="round" strokeWidth="3"></path>
+                                    </svg>
+                                    <div class="absolute flex flex-col items-center">
+                                        <span id="persentase" class="text-lg font-bold text-slate-900">0%</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Faktor Kepastian</span>
+                                    <span id="label-cf" class="text-sm font-medium text-primary"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-slate-700">
+                            <h4 class="font-bold mb-2">Deskripsi</h4>
+                            <p id="deskripsi"></p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h4 class="text-lg font-bold mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">medication</span>
+                            Rencana Pengobatan
+                        </h4>
+                        <div id="solusi" class="bg-slate-50 p-6 rounded-xl text-slate-700 whitespace-pre-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kemungkinan Lain -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+                <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+                    <h3 class="text-base font-bold mb-4 flex items-center justify-between">
+                        Kemungkinan Lain
+                        <span class="text-xs font-normal text-slate-500 bg-slate-100 px-2 py-1 rounded">Berdasarkan gejala</span>
+                    </h3>
+                    <div id="kemungkinan-lain" class="flex flex-col gap-3">
+                        <!-- List dinamis -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="no-result" class="hidden p-10 bg-white rounded-xl text-center border border-slate-200">
+            <h3 class="text-xl font-bold">Tidak ada penyakit yang teridentifikasi.</h3>
+            <p class="text-slate-500 mb-4">Gejala yang diberikan tidak cocok dengan penyakit yang diketahui secara kuat.</p>
+            <a href="/diagnosa.html" class="text-primary font-bold">Coba Lagi</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('tanggal').innerText = new Date().toLocaleDateString('id-ID');
+
+        const hasilStr = localStorage.getItem('hasilDiagnosa');
+        if (hasilStr) {
+            const hasil = JSON.parse(hasilStr);
+            if (hasil.length > 0) {
+                document.getElementById('hasil-container').classList.remove('hidden');
+
+                // Utama
+                const top = hasil[0];
+                document.getElementById('nama-penyakit').innerText = top.penyakit.nama;
+                document.getElementById('nama-ilmiah').innerText = top.penyakit.nama_ilmiah || '';
+                document.getElementById('deskripsi').innerText = top.penyakit.deskripsi || '';
+                document.getElementById('solusi').innerText = top.penyakit.solusi || '';
+                document.getElementById('persentase').innerText = `${top.persentase}%`;
+                document.getElementById('circle-progress').setAttribute('stroke-dasharray', `${top.persentase}, 100`);
+
+                const cfVal = top.faktor_kepastian;
+                document.getElementById('label-cf').innerText = cfVal > 0.8 ? 'Keyakinan Tinggi' : (cfVal > 0.5 ? 'Sedang' : 'Rendah');
+
+                // Lainnya
+                const containerLain = document.getElementById('kemungkinan-lain');
+                hasil.slice(1).forEach(h => {
+                    const div = document.createElement('div');
+                    div.className = "relative group p-3 rounded-lg border border-slate-100 hover:border-primary/50 transition-colors cursor-pointer";
+                    div.innerHTML = `
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-bold text-sm">${h.penyakit.nama}</span>
+                            <span class="text-xs font-bold text-slate-500">${h.persentase}%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-1.5 mb-2">
+                            <div class="bg-slate-400 h-1.5 rounded-full" style="width: ${h.persentase}%"></div>
+                        </div>
+                    `;
+                    containerLain.appendChild(div);
+                });
+
+            } else {
+                document.getElementById('no-result').classList.remove('hidden');
+            }
+        } else {
+            window.location.href = '/diagnosa.html';
+        }
+    </script>
+</body>
+</html>
