@@ -1,16 +1,16 @@
-from app.basisdata import SessionLocal, engine
-from app import model
+from app.database import SessionLocal, engine
+from app import models
 
 def tebar():
     db = SessionLocal()
 
     # Create tables
-    model.Base.metadata.create_all(bind=engine)
+    models.Base.metadata.create_all(bind=engine)
 
     # Clear existing data
-    db.query(model.Aturan).delete()
-    db.query(model.Gejala).delete()
-    db.query(model.Penyakit).delete()
+    db.query(models.Aturan).delete()
+    db.query(models.Gejala).delete()
+    db.query(models.Penyakit).delete()
     db.commit()
 
     print("Data lama dihapus.")
@@ -127,13 +127,13 @@ def tebar():
     # Insert Diseases
     db_penyakit_list = []
     for d_data in data_penyakit:
-        penyakit = model.Penyakit(**d_data)
+        penyakit = models.Penyakit(**d_data)
         db.add(penyakit)
         db_penyakit_list.append(penyakit)
     db.commit()
 
     # Reload diseases to get IDs
-    db_penyakit_list = db.query(model.Penyakit).all()
+    db_penyakit_list = db.query(models.Penyakit).all()
     map_penyakit = {p.nama: p.id for p in db_penyakit_list}
 
     # Symptoms
@@ -168,13 +168,13 @@ def tebar():
     # Insert Symptoms
     db_gejala_list = []
     for g_data in data_gejala:
-        gejala = model.Gejala(**g_data)
+        gejala = models.Gejala(**g_data)
         db.add(gejala)
         db_gejala_list.append(gejala)
     db.commit()
 
     # Reload symptoms
-    db_gejala_list = db.query(model.Gejala).all()
+    db_gejala_list = db.query(models.Gejala).all()
     map_gejala = {g.kode: g.id for g in db_gejala_list}
 
     # Rules (Disease Name, Symptom Code, Expert CF)
@@ -258,7 +258,7 @@ def tebar():
         gejala_id = map_gejala.get(kode_gejala)
 
         if penyakit_id and gejala_id:
-            aturan = model.Aturan(penyakit_id=penyakit_id, gejala_id=gejala_id, pakar_cf=cf)
+            aturan = models.Aturan(penyakit_id=penyakit_id, gejala_id=gejala_id, pakar_cf=cf)
             db.add(aturan)
 
     db.commit()

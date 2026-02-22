@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <script src="/static/js/skrip.js"></script>
+    <script src="/js/script.js"></script>
     <script>
         let gejalaDipilih = {}; // {id: keyakinan}
 
@@ -166,7 +166,7 @@
 
                 // Simpan hasil di localStorage untuk diambil di halaman hasil
                 localStorage.setItem('hasilDiagnosa', JSON.stringify(hasil));
-                window.location.href = '/hasil.html';
+                window.location.href = '/result.html';
             } catch (err) {
                 console.error(err);
                 alert("Gagal melakukan diagnosa.");

@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
-from .skema import GejalaPengguna
-from .model import Aturan
+from .schemas import GejalaPengguna
+from .models import Aturan
 
 def hitung_diagnosa(gejala_pengguna: List[GejalaPengguna], semua_aturan: List[Aturan]) -> Dict[int, float]:
     """
