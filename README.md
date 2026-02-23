@@ -2,6 +2,31 @@
 
 Aplikasi Sistem Pakar untuk mendiagnosa penyakit pada tanaman Kangkung Air menggunakan metode **Certainty Factor (CF)**. Aplikasi ini dibangun dengan **FastAPI** (Python) dan antarmuka web modern menggunakan HTML & Tailwind CSS.
 
+## Instalasi dan Menjalankan Aplikasi
+
+Proyek ini menggunakan `uv` untuk manajemen dependensi dan lingkungan virtual.
+
+### Prasyarat
+- Python 3.12 atau lebih baru
+- `uv` (diinstal via `pip install uv` atau metode lainnya)
+
+### Langkah-langkah
+1.  **Clone repository ini**
+2.  **Instal dependensi**
+    ```bash
+    uv sync
+    ```
+3.  **Inisialisasi Database**
+    Jalankan script seed untuk mengisi database dengan data penyakit, gejala, dan aturan pakar:
+    ```bash
+    uv run seed.py
+    ```
+4.  **Jalankan Server**
+    ```bash
+    uv run uvicorn app.main:app --reload
+    ```
+    Aplikasi akan berjalan di http://127.0.0.1:8000.
+
 ## 1. Diagram Alir Sistem (Flowchart)
 
 Berikut adalah alur proses diagnosa dalam sistem:
