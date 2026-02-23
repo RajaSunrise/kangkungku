@@ -99,7 +99,108 @@ erDiagram
     }
 ```
 
-## 4. Tabel Data Penyakit
+## 4. Activity Diagram
+
+Diagram aktivitas yang menggambarkan alur kerja sistem dalam melakukan diagnosa:
+
+```mermaid
+graph TD
+    start((Mulai)) --> input_gejala[Input Gejala & CF User]
+    input_gejala --> request_api[Kirim Request ke API]
+    request_api --> get_rules[Ambil Aturan dari DB]
+    get_rules --> calc_cf[Hitung CF Kombinasi]
+    calc_cf --> sort_result[Urutkan Hasil Diagnosa]
+    sort_result --> get_disease[Ambil Detail Penyakit]
+    get_disease --> return_response[Kirim Respon JSON]
+    return_response --> display[Tampilkan Hasil di UI]
+    display --> finish((Selesai))
+```
+
+## 5. Class Diagram
+
+Struktur kelas dan relasi antar komponen backend:
+
+```mermaid
+classDiagram
+    class Penyakit {
+        +int id
+        +str nama
+        +str nama_ilmiah
+        +str deskripsi
+        +str solusi
+        +str url_gambar
+    }
+
+    class Gejala {
+        +int id
+        +str kode
+        +str deskripsi
+        +str url_gambar
+    }
+
+    class Aturan {
+        +int id
+        +int penyakit_id
+        +int gejala_id
+        +float pakar_cf
+    }
+
+    class ExpertSystem {
+        +hitung_diagnosa(gejala_user, aturan_pakar)
+    }
+
+    class API_Endpoint {
+        +GET /api/gejala
+        +GET /api/penyakit
+        +POST /api/diagnosa
+    }
+
+    Penyakit "1" -- "many" Aturan : has
+    Gejala "1" -- "many" Aturan : has
+    API_Endpoint ..> ExpertSystem : uses
+    API_Endpoint ..> Aturan : queries
+    API_Endpoint ..> Penyakit : queries
+    API_Endpoint ..> Gejala : queries
+```
+
+## 6. Sequence Diagram
+
+Interaksi antar objek selama proses diagnosa:
+
+```mermaid
+sequenceDiagram
+    actor User as Pengguna
+    participant UI as Antarmuka Web
+    participant API as API Server (FastAPI)
+    participant DB as Database
+    participant ES as Expert System Logic
+
+    User->>UI: Pilih Gejala & Input CF
+    User->>UI: Klik "Dapatkan Hasil"
+    UI->>API: POST /api/diagnosa (Gejala, CF)
+    activate API
+    API->>DB: Ambil Semua Aturan
+    activate DB
+    DB-->>API: List Aturan
+    deactivate DB
+    API->>ES: hitung_diagnosa(Gejala User, Aturan)
+    activate ES
+    ES-->>API: Hasil Perhitungan (Dictionary)
+    deactivate ES
+
+    loop Untuk setiap Penyakit Terdiagnosa
+        API->>DB: Ambil Detail Penyakit
+        activate DB
+        DB-->>API: Data Penyakit
+        deactivate DB
+    end
+
+    API-->>UI: Respon Hasil Diagnosa (JSON)
+    deactivate API
+    UI-->>User: Tampilkan Hasil & Solusi
+```
+
+## 7. Tabel Data Penyakit
 
 Daftar 15 penyakit yang dapat didiagnosa oleh sistem:
 
@@ -121,7 +222,7 @@ Daftar 15 penyakit yang dapat didiagnosa oleh sistem:
 | 14 | Pengorok Daun (Leaf Miner) | *Liriomyza spp.* |
 | 15 | Kekurangan Nitrogen | *Nutrient Deficiency* |
 
-## 5. Tabel Data Gejala
+## 8. Tabel Data Gejala
 
 Daftar 25 gejala yang digunakan untuk diagnosa:
 
@@ -153,7 +254,7 @@ Daftar 25 gejala yang digunakan untuk diagnosa:
 | G24 | Daun berlubang (shot-holes) |
 | G25 | Massa spora merah muda terlihat |
 
-## 6. Tabel Basis Pengetahuan (Rule dan Bobot Pakar)
+## 9. Tabel Basis Pengetahuan (Rule dan Bobot Pakar)
 
 Berikut adalah daftar lengkap aturan diagnosa beserta nilai Certainty Factor (CF) dari pakar:
 
@@ -202,7 +303,7 @@ Berikut adalah daftar lengkap aturan diagnosa beserta nilai Certainty Factor (CF
 | 41 | Kekurangan Nitrogen | G07 | 0.5 |
 | 42 | Kekurangan Nitrogen | G08 | 0.8 |
 
-## 7. Tabel Konversi Bobot Pengguna (User)
+## 10. Tabel Konversi Bobot Pengguna (User)
 
 Pengguna dapat memasukkan tingkat keyakinan terhadap gejala yang dialami menggunakan slider (0.1 - 1.0). Berikut interpretasi nilainya:
 
@@ -214,7 +315,7 @@ Pengguna dapat memasukkan tingkat keyakinan terhadap gejala yang dialami menggun
 | 0.6 - 0.8 | Yakin |
 | 0.8 - 1.0 | Sangat Yakin |
 
-## 8. Simulasi Perhitungan Certainty Factor Secara Manual
+## 11. Simulasi Perhitungan Certainty Factor Secara Manual
 
 Misalkan pengguna memilih gejala untuk penyakit **Karat Putih** dengan keyakinan tertentu:
 
@@ -241,7 +342,7 @@ Misalkan pengguna memilih gejala untuk penyakit **Karat Putih** dengan keyakinan
 
     *   **Hasil Akhir**: Tingkat keyakinan sistem untuk penyakit Karat Putih adalah **83.76%**.
 
-## 9. Alur Antarmuka Pengguna (User Interface)
+## 12. Alur Antarmuka Pengguna (User Interface)
 
 1.  **Halaman Utama (Home)**: Pengenalan sistem dan tombol mulai diagnosa.
 2.  **Halaman Diagnosa**:
@@ -255,7 +356,7 @@ Misalkan pengguna memilih gejala untuk penyakit **Karat Putih** dengan keyakinan
     *   Solusi penanganan yang disarankan.
     *   Tabel rincian perhitungan gejala yang dipilih.
 
-## 10. Pengujian Akurasi Sistem (Validasi Pakar)
+## 13. Pengujian Akurasi Sistem (Validasi Pakar)
 
 Akurasi sistem divalidasi dengan membandingkan hasil diagnosa sistem dengan diagnosa pakar asli terhadap sejumlah kasus uji.
 
