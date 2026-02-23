@@ -130,24 +130,52 @@ Daftar 25 gejala yang digunakan untuk diagnosa:
 
 ## 6. Tabel Basis Pengetahuan (Rule dan Bobot Pakar)
 
-Contoh aturan dan nilai CF (Certainty Factor) dari pakar:
+Berikut adalah daftar lengkap aturan diagnosa beserta nilai Certainty Factor (CF) dari pakar:
 
-| Nama Penyakit | Kode Gejala | CF Pakar |
-|---|---|---|
-| Karat Putih | G01 | 0.9 |
-| Karat Putih | G02 | 0.7 |
-| Karat Putih | G03 | 0.5 |
-| Bercak Daun Cercospora | G04 | 0.8 |
-| Bercak Daun Cercospora | G05 | 0.8 |
-| Bercak Daun Cercospora | G08 | 0.4 |
-| Virus Mosaik Kangkung | G06 | 0.95 |
-| Virus Mosaik Kangkung | G03 | 0.6 |
-| Virus Mosaik Kangkung | G07 | 0.7 |
-| Layu Fusarium | G08 | 0.6 |
-| Layu Fusarium | G09 | 0.9 |
-| ... | ... | ... |
-
-*(Tabel lengkap mencakup seluruh relasi di database)*
+| No | Nama Penyakit | Kode Gejala | CF Pakar |
+|---|---|---|---|
+| 1 | Karat Putih (White Rust) | G01 | 0.9 |
+| 2 | Karat Putih (White Rust) | G02 | 0.7 |
+| 3 | Karat Putih (White Rust) | G03 | 0.5 |
+| 4 | Bercak Daun Cercospora | G04 | 0.8 |
+| 5 | Bercak Daun Cercospora | G05 | 0.8 |
+| 6 | Bercak Daun Cercospora | G08 | 0.4 |
+| 7 | Virus Mosaik Kangkung | G06 | 0.95 |
+| 8 | Virus Mosaik Kangkung | G03 | 0.6 |
+| 9 | Virus Mosaik Kangkung | G07 | 0.7 |
+| 10 | Layu Fusarium | G08 | 0.6 |
+| 11 | Layu Fusarium | G09 | 0.9 |
+| 12 | Layu Fusarium | G10 | 0.8 |
+| 13 | Layu Fusarium | G07 | 0.5 |
+| 14 | Busuk Akar Pythium | G11 | 0.9 |
+| 15 | Busuk Akar Pythium | G07 | 0.6 |
+| 16 | Busuk Akar Pythium | G09 | 0.5 |
+| 17 | Busuk Batang Rhizoctonia | G12 | 0.8 |
+| 18 | Busuk Batang Rhizoctonia | G13 | 0.9 |
+| 19 | Busuk Batang Rhizoctonia | G09 | 0.4 |
+| 20 | Bercak Daun Alternaria | G14 | 0.9 |
+| 21 | Bercak Daun Alternaria | G08 | 0.5 |
+| 22 | Bercak Daun Bakteri | G15 | 0.9 |
+| 23 | Bercak Daun Bakteri | G24 | 0.7 |
+| 24 | Bercak Daun Bakteri | G08 | 0.4 |
+| 25 | Embun Tepung (Powdery Mildew) | G16 | 0.95 |
+| 26 | Embun Tepung (Powdery Mildew) | G03 | 0.5 |
+| 27 | Embun Bulu (Downy Mildew) | G17 | 0.9 |
+| 28 | Embun Bulu (Downy Mildew) | G02 | 0.6 |
+| 29 | Embun Bulu (Downy Mildew) | G08 | 0.5 |
+| 30 | Antraknosa | G18 | 0.8 |
+| 31 | Antraknosa | G25 | 0.7 |
+| 32 | Antraknosa | G07 | 0.4 |
+| 33 | Serangan Kutu Daun (Aphids) | G19 | 0.9 |
+| 34 | Serangan Kutu Daun (Aphids) | G03 | 0.7 |
+| 35 | Serangan Kutu Daun (Aphids) | G06 | 0.3 |
+| 36 | Serangan Tungau Laba-laba | G20 | 0.9 |
+| 37 | Serangan Tungau Laba-laba | G21 | 0.8 |
+| 38 | Serangan Tungau Laba-laba | G08 | 0.4 |
+| 39 | Pengorok Daun (Leaf Miner) | G22 | 0.95 |
+| 40 | Kekurangan Nitrogen | G23 | 0.9 |
+| 41 | Kekurangan Nitrogen | G07 | 0.5 |
+| 42 | Kekurangan Nitrogen | G08 | 0.8 |
 
 ## 7. Tabel Konversi Bobot Pengguna (User)
 
