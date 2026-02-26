@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 from typing import List
 
 from . import crud, models, schemas, database, expert_system
+from .routers import auth, admin
 
 # Buat tabel
 models.Base.metadata.create_all(bind=database.engine)
@@ -18,6 +19,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(auth.router)
+app.include_router(admin.router)
 
 # Dependency
 def dapatkan_db():

@@ -1,5 +1,6 @@
 from app.database import SessionLocal, engine
 from app import models
+from app.security import get_password_hash
 
 def tebar():
     db = SessionLocal()
@@ -11,9 +12,23 @@ def tebar():
     db.query(models.Aturan).delete()
     db.query(models.Gejala).delete()
     db.query(models.Penyakit).delete()
+    db.query(models.User).delete()
     db.commit()
 
     print("Data lama dihapus.")
+
+    # Create Admin
+    admin_password = get_password_hash("admin123")
+    admin_user = models.User(username="admin", email="admin@example.com", hashed_password=admin_password, role="admin")
+    db.add(admin_user)
+
+    # Create User
+    user_password = get_password_hash("user123")
+    regular_user = models.User(username="user", email="user@example.com", hashed_password=user_password, role="user")
+    db.add(regular_user)
+
+    db.commit()
+    print("User admin dan user biasa dibuat.")
 
     # Diseases (15)
     data_penyakit = [
