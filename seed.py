@@ -102,41 +102,6 @@ def tebar():
             "solusi": "Kurangi kelembaban. Gunakan fungisida seperti tembaga atau mancozeb. Buang sisa tanaman yang terinfeksi.",
             "url_gambar": "https://example.com/downy_mildew.jpg"
         },
-        {
-            "nama": "Antraknosa",
-            "nama_ilmiah": "Colletotrichum spp.",
-            "deskripsi": "Lesi cekung gelap pada batang dan daun. Massa spora merah muda mungkin muncul dalam kondisi basah.",
-            "solusi": "Buang bagian yang terinfeksi. Gunakan klorotalonil atau fungisida tembaga. Pastikan benih bebas penyakit.",
-            "url_gambar": "https://example.com/anthracnose.jpg"
-        },
-        {
-            "nama": "Serangan Kutu Daun (Aphids)",
-            "nama_ilmiah": "Aphidoidea",
-            "deskripsi": "Serangga kecil bertubuh lunak berkumpul di pertumbuhan baru dan bagian bawah daun. Daun mengeriting, menguning, dan terdistorsi. Embun madu lengket mungkin ada.",
-            "solusi": "Semprot dengan air. Gunakan sabun insektisida atau minyak mimba. Perkenalkan predator alami seperti kepik.",
-            "url_gambar": "https://example.com/aphids.jpg"
-        },
-        {
-            "nama": "Serangan Tungau Laba-laba",
-            "nama_ilmiah": "Tetranychidae",
-            "deskripsi": "Bintik-bintik kuning atau putih kecil (stippling) pada daun. Jaring halus mungkin terlihat. Daun berubah menjadi perunggu atau kuning.",
-            "solusi": "Tingkatkan kelembaban. Semprot dengan air. Gunakan akarisida atau minyak mimba.",
-            "url_gambar": "https://example.com/spider_mites.jpg"
-        },
-        {
-            "nama": "Pengorok Daun (Leaf Miner)",
-            "nama_ilmiah": "Liriomyza spp.",
-            "deskripsi": "Terowongan putih berkelok-kelok (mines) terlihat di dalam jaringan daun. Larva makan di antara permukaan daun.",
-            "solusi": "Buang daun yang ada terowongannya. Gunakan perangkap lengket kuning untuk dewasa. Gunakan minyak mimba.",
-            "url_gambar": "https://example.com/leaf_miner.jpg"
-        },
-        {
-            "nama": "Kekurangan Nitrogen",
-            "nama_ilmiah": "Nutrient Deficiency",
-            "deskripsi": "Daun tua menguning secara umum (klorosis). Pertumbuhan tanaman lambat dan kerdil.",
-            "solusi": "Berikan pupuk kaya nitrogen (misalnya urea, emulsi ikan). Tambahkan kompos ke tanah.",
-            "url_gambar": "https://example.com/nitrogen_deficiency.jpg"
-        }
     ]
 
     # Insert Diseases
@@ -170,14 +135,7 @@ def tebar():
         {"kode": "G15", "deskripsi": "Bercak basah dikelilingi halo kuning"},
         {"kode": "G16", "deskripsi": "Serbuk putih pada permukaan daun"},
         {"kode": "G17", "deskripsi": "Pertumbuhan berbulu halus abu-abu/ungu di bawah daun"},
-        {"kode": "G18", "deskripsi": "Lesi cekung gelap pada batang/daun"},
-        {"kode": "G19", "deskripsi": "Serangga kecil berkumpul di pucuk/bawah daun"},
-        {"kode": "G20", "deskripsi": "Bintik-bintik kuning/putih halus pada daun"},
-        {"kode": "G21", "deskripsi": "Jaring halus pada tanaman"},
-        {"kode": "G22", "deskripsi": "Terowongan putih berkelok-kelok di dalam daun"},
-        {"kode": "G23", "deskripsi": "Daun tua menguning secara menyeluruh"},
-        {"kode": "G24", "deskripsi": "Daun berlubang (shot-holes)"},
-        {"kode": "G25", "deskripsi": "Massa spora merah muda terlihat"}
+        {"kode": "G24", "deskripsi": "Daun berlubang (shot-holes)"}
     ]
 
     # Insert Symptoms
@@ -242,29 +200,6 @@ def tebar():
         ("Embun Bulu (Downy Mildew)", "G17", 0.9),
         ("Embun Bulu (Downy Mildew)", "G02", 0.6),
         ("Embun Bulu (Downy Mildew)", "G08", 0.5),
-
-        # Anthracnose
-        ("Antraknosa", "G18", 0.8),
-        ("Antraknosa", "G25", 0.7),
-        ("Antraknosa", "G07", 0.4),
-
-        # Aphids
-        ("Serangan Kutu Daun (Aphids)", "G19", 0.9),
-        ("Serangan Kutu Daun (Aphids)", "G03", 0.7),
-        ("Serangan Kutu Daun (Aphids)", "G06", 0.3),
-
-        # Spider Mites
-        ("Serangan Tungau Laba-laba", "G20", 0.9),
-        ("Serangan Tungau Laba-laba", "G21", 0.8),
-        ("Serangan Tungau Laba-laba", "G08", 0.4),
-
-        # Leaf Miner
-        ("Pengorok Daun (Leaf Miner)", "G22", 0.95),
-
-        # Nitrogen Deficiency
-        ("Kekurangan Nitrogen", "G23", 0.9),
-        ("Kekurangan Nitrogen", "G07", 0.5),
-        ("Kekurangan Nitrogen", "G08", 0.8),
     ]
 
     # Insert Rules

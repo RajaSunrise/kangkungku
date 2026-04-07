@@ -202,7 +202,7 @@ sequenceDiagram
 
 ## 7. Tabel Data Penyakit
 
-Daftar 15 penyakit yang dapat didiagnosa oleh sistem:
+Daftar 10 penyakit yang dapat didiagnosa oleh sistem:
 
 | No | Nama Penyakit | Nama Ilmiah |
 |---|---|---|
@@ -216,15 +216,10 @@ Daftar 15 penyakit yang dapat didiagnosa oleh sistem:
 | 8 | Bercak Daun Bakteri | *Pseudomonas / Xanthomonas* |
 | 9 | Embun Tepung (Powdery Mildew) | *Erysiphe spp.* |
 | 10 | Embun Bulu (Downy Mildew) | *Peronospora spp.* |
-| 11 | Antraknosa | *Colletotrichum spp.* |
-| 12 | Serangan Kutu Daun (Aphids) | *Aphidoidea* |
-| 13 | Serangan Tungau Laba-laba | *Tetranychidae* |
-| 14 | Pengorok Daun (Leaf Miner) | *Liriomyza spp.* |
-| 15 | Kekurangan Nitrogen | *Nutrient Deficiency* |
 
 ## 8. Tabel Data Gejala
 
-Daftar 25 gejala yang digunakan untuk diagnosa:
+Daftar 18 gejala yang digunakan untuk diagnosa:
 
 | Kode | Deskripsi Gejala |
 |---|---|
@@ -245,14 +240,22 @@ Daftar 25 gejala yang digunakan untuk diagnosa:
 | G15 | Bercak basah dikelilingi halo kuning |
 | G16 | Serbuk putih pada permukaan daun |
 | G17 | Pertumbuhan berbulu halus abu-abu/ungu di bawah daun |
-| G18 | Lesi cekung gelap pada batang/daun |
-| G19 | Serangga kecil berkumpul di pucuk/bawah daun |
-| G20 | Bintik-bintik kuning/putih halus pada daun |
-| G21 | Jaring halus pada tanaman |
-| G22 | Terowongan putih berkelok-kelok di dalam daun |
-| G23 | Daun tua menguning secara menyeluruh |
 | G24 | Daun berlubang (shot-holes) |
-| G25 | Massa spora merah muda terlihat |
+
+## 8.1. Tabel Hubungan Penyakit dan Gejala
+
+| Penyakit | G01 | G02 | G03 | G04 | G05 | G06 | G07 | G08 | G09 | G10 | G11 | G12 | G13 | G14 | G15 | G16 | G17 | G24 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Karat Putih (White Rust) | ✓ | ✓ | ✓ | | | | | | | | | | | | | | | |
+| Bercak Daun Cercospora | | | | ✓ | ✓ | | | ✓ | | | | | | | | | | |
+| Virus Mosaik Kangkung | | | ✓ | | | ✓ | ✓ | | | | | | | | | | | |
+| Layu Fusarium | | | | | | | ✓ | ✓ | ✓ | ✓ | | | | | | | | |
+| Busuk Akar Pythium | | | | | | | ✓ | | ✓ | | ✓ | | | | | | | |
+| Busuk Batang Rhizoctonia | | | | | | | | | ✓ | | | ✓ | ✓ | | | | | |
+| Bercak Daun Alternaria | | | | | | | | ✓ | | | | | | ✓ | | | | |
+| Bercak Daun Bakteri | | | | | | | | ✓ | | | | | | | ✓ | | | ✓ |
+| Embun Tepung (Powdery Mildew) | | | ✓ | | | | | | | | | | | | | ✓ | | |
+| Embun Bulu (Downy Mildew) | | ✓ | | | | | | ✓ | | | | | | | | | ✓ | |
 
 ## 9. Tabel Basis Pengetahuan (Rule dan Bobot Pakar)
 
@@ -289,19 +292,6 @@ Berikut adalah daftar lengkap aturan diagnosa beserta nilai Certainty Factor (CF
 | 27 | Embun Bulu (Downy Mildew) | G17 | 0.9 |
 | 28 | Embun Bulu (Downy Mildew) | G02 | 0.6 |
 | 29 | Embun Bulu (Downy Mildew) | G08 | 0.5 |
-| 30 | Antraknosa | G18 | 0.8 |
-| 31 | Antraknosa | G25 | 0.7 |
-| 32 | Antraknosa | G07 | 0.4 |
-| 33 | Serangan Kutu Daun (Aphids) | G19 | 0.9 |
-| 34 | Serangan Kutu Daun (Aphids) | G03 | 0.7 |
-| 35 | Serangan Kutu Daun (Aphids) | G06 | 0.3 |
-| 36 | Serangan Tungau Laba-laba | G20 | 0.9 |
-| 37 | Serangan Tungau Laba-laba | G21 | 0.8 |
-| 38 | Serangan Tungau Laba-laba | G08 | 0.4 |
-| 39 | Pengorok Daun (Leaf Miner) | G22 | 0.95 |
-| 40 | Kekurangan Nitrogen | G23 | 0.9 |
-| 41 | Kekurangan Nitrogen | G07 | 0.5 |
-| 42 | Kekurangan Nitrogen | G08 | 0.8 |
 
 ## 10. Tabel Konversi Bobot Pengguna (User)
 
