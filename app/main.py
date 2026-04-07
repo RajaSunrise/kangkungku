@@ -1,6 +1,7 @@
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import FastAPI, Depends, HTTPException, status, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from typing import List
 
@@ -70,4 +71,50 @@ def baca_penyakit(penyakit_id: int, db: Session = Depends(dapatkan_db)):
     return db_penyakit
 
 # Mount static files
-app.mount("/", StaticFiles(directory="static", html=True), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+templates = Jinja2Templates(directory="templates")
+
+@app.get("/")
+def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+@app.get("/diagnosis.html")
+def read_diagnosis(request: Request):
+    return templates.TemplateResponse("diagnosis.html", {"request": request})
+
+@app.get("/encyclopedia.html")
+def read_encyclopedia(request: Request):
+    return templates.TemplateResponse("encyclopedia.html", {"request": request})
+
+@app.get("/calculator.html")
+def read_calculator(request: Request):
+    return templates.TemplateResponse("calculator.html", {"request": request})
+
+@app.get("/community.html")
+def read_community(request: Request):
+    return templates.TemplateResponse("community.html", {"request": request})
+
+@app.get("/blog.html")
+def read_blog(request: Request):
+    return templates.TemplateResponse("blog.html", {"request": request})
+
+@app.get("/dashboard.html")
+def read_dashboard(request: Request):
+    return templates.TemplateResponse("dashboard.html", {"request": request})
+
+@app.get("/admin.html")
+def read_admin(request: Request):
+    return templates.TemplateResponse("admin.html", {"request": request})
+
+@app.get("/login.html")
+def read_login(request: Request):
+    return templates.TemplateResponse("login.html", {"request": request})
+
+@app.get("/register.html")
+def read_register(request: Request):
+    return templates.TemplateResponse("register.html", {"request": request})
+
+@app.get("/result.html")
+def read_result(request: Request):
+    return templates.TemplateResponse("result.html", {"request": request})

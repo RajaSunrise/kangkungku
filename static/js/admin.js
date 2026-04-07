@@ -90,6 +90,7 @@ async function loadDiseases() {
                 <td class="px-6 py-4 font-bold">${d.nama}</td>
                 <td class="px-6 py-4 italic text-gray-500">${d.nama_ilmiah || '-'}</td>
                 <td class="px-6 py-4">
+                    <button onclick="editDisease(${d.id})" class="text-blue-600 hover:text-blue-800 font-bold mr-2">Edit</button>
                     <button onclick="deleteDisease(${d.id})" class="text-red-600 hover:text-red-800 font-bold">Hapus</button>
                 </td>
             `;
@@ -122,6 +123,47 @@ async function createDisease(event) {
         });
 
         if (!response.ok) throw new Error("Gagal menambah penyakit");
+
+        closeModal();
+        loadDiseases();
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function editDisease(id) {
+    try {
+        const response = await fetch(`/api/penyakit/${id}`);
+        if (!response.ok) throw new Error("Gagal mengambil data penyakit");
+        const data = await response.json();
+        showEditDiseaseModal(data);
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function updateDisease(event, id) {
+    event.preventDefault();
+    const form = event.target;
+    const data = {
+        nama: form.nama.value,
+        nama_ilmiah: form.nama_ilmiah.value,
+        deskripsi: form.deskripsi.value,
+        solusi: form.solusi.value,
+        url_gambar: form.url_gambar.value
+    };
+
+    try {
+        const response = await fetch(`/admin/penyakit/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${getToken()}`
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) throw new Error("Gagal memperbarui penyakit");
 
         closeModal();
         loadDiseases();
@@ -186,6 +228,44 @@ function showAddDiseaseModal() {
     document.body.appendChild(modal);
 }
 
+function showEditDiseaseModal(data) {
+    const modal = document.createElement('div');
+    modal.id = 'modal';
+    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.innerHTML = `
+        <div class="bg-white p-8 rounded-xl max-w-lg w-full max-h-screen overflow-y-auto">
+            <h2 class="text-xl font-bold mb-4">Edit Penyakit</h2>
+            <form onsubmit="updateDisease(event, ${data.id})" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium">Nama Penyakit</label>
+                    <input type="text" name="nama" value="${data.nama}" required class="w-full border rounded p-2">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">Nama Ilmiah</label>
+                    <input type="text" name="nama_ilmiah" value="${data.nama_ilmiah || ''}" class="w-full border rounded p-2">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">Deskripsi</label>
+                    <textarea name="deskripsi" class="w-full border rounded p-2">${data.deskripsi || ''}</textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">Solusi</label>
+                    <textarea name="solusi" class="w-full border rounded p-2">${data.solusi || ''}</textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">URL Gambar</label>
+                    <input type="text" name="url_gambar" value="${data.url_gambar || ''}" class="w-full border rounded p-2">
+                </div>
+                <div class="flex justify-end gap-2 mt-6">
+                    <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Batal</button>
+                    <button type="submit" class="px-4 py-2 bg-primary text-secondary font-bold rounded hover:opacity-90">Update</button>
+                </div>
+            </form>
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
+
 // --- Symptoms ---
 
 async function loadSymptoms() {
@@ -225,6 +305,7 @@ async function loadSymptoms() {
                 <td class="px-6 py-4 font-mono font-bold">${g.kode}</td>
                 <td class="px-6 py-4">${g.deskripsi}</td>
                 <td class="px-6 py-4">
+                    <button onclick="editSymptom(${g.id})" class="text-blue-600 hover:text-blue-800 font-bold mr-2">Edit</button>
                     <button onclick="deleteSymptom(${g.id})" class="text-red-600 hover:text-red-800 font-bold">Hapus</button>
                 </td>
             `;
@@ -255,6 +336,47 @@ async function createSymptom(event) {
         });
 
         if (!response.ok) throw new Error("Gagal menambah gejala");
+
+        closeModal();
+        loadSymptoms();
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function editSymptom(id) {
+    try {
+        const response = await fetch("/api/gejala");
+        if (!response.ok) throw new Error("Gagal mengambil data gejala");
+        const data = await response.json();
+        const symptom = data.find(s => s.id === id);
+        if (!symptom) throw new Error("Gejala tidak ditemukan");
+        showEditSymptomModal(symptom);
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function updateSymptom(event, id) {
+    event.preventDefault();
+    const form = event.target;
+    const data = {
+        kode: form.kode.value,
+        deskripsi: form.deskripsi.value,
+        url_gambar: form.url_gambar.value
+    };
+
+    try {
+        const response = await fetch(`/admin/gejala/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${getToken()}`
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) throw new Error("Gagal memperbarui gejala");
 
         closeModal();
         loadSymptoms();
@@ -304,6 +426,36 @@ function showAddSymptomModal() {
                 <div class="flex justify-end gap-2 mt-6">
                     <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Batal</button>
                     <button type="submit" class="px-4 py-2 bg-primary text-secondary font-bold rounded hover:opacity-90">Simpan</button>
+                </div>
+            </form>
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
+
+function showEditSymptomModal(data) {
+    const modal = document.createElement('div');
+    modal.id = 'modal';
+    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.innerHTML = `
+        <div class="bg-white p-8 rounded-xl max-w-lg w-full">
+            <h2 class="text-xl font-bold mb-4">Edit Gejala</h2>
+            <form onsubmit="updateSymptom(event, ${data.id})" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium">Kode</label>
+                    <input type="text" name="kode" value="${data.kode}" required class="w-full border rounded p-2">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">Deskripsi</label>
+                    <textarea name="deskripsi" required class="w-full border rounded p-2">${data.deskripsi}</textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">URL Gambar</label>
+                    <input type="text" name="url_gambar" value="${data.url_gambar || ''}" class="w-full border rounded p-2">
+                </div>
+                <div class="flex justify-end gap-2 mt-6">
+                    <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Batal</button>
+                    <button type="submit" class="px-4 py-2 bg-primary text-secondary font-bold rounded hover:opacity-90">Update</button>
                 </div>
             </form>
         </div>
