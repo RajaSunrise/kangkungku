@@ -325,22 +325,20 @@ sequenceDiagram
 
 ## 7. Tabel Data Penyakit
 
-Daftar 10 penyakit yang dapat didiagnosa oleh sistem:
+Daftar 8 penyakit yang dapat didiagnosa oleh sistem:
 
-| No | Nama Penyakit | Nama Ilmiah |
-|---|---|---|
-| 1 | Karat Putih (White Rust) | *Albugo ipomoeae-panduratae* |
-| 2 | Bercak Daun Cercospora | *Cercospora ipomoeae* |
-| 3 | Virus Mosaik Kangkung | *Water spinach mosaic virus* |
-| 4 | Layu Fusarium | *Fusarium oxysporum* |
-| 5 | Busuk Akar Pythium | *Pythium spp.* |
-| 6 | Busuk Batang Rhizoctonia | *Rhizoctonia solani* |
-| 7 | Bercak Daun Alternaria | *Alternaria spp.* |
-| 8 | Bercak Daun Bakteri | *Pseudomonas / Xanthomonas* |
-| 9 | Embun Tepung (Powdery Mildew) | *Erysiphe spp.* |
-| 10 | Embun Bulu (Downy Mildew) | *Peronospora spp.* |
+| No | Kode | Nama Penyakit | Nama Ilmiah |
+|---|---|---|---|
+| 1 | P01 | Karat Putih (White Rust) | *Albugo ipomoeae-panduratae* |
+| 2 | P02 | Bercak Daun Cercospora | *Cercospora ipomoeae* |
+| 3 | P03 | Virus Mosaik Kangkung | *Water spinach mosaic virus* |
+| 4 | P04 | Layu Fusarium | *Fusarium oxysporum* |
+| 5 | P05 | Busuk Akar Pythium | *Pythium spp.* |
+| 6 | P06 | Busuk Batang Rhizoctonia | *Rhizoctonia solani* |
+| 7 | P07 | Embun Tepung (Powdery Mildew) | *Erysiphe spp.* |
+| 8 | P08 | Embun Bulu (Downy Mildew) | *Peronospora spp.* |
 
-## 8. Tabel Data Gejala
+
 
 Daftar 18 gejala yang digunakan untuk diagnosa:
 
@@ -367,18 +365,16 @@ Daftar 18 gejala yang digunakan untuk diagnosa:
 
 ## 8.1. Tabel Hubungan Penyakit dan Gejala
 
-| Penyakit | G01 | G02 | G03 | G04 | G05 | G06 | G07 | G08 | G09 | G10 | G11 | G12 | G13 | G14 | G15 | G16 | G17 | G24 |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Karat Putih (White Rust) | ✓ | ✓ | ✓ | | | | | | | | | | | | | | | |
-| Bercak Daun Cercospora | | | | ✓ | ✓ | | | ✓ | | | | | | | | | | |
-| Virus Mosaik Kangkung | | | ✓ | | | ✓ | ✓ | | | | | | | | | | | |
-| Layu Fusarium | | | | | | | ✓ | ✓ | ✓ | ✓ | | | | | | | | |
-| Busuk Akar Pythium | | | | | | | ✓ | | ✓ | | ✓ | | | | | | | |
-| Busuk Batang Rhizoctonia | | | | | | | | | ✓ | | | ✓ | ✓ | | | | | |
-| Bercak Daun Alternaria | | | | | | | | ✓ | | | | | | ✓ | | | | |
-| Bercak Daun Bakteri | | | | | | | | ✓ | | | | | | | ✓ | | | ✓ |
-| Embun Tepung (Powdery Mildew) | | | ✓ | | | | | | | | | | | | | ✓ | | |
-| Embun Bulu (Downy Mildew) | | ✓ | | | | | | ✓ | | | | | | | | | ✓ | |
+| Penyakit | G001 | G002 | G003 | G004 | G005 | G006 | G007 | G008 | G009 | G010 | G011 | G012 | G013 | G014 | G015 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| P01 | √ | √ | √ | | | | | | | | | | | | |
+| P02 | | | | √ | √ | | | √ | | | | | | | |
+| P03 | | | √ | | | √ | √ | | | | | | | | |
+| P04 | | | | | | | √ | √ | √ | √ | | | | | |
+| P05 | | | | | | | √ | | √ | | √ | | | | |
+| P06 | | | | | | | | | √ | | | √ | √ | | |
+| P07 | | | √ | | | | | | | | | | | | √ |
+| P08 | | √ | | | | | | √ | | | | | | √ | |
 
 ## 9. Tabel Basis Pengetahuan (Rule dan Bobot Pakar)
 
