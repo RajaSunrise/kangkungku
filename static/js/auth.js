@@ -34,14 +34,14 @@ async function login(username, password) {
     }
 }
 
-async function register(username, email, password) {
+async function register(username, email, alamat, password) {
     try {
         const response = await fetch(`${API_URL}/auth/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ username, email, password }),
+            body: JSON.stringify({ username, email, alamat, password }),
         });
 
         if (!response.ok) {
