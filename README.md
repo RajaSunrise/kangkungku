@@ -138,7 +138,7 @@ graph TD
         U_Nav -- "Diagnosa" --> U_Diag[Masuk Halaman Diagnosa]
         U_Nav -- "Ensiklopedia" --> U_Ency[Buka Daftar Penyakit]
         U_Nav -- "Riwayat" --> U_Hist[Lihat Riwayat Saya]
-        U_Nav -- "Fitur Lain" --> U_Other[Blog / Komunitas / Kalkulator]
+        U_Nav -- "Fitur Lain" --> U_Other[Komunitas / Kalkulator]
         
         U_Diag --> U_Select[Pilih Gejala & Geser Slider CF]
         U_Select --> U_Submit[Klik Dapatkan Hasil]
