@@ -29,7 +29,32 @@
     </script>
 </head>
 <body class="bg-background-light text-secondary">
-    <div class="container mx-auto px-4 py-8 lg:px-8 max-w-7xl">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-border-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <div class="p-1.5 bg-primary rounded-lg text-secondary">
+                        <span class="material-symbols-outlined text-[20px] font-bold">eco</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-secondary">KangkungKu</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/" class="text-sm font-medium hover:text-primary transition-colors">Beranda</a>
+                    <a href="/diagnosis.html" class="text-sm font-medium text-primary transition-colors">Diagnosa</a>
+                    <a href="/encyclopedia.html" class="text-sm font-medium hover:text-primary transition-colors">Ensiklopedia</a>
+                    <a href="/calculator.html" class="text-sm font-medium hover:text-primary transition-colors">Kalkulator</a>
+                    <a href="/community.html" class="text-sm font-medium hover:text-primary transition-colors">Komunitas</a>
+                    <a href="/blog.html" class="text-sm font-medium hover:text-primary transition-colors">Blog</a>
+                </div>
+                <div id="nav-auth" class="flex items-center gap-4">
+                    <a href="/login.html" class="text-sm font-bold text-slate-600 hover:text-primary transition-colors">Masuk</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="px-4 lg:px-40 py-12 w-full max-w-[1440px] mx-auto">
         <div class="flex flex-col lg:flex-row gap-8">
             <div class="flex-1 min-w-0">
                 <div class="mb-8">
@@ -62,14 +87,39 @@
         </div>
     </div>
 
+    <script src="/static/js/auth.js"></script>
     <script src="/static/js/script.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('token');
+            const navAuth = document.getElementById('nav-auth');
+            if (token) {
+                navAuth.innerHTML = `
+                    <a href="/dashboard.html" class="hidden md:flex items-center justify-center h-10 px-5 rounded-lg bg-secondary text-white text-sm font-bold hover:bg-opacity-90 transition-all">
+                        Dasbor Pengguna
+                    </a>
+                    <button onclick="logout()" class="text-sm font-bold text-red-500 ml-4 hover:text-red-700">Keluar</button>
+                `;
+            }
+        });
+
         let gejalaDipilih = {}; // {id: keyakinan}
+        let dataGejalaMentah = []; // Simpan data dari API
 
         async function muatGejala() {
             const data = await ambilData('/gejala');
+            dataGejalaMentah = data || [];
             const wadah = document.getElementById('daftar-gejala');
             const pemuat = document.getElementById('loading');
+
+            const dapatkanIcon = (deskripsi) => {
+                const d = deskripsi.toLowerCase();
+                if (d.includes('daun')) return 'eco';
+                if (d.includes('batang')) return 'account_tree';
+                if (d.includes('akar')) return 'psychology_alt';
+                if (d.includes('tumbuh') || d.includes('kerdil')) return 'trending_down';
+                return 'coronavirus';
+            };
 
             if (data) {
                 pemuat.classList.add('hidden');
@@ -84,7 +134,7 @@
                         </div>
                         <div class="flex items-start gap-4">
                             <div id="icon-${g.id}" class="p-3 rounded-lg bg-slate-100 text-slate-600">
-                                <span class="material-symbols-outlined text-3xl">coronavirus</span>
+                                <span class="material-symbols-outlined text-3xl">${dapatkanIcon(g.deskripsi)}</span>
                             </div>
                             <div>
                                 <h3 class="text-lg font-bold mb-1">${g.kode}</h3>
@@ -147,7 +197,7 @@
 
             const btn = document.getElementById('btn-diagnosa');
             btn.disabled = true;
-            btn.innerText = "Menganalisis...";
+            btn.innerText = "Memproses...";
 
             const payload = {
                 gejala: Object.entries(gejalaDipilih).map(([id, conf]) => ({
@@ -156,13 +206,27 @@
                 }))
             };
 
+            const token = localStorage.getItem('token');
+            const headers = { 'Content-Type': 'application/json' };
+            if (token) {
+                headers['Authorization'] = `Bearer ${token}`;
+            }
+
             try {
                 const res = await fetch('/api/diagnosa', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: headers,
                     body: JSON.stringify(payload)
                 });
                 const hasil = await res.json();
+
+                // Simpan detail gejala yang dipilih untuk ditampilkan di hasil
+                const detailGejala = Object.keys(gejalaDipilih).map(id => {
+                    const found = dataGejalaMentah.find(g => g.id == id);
+                    return found ? { id: found.id, deskripsi: found.deskripsi } : null;
+                }).filter(x => x !== null);
+                
+                localStorage.setItem('gejalaTerpilihFull', JSON.stringify(detailGejala));
 
                 // Simpan hasil di localStorage untuk diambil di halaman hasil
                 localStorage.setItem('hasilDiagnosa', JSON.stringify(hasil));

@@ -9,6 +9,7 @@ def tebar():
     models.Base.metadata.create_all(bind=engine)
 
     # Clear existing data
+    db.query(models.DiagnosaHistory).delete()
     db.query(models.Aturan).delete()
     db.query(models.Gejala).delete()
     db.query(models.Penyakit).delete()
@@ -18,13 +19,13 @@ def tebar():
     print("Data lama dihapus.")
 
     # Create Admin
-    admin_password = get_password_hash("admin123")
-    admin_user = models.User(username="admin", email="admin@example.com", hashed_password=admin_password, role="admin")
+    admin_password = get_password_hash("indraaja")
+    admin_user = models.User(username="indraaja", email="admin@kangkung.com", hashed_password=admin_password, role="admin")
     db.add(admin_user)
 
     # Create User
-    user_password = get_password_hash("user123")
-    regular_user = models.User(username="user", email="user@example.com", hashed_password=user_password, role="user")
+    user_password = get_password_hash("user1234")
+    regular_user = models.User(username="user123", email="user@example.com", hashed_password=user_password, role="user")
     db.add(regular_user)
 
     db.commit()
@@ -35,72 +36,72 @@ def tebar():
         {
             "nama": "Karat Putih (White Rust)",
             "nama_ilmiah": "Albugo ipomoeae-panduratae",
-            "deskripsi": "Penyakit jamur yang menyebabkan pustula putih menonjol di bagian bawah daun. Pustula ini akhirnya pecah, melepaskan spora seperti bubuk putih. Permukaan atas daun mungkin menunjukkan bintik-bintik kuning yang sesuai dengan pustula di bawahnya. Infeksi parah dapat menyebabkan distorsi daun, pertumbuhan terhambat, dan kerontokan daun.",
-            "solusi": "Segera buang dan musnahkan daun yang terinfeksi. Tingkatkan sirkulasi udara dengan memberi jarak tanam yang tepat. Hindari penyiraman dari atas untuk menjaga dedaunan tetap kering. Gunakan fungisida berbahan dasar tembaga atau klorotalonil jika infeksi parah. Rotasi tanaman dengan tanaman bukan inang disarankan.",
-            "url_gambar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDZRIPhbMvk_-7tqFMuJ4urLI9CrTKS9gmO4m5-FblYd86SjOX92OHxzJ8e2qB1DYlhXT4BR7POlPJb2cMcc52TG_b41lVkPZlgx4uuEB46CQ65APo48gkeFIprq-CDigQUQEM2X_OMZLex10rBHp3DMOl6BRtc9-JYj99yM5jnPGh6BFQZAMCcLF0JiA_-B3bJH25Uk8G2I61CGcYFcC8Ny8Srkc7ly-5kfzPdwZy3iJ5DWvvEpw-E4pieq9Rkd_yZ_9a1iOvR5sE"
+            "deskripsi": "Karat Putih adalah penyakit yang disebabkan oleh oomycete Albugo ipomoeae-panduratae. Penyakit ini sangat umum terjadi pada tanaman kangkung, terutama di lingkungan dengan kelembaban tinggi dan sirkulasi udara yang buruk. Penyakit ini tidak hanya menyerang daun tetapi dapat menyebar ke batang jika tidak segera ditangani. Gejala awal dimulai dengan bintik kuning kecil di permukaan atas daun, yang kemudian diikuti oleh munculnya pustula putih berkapur di bagian bawah daun. Jika dibiarkan, tanaman akan mengalami hambatan pertumbuhan yang signifikan.",
+            "solusi": "[TINDAKAN SEGERA] Segera cabut dan musnahkan daun atau bagian tanaman yang memiliki pustula putih untuk mencegah penyebaran spora melalui angin atau percikan air. [PENGOBATAN] Gunakan fungisida organik berbasis sulfur atau semprotan air rebusan daun sirih sebagai antiseptik alami. Jika serangan sudah mencapai lebih dari 30% area tanam, gunakan fungisida berbahan aktif tembaga oksida atau klorotalonil sesuai dosis anjuran. [PENCEGAHAN] Atur jarak tanam minimal 15-20 cm untuk sirkulasi udara yang baik. Hindari penyiraman langsung pada daun di sore hari (lebih baik siram di area akar). Lakukan rotasi tanaman dengan jenis tanaman non-konvensional setiap 2 musim tanam.",
+            "url_gambar": "/static/img/karat-putih.png"
         },
         {
             "nama": "Bercak Daun Cercospora",
             "nama_ilmiah": "Cercospora ipomoeae",
-            "deskripsi": "Penyakit jamur ini bermanifestasi sebagai bercak kecil berbentuk bulat hingga tidak beraturan dengan pusat abu-abu atau putih dan tepi coklat tua atau kemerahan. Saat penyakit berkembang, bercak dapat menyatu, menyebabkan hawar daun yang luas. Daun bisa menguning dan rontok sebelum waktunya.",
-            "solusi": "Pangkas daun yang terinfeksi. Pastikan tanaman tidak terlalu padat. Gunakan irigasi tetes untuk menghindari membasahi daun. Fungisida seperti mancozeb atau semprotan berbahan dasar tembaga bisa efektif jika diterapkan sejak dini. Jaga kebersihan lahan.",
-            "url_gambar": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-zbTawTvvkamw30jzSlNm4XGRTmij1u_WzQg-AgYHjHkyuQZ9PlHDGOKWu7bKcMM24bTCMPAdJaaCFaLdqFBnX9RbqWDKu3JNNJZhS8w41eZnuW5eJ-4rV2HoOCVdEMAGuMSNagdSzki73rxP10bIeR0xVDD6EA0EAZWBeF-O4zXFRZ38p66iPN9BIXwDagyVfeXO7dsdrOc8fLMQjOJBB6sNN0tTChd5vCWlUlb_ge-PfXDv7HboNwhasSHiwBJW_Fmits0jcjo"
+            "deskripsi": "Bercak daun ini disebabkan oleh jamur Cercospora yang berkembang pesat pada cuaca hangat dan lembab. Penyakit ini menyebabkan bercak nekrotik yang dapat menurunkan kapasitas fotosintesis tanaman secara drastis. Jika infeksi parah, seluruh daun dapat menguning dan gugur sebelum waktunya, yang berujung pada penurunan hasil panen yang signifikan. Jamur ini dapat bertahan hidup pada sisa-sisa tanaman di tanah selama berbulan-bulan.",
+            "solusi": "[TINDAKAN SEGERA] Pangkas daun yang terinfeksi dan jangan biarkan jatuh ke tanah karena spora dapat bertahan di sisa tanaman. [PENGOBATAN] Aplikasikan fungisida sistemik berbahan aktif benomil atau mankozeb. Untuk solusi organik, gunakan ekstrak bawang putih yang diencerkan sebagai fungisida alami setiap 3 hari sekali. [PENCEGAHAN] Pastikan lahan memiliki drainase yang baik agar air tidak menggenang. Jaga kebersihan lahan dari gulma yang bisa menjadi inang alternatif. Gunakan pupuk kalium yang cukup untuk memperkuat dinding sel tanaman terhadap serangan jamur.",
+            "url_gambar": "/static/img/cercospora.png"
         },
         {
             "nama": "Virus Mosaik Kangkung",
             "nama_ilmiah": "Water spinach mosaic virus",
-            "deskripsi": "Tanaman yang terinfeksi menunjukkan pola belang hijau muda dan tua (mosaik) pada daun. Daun mungkin terdistorsi, berkerut, atau lebih kecil dari biasanya. Pertumbuhan sering terhambat.",
-            "solusi": "Tidak ada obat untuk penyakit virus. Cabut dan musnahkan tanaman yang terinfeksi untuk mencegah penyebaran. Kendalikan vektor kutu daun menggunakan sabun insektisida atau minyak mimba. Gunakan bahan tanam bebas virus.",
-            "url_gambar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBpyhyYdwHCmB4AFEt-s7jNebhI5-zpbzvM8xaMfW6sQWkIoxqHafCgYSNLh8jS9q5O40IqUQgKwtAUjkUaXHwwlum-QBR4kI_vrA1hQkEdCRo3YFz09wKxFQ24zUaEilVCq1Limtbp_TyredycWbHk0fS6lRoxZhVKYaiW-ueQNNASDvp7D6YSKK3L9vV9bakNVYMEQlmUK3g-dKyA5CmdlAsetEVdSFn3fiTvVcqil4o41Ajva7AIKEo81Ue1dmIk7VPb60AEHuQ"
+            "deskripsi": "Virus ini merupakan salah satu ancaman paling serius karena tidak dapat diobati dengan pestisida. Virus mosaik biasanya ditularkan oleh serangga vektor seperti kutu daun (aphids) atau melalui alat pertanian yang tidak steril. Gejala yang paling khas adalah pola warna belang hijau tua dan muda yang tidak teratur pada daun, serta bentuk daun yang mengerut atau abnormal. Tanaman yang terinfeksi akan tumbuh sangat kerdil dan tidak layak dikonsumsi.",
+            "solusi": "[TINDAKAN SEGERA] Cabut seluruh tanaman yang menunjukkan gejala mosaik hingga akarnya, masukkan ke dalam plastik, dan bakar di luar area lahan. JANGAN dijadikan kompos. [KONTROL VEKTOR] Fokus utama adalah membasmi kutu daun menggunakan sabun insektisida, minyak mimba (neem oil), atau insektisida berbahan aktif abamektin jika populasi serangga sangat tinggi. [PENCEGAHAN] Selalu sterilisasi alat potong menggunakan alkohol 70% sebelum berpindah ke tanaman lain. Gunakan benih bersertifikat yang bebas virus. Pasang perangkap kuning berperekat untuk memantau keberadaan serangga vektor.",
+            "url_gambar": "/static/img/virus-mosaik.png"
         },
         {
             "nama": "Layu Fusarium",
             "nama_ilmiah": "Fusarium oxysporum",
-            "deskripsi": "Jamur tular tanah ini menyebabkan daun bagian bawah menguning, seringkali pada satu sisi tanaman. Jaringan pembuluh di batang berubah menjadi coklat. Tanaman layu pada siang hari dan mungkin pulih pada malam hari, akhirnya mati.",
-            "solusi": "Gunakan varietas tahan jika tersedia. Perbaiki drainase tanah. Solarisaasi tanah sebelum tanam. Buang tanaman yang terinfeksi dan tanah di sekitarnya. Hindari pemupukan nitrogen berlebihan.",
-            "url_gambar": "https://example.com/fusarium.jpg"
+            "deskripsi": "Layu Fusarium adalah penyakit tular tanah (soil-borne) yang menyerang sistem pembuluh tanaman. Jamur ini menyumbat aliran air dan nutrisi dari akar ke daun, sehingga tanaman tampak layu meskipun tanah cukup basah. Ciri khasnya adalah tanaman layu saat terik matahari tetapi segar kembali pada malam hari, hingga akhirnya mati secara permanen. Jika batang dipotong melintang, akan terlihat cincin kecoklatan pada jaringan pembuluhnya.",
+            "solusi": "[TINDAKAN SEGERA] Singkirkan tanaman mati beserta tanah di sekeliling perakarannya untuk meminimalisir penyebaran spora di tanah. [PENGOBATAN TANAH] Gunakan agen hayati Trichoderma harzianum yang dicampurkan ke dalam kompos atau tanah sebelum tanam untuk menekan pertumbuhan jamur jahat. [PENCEGAHAN] Lakukan pengapuran tanah (dolomit) untuk menaikkan pH tanah menjadi 6.5-7.0, karena Fusarium menyukai tanah asam. Hindari penggunaan pupuk Urea berlebihan karena dapat memicu perkembangan jamur ini. Gunakan sistem irigasi yang tidak menyebabkan erosi tanah antar tanaman.",
+            "url_gambar": "/static/img/layu-fusarium.png"
         },
         {
             "nama": "Busuk Akar Pythium",
             "nama_ilmiah": "Pythium spp.",
-            "deskripsi": "Akar menjadi coklat, lembek, dan kerdil. Tanaman tampak kerdil dan mungkin layu meskipun air cukup. Batang bagian bawah mungkin menjadi lunak dan gelap (damping-off pada bibit).",
-            "solusi": "Pastikan drainase tanah sangat baik. Hindari penyiraman berlebihan. Gunakan media tanam steril untuk bibit. Gunakan fungisida khusus untuk Pythium (misalnya metalaksil) jika perlu.",
-            "url_gambar": "https://example.com/pythium.jpg"
+            "deskripsi": "Pythium sering disebut sebagai 'penyakit rebah kecambah' atau 'busuk akar' yang sangat merusak pada kondisi tanah jenuh air (becek). Jamur ini menyerang akar halus kangkung, membuatnya membusuk dan tidak mampu menyerap nutrisi. Pada bibit muda, pangkal batang akan menjadi lunak dan tanaman akan rebah seketika. Pada tanaman dewasa, pertumbuhan akan berhenti total dan daun menguning pucat.",
+            "solusi": "[TINDAKAN SEGERA] Hentikan penyiraman segera dan perbaiki saluran drainase agar tidak ada air menggenang. [PENGOBATAN] Gunakan fungisida khusus oomycetes berbahan aktif metalaksil atau propamokarb hidroklorida. Untuk pencegahan alami, pastikan media tanam sudah difermentasi sempurna sebelum digunakan. [PENCEGAHAN] Pastikan benih ditanam pada kedalaman yang tepat (jangan terlalu dalam). Gunakan air siraman yang bersih (bukan air limbah atau air selokan yang terkontaminasi). Perkaya tanah dengan bahan organik untuk meningkatkan porositas tanah.",
+            "url_gambar": "/static/img/busuk-akar-pythium.png"
         },
         {
             "nama": "Busuk Batang Rhizoctonia",
             "nama_ilmiah": "Rhizoctonia solani",
-            "deskripsi": "Lesi cekung berwarna coklat kemerahan muncul pada batang di dekat garis tanah. Batang bisa tercekik dan tanaman bisa roboh. Daun mungkin menunjukkan bercak coklat tidak beraturan.",
-            "solusi": "Tanam di tanah yang drainasenya baik. Hindari penanaman terlalu dalam. Buang sisa tanaman yang terinfeksi. Gunakan fungisida yang sesuai. Rotasi tanaman.",
-            "url_gambar": "https://example.com/rhizoctonia.jpg"
+            "deskripsi": "Busuk batang Rhizoctonia adalah penyakit jamur tular tanah yang sering menyerang tanaman kangkung di lahan yang terlalu basah. Jamur ini menyerang pangkal batang, menciptakan lesi berwarna coklat kemerahan yang perlahan melingkari batang (girdling). Akibatnya, transportasi air terputus dan tanaman akan roboh atau mati mendadak. Penyakit ini sering muncul setelah hujan terus-menerus.",
+            "solusi": "[TINDAKAN SEGERA] Segera kurangi frekuensi penyiraman dan lakukan pendangiran (penggemburan tanah) di sekitar batang untuk mengurangi kelembaban permukaan. [PENGOBATAN] Kocor pangkal batang dengan fungisida berbahan aktif benomil atau pcb (pencycuron). Secara organik, taburkan abu kayu di sekitar pangkal batang untuk menghambat jamur. [PENCEGAHAN] Gunakan benih yang sehat dan telah diberi perlakuan (seed treatment). Jangan menanam kangkung terlalu rapat. Pastikan sisa-sisa tanaman dari musim sebelumnya telah dibersihkan sepenuhnya.",
+            "url_gambar": "/static/img/rhizoctonia.png"
         },
         {
             "nama": "Bercak Daun Alternaria",
             "nama_ilmiah": "Alternaria spp.",
-            "deskripsi": "Bercak berbentuk target dengan cincin konsentris terbentuk pada daun. Bercak sering berwarna coklat atau hitam. Daun bisa menguning dan rontok.",
-            "solusi": "Buang daun yang terinfeksi. Gunakan fungisida berbahan dasar tembaga. Hindari irigasi overhead. Jaga jarak tanam yang tepat.",
-            "url_gambar": "https://example.com/alternaria.jpg"
+            "deskripsi": "Penyakit ini ditandai dengan bercak daun yang memiliki pola cincin konsentris (seperti papan target). Penyakit ini berkembang pesat pada kondisi cuaca yang berganti-ganti antara basah dan kering. Jika dibiarkan, bercak-bercak ini akan menyatu dan menyebabkan hawar daun (leaf blight), di mana daun akan mengering seperti terbakar dan rontok.",
+            "solusi": "[TINDAKAN SEGERA] Buang daun-daun tua di bagian bawah yang pertama kali menunjukkan gejala karena ini adalah sumber inokulum utama. [PENGOBATAN] Semprotkan fungisida kontak berbahan aktif klorotalonil atau propineb. Untuk pengobatan organik, semprotkan larutan baking soda (1 sendok teh per liter air) yang dicampur sedikit sabun cair sebagai fungisida kontak. [PENCEGAHAN] Hindari penggunaan sistem irigasi pancar (overhead irrigation). Lakukan pemupukan berimbang, pastikan tanaman mendapatkan cukup unsur mikro (seperti Boron dan Zink) untuk daya tahan daun.",
+            "url_gambar": "/static/img/alternaria.png"
         },
         {
             "nama": "Bercak Daun Bakteri",
             "nama_ilmiah": "Pseudomonas / Xanthomonas",
-            "deskripsi": "Bercak kecil basah muncul pada daun, sering dikelilingi oleh halo kuning. Bercak berubah menjadi coklat atau hitam dan bisa rontok, meninggalkan lubang.",
-            "solusi": "Buang bagian tanaman yang terinfeksi. Hindari penyiraman overhead. Gunakan bakterisida berbahan dasar tembaga. Desinfeksi alat.",
-            "url_gambar": "https://example.com/bacterial_spot.jpg"
+            "deskripsi": "Berbeda dengan jamur, bercak daun bakteri biasanya terlihat 'basah' atau berminyak. Bakteri ini masuk melalui luka atau pori-pori alami tanaman (hidatoda) saat kelembaban sangat tinggi. Ciri khasnya adalah adanya 'halo' kuning di sekitar bercak gelap. Bakteri ini sangat cepat menyebar melalui percikan air hujan atau alat pertanian yang terkontaminasi.",
+            "solusi": "[TINDAKAN SEGERA] Hentikan semua kegiatan di lahan saat tanaman basah (setelah hujan/siram) untuk mencegah penyebaran bakteri lewat tangan atau baju. [PENGOBATAN] Gunakan bakterisida atau fungisida berbahan aktif tembaga (Copper) seperti tembaga hidroksida yang efektif menekan bakteri. Belum ada obat organik yang sangat efektif, namun larutan kunyit bisa dicoba sebagai bakterisida alami ringan. [PENCEGAHAN] Gunakan benih bebas bakteri. Desinfeksi semua alat potong menggunakan alkohol atau larutan pemutih encer. Atur drainase agar tidak terjadi kelembaban udara yang ekstrim di area pertanaman.",
+            "url_gambar": "/static/img/bakteri.png"
         },
         {
             "nama": "Embun Tepung (Powdery Mildew)",
             "nama_ilmiah": "Erysiphe spp.",
-            "deskripsi": "Pertumbuhan jamur putih seperti bubuk muncul di permukaan atas daun. Daun bisa mengeriting atau terdistorsi.",
-            "solusi": "Gunakan belerang atau minyak mimba. Tingkatkan sirkulasi udara. Buang bagian yang terinfeksi parah.",
-            "url_gambar": "https://example.com/powdery_mildew.jpg"
+            "deskripsi": "Embun tepung mudah dikenali dari lapisan putih seperti tepung atau bedak di permukaan atas daun. Penyakit ini unik karena justru sering berkembang pada kondisi udara kering namun dengan kelembaban tinggi di sekitar tanaman. Lapisan putih ini sebenarnya adalah koloni jamur yang menyerap nutrisi langsung dari sel epidermis daun, menyebabkan daun mengerut dan fotosintesis terhenti.",
+            "solusi": "[TINDAKAN SEGERA] Semprot tanaman dengan air bertekanan kuat di pagi hari untuk merontokkan spora tepung secara fisik. [PENGOBATAN] Gunakan fungisida sistemik berbahan aktif tebukonazol. Secara organik, semprotan campuran susu cair dan air (rasio 1:9) sangat efektif karena protein dalam susu akan bereaksi dengan sinar matahari menjadi antiseptik bagi jamur ini. [PENCEGAHAN] Tanam kangkung di lokasi yang mendapatkan sinar matahari penuh minimal 6-8 jam sehari. Jangan memberikan pupuk nitrogen terlalu tinggi karena jaringan tanaman yang terlalu sukulen lebih mudah diserang.",
+            "url_gambar": "/static/img/embun-tepung.png"
         },
         {
             "nama": "Embun Bulu (Downy Mildew)",
             "nama_ilmiah": "Peronospora spp.",
-            "deskripsi": "Bercak kekuningan pada permukaan atas daun dengan pertumbuhan berbulu halus keabu-abuan/ungu di bagian bawah. Daun bisa berubah coklat dan mati.",
-            "solusi": "Kurangi kelembaban. Gunakan fungisida seperti tembaga atau mancozeb. Buang sisa tanaman yang terinfeksi.",
-            "url_gambar": "https://example.com/downy_mildew.jpg"
+            "deskripsi": "Downy mildew sering tertukar dengan powdery mildew, namun jamur ini tumbuh di bagian bawah daun dengan tekstur berbulu halus berwarna keunguan atau abu-abu. Di permukaan atas daun hanya terlihat bercak kuning pucat yang dibatasi oleh tulang daun (berbentuk menyudut). Penyakit ini sangat berbahaya pada cuaca dingin dan berkabut.",
+            "solusi": "[TINDAKAN SEGERA] Buang segera daun yang menunjukkan bercak kuning menyudut. Perbaiki sirkulasi udara dengan membuang gulma di sekitar bedengan. [PENGOBATAN] Gunakan fungisida khusus oomycetes seperti yang digunakan untuk Pythium (Metalaksil atau Dimetomorf). Untuk cara organik, gunakan semprotan rebusan batang serai yang mengandung sitronela sebagai antijamur. [PENCEGAHAN] Hindari menanam kangkung di area yang ternaungi atau selalu lembab. Pastikan sisa tanaman musim lalu dibakar untuk memutus siklus spora dorman.",
+            "url_gambar": "/static/img/embun-bulu.png"
         },
     ]
 

@@ -30,78 +30,123 @@
 </head>
 <body class="bg-background-light text-secondary">
     <div class="w-full max-w-[1440px] mx-auto p-4 md:px-10 py-8">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-            <div>
-                <p class="text-sm text-slate-500 mb-1">Sesi Diagnosa • <span id="tanggal"></span></p>
-                <h2 class="text-3xl md:text-4xl font-black tracking-tight">Hasil Diagnosa</h2>
+        <!-- Header Section -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+            <div class="space-y-1">
+                <div class="flex items-center gap-2 text-primary font-bold text-sm tracking-widest uppercase">
+                    <span class="h-[2px] w-8 bg-primary"></span>
+                    Hasil Analisis Pakar
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900">Laporan Diagnosa</h2>
+                <p class="text-slate-500 flex items-center gap-2 text-sm">
+                    <span class="material-symbols-outlined text-sm">calendar_today</span>
+                    Sesi: <span id="tanggal" class="font-medium"></span>
+                </p>
             </div>
-            <div class="flex gap-3">
-                <button onclick="window.print()" class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50 transition-colors">
+            <div class="flex flex-wrap gap-3 w-full md:w-auto">
+                <button onclick="window.history.back()" class="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-50 transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                    Kembali
+                </button>
+                <button onclick="window.print()" class="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm">
                     <span class="material-symbols-outlined text-[20px]">print</span>
                     Cetak Laporan
                 </button>
-                <a href="/diagnosis.html" class="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors shadow-lg shadow-primary/20">
+                <a href="/diagnosis.html" class="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-xl text-sm font-bold hover:bg-slate-800 transition-all shadow-xl shadow-primary/20">
                     <span class="material-symbols-outlined text-[20px]">add</span>
                     Diagnosa Baru
                 </a>
             </div>
         </div>
 
-        <div id="hasil-container" class="grid grid-cols-1 lg:grid-cols-12 gap-6 hidden">
+        <div id="hasil-container" class="grid grid-cols-1 lg:grid-cols-12 gap-8 hidden">
             <!-- Konten Utama -->
-            <div class="lg:col-span-8 flex flex-col gap-6">
-                <div class="bg-surface-light rounded-xl border border-slate-200 overflow-hidden shadow-sm">
-                    <div class="p-6 md:p-8 border-b border-slate-100 bg-gradient-to-r from-primary/10 via-transparent to-transparent">
-                        <div class="flex flex-col md:flex-row gap-6 justify-between items-start">
-                            <div>
-                                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider mb-3">
-                                    <span class="size-2 rounded-full bg-red-600 animate-pulse"></span>
-                                    Diagnosa Utama
+            <div class="lg:col-span-8 flex flex-col gap-8">
+                <!-- Card Diagnosa Utama -->
+                <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xl shadow-slate-200/50">
+                    <div class="p-8 md:p-10 border-b border-slate-100 bg-gradient-to-br from-primary/5 via-white to-white relative">
+                        <div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+                            <span class="material-symbols-outlined text-9xl">health_and_safety</span>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row gap-8 justify-between items-start relative z-10">
+                            <div class="flex-1">
+                                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 text-red-600 text-xs font-black uppercase tracking-widest mb-4 border border-red-100">
+                                    <span class="size-2 rounded-full bg-red-500 animate-ping"></span>
+                                    Probabilitas Tertinggi
                                 </div>
-                                <h3 id="nama-penyakit" class="text-3xl font-bold text-slate-900 mb-2"></h3>
-                                <p id="nama-ilmiah" class="text-slate-600 text-lg italic"></p>
+                                <h3 id="nama-penyakit" class="text-4xl font-black text-slate-900 mb-2 leading-tight"></h3>
+                                <p id="nama-ilmiah" class="text-primary text-xl italic font-medium mb-6"></p>
+                                
+                                <div id="gambar-wadah" class="hidden w-full max-w-md rounded-2xl overflow-hidden border border-slate-200 shadow-lg mb-6">
+                                    <img id="gambar-penyakit" src="" alt="Gambar Penyakit" class="w-full h-auto object-cover">
+                                </div>
                             </div>
-                            <div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-100">
-                                <div class="relative size-20 flex items-center justify-center">
+                            
+                            <div class="flex items-center gap-6 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                                <div class="relative size-24 flex items-center justify-center">
                                     <svg class="size-full -rotate-90 transform" viewBox="0 0 36 36">
-                                        <path class="text-slate-200" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="3"></path>
-                                        <path id="circle-progress" class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeDasharray="0, 100" strokeLinecap="round" strokeWidth="3"></path>
+                                        <path class="text-slate-100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="3.5"></path>
+                                        <path id="circle-progress" class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeDasharray="0, 100" strokeLinecap="round" strokeWidth="3.5" style="transition: stroke-dasharray 1s ease-out"></path>
                                     </svg>
                                     <div class="absolute flex flex-col items-center">
-                                        <span id="persentase" class="text-lg font-bold text-slate-900">0%</span>
+                                        <span id="persentase" class="text-2xl font-black text-slate-900">0%</span>
                                     </div>
                                 </div>
-                                <div class="flex flex-col">
-                                    <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Faktor Kepastian</span>
-                                    <span id="label-cf" class="text-sm font-medium text-primary"></span>
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-black">Confidence</span>
+                                    <span id="label-cf" class="text-xs font-bold px-2 py-1 rounded bg-slate-100 text-slate-600 inline-block text-center"></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-6 text-slate-700">
-                            <h4 class="font-bold mb-2">Deskripsi</h4>
-                            <p id="deskripsi"></p>
+
+                        <div class="mt-10 bg-slate-50/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-100 relative group transition-all hover:bg-slate-50">
+                            <h4 class="font-black text-slate-900 text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-xl">biotech</span>
+                                Analisis Patologi
+                            </h4>
+                            <p id="deskripsi" class="text-slate-600 text-base leading-relaxed"></p>
                         </div>
                     </div>
-                    <div class="p-6 md:p-8">
-                        <h4 class="text-lg font-bold mb-4 flex items-center gap-2">
-                            <span class="material-symbols-outlined text-primary">medication</span>
-                            Rencana Pengobatan
-                        </h4>
-                        <div id="solusi" class="bg-slate-50 p-6 rounded-xl text-slate-700 whitespace-pre-line"></div>
+
+                    <div class="p-8 md:p-10 bg-white">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="p-2 rounded-lg bg-primary/10 text-primary">
+                                <span class="material-symbols-outlined text-2xl font-bold">healing</span>
+                            </div>
+                            <h4 class="text-2xl font-black text-slate-900">Protokol Pemulihan</h4>
+                        </div>
+                        <div id="solusi" class="space-y-6"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Kemungkinan Lain -->
-            <div class="lg:col-span-4 flex flex-col gap-6">
-                <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
-                    <h3 class="text-base font-bold mb-4 flex items-center justify-between">
-                        Kemungkinan Lain
-                        <span class="text-xs font-normal text-slate-500 bg-slate-100 px-2 py-1 rounded">Berdasarkan gejala</span>
-                    </h3>
-                    <div id="kemungkinan-lain" class="flex flex-col gap-3">
+            <!-- Sidebar -->
+            <div class="lg:col-span-4 flex flex-col gap-8">
+                <!-- Gejala Teramati -->
+                <div id="gejala-sidebar-container"></div>
+
+                <!-- Kemungkinan Lain -->
+                <div class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-black text-slate-900">Diferensial</h3>
+                        <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Alternatif</span>
+                    </div>
+                    <div id="kemungkinan-lain" class="flex flex-col gap-4">
                         <!-- List dinamis -->
                     </div>
+                </div>
+
+                <!-- Banner Edukasi -->
+                <div class="bg-slate-900 rounded-3xl p-8 text-white relative overflow-hidden group">
+                    <div class="absolute -right-4 -bottom-4 text-white/10 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-9xl">Psychology</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 relative z-10">Butuh bantuan lebih lanjut?</h4>
+                    <p class="text-slate-400 text-sm mb-6 relative z-10">Konsultasikan hasil diagnosa ini dengan penyuluh pertanian setempat untuk verifikasi lapangan.</p>
+                    <button class="w-full py-3 bg-primary text-slate-900 font-bold rounded-xl text-sm relative z-10 hover:scale-[1.02] transition-transform">
+                        Hubungi Ahli
+                    </button>
                 </div>
             </div>
         </div>
@@ -116,10 +161,57 @@
     <script>
         document.getElementById('tanggal').innerText = new Date().toLocaleDateString('id-ID');
 
-        const hasilStr = localStorage.getItem('hasilDiagnosa');
-        if (hasilStr) {
-            const hasil = JSON.parse(hasilStr);
-            if (hasil.length > 0) {
+        async function initResult() {
+            // Cek apakah ada parameter ID (dari history)
+            const urlParams = new URLSearchParams(window.location.search);
+            const historyId = urlParams.get('id');
+            
+            let hasil;
+            
+            if (historyId) {
+                // Ambil dari API history
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    window.location.href = '/login.html';
+                    return;
+                }
+                
+                try {
+                    const res = await fetch(`/api/history/${historyId}`, {
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+                    if (!res.ok) throw new Error("Gagal mengambil history");
+                    const hData = await res.json();
+                    
+                    // Format agar sesuai dengan struktur 'hasil' yang diharapkan
+                    hasil = [{
+                        penyakit: hData.penyakit,
+                        faktor_kepastian: hData.faktor_kepastian,
+                        persentase: hData.persentase
+                    }];
+                    
+                    // Set tanggal dari history
+                    document.getElementById('tanggal').innerText = hData.created_at;
+                    
+                    // Karena kita tidak punya data 'kemungkinan lain' di history DB (hanya simpan yang tertinggi),
+                    // kita kosongkan hasil lainnya
+                } catch (err) {
+                    console.error(err);
+                    alert("Data riwayat tidak ditemukan.");
+                    window.location.href = '/dashboard.html';
+                    return;
+                }
+            } else {
+                // Ambil dari localStorage (diagnosa baru)
+                const hasilStr = localStorage.getItem('hasilDiagnosa');
+                if (!hasilStr) {
+                    window.location.href = '/diagnosis.html';
+                    return;
+                }
+                hasil = JSON.parse(hasilStr);
+            }
+
+            if (hasil && hasil.length > 0) {
                 document.getElementById('hasil-container').classList.remove('hidden');
 
                 // Utama
@@ -127,9 +219,117 @@
                 document.getElementById('nama-penyakit').innerText = top.penyakit.nama;
                 document.getElementById('nama-ilmiah').innerText = top.penyakit.nama_ilmiah || '';
                 document.getElementById('deskripsi').innerText = top.penyakit.deskripsi || '';
-                document.getElementById('solusi').innerText = top.penyakit.solusi || '';
+                
+                // Tampilkan gambar jika ada
+                if (top.penyakit.url_gambar) {
+                    const img = document.getElementById('gambar-penyakit');
+                    const wadah = document.getElementById('gambar-wadah');
+                    img.src = top.penyakit.url_gambar;
+                    wadah.classList.remove('hidden');
+                }
+                
+                // Format solusi agar lebih detail dan terstruktur
+                const formatSolusi = (text) => {
+                    if (!text) return 'Belum ada data pengobatan spesifik.';
+                    
+                    const sections = [
+                        { label: 'Tindakan Segera', icon: 'emergency', color: 'bg-red-50 text-red-600 border-red-100', dot: 'bg-red-500', pattern: /\[TINDAKAN SEGERA\](.*?)(\[|$)/s },
+                        { label: 'Protokol Pengobatan', icon: 'medication', color: 'bg-blue-50 text-blue-600 border-blue-100', dot: 'bg-blue-500', pattern: /\[PENGOBATAN\](.*?)(\[|$)/s },
+                        { label: 'Kontrol Vektor', icon: 'pest_control', color: 'bg-purple-50 text-purple-600 border-purple-100', dot: 'bg-purple-500', pattern: /\[KONTROL VEKTOR\](.*?)(\[|$)/s },
+                        { label: 'Sanitasi Tanah', icon: 'grass', color: 'bg-amber-50 text-amber-600 border-amber-100', dot: 'bg-amber-500', pattern: /\[PENGOBATAN TANAH\](.*?)(\[|$)/s },
+                        { label: 'Strategi Pencegahan', icon: 'shield', color: 'bg-emerald-50 text-emerald-600 border-emerald-100', dot: 'bg-emerald-500', pattern: /\[PENCEGAHAN\](.*?)(\[|$)/s }
+                    ];
+
+                    let html = '<div class="grid grid-cols-1 gap-6">';
+                    let foundAny = false;
+
+                    sections.forEach(sec => {
+                        const match = text.match(sec.pattern);
+                        if (match && match[1]) {
+                            foundAny = true;
+                            const content = match[1].trim();
+                            const points = content.split(/[.\n]+/).filter(p => p.trim().length > 5);
+
+                            html += `
+                                <div class="group rounded-2xl border border-slate-100 bg-white overflow-hidden transition-all hover:shadow-lg hover:border-slate-200">
+                                    <div class="px-6 py-4 ${sec.color.split(' ')[0]} flex items-center justify-between border-b border-slate-100">
+                                        <div class="flex items-center gap-3 font-black text-xs uppercase tracking-widest ${sec.color.split(' ')[1]}">
+                                            <span class="material-symbols-outlined text-xl">${sec.icon}</span>
+                                            ${sec.label}
+                                        </div>
+                                        <span class="flex h-2 w-2 rounded-full ${sec.dot}"></span>
+                                    </div>
+                                    <div class="p-6">
+                                        <ul class="space-y-4">
+                                            ${points.map(p => `
+                                                <li class="flex items-start gap-4 group/item">
+                                                    <div class="mt-1 flex-shrink-0 size-5 rounded-full bg-slate-50 flex items-center justify-center group-hover/item:bg-primary/10 transition-colors">
+                                                        <span class="material-symbols-outlined text-[10px] text-slate-400 group-hover/item:text-primary font-black">arrow_forward_ios</span>
+                                                    </div>
+                                                    <span class="text-sm text-slate-600 leading-relaxed font-medium">${p.trim()}.</span>
+                                                </li>
+                                            `).join('')}
+                                        </ul>
+                                    </div>
+                                </div>
+                            `;
+                        }
+                    });
+
+                    if (!foundAny) {
+                        return `
+                            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-slate-600 leading-relaxed font-medium">
+                                ${text}
+                            </div>
+                        `;
+                    }
+
+                    html += `
+                        <div class="mt-4 p-6 rounded-2xl bg-slate-900 text-white relative overflow-hidden">
+                            <div class="absolute right-0 top-0 p-4 opacity-10">
+                                <span class="material-symbols-outlined text-6xl">warning</span>
+                            </div>
+                            <div class="flex items-start gap-4 relative z-10">
+                                <span class="material-symbols-outlined text-primary font-bold">report_problem</span>
+                                <div class="space-y-1">
+                                    <p class="text-sm font-black uppercase tracking-widest text-primary">Peringatan Keamanan</p>
+                                    <p class="text-xs text-slate-400 leading-relaxed">Gunakan alat pelindung diri (masker & sarung tangan) saat menangani pestisida. Patuhi dosis pada kemasan produk demi keselamatan Anda dan lingkungan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                    
+                    return html;
+                };
+
+                document.getElementById('solusi').innerHTML = formatSolusi(top.penyakit.solusi);
                 document.getElementById('persentase').innerText = `${top.persentase}%`;
                 document.getElementById('circle-progress').setAttribute('stroke-dasharray', `${top.persentase}, 100`);
+
+                // Tambahkan Ringkasan Gejala yang Dipilih
+                const dataGejala = JSON.parse(localStorage.getItem('gejalaTerpilihFull') || '[]');
+                if (dataGejala.length > 0) {
+                    const sidebarContainer = document.getElementById('gejala-sidebar-container');
+                    const divGejala = document.createElement('div');
+                    divGejala.className = "bg-white rounded-3xl border border-slate-200 p-8 shadow-sm";
+                    divGejala.innerHTML = `
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-lg font-black text-slate-900">Anamnesa</h3>
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Gejala</span>
+                        </div>
+                        <ul class="space-y-4">
+                            ${dataGejala.map(g => `
+                                <li class="flex items-start gap-4 p-3 rounded-2xl bg-slate-50 border border-slate-100 transition-all hover:bg-white hover:shadow-md hover:border-primary/20 group">
+                                    <div class="size-8 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+                                        <span class="material-symbols-outlined text-sm font-bold">check</span>
+                                    </div>
+                                    <span class="text-sm text-slate-600 leading-tight font-medium">${g.deskripsi}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    `;
+                    sidebarContainer.appendChild(divGejala);
+                }
 
                 const cfVal = top.faktor_kepastian;
                 document.getElementById('label-cf').innerText = cfVal > 0.8 ? 'Keyakinan Tinggi' : (cfVal > 0.5 ? 'Sedang' : 'Rendah');
@@ -138,14 +338,23 @@
                 const containerLain = document.getElementById('kemungkinan-lain');
                 hasil.slice(1).forEach(h => {
                     const div = document.createElement('div');
-                    div.className = "relative group p-3 rounded-lg border border-slate-100 hover:border-primary/50 transition-colors cursor-pointer";
+                    div.className = "relative group p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-primary/30 transition-all cursor-pointer hover:shadow-lg hover:shadow-slate-200/50";
                     div.innerHTML = `
-                        <div class="flex justify-between items-center mb-1">
-                            <span class="font-bold text-sm">${h.penyakit.nama}</span>
-                            <span class="text-xs font-bold text-slate-500">${h.persentase}%</span>
-                        </div>
-                        <div class="w-full bg-slate-100 rounded-full h-1.5 mb-2">
-                            <div class="bg-slate-400 h-1.5 rounded-full" style="width: ${h.persentase}%"></div>
+                        <div class="flex items-center gap-4 mb-3">
+                            ${h.penyakit.url_gambar ? `
+                                <div class="size-12 rounded-lg overflow-hidden border border-slate-200 flex-shrink-0">
+                                    <img src="${h.penyakit.url_gambar}" class="w-full h-full object-cover">
+                                </div>
+                            ` : ''}
+                            <div class="flex-1 min-w-0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-black text-[10px] uppercase tracking-wider text-slate-700 truncate">${h.penyakit.nama}</span>
+                                    <span class="text-[10px] font-black text-primary bg-primary/10 px-2 py-0.5 rounded-full">${h.persentase}%</span>
+                                </div>
+                                <div class="w-full bg-slate-200/50 rounded-full h-1 overflow-hidden">
+                                    <div class="bg-primary h-full rounded-full transition-all duration-1000" style="width: ${h.persentase}%"></div>
+                                </div>
+                            </div>
                         </div>
                     `;
                     containerLain.appendChild(div);
@@ -154,9 +363,9 @@
             } else {
                 document.getElementById('no-result').classList.remove('hidden');
             }
-        } else {
-            window.location.href = '/diagnosis.html';
         }
+        
+        initResult();
     </script>
 </body>
 </html>

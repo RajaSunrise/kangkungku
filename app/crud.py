@@ -1,3 +1,4 @@
+from typing import Optional
 from sqlalchemy.orm import Session
 from . import models, schemas
 
@@ -75,3 +76,67 @@ def create_user(db: Session, user: schemas.UserCreate, hashed_password: str):
     db.commit()
     db.refresh(db_user)
     return db_user
+
+def simpan_history(db: Session, user_id: Optional[int], penyakit_id: int, cf: float, persentase: float, gejala_input: str):
+    from datetime import datetime
+    db_history = models.DiagnosaHistory(
+        user_id=user_id,
+        penyakit_id=penyakit_id,
+        faktor_kepastian=cf,
+        persentase=persentase,
+        gejala_input=gejala_input,
+        created_at=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    )
+    db.add(db_history)
+    db.commit()
+    db.refresh(db_history)
+    return db_history
+
+def dapatkan_history_user(db: Session, user_id: int):
+    return db.query(models.DiagnosaHistory).filter(models.DiagnosaHistory.user_id == user_id).order_by(models.DiagnosaHistory.id.desc()).all()
+
+def dapatkan_statistik(db: Session):
+    total_users = db.query(models.User).count()
+    total_diagnosa = db.query(models.DiagnosaHistory).count()
+    total_penyakit = db.query(models.Penyakit).count()
+    total_gejala = db.query(models.Gejala).count()
+    history_terbaru = db.query(models.DiagnosaHistory).order_by(models.DiagnosaHistory.id.desc()).limit(10).all()
+    
+    return {
+        "total_users": total_users,
+        "total_diagnosa": total_diagnosa,
+        "total_penyakit": total_penyakit,
+        "total_gejala": total_gejala,
+        "history_terbaru": history_terbaru
+    }
+
+# ---- User CRUD (Admin) ----
+
+def dapatkan_semua_users(db: Session, lewati: int = 0, batas: int = 100):
+    return db.query(models.User).offset(lewati).limit(batas).all()
+
+def dapatkan_user_by_id(db: Session, user_id: int):
+    return db.query(models.User).filter(models.User.id == user_id).first()
+
+def update_user(db: Session, user_id: int, user_data: schemas.UserUpdate, hashed_password: str = None):
+    db_user = db.query(models.User).filter(models.User.id == user_id).first()
+    if db_user:
+        update_data = user_data.model_dump(exclude_unset=True, exclude={"password"})
+        for key, value in update_data.items():
+            if value is not None:
+                setattr(db_user, key, value)
+        if hashed_password:
+            db_user.hashed_password = hashed_password
+        db.commit()
+        db.refresh(db_user)
+    return db_user
+
+def delete_user(db: Session, user_id: int):
+    db_user = db.query(models.User).filter(models.User.id == user_id).first()
+    if db_user:
+        # Also delete related diagnosis history
+        db.query(models.DiagnosaHistory).filter(models.DiagnosaHistory.user_id == user_id).delete()
+        db.delete(db_user)
+        db.commit()
+    return db_user
+

@@ -67,11 +67,12 @@
                     <a href="/community.html" class="text-sm font-medium hover:text-primary transition-colors">Komunitas</a>
                     <a href="/blog.html" class="text-sm font-medium hover:text-primary transition-colors">Blog</a>
                 </div>
-                <div class="flex items-center gap-4">
-                        <a href="/dashboard.html" class="hidden md:flex items-center justify-center h-10 px-5 rounded-lg bg-secondary text-white text-sm font-bold hover:bg-opacity-90 transition-all">
-                        Dasbor Pengguna
+                <div id="nav-auth" class="flex items-center gap-4">
+                    <!-- Dinamis via JS -->
+                    <a href="/login.html" class="text-sm font-bold text-slate-600 hover:text-primary transition-colors">Masuk</a>
+                    <a href="/register.html" class="flex items-center justify-center h-10 px-5 rounded-lg bg-secondary text-white text-sm font-bold hover:bg-opacity-90 transition-all">
+                        Daftar
                     </a>
-                    <a href="/admin.html" class="text-sm font-medium text-gray-500 hover:text-primary">Admin</a>
                 </div>
             </div>
         </div>
@@ -135,6 +136,161 @@
         </section>
     </main>
 
+    <!-- Kenapa Memilih Kami -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">Solusi Cerdas untuk Petani Modern</h2>
+                <p class="text-slate-500">Teknologi sistem pakar kami membantu Anda mengidentifikasi masalah tanaman lebih cepat dari sebelumnya.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 transition-all hover:shadow-xl hover:shadow-slate-200/50 group">
+                    <div class="size-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-slate-900 transition-colors">
+                        <span class="material-symbols-outlined text-3xl">bolt</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Analisis Instan</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Dapatkan hasil diagnosa dalam hitungan detik setelah Anda memilih gejala yang teramati pada tanaman.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 transition-all hover:shadow-xl hover:shadow-slate-200/50 group">
+                    <div class="size-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-slate-900 transition-colors">
+                        <span class="material-symbols-outlined text-3xl">verified</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Metode Teruji</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Menggunakan algoritma Certainty Factor yang telah divalidasi oleh para ahli pertanian untuk akurasi tinggi.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 transition-all hover:shadow-xl hover:shadow-slate-200/50 group">
+                    <div class="size-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-slate-900 transition-colors">
+                        <span class="material-symbols-outlined text-3xl">menu_book</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Laporan Detail</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Setiap hasil diagnosa dilengkapi dengan deskripsi penyakit dan langkah-langkah pengobatan yang konkret.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8 tracking-tight leading-tight">Membantu Ratusan Petani Mengamankan Hasil Panen</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                            <p class="text-slate-600 italic mb-4">"Berkat KangkungKu, saya bisa tahu lebih cepat kalau tanaman saya kena Karat Putih. Langkah pengobatannya sangat membantu!"</p>
+                            <div class="flex items-center gap-3">
+                                <div class="size-10 rounded-full bg-slate-200"></div>
+                                <div>
+                                    <p class="font-bold text-slate-900 text-sm">Pak Budi</p>
+                                    <p class="text-slate-400 text-xs">Petani Kangkung Jawa Tengah</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                            <p class="text-slate-600 italic mb-4">"Sangat praktis digunakan langsung di lahan. Kalkulator nutrisinya juga akurat untuk menghitung pupuk."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="size-10 rounded-full bg-slate-200"></div>
+                                <div>
+                                    <p class="font-bold text-slate-900 text-sm">Bu Sari</p>
+                                    <p class="text-slate-400 text-xs">Pengusaha Hidroponik</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img alt="Petani Sukses" class="rounded-3xl shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM977hWNxyrVMBhuPKyR0J5hUi7YN5GdvyLieZjErJCtppHGJdSWAgNspXUVbMrJxE23vl8zbkyF7sc9jPqkbt4EkVK9hO2rNv1zNzh7zPHVCuLLrxqSqlNPb1vm3h11YrlZkhKqsKC4hTm-VA41AQgtWw-1fzL959s0N_Y0Y2yXSchuXzFj05IKY5vhbpGv3THA2G_6_mo_AdhhSZupAp4VzYWuR15RUCN__abENA-8oTraFPr77-B9vFWxsQkp3le32r0xdXcT8"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-black text-center text-slate-900 mb-12">Pertanyaan Umum</h2>
+            <div class="space-y-4">
+                <details class="group bg-slate-50 rounded-2xl border border-slate-100 p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex items-center justify-between gap-4">
+                        <h3 class="font-bold text-slate-900">Apakah aplikasi ini gratis digunakan?</h3>
+                        <span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-4 text-slate-500 text-sm leading-relaxed">Ya, KangkungKu dapat digunakan secara gratis oleh seluruh petani untuk mendiagnosa penyakit dan mengakses ensiklopedia.</p>
+                </details>
+                <details class="group bg-slate-50 rounded-2xl border border-slate-100 p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex items-center justify-between gap-4">
+                        <h3 class="font-bold text-slate-900">Seberapa akurat hasil diagnosanya?</h3>
+                        <span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-4 text-slate-500 text-sm leading-relaxed">Hasil diagnosa didasarkan pada metode Certainty Factor yang dihitung berdasarkan input gejala. Akurasi sangat bergantung pada ketepatan gejala yang Anda pilih.</p>
+                </details>
+                <details class="group bg-slate-50 rounded-2xl border border-slate-100 p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex items-center justify-between gap-4">
+                        <h3 class="font-bold text-slate-900">Apa itu Certainty Factor?</h3>
+                        <span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-4 text-slate-500 text-sm leading-relaxed">Certainty Factor (CF) adalah metode untuk menangani ketidakpastian dalam sistem pakar, yang memberikan nilai keyakinan terhadap suatu kesimpulan atau diagnosa.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <a href="/" class="flex items-center gap-2 mb-6">
+                        <div class="p-1.5 bg-primary rounded-lg text-secondary">
+                            <span class="material-symbols-outlined text-[20px] font-bold">eco</span>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight">KangkungKu</span>
+                    </a>
+                    <p class="text-slate-400 max-w-sm">Membantu petani kangkung air Indonesia meningkatkan kualitas panen melalui teknologi sistem pakar cerdas.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Navigasi</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="/diagnosis.html">Diagnosa</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="/encyclopedia.html">Ensiklopedia</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="/calculator.html">Kalkulator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Kontak</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                            info@kangkungku.id
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            Universitas Teknologi Mataram
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-slate-500 text-xs">
+                &copy; 2026 KangkungKu. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/auth.js"></script>
     <script src="/static/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('token');
+            const navAuth = document.getElementById('nav-auth');
+            if (token) {
+                navAuth.innerHTML = `
+                    <a href="/dashboard.html" class="hidden md:flex items-center justify-center h-10 px-5 rounded-lg bg-secondary text-white text-sm font-bold hover:bg-opacity-90 transition-all">
+                        Dasbor Pengguna
+                    </a>
+                    <button onclick="logout()" class="text-sm font-bold text-red-500 hover:text-red-700">Keluar</button>
+                `;
+            }
+        });
+    </script>
 </body>
 </html>

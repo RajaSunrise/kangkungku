@@ -47,3 +47,17 @@ class User(Base):
     hashed_password = Column(String)
     role = Column(String, default="user")
     is_active = Column(Boolean, default=True)
+
+class DiagnosaHistory(Base):
+    __tablename__ = "diagnosa_history"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    penyakit_id = Column(Integer, ForeignKey("penyakit.id"))
+    faktor_kepastian = Column(Float)
+    persentase = Column(Float)
+    gejala_input = Column(Text) # JSON string of selected symptoms
+    created_at = Column(String) # Simple date string for simplicity
+
+    user = relationship("User")
+    penyakit = relationship("Penyakit")

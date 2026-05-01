@@ -29,8 +29,37 @@
     </script>
 </head>
 <body class="bg-background-light text-secondary">
-    <div class="max-w-7xl mx-auto px-4 py-12">
-        <a href="/" class="mb-8 inline-block text-primary font-bold">Kembali ke Beranda</a>
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-border-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <div class="p-1.5 bg-primary rounded-lg text-secondary">
+                        <span class="material-symbols-outlined text-[20px] font-bold">eco</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-secondary">KangkungKu</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/" class="text-sm font-medium hover:text-primary transition-colors">Beranda</a>
+                    <a href="/diagnosis.html" class="text-sm font-medium hover:text-primary transition-colors">Diagnosa</a>
+                    <a href="/encyclopedia.html" class="text-sm font-medium hover:text-primary transition-colors">Ensiklopedia</a>
+                    <a href="/calculator.html" class="text-sm font-medium hover:text-primary transition-colors">Kalkulator</a>
+                    <a href="/community.html" class="text-sm font-medium hover:text-primary transition-colors">Komunitas</a>
+                    <a href="/blog.html" class="text-sm font-medium text-primary transition-colors">Blog</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="/dashboard.html" class="hidden md:flex items-center justify-center h-10 px-5 rounded-lg bg-secondary text-white text-sm font-bold hover:bg-opacity-90 transition-all">
+                        Dasbor Pengguna
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="px-4 lg:px-40 py-12 w-full max-w-[1440px] mx-auto">
+        <div class="mb-12">
+            <h1 class="text-[#111812] text-4xl lg:text-5xl font-black leading-tight tracking-[-0.033em] mb-4">Blog & Artikel</h1>
+        </div>
         <div class="flex flex-col lg:flex-row gap-8 mb-12">
             <div class="w-full lg:w-3/5 aspect-video rounded-xl bg-gray-200 relative overflow-hidden group">
                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_cd5wLfQrpkUL630iLHiz7W9b8yAW3K5eiZewInvx1gQHlnqxFg7XUfFmQpKA2-4BQwnY4-ebbgXMblwD3sEmCUadjFnmp03s1SudLFtCHiaF5Oe0XXQQWVmdc78rzNw_cb_K-5m3Tqj7c4aBeb1t4tYPmeI95mBPMGyf7v9FHY0BMDVNif7u7xKuFzxdeaPKF46yS7fKeHk-gS6iPKa-uv1kbqzCi7v_IGuxSija9Cdk3YsWrXL5yaWTmZVZgCQoGG5b5MvUnPc" class="w-full h-full object-cover"/>

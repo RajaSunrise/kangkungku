@@ -23,6 +23,25 @@ class Penyakit(PenyakitBase):
     class Config:
         from_attributes = True
 
+class DiagnosaHistoryRead(BaseModel):
+    id: int
+    user_id: Optional[int]
+    penyakit: Penyakit
+    faktor_kepastian: float
+    persentase: float
+    gejala_input: str
+    created_at: str
+
+    class Config:
+        from_attributes = True
+
+class DashboardStats(BaseModel):
+    total_users: int
+    total_diagnosa: int
+    total_penyakit: int
+    total_gejala: int
+    history_terbaru: List[DiagnosaHistoryRead]
+
 class GejalaPengguna(BaseModel):
     gejala_id: int
     keyakinan: float = 1.0  # Keyakinan pengguna (0.0 to 1.0)
@@ -49,6 +68,13 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     password: str
+
+class UserUpdate(BaseModel):
+    username: Optional[str] = None
+    email: Optional[str] = None
+    role: Optional[str] = None
+    is_active: Optional[bool] = None
+    password: Optional[str] = None
 
 class UserRead(UserBase):
     id: int

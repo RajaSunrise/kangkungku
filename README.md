@@ -74,6 +74,8 @@ Struktur basis data yang digunakan:
 erDiagram
     PENYAKIT ||--|{ ATURAN : memiliki
     GEJALA ||--|{ ATURAN : memiliki
+    USERS ||--|{ DIAGNOSA_HISTORY : memiliki
+    PENYAKIT ||--|{ DIAGNOSA_HISTORY : tercatat_di
 
     PENYAKIT {
         int id PK
@@ -95,25 +97,123 @@ erDiagram
         int id PK
         int penyakit_id FK
         int gejala_id FK
-        float pakar_cf "Bobot Pakar (0-1)"
+        float pakar_cf
+    }
+
+    USERS {
+        int id PK
+        string username
+        string email
+        string hashed_password
+        string role
+        boolean is_active
+    }
+
+    DIAGNOSA_HISTORY {
+        int id PK
+        int user_id FK
+        int penyakit_id FK
+        float faktor_kepastian
+        float persentase
+        text gejala_input
+        string created_at
     }
 ```
 
 ## 4. Activity Diagram
 
-Diagram aktivitas yang menggambarkan alur kerja sistem dalam melakukan diagnosa:
+Diagram aktivitas yang menggambarkan alur kerja sistem untuk Pengguna dan Admin dengan format *swimlane* (Pengguna vs Sistem):
+
+### 4.1. Alur Aktivitas Pengguna (User)
+
+Diagram ini mencakup proses diagnosa, melihat ensiklopedia, dan manajemen akun pengguna.
+,
+```mermaid
+graph TD
+    subgraph "Pengguna (User)"
+        U_Start([Mulai]) --> U_Landing[Buka Halaman Utama]
+        U_Landing --> U_Nav{Pilih Menu}
+        
+        U_Nav -- "Login/Register" --> U_Auth[Input Kredensial]
+        U_Nav -- "Diagnosa" --> U_Diag[Masuk Halaman Diagnosa]
+        U_Nav -- "Ensiklopedia" --> U_Ency[Buka Daftar Penyakit]
+        U_Nav -- "Riwayat" --> U_Hist[Lihat Riwayat Saya]
+        U_Nav -- "Fitur Lain" --> U_Other[Blog / Komunitas / Kalkulator]
+        
+        U_Diag --> U_Select[Pilih Gejala & Geser Slider CF]
+        U_Select --> U_Submit[Klik Dapatkan Hasil]
+        
+        U_Ency --> U_Detail[Lihat Detail & Solusi]
+    end
+
+    subgraph "Sistem (Backend/Database)"
+        U_Auth --> S_Auth[Validasi & Buat Token JWT]
+        S_Auth -- "Sukses" --> U_Landing
+        S_Auth -- "Gagal" --> U_Auth
+        
+        U_Diag --> S_GetG[Ambil Daftar Gejala dari DB]
+        S_GetG --> U_Diag
+        
+        U_Submit --> S_Calc[Hitung CF dengan Expert System]
+        S_Calc --> S_Save[Simpan Hasil ke History]
+        S_Save --> S_Result[Tampilkan Hasil & Persentase]
+        
+        U_Ency --> S_GetP[Ambil Data Penyakit & Gejala]
+        S_GetP --> U_Ency
+        
+        U_Hist --> S_CheckL{Cek Login?}
+        S_CheckL -- "Ya" --> S_GetH[Ambil Data History User]
+        S_CheckL -- "Tidak" --> S_Warn[Tampilkan Pesan Login]
+        S_GetH --> U_Hist
+
+        U_Other --> S_ShowO[Tampilkan Konten Halaman]
+    end
+
+    S_Result --> U_End([Selesai])
+    U_Detail --> U_End
+    S_Warn --> U_End
+    S_ShowO --> U_End
+```
+
+### 4.2. Alur Aktivitas Admin
+
+Diagram ini mencakup proses manajemen basis pengetahuan (gejala, penyakit, dan aturan).
 
 ```mermaid
 graph TD
-    start((Mulai)) --> input_gejala[Input Gejala & CF User]
-    input_gejala --> request_api[Kirim Request ke API]
-    request_api --> get_rules[Ambil Aturan dari DB]
-    get_rules --> calc_cf[Hitung CF Kombinasi]
-    calc_cf --> sort_result[Urutkan Hasil Diagnosa]
-    sort_result --> get_disease[Ambil Detail Penyakit]
-    get_disease --> return_response[Kirim Respon JSON]
-    return_response --> display[Tampilkan Hasil di UI]
-    display --> finish((Selesai))
+    subgraph "Admin"
+        A_Start([Mulai]) --> A_Login[Login Akun Admin]
+        A_Login --> A_Dash[Masuk Dashboard Admin]
+        A_Dash --> A_Menu{Pilih Manajemen}
+        
+        A_Menu -- "Kelola Gejala" --> A_Gejala[Tampilkan List Gejala]
+        A_Menu -- "Kelola Penyakit" --> A_Penyakit[Tampilkan List Penyakit]
+        A_Menu -- "Statistik" --> A_Stat[Lihat Grafik & Data]
+        
+        A_Gejala --> A_FormG[Tambah / Edit / Hapus Gejala]
+        A_Penyakit --> A_FormP[Tambah / Edit / Hapus Penyakit]
+        
+        A_FormG --> A_SaveG[Klik Simpan]
+        A_FormP --> A_SaveP[Klik Simpan]
+    end
+
+    subgraph "Sistem (Admin API)"
+        A_Login --> S_AuthA[Validasi Kredensial & Role Admin]
+        S_AuthA -- "Admin" --> A_Dash
+        S_AuthA -- "Bukan Admin" --> A_Login
+        
+        A_SaveG --> S_UpdateG[Update Database Gejala]
+        A_SaveP --> S_UpdateP[Update Database Penyakit]
+        
+        S_UpdateG --> S_Notif[Tampilkan Notifikasi Berhasil]
+        S_UpdateP --> S_Notif
+        
+        A_Stat --> S_GetS[Hitung Total Data & History]
+        S_GetS --> A_Stat
+    end
+
+    S_Notif --> A_End([Selesai])
+    A_Stat --> A_End
 ```
 
 ## 5. Class Diagram
@@ -145,6 +245,25 @@ classDiagram
         +float pakar_cf
     }
 
+    class User {
+        +int id
+        +str username
+        +str email
+        +str hashed_password
+        +str role
+        +bool is_active
+    }
+
+    class DiagnosaHistory {
+        +int id
+        +int user_id
+        +int penyakit_id
+        +float faktor_kepastian
+        +float persentase
+        +str gejala_input
+        +str created_at
+    }
+
     class ExpertSystem {
         +hitung_diagnosa(gejala_user, aturan_pakar)
     }
@@ -157,10 +276,14 @@ classDiagram
 
     Penyakit "1" -- "many" Aturan : has
     Gejala "1" -- "many" Aturan : has
+    User "1" -- "many" DiagnosaHistory : has
+    Penyakit "1" -- "many" DiagnosaHistory : recorded_in
     API_Endpoint ..> ExpertSystem : uses
     API_Endpoint ..> Aturan : queries
     API_Endpoint ..> Penyakit : queries
     API_Endpoint ..> Gejala : queries
+    API_Endpoint ..> User : manages
+    API_Endpoint ..> DiagnosaHistory : records
 ```
 
 ## 6. Sequence Diagram

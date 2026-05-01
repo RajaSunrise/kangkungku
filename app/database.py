@@ -1,7 +1,11 @@
 import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Default to SQLite, but support Postgres via env var
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./expert_system.db")
