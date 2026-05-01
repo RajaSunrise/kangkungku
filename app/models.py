@@ -47,6 +47,7 @@ class User(Base):
     hashed_password = Column(String)
     role = Column(String, default="user")
     is_active = Column(Boolean, default=True)
+    alamat = Column(String, nullable=True)
 
 class DiagnosaHistory(Base):
     __tablename__ = "diagnosa_history"

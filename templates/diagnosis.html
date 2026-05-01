@@ -42,6 +42,7 @@
                 <div class="hidden md:flex items-center gap-8">
                     <a href="/" class="text-sm font-medium hover:text-primary transition-colors">Beranda</a>
                     <a href="/diagnosis.html" class="text-sm font-medium text-primary transition-colors">Diagnosa</a>
+                    <a href="/guide.html" class="text-sm font-medium hover:text-primary transition-colors">Panduan</a>
                     <a href="/encyclopedia.html" class="text-sm font-medium hover:text-primary transition-colors">Ensiklopedia</a>
                     <a href="/calculator.html" class="text-sm font-medium hover:text-primary transition-colors">Kalkulator</a>
                     <a href="/community.html" class="text-sm font-medium hover:text-primary transition-colors">Komunitas</a>
@@ -50,8 +51,25 @@
                 <div id="nav-auth" class="flex items-center gap-4">
                     <a href="/login.html" class="text-sm font-bold text-slate-600 hover:text-primary transition-colors">Masuk</a>
                 </div>
+                <div class="md:hidden flex items-center ml-4">
+                    <button id="mobile-menu-btn" class="text-secondary hover:text-primary focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
             </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Beranda</a>
+            <a href="/diagnosis.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Diagnosa</a>
+            <a href="/guide.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Panduan</a>
+            <a href="/encyclopedia.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Ensiklopedia</a>
+            <a href="/calculator.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Kalkulator</a>
+            <a href="/community.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Komunitas</a>
+            <a href="/blog.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Blog</a>
+        </div>
+
     </nav>
 
     <div class="px-4 lg:px-40 py-12 w-full max-w-[1440px] mx-auto">
@@ -241,5 +259,16 @@
 
         document.addEventListener('DOMContentLoaded', muatGejala);
     </script>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
+
 </html>

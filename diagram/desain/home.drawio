@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="home_diag" name="Home Page">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Background -->
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry width="1200" height="1600" as="geometry" />
+        </mxCell>
+
+        <!-- Header / Navbar -->
+        <mxCell id="nav_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111812;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry width="1200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="logo" value="KangkungKu" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#2BEE4B;fontSize=32;fontStyle=1;fontFamily=Space Grotesk;" vertex="1" parent="1">
+          <mxGeometry x="80" y="20" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_item1" value="Beranda" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#2BEE4B;fontSize=16;fontFamily=Space Grotesk;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="25" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_item2" value="Tentang" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#D1D5DB;fontSize=16;fontFamily=Space Grotesk;" vertex="1" parent="1">
+          <mxGeometry x="600" y="25" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_item3" value="Penyakit" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#D1D5DB;fontSize=16;fontFamily=Space Grotesk;" vertex="1" parent="1">
+          <mxGeometry x="700" y="25" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_login" value="Masuk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#2BEE4B;strokeWidth=2;fontColor=#2BEE4B;fontStyle=1;fontSize=16;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry x="900" y="20" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_register" value="Daftar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2BEE4B;strokeColor=#2BEE4B;fontColor=#111812;fontStyle=1;fontSize=16;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="20" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Hero Section -->
+        <mxCell id="hero_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111812;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry y="80" width="1200" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="hero_title" value="Solusi Cerdas untuk Pertanian Kangkung Anda" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=48;fontStyle=1;fontFamily=Space Grotesk;" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="500" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="hero_sub" value="Sistem pakar diagnosa penyakit kangkung air berbasis kecerdasan buatan. Temukan penyakit dan dapatkan solusinya dalam hitungan detik." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#9CA3AF;fontSize=18;fontFamily=Space Grotesk;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="480" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hero_btn" value="Mulai Diagnosa Sekarang" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2BEE4B;strokeColor=#2BEE4B;fontColor=#111812;fontStyle=1;fontSize=18;arcSize=20;" vertex="1" parent="1">
+          <mxGeometry x="80" y="420" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hero_img_placeholder" value="[ Ilustrasi Petani / Kangkung ]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F2937;strokeColor=#374151;fontColor=#6B7280;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="640" y="160" width="480" height="340" as="geometry" />
+        </mxCell>
+
+        <!-- Features Section -->
+        <mxCell id="feat_title" value="Mengapa Memilih KangkungKu?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=36;fontStyle=1;fontFamily=Space Grotesk;" vertex="1" parent="1">
+          <mxGeometry x="300" y="660" width="600" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Feature 1 -->
+        <mxCell id="feat1_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="780" width="320" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="feat1_icon" value="[Icon]" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=none;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="110" y="810" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="feat1_title" value="Diagnosa Akurat" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="890" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feat1_desc" value="Menggunakan metode Certainty Factor berdasarkan pengetahuan pakar pertanian." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#4B5563;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="110" y="930" width="260" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Feature 2 -->
+        <mxCell id="feat2_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="780" width="320" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="feat2_icon" value="[Icon]" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=none;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="470" y="810" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="feat2_title" value="Solusi Instan" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="890" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feat2_desc" value="Dapatkan panduan penanganan dan pengobatan secara langsung setelah diagnosa." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#4B5563;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="470" y="930" width="260" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Feature 3 -->
+        <mxCell id="feat3_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="780" width="320" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="feat3_icon" value="[Icon]" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=none;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="830" y="810" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="feat3_title" value="Riwayat Tersimpan" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="890" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feat3_desc" value="Pantau riwayat kesehatan tanaman Anda melalui dashboard khusus pengguna." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#4B5563;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="830" y="930" width="260" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Footer -->
+        <mxCell id="footer_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111812;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry y="1400" width="1200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="footer_logo" value="KangkungKu" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#2BEE4B;fontSize=28;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1460" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="footer_copy" value="© 2024 KangkungKu. All rights reserved." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#9CA3AF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1520" width="300" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Panduan Penggunaan - KangkungKu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee4b",
+                        "secondary": "#111812",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen font-body">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <div class="p-1.5 bg-primary rounded-lg text-secondary">
+                        <span class="material-symbols-outlined text-[20px] font-bold">eco</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-secondary">KangkungKu</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/" class="text-sm font-medium hover:text-primary transition-colors">Beranda</a>
+                    <a href="/diagnosis.html" class="text-sm font-medium hover:text-primary transition-colors">Diagnosa</a>
+                    <a href="/guide.html" class="text-sm font-medium text-primary transition-colors">Panduan</a>
+                    <a href="/encyclopedia.html" class="text-sm font-medium hover:text-primary transition-colors">Ensiklopedia</a>
+                    <a href="/calculator.html" class="text-sm font-medium hover:text-primary transition-colors">Kalkulator</a>
+                </div>
+                <div id="nav-auth" class="flex items-center gap-4 hidden md:flex">
+                    <a href="/login.html" class="text-sm font-bold text-gray-600 hover:text-primary transition-colors">Masuk</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-secondary hover:text-primary focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Beranda</a>
+            <a href="/diagnosis.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Diagnosa</a>
+            <a href="/guide.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary">Panduan</a>
+            <a href="/encyclopedia.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Ensiklopedia</a>
+            <a href="/calculator.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Kalkulator</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        <h1 class="text-4xl font-bold text-secondary mb-4 text-center">Panduan Sistem Pakar</h1>
+        <p class="text-gray-600 text-center mb-12 text-lg">Langkah-langkah mudah menggunakan aplikasi KangkungKu untuk mendiagnosa penyakit tanaman kangkung air Anda.</p>
+
+        <div class="space-y-8">
+            <!-- Step 1 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start">
+                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 text-green-800 flex items-center justify-center font-bold text-xl">1</div>
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-2">Buat Akun / Masuk</h3>
+                    <p class="text-gray-600 leading-relaxed">Untuk menyimpan riwayat diagnosa dan menggunakan fitur eksklusif (seperti Kalkulator Pupuk), silakan mendaftar akun terlebih dahulu. Jika sudah punya, Anda cukup masuk (Login) melalui tombol di kanan atas.</p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start">
+                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 text-green-800 flex items-center justify-center font-bold text-xl">2</div>
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-2">Pilih Gejala Tanaman</h3>
+                    <p class="text-gray-600 leading-relaxed">Buka menu <strong>Diagnosa</strong>. Anda akan melihat daftar gejala. Centang checkbox pada gejala yang Anda temukan secara fisik di tanaman kangkung Anda.</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start">
+                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 text-green-800 flex items-center justify-center font-bold text-xl">3</div>
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-2">Tentukan Tingkat Keyakinan</h3>
+                    <p class="text-gray-600 leading-relaxed">Setelah mencentang gejala, gunakan slider yang muncul di sebelahnya untuk menentukan seberapa yakin Anda dengan gejala tersebut. Geser ke kanan jika sangat yakin, atau ke kiri jika ragu-ragu. Sistem kami akan memperhitungkannya menggunakan metode <em>Certainty Factor</em>.</p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start">
+                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 text-green-800 flex items-center justify-center font-bold text-xl">4</div>
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-2">Dapatkan Hasil & Solusi</h3>
+                    <p class="text-gray-600 leading-relaxed">Klik tombol "Proses Diagnosa". Sistem akan langsung menampilkan persentase kemungkinan penyakit, deskripsi detail, serta solusi atau langkah penanganan yang harus segera Anda lakukan. Anda bisa mengakses hasil sebelumnya di halaman Dashboard Anda.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">eco</span>
+                    <span class="font-bold text-secondary">KangkungKu</span>
+                </div>
+                <p class="text-gray-500 text-sm">© 2024 Sistem Pakar Diagnosa Penyakit Kangkung Air. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/auth.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const token = getToken();
+            const navAuth = document.getElementById("nav-auth");
+
+            if (token) {
+                const userInfo = getUserInfo();
+                navAuth.innerHTML = `
+                    <div class="relative group">
+                        <button class="flex items-center gap-2 hover:bg-gray-100 px-3 py-2 rounded-lg transition-colors">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center font-bold text-secondary">
+                                ${userInfo.username.charAt(0).toUpperCase()}
+                            </div>
+                            <span class="font-medium text-sm hidden sm:block">${userInfo.username}</span>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="p-2 space-y-1">
+                                ${userInfo.role === 'admin' ? '<a href="/admin.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Panel Admin</a>' : ''}
+                                <a href="/dashboard.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Dasbor Saya</a>
+                                <hr class="my-1 border-gray-100">
+                                <button onclick="logout()" class="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg font-medium">Keluar</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        });
+
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

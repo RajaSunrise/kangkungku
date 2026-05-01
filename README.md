@@ -325,60 +325,53 @@ sequenceDiagram
 
 ## 7. Tabel Data Penyakit
 
-Daftar 10 penyakit yang dapat didiagnosa oleh sistem:
+Daftar 8 penyakit yang dapat didiagnosa oleh sistem:
 
-| No | Nama Penyakit | Nama Ilmiah |
-|---|---|---|
-| 1 | Karat Putih (White Rust) | *Albugo ipomoeae-panduratae* |
-| 2 | Bercak Daun Cercospora | *Cercospora ipomoeae* |
-| 3 | Virus Mosaik Kangkung | *Water spinach mosaic virus* |
-| 4 | Layu Fusarium | *Fusarium oxysporum* |
-| 5 | Busuk Akar Pythium | *Pythium spp.* |
-| 6 | Busuk Batang Rhizoctonia | *Rhizoctonia solani* |
-| 7 | Bercak Daun Alternaria | *Alternaria spp.* |
-| 8 | Bercak Daun Bakteri | *Pseudomonas / Xanthomonas* |
-| 9 | Embun Tepung (Powdery Mildew) | *Erysiphe spp.* |
-| 10 | Embun Bulu (Downy Mildew) | *Peronospora spp.* |
+| No | Kode | Nama Penyakit | Nama Ilmiah |
+|---|---|---|---|
+| 1 | P01 | Karat Putih (White Rust) | *Albugo ipomoeae-panduratae* |
+| 2 | P02 | Bercak Daun Cercospora | *Cercospora ipomoeae* |
+| 3 | P03 | Virus Mosaik Kangkung | *Water spinach mosaic virus* |
+| 4 | P04 | Layu Fusarium | *Fusarium oxysporum* |
+| 5 | P05 | Busuk Akar Pythium | *Pythium spp.* |
+| 6 | P06 | Busuk Batang Rhizoctonia | *Rhizoctonia solani* |
+| 7 | P07 | Embun Tepung (Powdery Mildew) | *Erysiphe spp.* |
+| 8 | P08 | Embun Bulu (Downy Mildew) | *Peronospora spp.* |
 
 ## 8. Tabel Data Gejala
 
-Daftar 18 gejala yang digunakan untuk diagnosa:
+Daftar 15 gejala yang digunakan untuk diagnosa:
 
-| Kode | Deskripsi Gejala |
-|---|---|
-| G01 | Bercak putih menonjol pada sisi bawah daun |
-| G02 | Bercak kuning pada sisi atas daun |
-| G03 | Daun melengkung atau terdistorsi |
-| G04 | Bercak bulat dengan pusat abu-abu/putih |
-| G05 | Bercak dengan tepi coklat tua/merah |
-| G06 | Pola mosaik hijau terang/gelap pada daun |
-| G07 | Pertumbuhan tanaman kerdil |
-| G08 | Daun bagian bawah menguning |
-| G09 | Tanaman layu pada siang hari, pulih malam hari |
-| G10 | Jaringan pembuluh batang berwarna coklat |
-| G11 | Akar berwarna coklat dan lembek |
-| G12 | Batang lunak dan gelap di dekat tanah |
-| G13 | Lesi cekung kemerahan pada batang |
-| G14 | Bercak seperti target dengan cincin konsentris |
-| G15 | Bercak basah dikelilingi halo kuning |
-| G16 | Serbuk putih pada permukaan daun |
-| G17 | Pertumbuhan berbulu halus abu-abu/ungu di bawah daun |
-| G24 | Daun berlubang (shot-holes) |
+| No | Kode Gejala | Nama Gejala |
+|---|---|---|
+| 1 | G001 | Bercak putih menonjol pada sisi bawah daun |
+| 2 | G002 | Bercak kuning pada sisi atas daun |
+| 3 | G003 | Daun melengkung atau terdistorsi |
+| 4 | G004 | Bercak bulat dengan pusat abu-abu/putih |
+| 5 | G005 | Bercak dengan tepi coklat tua/merah |
+| 6 | G006 | Pola mosaik hijau terang/gelap pada daun |
+| 7 | G007 | Pertumbuhan tanaman kerdil |
+| 8 | G008 | Daun bagian bawah menguning |
+| 9 | G009 | Tanaman layu pada siang hari, pulih malam hari |
+| 10 | G010 | Jaringan pembuluh batang berwarna coklat |
+| 11 | G011 | Akar berwarna coklat dan lembek |
+| 12 | G012 | Batang lunak dan gelap di dekat tanah |
+| 13 | G013 | Lesi cekung kemerahan pada batang |
+| 14 | G014 | Pertumbuhan berbulu halus abu-abu/ungu di bawah daun |
+| 15 | G015 | Serbuk putih pada permukaan daun |
 
 ## 8.1. Tabel Hubungan Penyakit dan Gejala
 
-| Penyakit | G01 | G02 | G03 | G04 | G05 | G06 | G07 | G08 | G09 | G10 | G11 | G12 | G13 | G14 | G15 | G16 | G17 | G24 |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Karat Putih (White Rust) | ✓ | ✓ | ✓ | | | | | | | | | | | | | | | |
-| Bercak Daun Cercospora | | | | ✓ | ✓ | | | ✓ | | | | | | | | | | |
-| Virus Mosaik Kangkung | | | ✓ | | | ✓ | ✓ | | | | | | | | | | | |
-| Layu Fusarium | | | | | | | ✓ | ✓ | ✓ | ✓ | | | | | | | | |
-| Busuk Akar Pythium | | | | | | | ✓ | | ✓ | | ✓ | | | | | | | |
-| Busuk Batang Rhizoctonia | | | | | | | | | ✓ | | | ✓ | ✓ | | | | | |
-| Bercak Daun Alternaria | | | | | | | | ✓ | | | | | | ✓ | | | | |
-| Bercak Daun Bakteri | | | | | | | | ✓ | | | | | | | ✓ | | | ✓ |
-| Embun Tepung (Powdery Mildew) | | | ✓ | | | | | | | | | | | | | ✓ | | |
-| Embun Bulu (Downy Mildew) | | ✓ | | | | | | ✓ | | | | | | | | | ✓ | |
+| Penyakit | G001 | G002 | G003 | G004 | G005 | G006 | G007 | G008 | G009 | G010 | G011 | G012 | G013 | G014 | G015 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| P01 | √ | √ | √ | | | | | | | | | | | | |
+| P02 | | | | √ | √ | | | √ | | | | | | | |
+| P03 | | | √ | | | √ | √ | | | | | | | | |
+| P04 | | | | | | | √ | √ | √ | √ | | | | | |
+| P05 | | | | | | | √ | | √ | | √ | | | | |
+| P06 | | | | | | | | | √ | | | √ | √ | | |
+| P07 | | | √ | | | | | | | | | | | | √ |
+| P08 | | √ | | | | | | √ | | | | | | √ | |
 
 ## 9. Tabel Basis Pengetahuan (Rule dan Bobot Pakar)
 

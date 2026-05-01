@@ -5,6 +5,9 @@ from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from typing import List
 import json
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
 from . import crud, models, schemas, database, expert_system, security
 from .routers import auth, admin
@@ -12,7 +15,10 @@ from .routers import auth, admin
 # Buat tabel
 models.Base.metadata.create_all(bind=database.engine)
 
+limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(title="KangkungKu API")
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
@@ -132,6 +138,10 @@ def read_root(request: Request):
 def read_diagnosis(request: Request):
     return templates.TemplateResponse("diagnosis.html", {"request": request})
 
+@app.get("/guide.html")
+def read_guide(request: Request):
+    return templates.TemplateResponse("guide.html", {"request": request})
+
 @app.get("/encyclopedia.html")
 def read_encyclopedia(request: Request):
     return templates.TemplateResponse("encyclopedia.html", {"request": request})
@@ -153,6 +163,7 @@ def read_dashboard(request: Request):
     return templates.TemplateResponse("dashboard.html", {"request": request})
 
 @app.get("/admin.html")
+@limiter.limit("5/minute")
 def read_admin(request: Request):
     return templates.TemplateResponse("admin.html", {"request": request})
 
