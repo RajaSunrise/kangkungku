@@ -1,103 +1,58 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="21.0.0" type="device">
-  <diagram id="user_dash" name="User Dashboard">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+  <diagram id="user_diag" name="User Dashboard">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+
+        <!-- Background -->
         <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry width="1200" height="1000" as="geometry" />
+          <mxGeometry width="1200" height="1200" as="geometry" />
         </mxCell>
 
-        <!-- Header -->
+        <!-- Header / Navbar -->
         <mxCell id="nav_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111812;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry width="1200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="logo" value="KangkungKu" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#2BEE4B;fontSize=24;fontStyle=1;fontFamily=Space Grotesk;" vertex="1" parent="1">
-          <mxGeometry x="80" y="25" width="200" height="30" as="geometry" />
+        <mxCell id="logo" value="KangkungKu" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#2BEE4B;fontSize=32;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="20" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="user_profile" value="Halo, User123" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="880" y="25" width="120" height="30" as="geometry" />
+        <mxCell id="nav_links" value="Beranda &nbsp; | &nbsp; Diagnosa &nbsp; | &nbsp; Dashboard" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#D1D5DB;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="400" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="btn_logout" value="Keluar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#EF4444;strokeWidth=2;fontColor=#EF4444;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1040" y="25" width="80" height="30" as="geometry" />
-        </mxCell>
-
-        <!-- Main Content Area -->
-        <mxCell id="content_title" value="Mulai Diagnosa Baru" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=28;fontStyle=1;fontFamily=Space Grotesk;" vertex="1" parent="1">
-          <mxGeometry x="80" y="120" width="400" height="40" as="geometry" />
+        <mxCell id="btn_logout" value="Keluar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#EF4444;strokeWidth=2;fontColor=#EF4444;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="20" width="100" height="40" as="geometry" />
         </mxCell>
 
-        <!-- Diagnostic Form Card -->
-        <mxCell id="form_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;arcSize=2;" vertex="1" parent="1">
-          <mxGeometry x="80" y="180" width="700" height="600" as="geometry" />
+        <!-- Profil Area -->
+        <mxCell id="prof_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="140" width="1000" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="form_desc" value="Pilih gejala yang dialami oleh tanaman kangkung Anda. Anda dapat memilih lebih dari satu gejala." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#6B7280;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="120" y="210" width="620" height="40" as="geometry" />
+        <mxCell id="prof_avatar" value="[Icon]" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=none;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="130" y="170" width="80" height="80" as="geometry" />
         </mxCell>
-
-        <!-- Symptoms Checkboxes -->
-        <mxCell id="chk1" value="☑" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#10B981;fontSize=20;" vertex="1" parent="1">
-          <mxGeometry x="120" y="280" width="30" height="30" as="geometry" />
+        <mxCell id="prof_name" value="Budi Petani" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=28;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="170" width="300" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="lbl1" value="[G001] Bercak putih menonjol pada sisi bawah daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#1F2937;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="160" y="280" width="400" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="slider1" value="----------O----- (0.8)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#10B981;" vertex="1" parent="1">
-          <mxGeometry x="580" y="280" width="150" height="30" as="geometry" />
+        <mxCell id="prof_addr" value="Alamat: Jl. Pertanian No. 12" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#4B5563;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="240" y="210" width="300" height="30" as="geometry" />
         </mxCell>
 
-        <mxCell id="chk2" value="☐" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#9CA3AF;fontSize=20;" vertex="1" parent="1">
-          <mxGeometry x="120" y="330" width="30" height="30" as="geometry" />
+        <!-- Riwayat Diagnosa -->
+        <mxCell id="hist_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="340" width="1000" height="500" as="geometry" />
         </mxCell>
-        <mxCell id="lbl2" value="[G002] Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#1F2937;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="160" y="330" width="400" height="30" as="geometry" />
+        <mxCell id="hist_title" value="Riwayat Diagnosa Terakhir" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="370" width="400" height="40" as="geometry" />
         </mxCell>
-
-        <mxCell id="chk3" value="☑" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#10B981;fontSize=20;" vertex="1" parent="1">
-          <mxGeometry x="120" y="380" width="30" height="30" as="geometry" />
+        <mxCell id="hist_table_head" value="Tanggal    |    Penyakit    |    Tingkat Kepastian    |    Aksi" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=none;fontColor=#4B5563;align=left;spacingLeft=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="440" width="940" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="lbl3" value="[G003] Daun melengkung atau terdistorsi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#1F2937;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="160" y="380" width="400" height="30" as="geometry" />
+        <mxCell id="hist_row1" value="12 Mei 2024  |  Karat Putih  |  85.5%  |  [Lihat Detail]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#E5E7EB;fontColor=#111812;align=left;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="130" y="480" width="940" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="slider3" value="----O----------- (0.4)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#10B981;" vertex="1" parent="1">
-          <mxGeometry x="580" y="380" width="150" height="30" as="geometry" />
-        </mxCell>
-
-        <mxCell id="chk4" value="☐" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#9CA3AF;fontSize=20;" vertex="1" parent="1">
-          <mxGeometry x="120" y="430" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="lbl4" value="[G004] Bercak bulat dengan pusat abu-abu/putih" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#1F2937;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="160" y="430" width="400" height="30" as="geometry" />
-        </mxCell>
-
-        <mxCell id="more_dots" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#9CA3AF;fontSize=24;" vertex="1" parent="1">
-          <mxGeometry x="160" y="480" width="50" height="30" as="geometry" />
-        </mxCell>
-
-        <mxCell id="btn_submit" value="Proses Diagnosa" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2BEE4B;strokeColor=#2BEE4B;fontColor=#111812;fontStyle=1;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="120" y="680" width="620" height="60" as="geometry" />
-        </mxCell>
-
-        <!-- Sidebar / History -->
-        <mxCell id="sidebar_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;arcSize=2;" vertex="1" parent="1">
-          <mxGeometry x="820" y="180" width="300" height="600" as="geometry" />
-        </mxCell>
-        <mxCell id="hist_title" value="Riwayat Terakhir" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=20;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="840" y="200" width="260" height="30" as="geometry" />
-        </mxCell>
-
-        <!-- History Item 1 -->
-        <mxCell id="hist1_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#E5E7EB;" vertex="1" parent="1">
-          <mxGeometry x="840" y="250" width="260" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="hist1_date" value="01 Mei 2024" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#6B7280;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="850" y="260" width="100" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="hist1_res" value="Karat Putih (85%)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=16;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="850" y="280" width="240" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="hist1_link" value="Lihat Detail →" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#10B981;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="850" y="300" width="100" height="20" as="geometry" />
+        <mxCell id="hist_row2" value="05 Mei 2024  |  Bercak Daun  |  72.0%  |  [Lihat Detail]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#E5E7EB;fontColor=#111812;align=left;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="130" y="530" width="940" height="50" as="geometry" />
         </mxCell>
 
       </root>

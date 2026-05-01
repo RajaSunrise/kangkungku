@@ -150,10 +150,6 @@ def read_encyclopedia(request: Request):
 def read_calculator(request: Request):
     return templates.TemplateResponse("calculator.html", {"request": request})
 
-@app.get("/community.html")
-def read_community(request: Request):
-    return templates.TemplateResponse("community.html", {"request": request})
-
 @app.get("/blog.html")
 def read_blog(request: Request):
     return templates.TemplateResponse("blog.html", {"request": request})
