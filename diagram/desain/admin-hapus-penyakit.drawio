@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="admin_hapus_penyakit" name="Admin Hapus Penyakit">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Overlay Background -->
+        <mxCell id="overlay" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;fillOpacity=50;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry width="1200" height="800" as="geometry" />
+        </mxCell>
+
+        <!-- Modal Card -->
+        <mxCell id="modal" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="250" width="400" height="250" as="geometry" />
+        </mxCell>
+        
+        <!-- Warning Icon -->
+        <mxCell id="icon" value="warning" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#DC2626;fontSize=48;fontFamily=Material Icons;" vertex="1" parent="1">
+          <mxGeometry x="575" y="280" width="50" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="title" value="Konfirmasi Hapus" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="340" width="300" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg" value="Apakah Anda yakin ingin menghapus data penyakit ini? Tindakan ini tidak dapat dibatalkan." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#4B5563;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="450" y="370" width="300" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Buttons -->
+        <mxCell id="btn_cancel" value="Batal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=none;fontColor=#4B5563;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="480" y="430" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_delete" value="Hapus" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DC2626;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="620" y="430" width="100" height="40" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

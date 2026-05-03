@@ -33,16 +33,19 @@ Berikut adalah alur proses diagnosa dalam sistem:
 
 ```mermaid
 flowchart TD
-    A([Mulai]) --> B[Pengguna Memilih Gejala yang Diamati]
-    B --> C[Pengguna Memasukkan Tingkat Keyakinan (CF User)]
+    Start(( )):::startNode --> B(Pengguna Memilih Gejala yang Diamati)
+    B --> C(Pengguna Memasukkan Tingkat Keyakinan CF User)
     C --> D{Apakah ada gejala lain?}
     D -- Ya --> B
-    D -- Tidak --> E[Sistem Mengambil Data Aturan & Bobot Pakar]
-    E --> F[Hitung CF Pakar * CF User]
-    F --> G[Hitung CF Kombinasi untuk Setiap Penyakit]
-    G --> H[Urutkan Hasil Diagnosa Berdasarkan Nilai CF Tertinggi]
-    H --> I[Tampilkan Hasil Diagnosa & Solusi]
-    I --> J([Selesai])
+    D -- Tidak --> E(Sistem Mengambil Data Aturan & Bobot Pakar)
+    E --> F(Hitung CF Pakar * CF User)
+    F --> G(Hitung CF Kombinasi untuk Setiap Penyakit)
+    G --> H(Urutkan Hasil Diagnosa Berdasarkan Nilai CF Tertinggi)
+    H --> I(Tampilkan Hasil Diagnosa & Solusi)
+    I --> End((( ))):::endNode
+
+    classDef startNode fill:#000,stroke:#000;
+    classDef endNode fill:#000,stroke:#000,stroke-width:4px;
 ```
 
 ## 2. Use Case Diagram
@@ -129,50 +132,58 @@ Diagram aktivitas yang menggambarkan alur kerja sistem untuk Pengguna dan Admin 
 Diagram ini mencakup proses diagnosa, melihat ensiklopedia, dan manajemen akun pengguna.
 ,
 ```mermaid
-graph TD
+flowchart TD
     subgraph "Pengguna (User)"
-        U_Start([Mulai]) --> U_Landing[Buka Halaman Utama]
+        U_Start(( )):::startNode --> U_Landing(Buka Halaman Utama)
         U_Landing --> U_Nav{Pilih Menu}
         
-        U_Nav -- "Login/Register" --> U_Auth[Input Kredensial]
-        U_Nav -- "Diagnosa" --> U_Diag[Masuk Halaman Diagnosa]
-        U_Nav -- "Ensiklopedia" --> U_Ency[Buka Daftar Penyakit]
-        U_Nav -- "Riwayat" --> U_Hist[Lihat Riwayat Saya]
-        U_Nav -- "Fitur Lain" --> U_Other[Komunitas / Kalkulator]
+        U_Nav -- "Login" --> U_Login(Input Kredensial)
+        U_Nav -- "Register" --> U_Reg(Input Data Akun Baru)
+        U_Nav -- "Diagnosa" --> U_Diag(Masuk Halaman Diagnosa)
+        U_Nav -- "Ensiklopedia" --> U_Ency(Buka Daftar Penyakit)
+        U_Nav -- "Riwayat" --> U_Hist(Lihat Riwayat Saya)
+        U_Nav -- "Fitur Lain" --> U_Other(Komunitas / Kalkulator)
         
-        U_Diag --> U_Select[Pilih Gejala & Geser Slider CF]
-        U_Select --> U_Submit[Klik Dapatkan Hasil]
+        U_Diag --> U_Select(Pilih Gejala & Geser Slider CF)
+        U_Select --> U_Submit(Klik Dapatkan Hasil)
         
-        U_Ency --> U_Detail[Lihat Detail & Solusi]
+        U_Ency --> U_Detail(Lihat Detail & Solusi)
     end
 
     subgraph "Sistem (Backend/Database)"
-        U_Auth --> S_Auth[Validasi & Buat Token JWT]
+        U_Login --> S_Auth{Validasi Login?}
         S_Auth -- "Sukses" --> U_Landing
-        S_Auth -- "Gagal" --> U_Auth
+        S_Auth -- "Gagal" --> U_Login
+
+        U_Reg --> S_Reg{Validasi Data?}
+        S_Reg -- "Sukses" --> U_Login
+        S_Reg -- "Gagal" --> U_Reg
         
-        U_Diag --> S_GetG[Ambil Daftar Gejala dari DB]
+        U_Diag --> S_GetG(Ambil Daftar Gejala dari DB)
         S_GetG --> U_Diag
         
-        U_Submit --> S_Calc[Hitung CF dengan Expert System]
-        S_Calc --> S_Save[Simpan Hasil ke History]
-        S_Save --> S_Result[Tampilkan Hasil & Persentase]
+        U_Submit --> S_Calc(Hitung CF dengan Expert System)
+        S_Calc --> S_Save(Simpan Hasil ke History)
+        S_Save --> S_Result(Tampilkan Hasil & Persentase)
         
-        U_Ency --> S_GetP[Ambil Data Penyakit & Gejala]
+        U_Ency --> S_GetP(Ambil Data Penyakit & Gejala)
         S_GetP --> U_Ency
         
         U_Hist --> S_CheckL{Cek Login?}
-        S_CheckL -- "Ya" --> S_GetH[Ambil Data History User]
-        S_CheckL -- "Tidak" --> S_Warn[Tampilkan Pesan Login]
+        S_CheckL -- "Ya" --> S_GetH(Ambil Data History User)
+        S_CheckL -- "Tidak" --> S_Warn(Tampilkan Pesan Login)
         S_GetH --> U_Hist
 
-        U_Other --> S_ShowO[Tampilkan Konten Halaman]
+        U_Other --> S_ShowO(Tampilkan Konten Halaman)
     end
 
-    S_Result --> U_End([Selesai])
+    S_Result --> U_End((( ))):::endNode
     U_Detail --> U_End
     S_Warn --> U_End
     S_ShowO --> U_End
+
+    classDef startNode fill:#000,stroke:#000;
+    classDef endNode fill:#000,stroke:#000,stroke-width:4px;
 ```
 
 ### 4.2. Alur Aktivitas Admin
@@ -180,40 +191,43 @@ graph TD
 Diagram ini mencakup proses manajemen basis pengetahuan (gejala, penyakit, dan aturan).
 
 ```mermaid
-graph TD
+flowchart TD
     subgraph "Admin"
-        A_Start([Mulai]) --> A_Login[Login Akun Admin]
-        A_Login --> A_Dash[Masuk Dashboard Admin]
+        A_Start(( )):::startNode --> A_Login(Login Akun Admin)
+        A_Login --> A_Dash(Masuk Dashboard Admin)
         A_Dash --> A_Menu{Pilih Manajemen}
         
-        A_Menu -- "Kelola Gejala" --> A_Gejala[Tampilkan List Gejala]
-        A_Menu -- "Kelola Penyakit" --> A_Penyakit[Tampilkan List Penyakit]
-        A_Menu -- "Statistik" --> A_Stat[Lihat Grafik & Data]
+        A_Menu -- "Kelola Gejala" --> A_Gejala(Tampilkan List Gejala)
+        A_Menu -- "Kelola Penyakit" --> A_Penyakit(Tampilkan List Penyakit)
+        A_Menu -- "Statistik" --> A_Stat(Lihat Grafik & Data)
         
-        A_Gejala --> A_FormG[Tambah / Edit / Hapus Gejala]
-        A_Penyakit --> A_FormP[Tambah / Edit / Hapus Penyakit]
+        A_Gejala --> A_FormG(Tambah / Edit / Hapus Gejala)
+        A_Penyakit --> A_FormP(Tambah / Edit / Hapus Penyakit)
         
-        A_FormG --> A_SaveG[Klik Simpan]
-        A_FormP --> A_SaveP[Klik Simpan]
+        A_FormG --> A_SaveG(Klik Simpan)
+        A_FormP --> A_SaveP(Klik Simpan)
     end
 
     subgraph "Sistem (Admin API)"
-        A_Login --> S_AuthA[Validasi Kredensial & Role Admin]
+        A_Login --> S_AuthA{Validasi Admin?}
         S_AuthA -- "Admin" --> A_Dash
         S_AuthA -- "Bukan Admin" --> A_Login
         
-        A_SaveG --> S_UpdateG[Update Database Gejala]
-        A_SaveP --> S_UpdateP[Update Database Penyakit]
+        A_SaveG --> S_UpdateG(Update Database Gejala)
+        A_SaveP --> S_UpdateP(Update Database Penyakit)
         
-        S_UpdateG --> S_Notif[Tampilkan Notifikasi Berhasil]
+        S_UpdateG --> S_Notif(Tampilkan Notifikasi Berhasil)
         S_UpdateP --> S_Notif
         
-        A_Stat --> S_GetS[Hitung Total Data & History]
+        A_Stat --> S_GetS(Hitung Total Data & History)
         S_GetS --> A_Stat
     end
 
-    S_Notif --> A_End([Selesai])
+    S_Notif --> A_End((( ))):::endNode
     A_Stat --> A_End
+
+    classDef startNode fill:#000,stroke:#000;
+    classDef endNode fill:#000,stroke:#000,stroke-width:4px;
 ```
 
 ## 5. Class Diagram
@@ -471,3 +485,55 @@ Metode pengujian:
 2.  **Tingkat Akurasi**: $\frac{\text{Jumlah Kasus Benar}}{\text{Total Kasus}} \times 100\%$
 
 Sistem ini dirancang untuk memberikan rekomendasi awal. Jika hasil diagnosa memiliki persentase rendah (< 50%), disarankan untuk berkonsultasi langsung dengan ahli pertanian.
+
+## 14. Struktur Basis Data
+
+Berikut adalah struktur tabel-tabel yang digunakan dalam basis data sistem pakar KangkungKu:
+
+### 14.1. Tabel: penyakit
+| No | Field | Type | Size | Keterangan |
+|---|---|---|---|---|
+| 1 | id | Int | 11 | Identitas penyakit (Primary Key) |
+| 2 | nama | Varchar | 255 | Nama penyakit |
+| 3 | nama_ilmiah | Varchar | 255 | Nama ilmiah penyakit |
+| 4 | deskripsi | Text | - | Deskripsi lengkap penyakit |
+| 5 | solusi | Text | - | Solusi penanganan penyakit |
+| 6 | url_gambar | Varchar | 255 | Path atau URL gambar penyakit |
+
+### 14.2. Tabel: gejala
+| No | Field | Type | Size | Keterangan |
+|---|---|---|---|---|
+| 1 | id | Int | 11 | Identitas gejala (Primary Key) |
+| 2 | kode | Varchar | 10 | Kode unik gejala |
+| 3 | deskripsi | Varchar | 255 | Deskripsi gejala |
+| 4 | url_gambar | Varchar | 255 | Path atau URL gambar gejala |
+
+### 14.3. Tabel: aturan
+| No | Field | Type | Size | Keterangan |
+|---|---|---|---|---|
+| 1 | id | Int | 11 | Identitas aturan (Primary Key) |
+| 2 | penyakit_id | Int | 11 | ID Penyakit (Foreign Key) |
+| 3 | gejala_id | Int | 11 | ID Gejala (Foreign Key) |
+| 4 | pakar_cf | Float | - | Nilai Certainty Factor dari pakar |
+
+### 14.4. Tabel: users
+| No | Field | Type | Size | Keterangan |
+|---|---|---|---|---|
+| 1 | id | Int | 11 | Identitas user (Primary Key) |
+| 2 | username | Varchar | 50 | Username untuk login |
+| 3 | email | Varchar | 100 | Alamat email user |
+| 4 | hashed_password | Varchar | 255 | Password yang telah di-hash |
+| 5 | role | Varchar | 20 | Role pengguna (admin/user) |
+| 6 | is_active | Boolean | - | Status keaktifan akun |
+| 7 | alamat | Varchar | 255 | Alamat pengguna |
+
+### 14.5. Tabel: diagnosa_history
+| No | Field | Type | Size | Keterangan |
+|---|---|---|---|---|
+| 1 | id | Int | 11 | Identitas riwayat (Primary Key) |
+| 2 | user_id | Int | 11 | ID User (Foreign Key) |
+| 3 | penyakit_id | Int | 11 | ID Penyakit (Foreign Key) |
+| 4 | faktor_kepastian | Float | - | Nilai faktor kepastian hasil diagnosa |
+| 5 | persentase | Float | - | Persentase keyakinan hasil diagnosa |
+| 6 | gejala_input | Text | - | Data JSON gejala yang diinputkan |
+| 7 | created_at | Varchar | 50 | Waktu dilakukannya diagnosa |

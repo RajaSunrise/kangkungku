@@ -8,7 +8,7 @@
           <mxGeometry x="400" y="10" width="500" height="35" as="geometry"/>
         </mxCell>
         <mxCell id="s" value="MULAI" style="ellipse;whiteSpace=wrap;html=1;fillColor=#2A9D8F;fontColor=#FFFFFF;fontStyle=1;fontSize=13;strokeColor=#264653;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="580" y="55" width="130" height="50" as="geometry"/>
+          <mxGeometry x="580" y="55" width="40" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="hal" value="Tampilkan&#xa;Halaman Utama" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#A8DADC;fontSize=10;strokeColor=#1D3557;size=0.25;" vertex="1" parent="1">
           <mxGeometry x="580" y="130" width="130" height="50" as="geometry"/>
@@ -18,7 +18,7 @@
         </mxCell>
 
         <!-- Register -->
-        <mxCell id="ir" value="Input Data Registrasi&#xa;(Username, Email, Password)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#A8DADC;fontSize=9;strokeColor=#1D3557;size=18;" vertex="1" parent="1">
+        <mxCell id="ir" value="Input Data Registrasi&#xa;(Username, Email, Password)" style="rounded=1;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#A8DADC;fontSize=9;strokeColor=#1D3557;size=18;" vertex="1" parent="1">
           <mxGeometry x="310" y="220" width="185" height="55" as="geometry"/>
         </mxCell>
         <mxCell id="vr" value="Validasi&#xa;Data?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E9C46A;strokeColor=#264653;fontSize=9;fontStyle=1;" vertex="1" parent="1">
@@ -32,7 +32,7 @@
         </mxCell>
 
         <!-- Login -->
-        <mxCell id="il" value="Input Username&#xa;&amp; Password" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#A8DADC;fontSize=9;strokeColor=#1D3557;size=18;" vertex="1" parent="1">
+        <mxCell id="il" value="Input Username&#xa;&amp; Password" style="rounded=1;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#A8DADC;fontSize=9;strokeColor=#1D3557;size=18;" vertex="1" parent="1">
           <mxGeometry x="795" y="220" width="160" height="55" as="geometry"/>
         </mxCell>
         <mxCell id="vl" value="Login&#xa;Valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E9C46A;strokeColor=#264653;fontSize=9;fontStyle=1;" vertex="1" parent="1">
@@ -46,7 +46,7 @@
         </mxCell>
 
         <!-- Dashboard -->
-        <mxCell id="dash" value="Dashboard Pengguna" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#457B9D;fontColor=#FFFFFF;fontSize=11;fontStyle=1;strokeColor=#264653;" vertex="1" parent="1">
+        <mxCell id="dash" value="Dashboard Pengguna" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#457B9D;fontColor=#FFFFFF;fontSize=11;fontStyle=1;strokeColor=#264653;" vertex="1" parent="1">
           <mxGeometry x="565" y="480" width="160" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="d2" value="Pilih&#xa;Menu?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E9C46A;strokeColor=#264653;fontSize=11;fontStyle=1;" vertex="1" parent="1">
@@ -57,10 +57,10 @@
         <mxCell id="mDiag" value="Diagnosa&#xa;Penyakit" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#264653;fontColor=#FFFFFF;fontSize=10;size=0.15;" vertex="1" parent="1">
           <mxGeometry x="330" y="560" width="120" height="45" as="geometry"/>
         </mxCell>
-        <mxCell id="iGej" value="Pilih Gejala &amp;&#xa;Input CF User (0-1)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#A8DADC;fontSize=9;strokeColor=#1D3557;size=15;" vertex="1" parent="1">
+        <mxCell id="iGej" value="Pilih Gejala &amp;&#xa;Input CF User (0-1)" style="rounded=1;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#A8DADC;fontSize=9;strokeColor=#1D3557;size=15;" vertex="1" parent="1">
           <mxGeometry x="295" y="635" width="170" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="pCF" value="Proses Perhitungan&#xa;Certainty Factor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#457B9D;fontColor=#FFFFFF;fontSize=9;strokeColor=#264653;" vertex="1" parent="1">
+        <mxCell id="pCF" value="Proses Perhitungan&#xa;Certainty Factor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#457B9D;fontColor=#FFFFFF;fontSize=9;strokeColor=#264653;" vertex="1" parent="1">
           <mxGeometry x="315" y="715" width="140" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="oHasil" value="Tampilkan Hasil&#xa;(Penyakit, %, Solusi)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#2A9D8F;fontColor=#FFFFFF;fontSize=9;strokeColor=#264653;size=0.25;" vertex="1" parent="1">
@@ -98,7 +98,7 @@
         </mxCell>
 
         <mxCell id="e" value="SELESAI" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E76F51;fontColor=#FFFFFF;fontStyle=1;fontSize=13;strokeColor=#264653;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="580" y="960" width="130" height="50" as="geometry"/>
+          <mxGeometry x="580" y="960" width="40" height="40" as="geometry"/>
         </mxCell>
 
         <!-- ARROWS -->
@@ -144,13 +144,13 @@
         <mxCell id="l1" value="Mulai/Selesai" style="ellipse;whiteSpace=wrap;html=1;fillColor=#2A9D8F;fontColor=#FFFFFF;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="25" y="88" width="80" height="25" as="geometry"/>
         </mxCell>
-        <mxCell id="l2" value="Proses" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#457B9D;fontColor=#FFFFFF;fontSize=8;" vertex="1" parent="1">
+        <mxCell id="l2" value="Proses" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#457B9D;fontColor=#FFFFFF;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="25" y="120" width="80" height="22" as="geometry"/>
         </mxCell>
         <mxCell id="l3" value="Keputusan" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E9C46A;fontSize=8;strokeColor=#264653;" vertex="1" parent="1">
           <mxGeometry x="25" y="150" width="80" height="38" as="geometry"/>
         </mxCell>
-        <mxCell id="l4" value="Input/Output" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#A8DADC;fontSize=8;strokeColor=#1D3557;size=10;" vertex="1" parent="1">
+        <mxCell id="l4" value="Input/Output" style="rounded=1;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#A8DADC;fontSize=8;strokeColor=#1D3557;size=10;" vertex="1" parent="1">
           <mxGeometry x="25" y="196" width="90" height="25" as="geometry"/>
         </mxCell>
         <mxCell id="l5" value="Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#264653;fontColor=#FFFFFF;fontSize=8;size=6;" vertex="1" parent="1">
