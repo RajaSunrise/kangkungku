@@ -1,61 +1,9 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ensiklopedia - KangkungKu</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#2bee4b",
-                        "secondary": "#111812",
-                        "background-light": "#f6f8f6",
-                        "surface-light": "#ffffff",
-                        "border-light": "#dbe6dd",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Space Grotesk", "sans-serif"],
-                    },
-                },
-            },
-        }
-    </script>
-</head>
-<body class="bg-background-light text-secondary">
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-border-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="/" class="flex items-center gap-2">
-                    <div class="p-1.5 bg-primary rounded-lg text-secondary">
-                        <span class="material-symbols-outlined text-[20px] font-bold">eco</span>
-                    </div>
-                    <span class="text-xl font-bold tracking-tight text-secondary">KangkungKu</span>
-                </a>
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="/" class="text-sm font-medium hover:text-primary transition-colors">Beranda</a>
-                    <a href="/diagnosis.html" class="text-sm font-medium hover:text-primary transition-colors">Diagnosa</a>
-                    <a href="/encyclopedia.html" class="text-sm font-medium text-primary transition-colors">Ensiklopedia</a>
-                    <a href="/calculator.html" class="text-sm font-medium hover:text-primary transition-colors">Kalkulator</a>
-                    <a href="/blog.html" class="text-sm font-medium hover:text-primary transition-colors">Blog</a>
-                </div>
-                <div class="flex items-center gap-4">
-                    <a href="/dashboard.html" class="hidden md:flex items-center justify-center h-10 px-5 rounded-lg bg-secondary text-white text-sm font-bold hover:bg-opacity-90 transition-all">
-                        Dasbor Pengguna
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+{% extends "base.html" %}
 
-    <div class="max-w-[1280px] mx-auto px-4 md:px-8 py-12 flex flex-col gap-8">
+{% block title %}Ensiklopedia - KangkungKu{% endblock %}
+
+{% block content %}
+<div class="max-w-[1280px] mx-auto px-4 md:px-8 py-12 flex flex-col gap-8">
         <div class="text-center max-w-2xl mx-auto mb-8">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
                 <span class="material-symbols-outlined text-sm">local_florist</span>
@@ -73,8 +21,12 @@
         </div>
     </div>
 
-    <script src="/static/js/script.js"></script>
-    <script>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script>
         async function muatPenyakit() {
             const data = await ambilData('/penyakit');
             const wadah = document.getElementById('daftar-penyakit');
@@ -115,5 +67,4 @@
         }
         document.addEventListener('DOMContentLoaded', muatPenyakit);
     </script>
-</body>
-</html>
+{% endblock %}

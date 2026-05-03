@@ -146,6 +146,10 @@ def read_guide(request: Request):
 def read_encyclopedia(request: Request):
     return templates.TemplateResponse("encyclopedia.html", {"request": request})
 
+@app.get("/calculator.html")
+def read_calculator(request: Request):
+    return templates.TemplateResponse("calculator.html", {"request": request})
+
 @app.get("/dashboard.html")
 def read_dashboard(request: Request):
     return templates.TemplateResponse("dashboard.html", {"request": request})

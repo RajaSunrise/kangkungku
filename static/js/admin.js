@@ -1,3 +1,16 @@
+let deleteCallback = null;
+
+function showDeleteModal(description, callback) {
+    document.getElementById("modal-description").innerText = description;
+    document.getElementById("delete-modal").classList.remove("hidden");
+    deleteCallback = callback;
+}
+
+function hideDeleteModal() {
+    document.getElementById("delete-modal").classList.add("hidden");
+    deleteCallback = null;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     checkAdmin();
     loadDashboard();
@@ -26,6 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         logout();
     });
+
+    const cancelBtn = document.getElementById("cancel-delete-btn");
+    if (cancelBtn) {
+        cancelBtn.addEventListener("click", hideDeleteModal);
+    }
+
+    const confirmBtn = document.getElementById("confirm-delete-btn");
+    if (confirmBtn) {
+        confirmBtn.addEventListener("click", () => {
+            if (deleteCallback) {
+                deleteCallback();
+            }
+            hideDeleteModal();
+        });
+    }
 });
 
 function updateActiveNav(activeId) {
@@ -280,21 +308,21 @@ async function updateDisease(event, id) {
 }
 
 async function deleteDisease(id) {
-    if (!confirm("Yakin ingin menghapus penyakit ini?")) return;
+    showDeleteModal("Yakin ingin menghapus penyakit ini?", async () => {
+        try {
+            const response = await fetch(`/admin/penyakit/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Authorization": `Bearer ${getToken()}`
+                }
+            });
 
-    try {
-        const response = await fetch(`/admin/penyakit/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Authorization": `Bearer ${getToken()}`
-            }
-        });
-
-        if (!response.ok) throw new Error("Gagal menghapus penyakit");
-        loadDiseases();
-    } catch (error) {
-        alert(error.message);
-    }
+            if (!response.ok) throw new Error("Gagal menghapus penyakit");
+            loadDiseases();
+        } catch (error) {
+            alert(error.message);
+        }
+    });
 }
 
 function showAddDiseaseModal() {
@@ -493,21 +521,21 @@ async function updateSymptom(event, id) {
 }
 
 async function deleteSymptom(id) {
-    if (!confirm("Yakin ingin menghapus gejala ini?")) return;
+    showDeleteModal("Yakin ingin menghapus gejala ini?", async () => {
+        try {
+            const response = await fetch(`/admin/gejala/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Authorization": `Bearer ${getToken()}`
+                }
+            });
 
-    try {
-        const response = await fetch(`/admin/gejala/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Authorization": `Bearer ${getToken()}`
-            }
-        });
-
-        if (!response.ok) throw new Error("Gagal menghapus gejala");
-        loadSymptoms();
-    } catch (error) {
-        alert(error.message);
-    }
+            if (!response.ok) throw new Error("Gagal menghapus gejala");
+            loadSymptoms();
+        } catch (error) {
+            alert(error.message);
+        }
+    });
 }
 
 function showAddSymptomModal() {
@@ -830,22 +858,22 @@ async function updateUser(event, id) {
 }
 
 async function deleteUser(id) {
-    if (!confirm("Yakin ingin menghapus pengguna ini? Semua data diagnosa terkait juga akan dihapus.")) return;
+    showDeleteModal("Yakin ingin menghapus pengguna ini? Semua data diagnosa terkait juga akan dihapus.", async () => {
+        try {
+            const response = await fetch(`/admin/users/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Authorization": `Bearer ${getToken()}`
+                }
+            });
 
-    try {
-        const response = await fetch(`/admin/users/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Authorization": `Bearer ${getToken()}`
+            if (!response.ok) {
+                const err = await response.json();
+                throw new Error(err.detail || "Gagal menghapus user");
             }
-        });
-
-        if (!response.ok) {
-            const err = await response.json();
-            throw new Error(err.detail || "Gagal menghapus user");
+            loadUsers();
+        } catch (error) {
+            alert(error.message);
         }
-        loadUsers();
-    } catch (error) {
-        alert(error.message);
-    }
+    });
 }

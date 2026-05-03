@@ -1,60 +1,20 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Dasbor - KangkungKu</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#2bee4b",
-                        "secondary": "#111812",
-                        "background-light": "#f6f8f6",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Space Grotesk", "sans-serif"],
-                    },
-                },
-            },
-        }
-    </script>
-</head>
-<body class="bg-background-light text-secondary">
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-border-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="/" class="flex items-center gap-2">
-                    <div class="p-1.5 bg-primary rounded-lg text-secondary">
-                        <span class="material-symbols-outlined text-[20px] font-bold">eco</span>
-                    </div>
-                    <span class="text-xl font-bold tracking-tight text-secondary">KangkungKu</span>
-                </a>
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="/" class="text-sm font-medium hover:text-primary transition-colors">Beranda</a>
-                    <a href="/diagnosis.html" class="text-sm font-medium hover:text-primary transition-colors">Diagnosa</a>
-                    <a href="/guide.html" class="text-sm font-medium hover:text-primary transition-colors">Panduan</a>
-                    <a href="/encyclopedia.html" class="text-sm font-medium hover:text-primary transition-colors">Ensiklopedia</a>
-                    <a href="/calculator.html" class="text-sm font-medium hover:text-primary transition-colors">Kalkulator</a>
-                    <a href="/blog.html" class="text-sm font-medium hover:text-primary transition-colors">Blog</a>
-                </div>
-                <div class="flex items-center gap-4">
-                    <button onclick="logout()" class="text-sm font-bold text-red-500 hover:text-red-700">Keluar</button>
-                </div>
-            </div>
-        </div>
-    </nav>
+{% extends "base.html" %}
 
-    <div class="flex min-h-[calc(100vh-64px)]">
+{% block title %}Dashboard - KangkungKu{% endblock %}
+
+{% block content %}
+<div class="flex min-h-[calc(100vh-64px)] relative">
+        <!-- Mobile Sidebar Toggle -->
+        <button onclick="document.getElementById('user-sidebar').classList.toggle('-translate-x-full')" class="lg:hidden absolute top-4 left-4 z-40 p-2 bg-white rounded-lg shadow-sm border border-slate-200 text-slate-600 hover:text-primary focus:outline-none">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+
         <!-- Sidebar Dashboard -->
-        <aside class="w-64 bg-white border-r border-slate-200 hidden lg:block">
-            <div class="p-6">
+        <aside id="user-sidebar" class="fixed inset-y-0 left-0 transform -translate-x-full lg:relative lg:translate-x-0 z-50 transition-transform duration-300 ease-in-out w-64 bg-white border-r border-slate-200 flex flex-col pt-16 lg:pt-0 h-full">
+            <button onclick="document.getElementById('user-sidebar').classList.add('-translate-x-full')" class="absolute top-4 right-4 p-2 rounded-md hover:bg-slate-100 lg:hidden focus:outline-none text-slate-500">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="p-6 overflow-y-auto">
                 <div class="flex items-center gap-3 mb-8">
                     <div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
                         <span class="material-symbols-outlined">person</span>
@@ -109,15 +69,6 @@
                 </div>
                 <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm group hover:border-primary/50 transition-all">
                     <div class="flex items-center justify-between mb-4">
-                        <div class="p-3 rounded-2xl bg-primary/10 text-primary">
-                            <span class="material-symbols-outlined">eco</span>
-                        </div>
-                    </div>
-                    <p class="text-slate-400 text-[10px] font-black uppercase tracking-widest">Tanaman Sehat</p>
-                    <h3 id="stat-healthy-count" class="text-3xl font-black text-slate-900 mt-1">0</h3>
-                </div>
-                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm group hover:border-primary/50 transition-all">
-                    <div class="flex items-center justify-between mb-4">
                         <div class="p-3 rounded-2xl bg-red-50 text-red-600">
                             <span class="material-symbols-outlined">warning</span>
                         </div>
@@ -141,8 +92,10 @@
             </div>
         </main>
     </div>
-    <script src="/static/js/auth.js"></script>
-    <script>
+{% endblock %}
+
+{% block scripts %}
+<script>
         document.addEventListener("DOMContentLoaded", async () => {
             const token = checkAuth();
             if (!token) return;
@@ -165,7 +118,6 @@
                 document.getElementById('stat-total-diagnosa').innerText = history.length;
                 const diseaseCount = history.filter(h => h.persentase > 50).length;
                 document.getElementById('stat-disease-count').innerText = diseaseCount;
-                document.getElementById('stat-healthy-count').innerText = history.length - diseaseCount;
                 document.getElementById('user-sidebar-name').innerText = user.username;
 
                 if (history.length === 0) {
@@ -210,5 +162,4 @@
             window.location.href = `/result.html?id=${id}`;
         }
     </script>
-</body>
-</html>
+{% endblock %}
