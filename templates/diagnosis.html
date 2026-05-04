@@ -1,76 +1,9 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Diagnosa - KangkungKu</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#2bee4b",
-                        "secondary": "#111812",
-                        "background-light": "#f6f8f6",
-                        "surface-light": "#ffffff",
-                        "border-light": "#dbe6dd",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Space Grotesk", "sans-serif"],
-                    },
-                },
-            },
-        }
-    </script>
-</head>
-<body class="bg-background-light text-secondary">
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-border-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="/" class="flex items-center gap-2">
-                    <div class="p-1.5 bg-primary rounded-lg text-secondary">
-                        <span class="material-symbols-outlined text-[20px] font-bold">eco</span>
-                    </div>
-                    <span class="text-xl font-bold tracking-tight text-secondary">KangkungKu</span>
-                </a>
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="/" class="text-sm font-medium hover:text-primary transition-colors">Beranda</a>
-                    <a href="/diagnosis.html" class="text-sm font-medium text-primary transition-colors">Diagnosa</a>
-                    <a href="/guide.html" class="text-sm font-medium hover:text-primary transition-colors">Panduan</a>
-                    <a href="/encyclopedia.html" class="text-sm font-medium hover:text-primary transition-colors">Ensiklopedia</a>
-                    <a href="/calculator.html" class="text-sm font-medium hover:text-primary transition-colors">Kalkulator</a>
-                    <a href="/blog.html" class="text-sm font-medium hover:text-primary transition-colors">Blog</a>
-                </div>
-                <div id="nav-auth" class="flex items-center gap-4">
-                    <a href="/login.html" class="text-sm font-bold text-slate-600 hover:text-primary transition-colors">Masuk</a>
-                </div>
-                <div class="md:hidden flex items-center ml-4">
-                    <button id="mobile-menu-btn" class="text-secondary hover:text-primary focus:outline-none">
-                        <span class="material-symbols-outlined text-3xl">menu</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+{% extends "base.html" %}
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 pt-2 pb-4 space-y-2">
-            <a href="/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Beranda</a>
-            <a href="/diagnosis.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Diagnosa</a>
-            <a href="/guide.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Panduan</a>
-            <a href="/encyclopedia.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Ensiklopedia</a>
-            <a href="/calculator.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Kalkulator</a>
-            <a href="/blog.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary">Blog</a>
-        </div>
+{% block title %}Diagnosa - KangkungKu{% endblock %}
 
-    </nav>
-
-    <div class="px-4 lg:px-40 py-12 w-full max-w-[1440px] mx-auto">
+{% block content %}
+<div class="px-4 lg:px-40 py-12 w-full max-w-[1440px] mx-auto">
         <div class="flex flex-col lg:flex-row gap-8">
             <div class="flex-1 min-w-0">
                 <div class="mb-8">
@@ -103,9 +36,15 @@
         </div>
     </div>
 
-    <script src="/static/js/auth.js"></script>
-    <script src="/static/js/script.js"></script>
-    <script>
+
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const token = localStorage.getItem('token');
             const navAuth = document.getElementById('nav-auth');
@@ -149,9 +88,12 @@
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <div id="icon-${g.id}" class="p-3 rounded-lg bg-slate-100 text-slate-600">
-                                <span class="material-symbols-outlined text-3xl">${dapatkanIcon(g.deskripsi)}</span>
-                            </div>
+                            ${g.url_gambar
+                                ? `<img src="${g.url_gambar}" alt="${g.kode}" class="w-12 h-12 object-cover rounded-lg bg-slate-100">`
+                                : `<div id="icon-${g.id}" class="p-3 rounded-lg bg-slate-100 text-slate-600">
+                                    <span class="material-symbols-outlined text-3xl">${dapatkanIcon(g.deskripsi)}</span>
+                                   </div>`
+                            }
                             <div>
                                 <h3 class="text-lg font-bold mb-1">${g.kode}</h3>
                                 <p class="text-sm text-slate-500 leading-relaxed">${g.deskripsi}</p>
@@ -183,16 +125,20 @@
                 el.classList.add('border-transparent');
                 check.classList.add('hidden');
                 slider.classList.add('hidden');
-                icon.classList.remove('bg-yellow-100', 'text-yellow-600');
-                icon.classList.add('bg-slate-100', 'text-slate-600');
+                if (icon) {
+                    icon.classList.remove('bg-yellow-100', 'text-yellow-600');
+                    icon.classList.add('bg-slate-100', 'text-slate-600');
+                }
             } else {
                 gejalaDipilih[id] = 0.8;
                 el.classList.add('border-primary');
                 el.classList.remove('border-transparent');
                 check.classList.remove('hidden');
                 slider.classList.remove('hidden');
-                icon.classList.add('bg-yellow-100', 'text-yellow-600');
-                icon.classList.remove('bg-slate-100', 'text-slate-600');
+                if (icon) {
+                    icon.classList.add('bg-yellow-100', 'text-yellow-600');
+                    icon.classList.remove('bg-slate-100', 'text-slate-600');
+                }
 
                 // Reset slider visual
                 document.querySelector(`#slider-container-${id} input`).value = 0.8;
@@ -258,7 +204,7 @@
         document.addEventListener('DOMContentLoaded', muatGejala);
     </script>
 
-    <script>
+<script>
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileBtn && mobileMenu) {
@@ -267,6 +213,4 @@
             });
         }
     </script>
-</body>
-
-</html>
+{% endblock %}
