@@ -1,5 +1,5 @@
 from typing import List, Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 class GejalaBase(BaseModel):
     kode: str
@@ -23,6 +23,27 @@ class Penyakit(PenyakitBase):
     class Config:
         from_attributes = True
 
+# Aturan (Rules) Schemas
+class AturanBase(BaseModel):
+    penyakit_id: int
+    gejala_id: int
+    pakar_cf: float
+
+    @field_validator('pakar_cf')
+    @classmethod
+    def validate_cf(cls, v):
+        if not (0.0 <= v <= 1.0):
+            raise ValueError('CF pakar harus antara 0.0 dan 1.0')
+        return v
+
+class AturanRead(AturanBase):
+    id: int
+    penyakit: Optional[Penyakit] = None
+    gejala: Optional[Gejala] = None
+
+    class Config:
+        from_attributes = True
+
 class DiagnosaHistoryRead(BaseModel):
     id: int
     user_id: Optional[int]
@@ -40,6 +61,7 @@ class DashboardStats(BaseModel):
     total_diagnosa: int
     total_penyakit: int
     total_gejala: int
+    total_aturan: int
     history_terbaru: List[DiagnosaHistoryRead]
 
 class GejalaPengguna(BaseModel):

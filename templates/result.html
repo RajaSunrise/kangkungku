@@ -33,7 +33,7 @@
         <!-- Header Section -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
             <div class="space-y-1">
-                <div class="flex items-center gap-2 text-primary font-bold text-sm tracking-widest uppercase">
+                <div class="flex items-center gap-2 text-primary-text font-bold text-sm tracking-widest uppercase">
                     <span class="h-[2px] w-8 bg-primary"></span>
                     Hasil Analisis Pakar
                 </div>
@@ -76,7 +76,7 @@
                                     Probabilitas Tertinggi
                                 </div>
                                 <h3 id="nama-penyakit" class="text-4xl font-black text-slate-900 mb-2 leading-tight"></h3>
-                                <p id="nama-ilmiah" class="text-primary text-xl italic font-medium mb-6"></p>
+                                <p id="nama-ilmiah" class="text-primary-text text-xl italic font-medium mb-6"></p>
                                 
                                 <div id="gambar-wadah" class="hidden w-full max-w-md rounded-2xl overflow-hidden border border-slate-200 shadow-lg mb-6">
                                     <img id="gambar-penyakit" src="" alt="Gambar Penyakit" class="w-full h-auto object-cover">
@@ -87,7 +87,7 @@
                                 <div class="relative size-24 flex items-center justify-center">
                                     <svg class="size-full -rotate-90 transform" viewBox="0 0 36 36">
                                         <path class="text-slate-100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="3.5"></path>
-                                        <path id="circle-progress" class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeDasharray="0, 100" strokeLinecap="round" strokeWidth="3.5" style="transition: stroke-dasharray 1s ease-out"></path>
+                                        <path id="circle-progress" class="text-primary-text" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeDasharray="0, 100" strokeLinecap="round" strokeWidth="3.5" style="transition: stroke-dasharray 1s ease-out"></path>
                                     </svg>
                                     <div class="absolute flex flex-col items-center">
                                         <span id="persentase" class="text-2xl font-black text-slate-900">0%</span>
@@ -102,7 +102,7 @@
 
                         <div class="mt-10 bg-slate-50/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-100 relative group transition-all hover:bg-slate-50">
                             <h4 class="font-black text-slate-900 text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
-                                <span class="material-symbols-outlined text-primary text-xl">biotech</span>
+                                <span class="material-symbols-outlined text-primary-text text-xl">biotech</span>
                                 Analisis Patologi
                             </h4>
                             <p id="deskripsi" class="text-slate-600 text-base leading-relaxed"></p>
@@ -111,7 +111,7 @@
 
                     <div class="p-8 md:p-10 bg-white">
                         <div class="flex items-center gap-3 mb-8">
-                            <div class="p-2 rounded-lg bg-primary/10 text-primary">
+                            <div class="p-2 rounded-lg bg-primary/10 text-primary-text">
                                 <span class="material-symbols-outlined text-2xl font-bold">healing</span>
                             </div>
                             <h4 class="text-2xl font-black text-slate-900">Protokol Pemulihan</h4>
@@ -154,7 +154,7 @@
         <div id="no-result" class="hidden p-10 bg-white rounded-xl text-center border border-slate-200">
             <h3 class="text-xl font-bold">Tidak ada penyakit yang teridentifikasi.</h3>
             <p class="text-slate-500 mb-4">Gejala yang diberikan tidak cocok dengan penyakit yang diketahui secara kuat.</p>
-            <a href="/diagnosis.html" class="text-primary font-bold">Coba Lagi</a>
+            <a href="/diagnosis.html" class="text-primary-text font-bold">Coba Lagi</a>
         </div>
     </div>
 
@@ -264,7 +264,7 @@
                                             ${points.map(p => `
                                                 <li class="flex items-start gap-4 group/item">
                                                     <div class="mt-1 flex-shrink-0 size-5 rounded-full bg-slate-50 flex items-center justify-center group-hover/item:bg-primary/10 transition-colors">
-                                                        <span class="material-symbols-outlined text-[10px] text-slate-400 group-hover/item:text-primary font-black">arrow_forward_ios</span>
+                                                        <span class="material-symbols-outlined text-[10px] text-slate-400 group-hover/item:text-primary-text font-black">arrow_forward_ios</span>
                                                     </div>
                                                     <span class="text-sm text-slate-600 leading-relaxed font-medium">${p.trim()}.</span>
                                                 </li>
@@ -290,9 +290,9 @@
                                 <span class="material-symbols-outlined text-6xl">warning</span>
                             </div>
                             <div class="flex items-start gap-4 relative z-10">
-                                <span class="material-symbols-outlined text-primary font-bold">report_problem</span>
+                                <span class="material-symbols-outlined text-primary-text font-bold">report_problem</span>
                                 <div class="space-y-1">
-                                    <p class="text-sm font-black uppercase tracking-widest text-primary">Peringatan Keamanan</p>
+                                    <p class="text-sm font-black uppercase tracking-widest text-primary-text">Peringatan Keamanan</p>
                                     <p class="text-xs text-slate-400 leading-relaxed">Gunakan alat pelindung diri (masker & sarung tangan) saat menangani pestisida. Patuhi dosis pada kemasan produk demi keselamatan Anda dan lingkungan.</p>
                                 </div>
                             </div>
@@ -320,7 +320,7 @@
                         <ul class="space-y-4">
                             ${dataGejala.map(g => `
                                 <li class="flex items-start gap-4 p-3 rounded-2xl bg-slate-50 border border-slate-100 transition-all hover:bg-white hover:shadow-md hover:border-primary/20 group">
-                                    <div class="size-8 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <div class="size-8 rounded-xl bg-white flex items-center justify-center text-primary-text shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
                                         <span class="material-symbols-outlined text-sm font-bold">check</span>
                                     </div>
                                     <span class="text-sm text-slate-600 leading-tight font-medium">${g.deskripsi}</span>
@@ -349,7 +349,7 @@
                             <div class="flex-1 min-w-0">
                                 <div class="flex justify-between items-center mb-1">
                                     <span class="font-black text-[10px] uppercase tracking-wider text-slate-700 truncate">${h.penyakit.nama}</span>
-                                    <span class="text-[10px] font-black text-primary bg-primary/10 px-2 py-0.5 rounded-full">${h.persentase}%</span>
+                                    <span class="text-[10px] font-black text-primary-text bg-primary/10 px-2 py-0.5 rounded-full">${h.persentase}%</span>
                                 </div>
                                 <div class="w-full bg-slate-200/50 rounded-full h-1 overflow-hidden">
                                     <div class="bg-primary h-full rounded-full transition-all duration-1000" style="width: ${h.persentase}%"></div>

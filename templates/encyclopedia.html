@@ -13,11 +13,55 @@
         </div>
 
         <div id="loading" class="flex justify-center p-10">
-            <span class="material-symbols-outlined animate-spin text-4xl text-primary">autorenew</span>
+            <span class="material-symbols-outlined animate-spin text-4xl text-primary-text">autorenew</span>
         </div>
 
         <div id="daftar-penyakit" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
             <!-- Penyakit akan dimuat di sini -->
+        </div>
+    </div>
+
+    <!-- Modal Detail Penyakit -->
+    <div id="modal-detail" class="fixed inset-0 z-[100] hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm transition-opacity" onclick="tutupDetail()"></div>
+        
+        <!-- Modal Panel -->
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0">
+            <div class="relative bg-white rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:max-w-2xl w-full border border-slate-100 flex flex-col max-h-[90vh]">
+                
+                <!-- Modal Header with Image -->
+                <div class="relative h-48 sm:h-64 shrink-0">
+                    <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent"></div>
+                    <button onclick="tutupDetail()" class="absolute top-4 right-4 size-8 rounded-full bg-black/20 text-white flex items-center justify-center hover:bg-black/40 backdrop-blur-sm transition-colors">
+                        <span class="material-symbols-outlined text-xl">close</span>
+                    </button>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <p id="modal-ilmiah" class="text-primary font-medium italic text-sm mb-1"></p>
+                        <h3 id="modal-nama" class="text-2xl sm:text-3xl font-black text-white tracking-tight"></h3>
+                    </div>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="p-6 sm:p-8 overflow-y-auto">
+                    <div class="mb-8">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="material-symbols-outlined text-amber-500">info</span>
+                            <h4 class="text-lg font-bold text-secondary">Deskripsi Penyakit</h4>
+                        </div>
+                        <p id="modal-deskripsi" class="text-slate-600 leading-relaxed text-sm sm:text-base whitespace-pre-line"></p>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-primary/5 border border-primary/20">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="material-symbols-outlined text-primary-text">healing</span>
+                            <h4 class="text-lg font-bold text-secondary">Solusi & Penanganan</h4>
+                        </div>
+                        <p id="modal-solusi" class="text-slate-700 leading-relaxed text-sm sm:text-base whitespace-pre-line"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -27,16 +71,19 @@
 
 {% block scripts %}
 <script>
+        let dataPenyakitGlobal = [];
+
         async function muatPenyakit() {
             const data = await ambilData('/penyakit');
+            dataPenyakitGlobal = data || [];
             const wadah = document.getElementById('daftar-penyakit');
             const pemuat = document.getElementById('loading');
 
-            if (data) {
+            if (dataPenyakitGlobal.length > 0) {
                 pemuat.classList.add('hidden');
                 wadah.classList.remove('hidden');
 
-                wadah.innerHTML = data.map(p => `
+                wadah.innerHTML = dataPenyakitGlobal.map(p => `
                     <article class="group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 flex flex-col h-full">
                         <div class="relative h-48 overflow-hidden">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60"></div>
@@ -49,14 +96,14 @@
                         </div>
                         <div class="p-5 flex flex-col flex-grow">
                             <div class="mb-3">
-                                <h3 class="text-xl font-bold text-text-main group-hover:text-primary transition-colors">${p.nama}</h3>
+                                <h3 class="text-xl font-bold text-text-main group-hover:text-primary-text transition-colors">${p.nama}</h3>
                                 <p class="text-sm text-text-muted italic font-medium">${p.nama_ilmiah || ''}</p>
                             </div>
                             <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
                                 <span class="inline-flex items-center gap-1 text-xs font-semibold text-text-muted uppercase tracking-wider">
                                     Info
                                 </span>
-                                <button onclick="alert('Detail belum tersedia di demo ini')" class="inline-flex items-center text-sm font-bold text-primary hover:text-primary-dark transition-colors gap-1">
+                                <button onclick="bukaDetail(${p.id})" class="inline-flex items-center text-sm font-bold text-primary-text hover:text-primary-dark transition-colors gap-1">
                                     Selengkapnya <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                                 </button>
                             </div>
@@ -65,6 +112,29 @@
                 `).join('');
             }
         }
+
+        function bukaDetail(id) {
+            const penyakit = dataPenyakitGlobal.find(p => p.id === id);
+            if (!penyakit) return;
+
+            document.getElementById('modal-img').src = penyakit.url_gambar || 'https://via.placeholder.com/800x400';
+            document.getElementById('modal-img').alt = penyakit.nama;
+            document.getElementById('modal-nama').innerText = penyakit.nama;
+            document.getElementById('modal-ilmiah').innerText = penyakit.nama_ilmiah || '';
+            document.getElementById('modal-deskripsi').innerText = penyakit.deskripsi || 'Deskripsi tidak tersedia.';
+            document.getElementById('modal-solusi').innerText = penyakit.solusi || 'Solusi tidak tersedia.';
+
+            const modal = document.getElementById('modal-detail');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling background
+        }
+
+        function tutupDetail() {
+            const modal = document.getElementById('modal-detail');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
         document.addEventListener('DOMContentLoaded', muatPenyakit);
     </script>
 {% endblock %}

@@ -435,32 +435,80 @@ Pengguna dapat memasukkan tingkat keyakinan terhadap gejala yang dialami menggun
 | 0.6 - 0.8 | Yakin |
 | 0.8 - 1.0 | Sangat Yakin |
 
-## 11. Simulasi Perhitungan Certainty Factor Secara Manual
+## 11. Perhitungan Certainty Factor (Simulasi)
 
-Misalkan pengguna memilih gejala untuk penyakit **Karat Putih** dengan keyakinan tertentu:
+Nilai bobot pakar dalam sistem ini diperoleh dari hasil analisis data dan simulasi wawancara dengan pakar pertanian untuk memberikan nilai akurasi dalam mendiagnosa penyakit tanaman kangkung sehingga dapat memberikan nilai persentase kepercayaan.
 
-1.  **Gejala 1 (G01)**: Bercak putih menonjol
-    *   CF Pakar: 0.9
-    *   CF User: 0.8 (Sangat Yakin)
-    *   **CF(1)** = 0.9 * 0.8 = **0.72**
+**Tabel 4.4 Nilai Bobot Pakar (Ringkasan)**
 
-2.  **Gejala 2 (G02)**: Bercak kuning
-    *   CF Pakar: 0.7
-    *   CF User: 0.6 (Cukup Yakin)
-    *   **CF(2)** = 0.7 * 0.6 = **0.42**
+| No | Nama Penyakit | Gejala | Nilai Bobot (CF Pakar) |
+|---|---|---|:---:|
+| 1 | Karat Putih | Bercak putih menonjol (G01) | 0.9 |
+| | | Bercak kuning (G02) | 0.7 |
+| | | Daun melengkung (G03) | 0.5 |
+| 2 | Bercak Daun | Bercak bulat (G04) | 0.8 |
+| | | Tepi coklat tua (G05) | 0.8 |
+| | | Daun menguning (G08) | 0.4 |
 
-3.  **Perhitungan CF Kombinasi (CF Combine)**:
-    Rumus: $CF_{new} = CF_{old} + CF_{current} \times (1 - CF_{old})$
+---
 
-    *   Langkah 1 (Gabungkan CF1 dan CF2):
-        $$CF_{old} = CF(1) = 0.72$$
-        $$CF_{current} = CF(2) = 0.42$$
-        $$CF_{combine} = 0.72 + 0.42 \times (1 - 0.72)$$
-        $$CF_{combine} = 0.72 + 0.42 \times 0.28$$
-        $$CF_{combine} = 0.72 + 0.1176$$
-        $$CF_{combine} = \mathbf{0.8376}$$
+### 11.1. Kasus Diagnosa: Karat Putih "P001"
 
-    *   **Hasil Akhir**: Tingkat keyakinan sistem untuk penyakit Karat Putih adalah **83.76%**.
+**Tabel 4.5 Gejala dan Nilai Bobot Pakar P001**
+
+| Gejala | Nilai Bobot Pakar |
+|---|:---:|
+| (G01) Bercak putih menonjol pada sisi bawah daun | 0.9 |
+| (G02) Bercak kuning pada sisi atas daun | 0.7 |
+| (G03) Daun melengkung atau terdistorsi | 0.5 |
+
+**Tabel 4.6 Nilai Bobot User P001**
+
+| Gejala | Jawaban User | Bobot (CF User) |
+|---|---|:---:|
+| (G01) Bercak putih menonjol | Sangat Yakin | 1.0 |
+| (G02) Bercak kuning | Cukup Yakin | 0.6 |
+| (G03) Daun melengkung | Sedikit Yakin | 0.4 |
+
+Selanjutnya, bobot nilai yang dimasukkan pengguna akan dikalikan dengan bobot nilai dari pakar:
+
+*   **Gejala 1** = CF(user) * CF(pakar) = 1.0 * 0.9 = **0.9**
+*   **Gejala 2** = CF(user) * CF(pakar) = 0.6 * 0.7 = **0.42**
+*   **Gejala 3** = CF(user) * CF(pakar) = 0.4 * 0.5 = **0.2**
+
+Dikarenakan terdapat lebih dari satu gejala, maka untuk menentukan CF selanjutnya digunakan persamaan berikut:
+
+1.  **CF_combine1(Gejala 1, Gejala 2)**
+    *   = CF_gejala1 + CF_gejala2 * (1 - CF_gejala1)
+    *   = 0.9 + 0.42 * (1 - 0.9)
+    *   = 0.9 + 0.42 * (0.1)
+    *   **CF_old1 = 0.942**
+
+2.  **CF_combine2(CF_old1, Gejala 3)**
+    *   = CF_old1 + CF_gejala3 * (1 - CF_old1)
+    *   = 0.942 + 0.2 * (1 - 0.942)
+    *   = 0.942 + 0.2 * (0.058)
+    *   **CF_final = 0.9536**
+
+Selanjutnya hitung persentase keyakinan terhadap penyakit dengan persamaan berikut:
+*   **Persentase** = CF_final * 100
+*   = 0.9536 * 100
+*   = **95.36%**
+
+---
+
+### 11.2. Perbandingan Hasil Kombinasi
+
+**Tabel 4.9 Perbandingan Hasil Kombinasi**
+
+| Kode Penyakit | Nama Penyakit | Hasil Gabungan CF |
+|---|---|:---:|
+| P001 | Karat Putih (White Rust) | **95.36%** |
+| P002 | Bercak Daun Cercospora | 42.10% |
+
+**Kesimpulan:**
+Dari tabel di atas, sistem akan membandingkan hasil penggabungan nilai CF dan sistem akan mengambil keputusan berdasarkan nilai penggabungan yang tertinggi. Maka dapat diketahui bahwa tanaman kangkung terserang penyakit **Karat Putih** dengan nilai kepastian sebesar **95.36%**.
+
 
 ## 12. Alur Antarmuka Pengguna (User Interface)
 

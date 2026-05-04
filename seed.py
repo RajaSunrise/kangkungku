@@ -45,35 +45,35 @@ def tebar():
             'nama_ilmiah': 'Cercospora ipomoeae',
             'deskripsi': 'Bercak daun ini disebabkan oleh jamur Cercospora yang berkembang pesat pada cuaca hangat dan lembab. Penyakit ini menyebabkan bercak nekrotik yang dapat menurunkan kapasitas fotosintesis tanaman secara drastis. Jika infeksi parah, seluruh daun dapat menguning dan gugur sebelum waktunya, yang berujung pada penurunan hasil panen yang signifikan. Jamur ini dapat bertahan hidup pada sisa-sisa tanaman di tanah selama berbulan-bulan.',
             'solusi': '[TINDAKAN SEGERA] Pangkas daun yang terinfeksi dan jangan biarkan jatuh ke tanah karena spora dapat bertahan di sisa tanaman. [PENGOBATAN] Aplikasikan fungisida sistemik berbahan aktif benomil atau mankozeb. Untuk solusi organik, gunakan ekstrak bawang putih yang diencerkan sebagai fungisida alami setiap 3 hari sekali. [PENCEGAHAN] Pastikan lahan memiliki drainase yang baik agar air tidak menggenang. Jaga kebersihan lahan dari gulma yang bisa menjadi inang alternatif. Gunakan pupuk kalium yang cukup untuk memperkuat dinding sel tanaman terhadap serangan jamur.',
-            'url_gambar': '/static/img/cercospora.png'
+            'url_gambar': '/static/img/Cercospora.png'
         },
         {
             'nama': 'Virus Mosaik Kangkung',
             'nama_ilmiah': 'Water spinach mosaic virus',
             'deskripsi': 'Virus ini merupakan salah satu ancaman paling serius karena tidak dapat diobati dengan pestisida. Virus mosaik biasanya ditularkan oleh serangga vektor seperti kutu daun (aphids) atau melalui alat pertanian yang tidak steril. Gejala yang paling khas adalah pola warna belang hijau tua dan muda yang tidak teratur pada daun, serta bentuk daun yang mengerut atau abnormal. Tanaman yang terinfeksi akan tumbuh sangat kerdil dan tidak layak dikonsumsi.',
             'solusi': '[TINDAKAN SEGERA] Cabut seluruh tanaman yang menunjukkan gejala mosaik hingga akarnya, masukkan ke dalam plastik, dan bakar di luar area lahan. JANGAN dijadikan kompos. [KONTROL VEKTOR] Fokus utama adalah membasmi kutu daun menggunakan sabun insektisida, minyak mimba (neem oil), atau insektisida berbahan aktif abamektin jika populasi serangga sangat tinggi. [PENCEGAHAN] Selalu sterilisasi alat potong menggunakan alkohol 70% sebelum berpindah ke tanaman lain. Gunakan benih bersertifikat yang bebas virus. Pasang perangkap kuning berperekat untuk memantau keberadaan serangga vektor.',
-            'url_gambar': '/static/img/mosaik.png'
+            'url_gambar': '/static/img/virus-mosaik.png'
         },
         {
             'nama': 'Layu Fusarium',
             'nama_ilmiah': 'Fusarium oxysporum',
             'deskripsi': 'Layu Fusarium adalah penyakit tular tanah (soil-borne) yang menyerang sistem pembuluh tanaman. Jamur ini menyumbat aliran air dan nutrisi dari akar ke daun, sehingga tanaman tampak layu meskipun tanah cukup basah. Ciri khasnya adalah tanaman layu saat terik matahari tetapi segar kembali pada malam hari, hingga akhirnya mati secara permanen. Jika batang dipotong melintang, akan terlihat cincin kecoklatan pada jaringan pembuluhnya.',
             'solusi': '[TINDAKAN SEGERA] Singkirkan tanaman mati beserta tanah di sekeliling perakarannya untuk meminimalisir penyebaran spora di tanah. [PENGOBATAN TANAH] Gunakan agen hayati Trichoderma harzianum yang dicampurkan ke dalam kompos atau tanah sebelum tanam untuk menekan pertumbuhan jamur jahat. [PENCEGAHAN] Lakukan pengapuran tanah (dolomit) untuk menaikkan pH tanah menjadi 6.5-7.0, karena Fusarium menyukai tanah asam. Hindari penggunaan pupuk Urea berlebihan karena dapat memicu perkembangan jamur ini. Gunakan sistem irigasi yang tidak menyebabkan erosi tanah antar tanaman.',
-            'url_gambar': '/static/img/fusarium.png'
+            'url_gambar': '/static/img/layu-fosarium.png'
         },
         {
             'nama': 'Busuk Akar Pythium',
             'nama_ilmiah': 'Pythium spp',
             'deskripsi': 'Pythium sering disebut sebagai \'penyakit rebah kecambah\' atau \'busuk akar\' yang sangat merusak pada kondisi tanah jenuh air (becek). Jamur ini menyerang akar halus kangkung, membuatnya membusuk dan tidak mampu menyerap nutrisi. Pada bibit muda, pangkal batang akan menjadi lunak dan tanaman akan rebah seketika. Pada tanaman dewasa, pertumbuhan akan berhenti total dan daun menguning pucat.',
             'solusi': '[TINDAKAN SEGERA] Hentikan penyiraman segera dan perbaiki saluran drainase agar tidak ada air menggenang. [PENGOBATAN] Gunakan fungisida khusus oomycetes berbahan aktif metalaksil atau propamokarb hidroklorida. Untuk pencegahan alami, pastikan media tanam sudah difermentasi sempurna sebelum digunakan. [PENCEGAHAN] Pastikan benih ditanam pada kedalaman yang tepat (jangan terlalu dalam). Gunakan air siraman yang bersih (bukan air limbah atau air selokan yang terkontaminasi). Perkaya tanah dengan bahan organik untuk meningkatkan porositas tanah.',
-            'url_gambar': '/static/img/pythium.png'
+            'url_gambar': '/static/img/busuk-akar-pythium.png'
         },
         {
             'nama': 'Busuk Batang Rhizoctonia',
             'nama_ilmiah': 'Rhizoctonia solani',
             'deskripsi': 'Busuk batang Rhizoctonia adalah penyakit jamur tular tanah yang sering menyerang tanaman kangkung di lahan yang terlalu basah. Jamur ini menyerang pangkal batang, menciptakan lesi berwarna coklat kemerahan yang perlahan melingkari batang (girdling). Akibatnya, transportasi air terputus dan tanaman akan roboh atau mati mendadak. Penyakit ini sering muncul setelah hujan terus-menerus.',
             'solusi': '[TINDAKAN SEGERA] Segera kurangi frekuensi penyiraman dan lakukan pendangiran (penggemburan tanah) di sekitar batang untuk mengurangi kelembaban permukaan. [PENGOBATAN] Kocor pangkal batang dengan fungisida berbahan aktif benomil atau pcb (pencycuron). Secara organik, taburkan abu kayu di sekitar pangkal batang untuk menghambat jamur. [PENCEGAHAN] Gunakan benih yang sehat dan telah diberi perlakuan (seed treatment). Jangan menanam kangkung terlalu rapat. Pastikan sisa-sisa tanaman dari musim sebelumnya telah dibersihkan sepenuhnya.',
-            'url_gambar': '/static/img/rhizoctonia.png'
+            'url_gambar': '/static/img/alternaria.png'
         },
         {
             'nama': 'Embun Tepung (Powdery Mildew)',

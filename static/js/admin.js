@@ -35,6 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
         loadUsers();
         updateActiveNav("nav-users");
     });
+    document.getElementById("nav-rules").addEventListener("click", (e) => {
+        e.preventDefault();
+        loadRules();
+        updateActiveNav("nav-rules");
+    });
     document.getElementById("btn-logout").addEventListener("click", (e) => {
         e.preventDefault();
         logout();
@@ -57,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function updateActiveNav(activeId) {
-    const navIds = ["nav-dashboard", "nav-diseases", "nav-symptoms", "nav-users"];
+    const navIds = ["nav-dashboard", "nav-diseases", "nav-symptoms", "nav-rules", "nav-users"];
     navIds.forEach(id => {
         const el = document.getElementById(id);
         if (id === activeId) {
@@ -74,7 +79,7 @@ async function loadDashboard() {
     const content = document.getElementById("main-content");
     content.innerHTML = `
         <h1 class="text-2xl font-bold text-gray-900 mb-8">Tinjauan Sistem</h1>
-        <div id="stats-container" class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div id="stats-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8">
             <div class="animate-pulse bg-white p-6 rounded-xl border border-gray-100 h-32"></div>
             <div class="animate-pulse bg-white p-6 rounded-xl border border-gray-100 h-32"></div>
             <div class="animate-pulse bg-white p-6 rounded-xl border border-gray-100 h-32"></div>
@@ -157,6 +162,15 @@ async function loadDashboard() {
                 </div>
                 <p class="text-slate-500 text-xs font-black uppercase tracking-widest">Gejala</p>
                 <h3 class="text-3xl font-black text-slate-900 mt-1">${stats.total_gejala}</h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:shadow-lg group">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="p-3 rounded-xl bg-violet-50 text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">rule</span>
+                    </div>
+                </div>
+                <p class="text-slate-500 text-xs font-black uppercase tracking-widest">Aturan</p>
+                <h3 class="text-3xl font-black text-slate-900 mt-1">${stats.total_aturan}</h3>
             </div>
         `;
 
@@ -328,9 +342,10 @@ async function deleteDisease(id) {
 function showAddDiseaseModal() {
     const modal = document.createElement('div');
     modal.id = 'modal';
-    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.className = 'fixed inset-0 z-[100] flex items-center justify-center';
     modal.innerHTML = `
-        <div class="bg-white p-8 rounded-xl max-w-lg w-full max-h-screen overflow-y-auto">
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-white p-8 rounded-2xl max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100">
             <h2 class="text-xl font-bold mb-4">Tambah Penyakit Baru</h2>
             <form onsubmit="createDisease(event)" class="space-y-4">
                 <div>
@@ -366,9 +381,10 @@ function showAddDiseaseModal() {
 function showEditDiseaseModal(data) {
     const modal = document.createElement('div');
     modal.id = 'modal';
-    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.className = 'fixed inset-0 z-[100] flex items-center justify-center';
     modal.innerHTML = `
-        <div class="bg-white p-8 rounded-xl max-w-lg w-full max-h-screen overflow-y-auto">
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-white p-8 rounded-2xl max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100">
             <h2 class="text-xl font-bold mb-4">Edit Penyakit</h2>
             <form onsubmit="updateDisease(event, ${data.id})" class="space-y-4">
                 <div>
@@ -456,8 +472,7 @@ async function createSymptom(event) {
     const form = event.target;
     const data = {
         kode: form.kode.value,
-        deskripsi: form.deskripsi.value,
-        url_gambar: form.url_gambar.value
+        deskripsi: form.deskripsi.value
     };
 
     try {
@@ -497,8 +512,7 @@ async function updateSymptom(event, id) {
     const form = event.target;
     const data = {
         kode: form.kode.value,
-        deskripsi: form.deskripsi.value,
-        url_gambar: form.url_gambar.value
+        deskripsi: form.deskripsi.value
     };
 
     try {
@@ -541,9 +555,10 @@ async function deleteSymptom(id) {
 function showAddSymptomModal() {
     const modal = document.createElement('div');
     modal.id = 'modal';
-    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.className = 'fixed inset-0 z-[100] flex items-center justify-center';
     modal.innerHTML = `
-        <div class="bg-white p-8 rounded-xl max-w-lg w-full">
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-white p-8 rounded-2xl max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100">
             <h2 class="text-xl font-bold mb-4">Tambah Gejala Baru</h2>
             <form onsubmit="createSymptom(event)" class="space-y-4">
                 <div>
@@ -553,10 +568,6 @@ function showAddSymptomModal() {
                 <div>
                     <label class="block text-sm font-medium">Deskripsi</label>
                     <textarea name="deskripsi" required class="w-full border rounded p-2"></textarea>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium">URL Gambar</label>
-                    <input type="text" name="url_gambar" class="w-full border rounded p-2">
                 </div>
                 <div class="flex justify-end gap-2 mt-6">
                     <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Batal</button>
@@ -571,9 +582,10 @@ function showAddSymptomModal() {
 function showEditSymptomModal(data) {
     const modal = document.createElement('div');
     modal.id = 'modal';
-    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.className = 'fixed inset-0 z-[100] flex items-center justify-center';
     modal.innerHTML = `
-        <div class="bg-white p-8 rounded-xl max-w-lg w-full">
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-white p-8 rounded-2xl max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100">
             <h2 class="text-xl font-bold mb-4">Edit Gejala</h2>
             <form onsubmit="updateSymptom(event, ${data.id})" class="space-y-4">
                 <div>
@@ -583,10 +595,6 @@ function showEditSymptomModal(data) {
                 <div>
                     <label class="block text-sm font-medium">Deskripsi</label>
                     <textarea name="deskripsi" required class="w-full border rounded p-2">${data.deskripsi}</textarea>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium">URL Gambar</label>
-                    <input type="text" name="url_gambar" value="${data.url_gambar || ''}" class="w-full border rounded p-2">
                 </div>
                 <div class="flex justify-end gap-2 mt-6">
                     <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Batal</button>
@@ -601,6 +609,297 @@ function showEditSymptomModal(data) {
 function closeModal() {
     const modal = document.getElementById('modal');
     if (modal) modal.remove();
+}
+
+// --- Rules (Aturan) ---
+
+let cachedDiseases = [];
+let cachedSymptoms = [];
+
+async function fetchDiseasesAndSymptoms() {
+    const [dRes, sRes] = await Promise.all([
+        fetch('/api/penyakit'),
+        fetch('/api/gejala')
+    ]);
+    cachedDiseases = await dRes.json();
+    cachedSymptoms = await sRes.json();
+}
+
+async function loadRules() {
+    const content = document.getElementById("main-content");
+    content.innerHTML = `
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-900">Kelola Aturan (Rules)</h1>
+                <p class="text-sm text-gray-500 mt-1">Atur relasi penyakit, gejala, dan nilai CF pakar</p>
+            </div>
+            <button onclick="showAddRuleModal()" class="bg-primary text-secondary px-4 py-2 rounded-lg font-bold shadow hover:bg-opacity-90 flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">add_circle</span> Tambah Aturan
+            </button>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden overflow-x-auto">
+            <table class="w-full text-left text-sm">
+                <thead class="bg-gray-50 text-gray-500">
+                    <tr>
+                        <th class="px-6 py-3">ID</th>
+                        <th class="px-6 py-3">Penyakit</th>
+                        <th class="px-6 py-3">Gejala</th>
+                        <th class="px-6 py-3">CF Pakar</th>
+                        <th class="px-6 py-3">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="rules-table-body" class="divide-y divide-gray-100">
+                    <tr><td colspan="5" class="px-6 py-4 text-center">Memuat...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    `;
+
+    try {
+        await fetchDiseasesAndSymptoms();
+        const response = await fetch("/admin/aturan", {
+            headers: { "Authorization": `Bearer ${getToken()}` }
+        });
+        if (!response.ok) throw new Error("Gagal memuat aturan");
+        const rules = await response.json();
+        const tbody = document.getElementById("rules-table-body");
+        tbody.innerHTML = "";
+
+        if (rules.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="5" class="px-6 py-8 text-center text-gray-400">Belum ada aturan. Tambahkan aturan pertama!</td></tr>';
+            return;
+        }
+
+        // Create lookup maps
+        const diseaseMap = {};
+        cachedDiseases.forEach(d => diseaseMap[d.id] = d.nama);
+        const symptomMap = {};
+        cachedSymptoms.forEach(s => symptomMap[s.id] = `${s.kode} - ${s.deskripsi}`);
+
+        rules.forEach(r => {
+            const penyakitNama = (r.penyakit && r.penyakit.nama) || diseaseMap[r.penyakit_id] || `ID: ${r.penyakit_id}`;
+            const gejalaNama = (r.gejala ? `${r.gejala.kode} - ${r.gejala.deskripsi}` : null) || symptomMap[r.gejala_id] || `ID: ${r.gejala_id}`;
+            const cfColor = r.pakar_cf >= 0.8 ? 'text-green-700 bg-green-50' : r.pakar_cf >= 0.5 ? 'text-amber-700 bg-amber-50' : 'text-red-700 bg-red-50';
+
+            const tr = document.createElement("tr");
+            tr.className = "hover:bg-gray-50 transition-colors";
+            tr.innerHTML = `
+                <td class="px-6 py-4 text-gray-400 font-mono text-xs">${r.id}</td>
+                <td class="px-6 py-4 font-bold">
+                    <span class="inline-flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-red-400 text-base">coronavirus</span>
+                        ${penyakitNama}
+                    </span>
+                </td>
+                <td class="px-6 py-4">
+                    <span class="inline-flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-amber-400 text-base">healing</span>
+                        ${gejalaNama}
+                    </span>
+                </td>
+                <td class="px-6 py-4">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold ${cfColor}">${r.pakar_cf}</span>
+                </td>
+                <td class="px-6 py-4">
+                    <button onclick="editRule(${r.id})" class="text-blue-600 hover:text-blue-800 font-bold mr-2">Edit</button>
+                    <button onclick="deleteRule(${r.id})" class="text-red-600 hover:text-red-800 font-bold">Hapus</button>
+                </td>
+            `;
+            tbody.appendChild(tr);
+        });
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+function buildDiseaseOptions(selectedId = null) {
+    return cachedDiseases.map(d =>
+        `<option value="${d.id}" ${d.id === selectedId ? 'selected' : ''}>${d.nama}</option>`
+    ).join('');
+}
+
+function buildSymptomOptions(selectedId = null) {
+    return cachedSymptoms.map(s =>
+        `<option value="${s.id}" ${s.id === selectedId ? 'selected' : ''}>${s.kode} - ${s.deskripsi}</option>`
+    ).join('');
+}
+
+async function showAddRuleModal() {
+    await fetchDiseasesAndSymptoms();
+    const modal = document.createElement('div');
+    modal.id = 'modal';
+    modal.className = 'fixed inset-0 z-[100] flex items-center justify-center';
+    modal.innerHTML = `
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-white p-8 rounded-2xl max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">add_circle</span>
+                Tambah Aturan Baru
+            </h2>
+            <form onsubmit="createRule(event)" class="space-y-5">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Penyakit</label>
+                    <select name="penyakit_id" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none bg-white">
+                        <option value="">-- Pilih Penyakit --</option>
+                        ${buildDiseaseOptions()}
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">Gejala</label>
+                    <select name="gejala_id" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none bg-white">
+                        <option value="">-- Pilih Gejala --</option>
+                        ${buildSymptomOptions()}
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">CF Pakar <span class="text-gray-400 font-normal">(0.0 - 1.0)</span></label>
+                    <input type="number" name="pakar_cf" step="0.01" min="0" max="1" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="contoh: 0.8">
+                    <p class="text-xs text-gray-400 mt-1">Nilai certainty factor yang diberikan oleh pakar</p>
+                </div>
+                <div class="flex justify-end gap-2 mt-6">
+                    <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 font-medium">Batal</button>
+                    <button type="submit" class="px-4 py-2 bg-primary text-secondary font-bold rounded-lg hover:opacity-90">Simpan</button>
+                </div>
+            </form>
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
+
+async function createRule(event) {
+    event.preventDefault();
+    const form = event.target;
+    const data = {
+        penyakit_id: parseInt(form.penyakit_id.value),
+        gejala_id: parseInt(form.gejala_id.value),
+        pakar_cf: parseFloat(form.pakar_cf.value)
+    };
+
+    try {
+        const response = await fetch("/admin/aturan", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${getToken()}`
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            const err = await response.json();
+            throw new Error(err.detail || "Gagal menambah aturan");
+        }
+
+        closeModal();
+        loadRules();
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function editRule(id) {
+    try {
+        await fetchDiseasesAndSymptoms();
+        const response = await fetch(`/admin/aturan/${id}`, {
+            headers: { "Authorization": `Bearer ${getToken()}` }
+        });
+        if (!response.ok) throw new Error("Gagal mengambil data aturan");
+        const data = await response.json();
+        showEditRuleModal(data);
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+function showEditRuleModal(data) {
+    const modal = document.createElement('div');
+    modal.id = 'modal';
+    modal.className = 'fixed inset-0 z-[100] flex items-center justify-center';
+    modal.innerHTML = `
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-white p-8 rounded-2xl max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <span class="material-symbols-outlined text-blue-600">edit</span>
+                Edit Aturan
+            </h2>
+            <form onsubmit="updateRule(event, ${data.id})" class="space-y-5">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Penyakit</label>
+                    <select name="penyakit_id" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none bg-white">
+                        ${buildDiseaseOptions(data.penyakit_id)}
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">Gejala</label>
+                    <select name="gejala_id" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none bg-white">
+                        ${buildSymptomOptions(data.gejala_id)}
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">CF Pakar <span class="text-gray-400 font-normal">(0.0 - 1.0)</span></label>
+                    <input type="number" name="pakar_cf" step="0.01" min="0" max="1" value="${data.pakar_cf}" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                    <p class="text-xs text-gray-400 mt-1">Nilai certainty factor yang diberikan oleh pakar</p>
+                </div>
+                <div class="flex justify-end gap-2 mt-6">
+                    <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 font-medium">Batal</button>
+                    <button type="submit" class="px-4 py-2 bg-primary text-secondary font-bold rounded-lg hover:opacity-90">Update</button>
+                </div>
+            </form>
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
+
+async function updateRule(event, id) {
+    event.preventDefault();
+    const form = event.target;
+    const data = {
+        penyakit_id: parseInt(form.penyakit_id.value),
+        gejala_id: parseInt(form.gejala_id.value),
+        pakar_cf: parseFloat(form.pakar_cf.value)
+    };
+
+    try {
+        const response = await fetch(`/admin/aturan/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${getToken()}`
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            const err = await response.json();
+            throw new Error(err.detail || "Gagal memperbarui aturan");
+        }
+
+        closeModal();
+        loadRules();
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function deleteRule(id) {
+    showDeleteModal("Yakin ingin menghapus aturan ini? Ini akan mempengaruhi hasil diagnosa sistem pakar.", async () => {
+        try {
+            const response = await fetch(`/admin/aturan/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Authorization": `Bearer ${getToken()}`
+                }
+            });
+
+            if (!response.ok) {
+                const err = await response.json();
+                throw new Error(err.detail || "Gagal menghapus aturan");
+            }
+            loadRules();
+        } catch (error) {
+            alert(error.message);
+        }
+    });
 }
 
 // --- Users ---
@@ -678,9 +977,10 @@ async function loadUsers() {
 function showAddUserModal() {
     const modal = document.createElement('div');
     modal.id = 'modal';
-    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.className = 'fixed inset-0 z-[100] flex items-center justify-center';
     modal.innerHTML = `
-        <div class="bg-white p-8 rounded-xl max-w-lg w-full max-h-screen overflow-y-auto">
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-white p-8 rounded-2xl max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100">
             <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
                 <span class="material-symbols-outlined text-primary">person_add</span>
                 Tambah Pengguna Baru
@@ -776,9 +1076,10 @@ async function editUser(id) {
 function showEditUserModal(data) {
     const modal = document.createElement('div');
     modal.id = 'modal';
-    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.className = 'fixed inset-0 z-[100] flex items-center justify-center';
     modal.innerHTML = `
-        <div class="bg-white p-8 rounded-xl max-w-lg w-full max-h-screen overflow-y-auto">
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-white p-8 rounded-2xl max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100">
             <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
                 <span class="material-symbols-outlined text-blue-600">edit</span>
                 Edit Pengguna

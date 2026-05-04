@@ -44,6 +44,66 @@ def delete_gejala(gejala_id: int, db: Session = Depends(database.get_db)):
         raise HTTPException(status_code=404, detail="Gejala not found")
     return db_gejala
 
+# Rules (Aturan)
+@router.get("/aturan", response_model=List[schemas.AturanRead])
+def get_all_aturan(db: Session = Depends(database.get_db)):
+    aturan_list = crud.dapatkan_semua_aturan(db)
+    return aturan_list
+
+@router.get("/aturan/{aturan_id}", response_model=schemas.AturanRead)
+def get_aturan(aturan_id: int, db: Session = Depends(database.get_db)):
+    db_aturan = crud.dapatkan_aturan(db, aturan_id=aturan_id)
+    if db_aturan is None:
+        raise HTTPException(status_code=404, detail="Aturan tidak ditemukan")
+    return db_aturan
+
+@router.post("/aturan", response_model=schemas.AturanRead)
+def create_aturan(aturan: schemas.AturanBase, db: Session = Depends(database.get_db)):
+    # Validate penyakit and gejala exist
+    penyakit = crud.dapatkan_penyakit(db, penyakit_id=aturan.penyakit_id)
+    if not penyakit:
+        raise HTTPException(status_code=404, detail="Penyakit tidak ditemukan")
+    gejala = db.query(models.Gejala).filter(models.Gejala.id == aturan.gejala_id).first()
+    if not gejala:
+        raise HTTPException(status_code=404, detail="Gejala tidak ditemukan")
+    # Check for duplicate rule
+    existing = db.query(models.Aturan).filter(
+        models.Aturan.penyakit_id == aturan.penyakit_id,
+        models.Aturan.gejala_id == aturan.gejala_id
+    ).first()
+    if existing:
+        raise HTTPException(status_code=400, detail="Aturan untuk kombinasi penyakit dan gejala ini sudah ada")
+    return crud.buat_aturan(db=db, penyakit_id=aturan.penyakit_id, gejala_id=aturan.gejala_id, pakar_cf=aturan.pakar_cf)
+
+@router.put("/aturan/{aturan_id}", response_model=schemas.AturanRead)
+def update_aturan(aturan_id: int, aturan: schemas.AturanBase, db: Session = Depends(database.get_db)):
+    # Validate penyakit and gejala exist
+    penyakit = crud.dapatkan_penyakit(db, penyakit_id=aturan.penyakit_id)
+    if not penyakit:
+        raise HTTPException(status_code=404, detail="Penyakit tidak ditemukan")
+    gejala = db.query(models.Gejala).filter(models.Gejala.id == aturan.gejala_id).first()
+    if not gejala:
+        raise HTTPException(status_code=404, detail="Gejala tidak ditemukan")
+    # Check for duplicate rule (excluding current)
+    existing = db.query(models.Aturan).filter(
+        models.Aturan.penyakit_id == aturan.penyakit_id,
+        models.Aturan.gejala_id == aturan.gejala_id,
+        models.Aturan.id != aturan_id
+    ).first()
+    if existing:
+        raise HTTPException(status_code=400, detail="Aturan untuk kombinasi penyakit dan gejala ini sudah ada")
+    db_aturan = crud.update_aturan(db, aturan_id=aturan_id, penyakit_id=aturan.penyakit_id, gejala_id=aturan.gejala_id, pakar_cf=aturan.pakar_cf)
+    if db_aturan is None:
+        raise HTTPException(status_code=404, detail="Aturan tidak ditemukan")
+    return db_aturan
+
+@router.delete("/aturan/{aturan_id}", response_model=schemas.AturanRead)
+def delete_aturan(aturan_id: int, db: Session = Depends(database.get_db)):
+    db_aturan = crud.delete_aturan(db, aturan_id=aturan_id)
+    if db_aturan is None:
+        raise HTTPException(status_code=404, detail="Aturan tidak ditemukan")
+    return db_aturan
+
 # Stats
 @router.get("/stats", response_model=schemas.DashboardStats)
 def get_stats(db: Session = Depends(database.get_db)):

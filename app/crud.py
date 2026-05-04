@@ -35,6 +35,26 @@ def buat_aturan(db: Session, penyakit_id: int, gejala_id: int, pakar_cf: float):
     db.refresh(db_aturan)
     return db_aturan
 
+def dapatkan_aturan(db: Session, aturan_id: int):
+    return db.query(models.Aturan).filter(models.Aturan.id == aturan_id).first()
+
+def update_aturan(db: Session, aturan_id: int, penyakit_id: int, gejala_id: int, pakar_cf: float):
+    db_aturan = db.query(models.Aturan).filter(models.Aturan.id == aturan_id).first()
+    if db_aturan:
+        db_aturan.penyakit_id = penyakit_id
+        db_aturan.gejala_id = gejala_id
+        db_aturan.pakar_cf = pakar_cf
+        db.commit()
+        db.refresh(db_aturan)
+    return db_aturan
+
+def delete_aturan(db: Session, aturan_id: int):
+    db_aturan = db.query(models.Aturan).filter(models.Aturan.id == aturan_id).first()
+    if db_aturan:
+        db.delete(db_aturan)
+        db.commit()
+    return db_aturan
+
 def update_penyakit(db: Session, penyakit_id: int, penyakit: schemas.PenyakitBase):
     db_penyakit = db.query(models.Penyakit).filter(models.Penyakit.id == penyakit_id).first()
     if db_penyakit:
@@ -100,6 +120,7 @@ def dapatkan_statistik(db: Session):
     total_diagnosa = db.query(models.DiagnosaHistory).count()
     total_penyakit = db.query(models.Penyakit).count()
     total_gejala = db.query(models.Gejala).count()
+    total_aturan = db.query(models.Aturan).count()
     history_terbaru = db.query(models.DiagnosaHistory).order_by(models.DiagnosaHistory.id.desc()).limit(10).all()
     
     return {
@@ -107,6 +128,7 @@ def dapatkan_statistik(db: Session):
         "total_diagnosa": total_diagnosa,
         "total_penyakit": total_penyakit,
         "total_gejala": total_gejala,
+        "total_aturan": total_aturan,
         "history_terbaru": history_terbaru
     }
 

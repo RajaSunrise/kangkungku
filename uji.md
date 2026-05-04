@@ -43,3 +43,16 @@
 | 30 | Ensiklopedia | Membuka daftar penyakit di halaman publik | User bisa membaca informasi penyakit tanpa login | [√] Berhasil <br> [ ] Tidak Berhasil |
 | 31 | Pencarian | Mencari data pada tabel (Admin) | Tabel memfilter data secara real-time | [√] Berhasil <br> [ ] Tidak Berhasil |
 | 32 | Responsivitas | Mengakses web melalui perangkat mobile | Tampilan menyesuaikan ukuran layar (Responsive) | [√] Berhasil <br> [ ] Tidak Berhasil |
+
+## 5.1 Kesimpulan
+Sistem Pakar Diagnosa Penyakit Tanaman Kangkung Berbasis Web ini dibangun dengan menggunakan metode pengembangan RAD (Rapid Application Development) dengan tahapan yaitu: Perencanaan Kebutuhan, Desain Sistem, Proses Pengembangan, Pengumpulan Feedback, serta Implementasi atau Penyelesaian Produk.
+
+Perencanaan kebutuhan sistem dilakukan dengan menggunakan beberapa alat perancangan sistem yaitu Flowchart Sistem, UML yang terdiri dari Use Case Diagram dan Activity Diagram dengan aktor Admin dan Pengguna (User). Perancangan database dilakukan dengan Entity Relationship Diagram (ERD) yang merelasikan 5 tabel utama yaitu tabel `users`, `penyakit`, `gejala`, `aturan`, dan `diagnosa_history`. Perancangan arsitektur menggunakan bahasa pemrograman Python dengan framework FastAPI dan database SQLite/PostgreSQL. Luaran yang dihasilkan berupa hasil diagnosa penyakit kangkung yang dilengkapi dengan nilai Certainty Factor (CF) serta solusi penanganannya. Pengujian fungsional dilakukan menggunakan metode Black Box Testing untuk memastikan seluruh fitur berjalan dengan baik.
+
+## 5.2 Saran
+Berdasarkan hasil penelitian dan implementasi sistem, terdapat beberapa saran yang dapat dikemukakan untuk pengembangan lebih lanjut:
+1. Agar sistem dapat bekerja secara efektif dan efisien, diperlukan admin yang memiliki pemahaman dasar mengenai penyakit tanaman kangkung dalam pengoperasian data basis pengetahuan.
+2. Perlu diadakan edukasi atau panduan bagi pengguna (petani) tentang bagaimana cara mengamati gejala tanaman secara akurat agar input yang dimasukkan ke sistem menghasilkan diagnosa yang tepat.
+3. Penerapan sistem sebaiknya didukung oleh perangkat keras dan koneksi internet yang memadai agar proses akses dashboard admin dan konsultasi pengguna berjalan lancar.
+4. Diharapkan pengelola sistem terus mengevaluasi dan memperbarui data Certainty Factor (CF) pakar secara berkala sesuai dengan perkembangan kondisi di lapangan agar tingkat akurasi diagnosa tetap terjaga dan sistem menjadi lebih sempurna.
+

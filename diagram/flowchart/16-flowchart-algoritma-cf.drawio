@@ -1,0 +1,97 @@
+<mxfile host="65bd71144e">
+    <diagram name="Flowchart Hitung CF" id="flowchart-cf">
+        <mxGraphModel dx="709" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="13" value="Mulai" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Input: Gejala Dipilih&#10;&amp; Keyakinan Pengguna" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="220" width="200" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Ambil Semua Aturan&#10;CF dari Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;size=10;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="315" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Inisialisasi CF_total = 0&#10;untuk Setiap Penyakit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="420" width="200" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Ambil Aturan&#10;Berikutnya" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="520" width="200" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Gejala Aturan&#10;Dipilih User?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="185" y="620" width="190" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Hitung CF Gejala:&#10;CF_gejala = CF_aturan × keyakinan_user" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="630" width="230" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Kombinasi CF:&#10;CF_baru = CF_lama + CF_gejala × (1 - CF_lama)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="429" y="764" width="230" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Masih Ada&#10;Aturan?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="185" y="760" width="190" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Urutkan Penyakit&#10;Berdasarkan CF Tertinggi" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="900" width="200" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Output: Daftar Penyakit&#10;+ Nilai CF + Persentase" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="1000" width="200" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Selesai" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="1100" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="13" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="14" target="15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="15" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="16" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="17" target="18">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Y" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;fontStyle=1;" edge="1" parent="1" source="18" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="19" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="20" target="21">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="429" y="800"/>
+                            <mxPoint x="410" y="800"/>
+                            <mxPoint x="410" y="805"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="T" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;fontStyle=1;" edge="1" parent="1" source="18" target="21">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Y" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;fontStyle=1;" edge="1" parent="1" source="21" target="17">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="130" y="805"/>
+                            <mxPoint x="130" y="547"/>
+                            <mxPoint x="180" y="547"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="T" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;fontStyle=1;" edge="1" parent="1" source="21" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="22" target="23">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="23" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
