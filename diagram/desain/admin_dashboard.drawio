@@ -5,75 +5,68 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
-        <!-- Background -->
-        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=none;" vertex="1" parent="1">
+        
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry width="1200" height="1000" as="geometry" />
         </mxCell>
 
-        <!-- Sidebar -->
-        <mxCell id="sidebar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111812;strokeColor=none;" vertex="1" parent="1">
+        
+        <mxCell id="sidebar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry width="250" height="1000" as="geometry" />
         </mxCell>
-        <mxCell id="logo" value="KangkungKu
-Admin" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#2BEE4B;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="logo" value="KangkungKu Admin" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=24;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="25" y="30" width="200" height="60" as="geometry" />
         </mxCell>
 
-        <mxCell id="menu1" value="Dashboard Overview" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F2937;strokeColor=none;fontColor=#FFFFFF;align=left;spacingLeft=20;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="menu1" value="Dashboard Overview" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=left;spacingLeft=20;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="20" y="140" width="210" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="menu2" value="Manajemen Penyakit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#9CA3AF;align=left;spacingLeft=20;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="menu2" value="Manajemen Penyakit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;align=left;spacingLeft=20;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="20" y="200" width="210" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="menu3" value="Manajemen Gejala" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#9CA3AF;align=left;spacingLeft=20;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="menu3" value="Manajemen Gejala" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;align=left;spacingLeft=20;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="20" y="260" width="210" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="menu4" value="Aturan CF (Rules)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#9CA3AF;align=left;spacingLeft=20;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="menu4" value="Aturan CF (Rules)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;align=left;spacingLeft=20;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="20" y="320" width="210" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="menu_logout" value="Keluar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EF4444;strokeColor=none;fontColor=#FFFFFF;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="menu_logout" value="Keluar" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;align=center;fontSize=16;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="20" y="900" width="210" height="50" as="geometry" />
         </mxCell>
 
-        <!-- Main Content -->
-        <mxCell id="header" value="Dashboard Admin" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=32;fontStyle=1;" vertex="1" parent="1">
+        
+        <mxCell id="header" value="Dashboard Admin" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=32;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="300" y="50" width="400" height="50" as="geometry" />
         </mxCell>
 
-        <!-- Stats Cards -->
-        <mxCell id="stat1" value="Total Penyakit
-
-8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;fontColor=#111812;fontSize=24;fontStyle=1;align=center;" vertex="1" parent="1">
+        
+        <mxCell id="stat1" value="Total Penyakit  8" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=24;fontStyle=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="300" y="140" width="250" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="stat2" value="Total Gejala
-
-15" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;fontColor=#111812;fontSize=24;fontStyle=1;align=center;" vertex="1" parent="1">
+        <mxCell id="stat2" value="Total Gejala  15" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=24;fontStyle=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="600" y="140" width="250" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="stat3" value="Total User
-
-120" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;fontColor=#111812;fontSize=24;fontStyle=1;align=center;" vertex="1" parent="1">
+        <mxCell id="stat3" value="Total User  120" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=24;fontStyle=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="900" y="140" width="250" height="150" as="geometry" />
         </mxCell>
 
-        <!-- Data Table Example -->
-        <mxCell id="table_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
+        
+        <mxCell id="table_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="300" y="340" width="850" height="400" as="geometry" />
         </mxCell>
-        <mxCell id="table_title" value="Data Penyakit Terakhir" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="table_title" value="Data Penyakit Terakhir" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=20;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="330" y="360" width="300" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="btn_add" value="+ Tambah Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2BEE4B;strokeColor=none;fontColor=#111812;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="btn_add" value="+ Tambah Data" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="980" y="360" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="table_header" value="ID   |   Nama Penyakit   |   Aksi" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=none;fontColor=#4B5563;align=left;spacingLeft=20;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="table_header" value="ID   |   Nama Penyakit   |   Aksi" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;align=left;spacingLeft=20;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="330" y="420" width="790" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="row1" value="P01  |  Karat Putih      |  [Edit] [Hapus]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#E5E7EB;fontColor=#111812;align=left;spacingLeft=20;" vertex="1" parent="1">
+        <mxCell id="row1" value="P01  |  Karat Putih      |  [Edit] [Hapus]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=left;spacingLeft=20;" vertex="1" parent="1">
           <mxGeometry x="330" y="460" width="790" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="row2" value="P02  |  Bercak Daun      |  [Edit] [Hapus]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#E5E7EB;fontColor=#111812;align=left;spacingLeft=20;" vertex="1" parent="1">
+        <mxCell id="row2" value="P02  |  Bercak Daun      |  [Edit] [Hapus]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=left;spacingLeft=20;" vertex="1" parent="1">
           <mxGeometry x="330" y="500" width="790" height="40" as="geometry" />
         </mxCell>
 

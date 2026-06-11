@@ -1,0 +1,59 @@
+<mxfile host="65bd71144e">
+    <diagram name="Flowchart Register User" id="register-flow">
+        <mxGraphModel dx="792" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="io_register" value="Register" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFFFFF;fontColor=#000000;fontSize=11;strokeColor=#000000;strokeWidth=1;size=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="327" y="170" width="143" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="tampil_form_reg" value="Tampil form register" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFFFFF;fontColor=#000000;fontSize=11;strokeColor=#000000;strokeWidth=1;size=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="311.5" y="230" width="175" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="input_reg" value="Masukan nama lengkap&#10;ussername dan password" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFFFFF;fontColor=#000000;fontSize=10;strokeColor=#000000;strokeWidth=1;size=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="306.5" y="310" width="185" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="proses_register" value="Register" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;fontColor=#000000;fontSize=11;strokeColor=#000000;strokeWidth=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="324" y="390" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Iyaa" style="edgeStyle=none;html=1;fontStyle=1" edge="1" parent="1" source="validasi_reg" target="selesai">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="validasi_reg" value="validasi" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=11;fontStyle=1;strokeWidth=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="326" y="460" width="145" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="selesai" value="Halaman Login" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#FFFFFF;fontColor=#000000;fontSize=11;strokeColor=#000000;strokeWidth=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="358.5" y="550" width="80" height="67" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontStyle=1" parent="1" source="2" target="io_register" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="405" y="80" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontStyle=1" parent="1" source="io_register" target="tampil_form_reg" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontStyle=1" parent="1" source="tampil_form_reg" target="input_reg" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontStyle=1" parent="1" source="input_reg" target="proses_register" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontStyle=1" parent="1" source="proses_register" target="validasi_reg" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="validasi_reg" target="tampil_form_reg" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="200" y="489"/>
+                            <mxPoint x="200" y="245"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="Mulai" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="341.5" y="93" width="115" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

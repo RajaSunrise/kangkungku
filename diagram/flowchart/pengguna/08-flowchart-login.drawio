@@ -1,0 +1,60 @@
+<mxfile host="65bd71144e">
+    <diagram name="Flowchart Login User" id="login-flow">
+        <mxGraphModel dx="792" dy="797" grid="1" gridSize="12" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="819" pageHeight="840" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="7" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontStyle=1" parent="1" source="input_login" target="validasi_login" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="input_login" value="Input data Username dan Password" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFFFFF;fontColor=#000000;fontSize=10;strokeColor=#000000;size=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="335" y="210" width="145" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="validasi_login" value="Validasi" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=11;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="357" y="314" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="halaman_dashboard" value="Halaman Dashboard" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#FFFFFF;fontColor=#000000;fontSize=11;strokeColor=#000000;strokeWidth=2;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="368" y="560" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" value="Benar" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontSize=10;fontStyle=1;" parent="1" source="validasi_login" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="406" y="470" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e6" value="Salah" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1;fontSize=10;fontStyle=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="validasi_login" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="280" y="370" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=none;html=1;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="15" target="input_login" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="407.8894230769231" y="164" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="13" target="halaman_dashboard" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="406.29999999999995" y="530" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;html=1;entryX=-0.002;entryY=0.423;entryDx=0;entryDy=0;fontStyle=1;exitX=0.566;exitY=0.025;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" parent="1" source="12" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="220" y="140"/>
+                        </Array>
+                        <mxPoint x="220" y="340" as="sourcePoint"/>
+                        <mxPoint x="348" y="141" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="Notif Gagal" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="152" y="336" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Notif Berhasil" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="346" y="460" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Login" style="shape=offPageConnector;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="366" y="112" width="78" height="73" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

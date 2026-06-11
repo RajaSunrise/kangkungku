@@ -1,0 +1,79 @@
+<mxfile host="65bd71144e">
+    <diagram id="h3hBzQOgWNedK23xCChM" name="Page-1">
+        <mxGraphModel dx="792" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="819" pageHeight="840" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="27" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontStyle=1" parent="1" source="43" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="405" y="170" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1" parent="1" source="26" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="407" y="316" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="Input data Usename dan Password" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="335" y="210" width="145" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontStyle=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="46" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="407" y="366" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="Benar" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;fontStyle=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="31" target="45" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="405.6428571428571" y="563" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="Salah" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontStyle=1" parent="1" source="31" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="459" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="Validasi" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="355" y="409" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1;" parent="1" source="45" target="39" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="406" y="623" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="44" target="43" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="190" y="459" as="sourcePoint"/>
+                        <mxPoint x="345" y="140" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="160" y="460"/>
+                            <mxPoint x="160" y="150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="39" value="Halaman dashboard admin" style="shape=offPageConnector;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="366" y="659" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1" parent="1" source="41" target="43" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="405" y="110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="Mulai" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="350" y="50" width="113" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;Halaman Login&lt;/span&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="346" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;Notif Gagal&lt;/span&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="165" y="429" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;Tampil notif berhasil&lt;/span&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="346" y="562" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;Login&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="345.5" y="311" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

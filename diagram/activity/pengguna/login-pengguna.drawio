@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="kEL7M0PXlytdhJxPXJM-" name="Page-1">
-        <mxGraphModel dx="630" dy="550" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="312" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -22,13 +22,13 @@
                         <mxPoint x="450" y="390" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="7" value="Membuka Aplikasi" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="7" value="Membuka Aplikasi" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="260" y="270" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="Menampilkan Menu Login" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="8" value="Menampilkan Menu Login" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="538" y="270" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="Memasukan Username dan Password" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="9" value="Memasukan Username dan Password" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="260" y="390" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7" target="8" edge="1">
@@ -48,7 +48,7 @@
                         <mxPoint x="450" y="360" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="12" value="Validasi Username dan Password" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="12" value="Validasi Username dan Password" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="530" y="390" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" target="12" edge="1">
@@ -57,7 +57,7 @@
                         <mxPoint x="450" y="360" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="14" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="14" value="Cek data di database?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="558" y="500" width="80" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.575;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="12" target="14" edge="1">
@@ -81,10 +81,10 @@
                 <mxCell id="18" value="Benar" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="598" y="460" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" value="Masuk ke Halaman Pengguna" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="19" value="Masuk ke Halaman Pengguna" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="538" y="620" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="14" target="19" edge="1">
+                <mxCell id="20" value="benar" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="14" target="19" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="400" y="600" as="sourcePoint"/>
                         <mxPoint x="450" y="550" as="targetPoint"/>

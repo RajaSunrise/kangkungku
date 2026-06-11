@@ -5,47 +5,47 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
-        <!-- Overlay Background -->
+        
         <mxCell id="overlay" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;fillOpacity=50;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry width="1200" height="800" as="geometry" />
         </mxCell>
 
-        <!-- Modal Card -->
-        <mxCell id="modal" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
+        
+        <mxCell id="modal" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="350" y="150" width="500" height="450" as="geometry" />
         </mxCell>
         
-        <mxCell id="title" value="Update Gejala" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#111812;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="title" value="Update Gejala" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=20;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="180" width="300" height="40" as="geometry" />
         </mxCell>
 
-        <!-- Form Fields -->
-        <mxCell id="lbl_kode" value="Kode Gejala" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#374151;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+        
+        <mxCell id="lbl_kode" value="Kode Gejala" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="240" width="150" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="in_kode" value="G01" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#D1D5DB;fontColor=#6B7280;" vertex="1" parent="1">
+        <mxCell id="in_kode" value="G01" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="380" y="265" width="440" height="40" as="geometry" />
         </mxCell>
 
-        <mxCell id="lbl_desc" value="Deskripsi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#374151;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="lbl_desc" value="Deskripsi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="320" width="150" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="in_desc" value="Terdapat bintik-bintik putih pada permukaan bawah daun" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D1D5DB;align=left;spacingLeft=10;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+        <mxCell id="in_desc" value="Terdapat bintik-bintik putih pada permukaan bawah daun" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;align=left;spacingLeft=10;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
           <mxGeometry x="380" y="345" width="440" height="100" as="geometry" />
         </mxCell>
 
-        <mxCell id="lbl_img" value="URL Gambar" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#374151;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="lbl_img" value="URL Gambar" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="460" width="150" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="in_img" value="https://example.com/image.jpg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D1D5DB;align=left;spacingLeft=10;" vertex="1" parent="1">
+        <mxCell id="in_img" value="https://example.com/image.jpg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="380" y="485" width="440" height="40" as="geometry" />
         </mxCell>
 
-        <!-- Buttons -->
-        <mxCell id="btn_cancel" value="Batal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=none;fontColor=#4B5563;fontSize=14;" vertex="1" parent="1">
+        
+        <mxCell id="btn_cancel" value="Batal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="630" y="550" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="btn_save" value="Simpan Perubahan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563EB;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="btn_save" value="Simpan Perubahan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="720" y="550" width="150" height="40" as="geometry" />
         </mxCell>
 

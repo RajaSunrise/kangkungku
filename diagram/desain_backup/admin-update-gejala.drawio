@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="admin_update_gejala" name="Admin Update Gejala">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Overlay Background -->
+        <mxCell id="overlay" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;fillOpacity=50;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry width="1200" height="800" as="geometry" />
+        </mxCell>
+
+        <!-- Modal Card -->
+        <mxCell id="modal" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="150" width="500" height="450" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="title" value="Update Gejala" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="180" width="300" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Form Fields -->
+        <mxCell id="lbl_kode" value="Kode Gejala" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3F3F3F;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="240" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="in_kode" value="G01" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=#D4D4D4;fontColor=#717171;" vertex="1" parent="1">
+          <mxGeometry x="380" y="265" width="440" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lbl_desc" value="Deskripsi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3F3F3F;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="320" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="in_desc" value="Terdapat bintik-bintik putih pada permukaan bawah daun" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D4D4D4;align=left;spacingLeft=10;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="380" y="345" width="440" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lbl_img" value="URL Gambar" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3F3F3F;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="460" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="in_img" value="https://example.com/image.jpg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D4D4D4;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="380" y="485" width="440" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Buttons -->
+        <mxCell id="btn_cancel" value="Batal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=none;fontColor=#535353;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="630" y="550" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_save" value="Simpan Perubahan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5F5F5F;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="720" y="550" width="150" height="40" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

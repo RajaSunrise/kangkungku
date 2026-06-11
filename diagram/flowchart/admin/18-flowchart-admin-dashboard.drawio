@@ -1,0 +1,77 @@
+<mxfile host="65bd71144e">
+    <diagram name="Flowchart Admin Dashboard" id="flowchart-admin-dashboard">
+        <mxGraphModel dx="792" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="51" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontStyle=1" parent="1" source="46" target="47" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Halaman Dashboard" style="shape=offPageConnector;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="540" y="70" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Tidak" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;fontStyle=1" parent="1" source="47" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="Iyaa" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.023;entryY=0.37;entryDx=0;entryDy=0;entryPerimeter=0;fontStyle=1" parent="1" source="47" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="Kelola Penyakit" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="530" y="190" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="Tidak" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;fontStyle=1" parent="1" source="48" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="Iyaa" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.033;entryY=0.397;entryDx=0;entryDy=0;entryPerimeter=0;fontStyle=1" parent="1" source="48" target="56" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="Kelola Gejala" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="530" y="350" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="Tidak" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;fontStyle=1" parent="1" source="49" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="Iyaa" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=1" parent="1" source="49" target="57" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="860" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="49" value="Kelola Aturan" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="530" y="507" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="Iyaa" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.375;entryDx=0;entryDy=0;entryPerimeter=0;fontStyle=1" parent="1" source="50" target="58" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="Tidak" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontStyle=1" parent="1" source="50" target="67" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="582.5747126436781" y="803" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="50" value="Kelola Pengguna" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="533" y="666" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Halaman Kelola Penyakit" style="shape=offPageConnector;whiteSpace=wrap;html=1;size=0.5;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="802" y="213" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Halaman Kelola gejala" style="shape=offPageConnector;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="800" y="370" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="Halaman kelola aturan" style="shape=offPageConnector;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="802" y="517" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="Halaman kelola pengguna" style="shape=offPageConnector;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="800" y="686" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="Iyaa" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;fontStyle=1" parent="1" source="67" target="70" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="Logout" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="530" y="827" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="Halaman Login&amp;nbsp;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="802" y="837" width="80" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
