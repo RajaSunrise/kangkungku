@@ -22,7 +22,7 @@
                         <mxPoint x="450" y="390" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="25" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="8" target="24">
+                <mxCell id="25" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="8" target="24" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="Menampilkan Halaman Login" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -64,7 +64,7 @@
                     <mxGeometry x="410" y="480" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="Benar" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="595" y="555" width="60" height="30" as="geometry"/>
+                    <mxGeometry x="588" y="547" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="Masuk ke Halaman Admin" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="520" y="587" width="140" height="50" as="geometry"/>
@@ -84,10 +84,10 @@
                         <mxPoint x="450" y="550" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="24" value="Menampilkan Form Login" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="24" value="Menampilkan Form Login" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="519" y="280" width="140" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="26" value="" style="endArrow=classic;html=1;exitX=0.431;exitY=1.008;exitDx=0;exitDy=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="24" target="9">
+                <mxCell id="26" value="" style="endArrow=classic;html=1;exitX=0.431;exitY=1.008;exitDx=0;exitDy=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="24" target="9" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="640" y="490" as="sourcePoint"/>
                         <mxPoint x="350" y="400" as="targetPoint"/>

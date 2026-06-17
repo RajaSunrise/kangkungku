@@ -236,12 +236,11 @@ async function loadDiseases() {
                     <tr>
                         <th class="px-6 py-3">ID</th>
                         <th class="px-6 py-3">Nama</th>
-                        <th class="px-6 py-3">Nama Ilmiah</th>
                         <th class="px-6 py-3">Aksi</th>
                     </tr>
                 </thead>
                 <tbody id="diseases-table-body" class="divide-y divide-gray-100">
-                    <tr><td colspan="4" class="px-6 py-4 text-center">Memuat...</td></tr>
+                    <tr><td colspan="3" class="px-6 py-4 text-center">Memuat...</td></tr>
                 </tbody>
             </table>
         </div>
@@ -258,7 +257,6 @@ async function loadDiseases() {
             tr.innerHTML = `
                 <td class="px-6 py-4">${d.id}</td>
                 <td class="px-6 py-4 font-bold">${d.nama}</td>
-                <td class="px-6 py-4 italic text-gray-500">${d.nama_ilmiah || '-'}</td>
                 <td class="px-6 py-4">
                     <button onclick="editDisease(${d.id})" class="text-blue-600 hover:text-blue-800 font-bold mr-2">Edit</button>
                     <button onclick="deleteDisease(${d.id})" class="text-red-600 hover:text-red-800 font-bold">Hapus</button>
@@ -276,7 +274,6 @@ async function createDisease(event) {
     const form = event.target;
     const data = {
         nama: form.nama.value,
-        nama_ilmiah: form.nama_ilmiah.value,
         deskripsi: form.deskripsi.value,
         solusi: form.solusi.value,
         url_gambar: form.url_gambar.value
@@ -317,7 +314,6 @@ async function updateDisease(event, id) {
     const form = event.target;
     const data = {
         nama: form.nama.value,
-        nama_ilmiah: form.nama_ilmiah.value,
         deskripsi: form.deskripsi.value,
         solusi: form.solusi.value,
         url_gambar: form.url_gambar.value
@@ -374,10 +370,6 @@ function showAddDiseaseModal() {
                     <input type="text" name="nama" required class="w-full border rounded p-2">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium">Nama Ilmiah</label>
-                    <input type="text" name="nama_ilmiah" class="w-full border rounded p-2">
-                </div>
-                <div>
                     <label class="block text-sm font-medium">Deskripsi</label>
                     <textarea name="deskripsi" class="w-full border rounded p-2"></textarea>
                 </div>
@@ -411,10 +403,6 @@ function showEditDiseaseModal(data) {
                 <div>
                     <label class="block text-sm font-medium">Nama Penyakit</label>
                     <input type="text" name="nama" value="${data.nama}" required class="w-full border rounded p-2">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium">Nama Ilmiah</label>
-                    <input type="text" name="nama_ilmiah" value="${data.nama_ilmiah || ''}" class="w-full border rounded p-2">
                 </div>
                 <div>
                     <label class="block text-sm font-medium">Deskripsi</label>

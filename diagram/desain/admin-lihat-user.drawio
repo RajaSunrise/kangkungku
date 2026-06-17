@@ -53,10 +53,7 @@
           <mxGeometry x="310" y="115" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="th_2" value="Username" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="115" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="th_3" value="Email" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="530" y="115" width="200" height="30" as="geometry" />
+          <mxGeometry x="370" y="115" width="350" height="30" as="geometry" />
         </mxCell>
         <mxCell id="th_4" value="Role" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=12;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="740" y="115" width="80" height="30" as="geometry" />
@@ -76,10 +73,7 @@
           <mxGeometry x="310" y="160" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="tr1_2" value="admin" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=13;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="160" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="tr1_3" value="admin@example.com" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="530" y="160" width="200" height="30" as="geometry" />
+          <mxGeometry x="370" y="160" width="350" height="30" as="geometry" />
         </mxCell>
         <mxCell id="tr1_4" value="admin" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="740" y="160" width="80" height="30" as="geometry" />

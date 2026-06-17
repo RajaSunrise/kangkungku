@@ -2,190 +2,190 @@
     <diagram id="diag_diag" name="Diagnosa Page">
         <mxGraphModel dx="1524" dy="1733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
             <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F7;strokeColor=none;" parent="1" vertex="1">
-                    <mxGeometry y="64" width="1200" height="1600" as="geometry"/>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry y="64" width="1200" height="1600" as="geometry" />
                 </mxCell>
-                <mxCell id="nav_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E1E1E1;strokeWidth=1;" parent="1" vertex="1">
-                    <mxGeometry width="1200" height="64" as="geometry"/>
+                <mxCell id="nav_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry width="1200" height="64" as="geometry" />
                 </mxCell>
-                <mxCell id="logo_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="60" y="16" width="32" height="32" as="geometry"/>
+                <mxCell id="logo_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="16" width="32" height="32" as="geometry" />
                 </mxCell>
-                <mxCell id="logo_icon" value="eco" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=16;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="60" y="16" width="32" height="32" as="geometry"/>
+                <mxCell id="logo_icon" value="eco" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="16" width="32" height="32" as="geometry" />
                 </mxCell>
-                <mxCell id="logo_text" value="KangkungKu" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=20;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="100" y="12" width="150" height="40" as="geometry"/>
+                <mxCell id="logo_text" value="KangkungKu" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="12" width="150" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="nav_links" value="Beranda    Diagnosa    Panduan    Ensiklopedia    Kalkulator" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=14;fontStyle=0;" parent="1" vertex="1">
-                    <mxGeometry x="350" y="12" width="500" height="40" as="geometry"/>
+                <mxCell id="nav_links" value="Beranda    Diagnosa    Panduan    Ensiklopedia    Kalkulator" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=0;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="12" width="500" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="title" value="Diagnosa Kesehatan Kangkung" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=40;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="60" y="120" width="800" height="60" as="geometry"/>
+                <mxCell id="title" value="Diagnosa Kesehatan Kangkung" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=40;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="120" width="800" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="desc" value="Pilih gejala yang diamati untuk mengidentifikasi penyakit potensial menggunakan Sistem Pakar kami. Sesuaikan tingkat keyakinan untuk hasil yang lebih akurat." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#535353;fontSize=18;lineHeight=1.5;" parent="1" vertex="1">
-                    <mxGeometry x="60" y="180" width="700" height="80" as="geometry"/>
+                <mxCell id="desc" value="Pilih gejala yang diamati untuk mengidentifikasi penyakit potensial menggunakan Sistem Pakar kami. Sesuaikan tingkat keyakinan untuk hasil yang lebih akurat." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;lineHeight=1.5;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="180" width="700" height="80" as="geometry" />
                 </mxCell>
-                <mxCell id="grid_container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="60" y="258" width="1080" height="1000" as="geometry"/>
+                <mxCell id="grid_container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="258" width="1080" height="1000" as="geometry" />
                 </mxCell>
-                <mxCell id="c1_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A1A1A1;strokeWidth=2;" parent="1" vertex="1">
-                    <mxGeometry x="60" y="280" width="530" height="190" as="geometry"/>
+                <mxCell id="c1_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="280" width="530" height="190" as="geometry" />
                 </mxCell>
-                <mxCell id="c1_check" value="check" style="ellipse;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;fontColor=#000000;fontSize=10;fontStyle=1;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="550" y="295" width="24" height="24" as="geometry"/>
+                <mxCell id="c1_check" value="check" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="295" width="24" height="24" as="geometry" />
                 </mxCell>
-                <mxCell id="c1_icon_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="85" y="305" width="56" height="56" as="geometry"/>
+                <mxCell id="c1_icon_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="85" y="305" width="56" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="c1_code" value="G001" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="155" y="305" width="100" height="30" as="geometry"/>
+                <mxCell id="c1_code" value="G001" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="155" y="305" width="100" height="30" as="geometry" />
                 </mxCell>
-                <mxCell id="c1_desc" value="Bercak putih menonjol pada sisi bawah daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=14;lineHeight=1.4;" parent="1" vertex="1">
-                    <mxGeometry x="155" y="335" width="350" height="40" as="geometry"/>
+                <mxCell id="c1_desc" value="Bercak putih menonjol pada sisi bawah daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;lineHeight=1.4;" parent="1" vertex="1">
+                    <mxGeometry x="155" y="335" width="350" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="c1_slider_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;strokeColor=#E1E1E1;direction=east;" vertex="1" parent="1">
-                    <mxGeometry x="85" y="385" width="480" height="10" as="geometry"/>
+                <mxCell id="c1_slider_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;strokeColor=#000000;direction=east;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="85" y="385" width="480" height="10" as="geometry" />
                 </mxCell>
-                <mxCell id="c1_slider_lbl" value="TINGKAT KEYAKINAN" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#A0A0A0;fontSize=10;fontStyle=1;letterSpacing=0.1em;" parent="1" vertex="1">
-                    <mxGeometry x="85" y="410" width="200" height="20" as="geometry"/>
+                <mxCell id="c1_slider_lbl" value="TINGKAT KEYAKINAN" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=10;fontStyle=1;letterSpacing=0.1em;" parent="1" vertex="1">
+                    <mxGeometry x="85" y="410" width="200" height="20" as="geometry" />
                 </mxCell>
-                <mxCell id="c1_slider_val" value="0.8" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#A1A1A1;fontSize=14;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="515" y="405" width="50" height="20" as="geometry"/>
+                <mxCell id="c1_slider_val" value="0.8" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="405" width="50" height="20" as="geometry" />
                 </mxCell>
-                <mxCell id="c1_slider_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E7E7E7;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="85" y="440" width="480" height="8" as="geometry"/>
+                <mxCell id="c1_slider_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="85" y="440" width="480" height="8" as="geometry" />
                 </mxCell>
-                <mxCell id="c1_slider_active" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="85" y="440" width="384" height="8" as="geometry"/>
+                <mxCell id="c1_slider_active" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="85" y="440" width="384" height="8" as="geometry" />
                 </mxCell>
-                <mxCell id="c2_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" parent="1" vertex="1">
-                    <mxGeometry x="610" y="280" width="530" height="120" as="geometry"/>
+                <mxCell id="c2_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="280" width="530" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="c2_icon_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="635" y="305" width="56" height="56" as="geometry"/>
+                <mxCell id="c2_icon_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="635" y="305" width="56" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="c2_code" value="G002" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;" parent="1" vertex="1">
-                    <mxGeometry x="705" y="305" width="100" height="30" as="geometry"/>
+                <mxCell id="c2_code" value="G002" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="705" y="305" width="100" height="30" as="geometry" />
                 </mxCell>
-                <mxCell id="c2_desc" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=14;lineHeight=1.4;" parent="1" vertex="1">
-                    <mxGeometry x="705" y="335" width="350" height="40" as="geometry"/>
+                <mxCell id="c2_desc" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;lineHeight=1.4;" parent="1" vertex="1">
+                    <mxGeometry x="705" y="335" width="350" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="footer_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;strokeColor=#E1E1E1;direction=east;" vertex="1" parent="1">
-                    <mxGeometry x="60" y="1400" width="1080" height="10" as="geometry"/>
+                <mxCell id="footer_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;strokeColor=#000000;direction=east;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="1400" width="1080" height="10" as="geometry" />
                 </mxCell>
-                <mxCell id="btn_back" value="Kembali" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#E1E1E1;fontColor=#535353;fontStyle=1;fontSize=16;" parent="1" vertex="1">
-                    <mxGeometry x="60" y="1440" width="180" height="56" as="geometry"/>
+                <mxCell id="btn_back" value="Kembali" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="1440" width="180" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="btn_submit" value="Dapatkan Hasil&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;fontColor=#161616;fontStyle=1;fontSize=16;shadow=1;" parent="1" vertex="1">
-                    <mxGeometry x="880" y="1440" width="260" height="56" as="geometry"/>
+                <mxCell id="btn_submit" value="Dapatkan Hasil&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="880" y="1440" width="260" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
-                    <mxGeometry x="615" y="425" width="530" height="120" as="geometry"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="615" y="425" width="530" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="640" y="450" width="56" height="56" as="geometry"/>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="450" width="56" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="4" value="G002" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="710" y="450" width="100" height="30" as="geometry"/>
+                <mxCell id="4" value="G002" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="450" width="100" height="30" as="geometry" />
                 </mxCell>
-                <mxCell id="5" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
-                    <mxGeometry x="710" y="480" width="350" height="40" as="geometry"/>
+                <mxCell id="5" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="480" width="350" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
-                    <mxGeometry x="620" y="610" width="530" height="120" as="geometry"/>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="610" width="530" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="7" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="645" y="635" width="56" height="56" as="geometry"/>
+                <mxCell id="7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="645" y="635" width="56" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="8" value="G002" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="715" y="635" width="100" height="30" as="geometry"/>
+                <mxCell id="8" value="G002" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="715" y="635" width="100" height="30" as="geometry" />
                 </mxCell>
-                <mxCell id="9" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
-                    <mxGeometry x="715" y="665" width="350" height="40" as="geometry"/>
+                <mxCell id="9" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
+                    <mxGeometry x="715" y="665" width="350" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
-                    <mxGeometry x="44" y="520" width="530" height="120" as="geometry"/>
+                <mxCell id="10" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="44" y="520" width="530" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="11" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="69" y="545" width="56" height="56" as="geometry"/>
+                <mxCell id="11" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="69" y="545" width="56" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="12" value="G003" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="139" y="545" width="100" height="30" as="geometry"/>
+                <mxCell id="12" value="G003" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="139" y="545" width="100" height="30" as="geometry" />
                 </mxCell>
-                <mxCell id="13" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
-                    <mxGeometry x="139" y="575" width="350" height="40" as="geometry"/>
+                <mxCell id="13" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
+                    <mxGeometry x="139" y="575" width="350" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="26" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.848;entryY=1.011;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="14" target="17">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="26" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.848;entryY=1.011;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="14" target="17">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="14" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
-                    <mxGeometry x="30" y="683" width="530" height="120" as="geometry"/>
+                <mxCell id="14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="683" width="530" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="15" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="55" y="708" width="56" height="56" as="geometry"/>
+                <mxCell id="15" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="55" y="708" width="56" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="16" value="G004" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="125" y="708" width="100" height="30" as="geometry"/>
+                <mxCell id="16" value="G004" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="708" width="100" height="30" as="geometry" />
                 </mxCell>
-                <mxCell id="17" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
-                    <mxGeometry x="125" y="738" width="350" height="40" as="geometry"/>
+                <mxCell id="17" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="738" width="350" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="18" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
-                    <mxGeometry x="625" y="820" width="530" height="120" as="geometry"/>
+                <mxCell id="18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="625" y="820" width="530" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="19" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="650" y="845" width="56" height="56" as="geometry"/>
+                <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="845" width="56" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="20" value="G002" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="720" y="845" width="100" height="30" as="geometry"/>
+                <mxCell id="20" value="G002" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="845" width="100" height="30" as="geometry" />
                 </mxCell>
-                <mxCell id="21" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
-                    <mxGeometry x="720" y="875" width="350" height="40" as="geometry"/>
+                <mxCell id="21" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="875" width="350" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="22" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
-                    <mxGeometry x="30" y="860" width="530" height="120" as="geometry"/>
+                <mxCell id="22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="860" width="530" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="23" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="55" y="875" width="56" height="56" as="geometry"/>
+                <mxCell id="23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="55" y="875" width="56" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="24" value="G005" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="125" y="875" width="100" height="30" as="geometry"/>
+                <mxCell id="24" value="G005" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="875" width="100" height="30" as="geometry" />
                 </mxCell>
-                <mxCell id="25" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
-                    <mxGeometry x="125" y="905" width="350" height="40" as="geometry"/>
+                <mxCell id="25" value="Bercak kuning pada sisi atas daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="905" width="350" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="27" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A1A1A1;strokeWidth=2;" vertex="1" parent="1">
-                    <mxGeometry x="614" y="990" width="530" height="190" as="geometry"/>
+                <mxCell id="27" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="614" y="990" width="530" height="190" as="geometry" />
                 </mxCell>
-                <mxCell id="28" value="check" style="ellipse;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;fontColor=#000000;fontSize=10;fontStyle=1;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="1104" y="1005" width="24" height="24" as="geometry"/>
+                <mxCell id="28" value="check" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="1104" y="1005" width="24" height="24" as="geometry" />
                 </mxCell>
-                <mxCell id="29" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="639" y="1015" width="56" height="56" as="geometry"/>
+                <mxCell id="29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="639" y="1015" width="56" height="56" as="geometry" />
                 </mxCell>
-                <mxCell id="30" value="G008" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="709" y="1015" width="100" height="30" as="geometry"/>
+                <mxCell id="30" value="G008" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="709" y="1015" width="100" height="30" as="geometry" />
                 </mxCell>
-                <mxCell id="31" value="Bercak putih menonjol pada sisi bawah daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
-                    <mxGeometry x="709" y="1045" width="350" height="40" as="geometry"/>
+                <mxCell id="31" value="Bercak putih menonjol pada sisi bawah daun" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;lineHeight=1.4;" vertex="1" parent="1">
+                    <mxGeometry x="709" y="1045" width="350" height="40" as="geometry" />
                 </mxCell>
-                <mxCell id="32" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;strokeColor=#E1E1E1;direction=east;" vertex="1" parent="1">
-                    <mxGeometry x="639" y="1095" width="480" height="10" as="geometry"/>
+                <mxCell id="32" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;strokeColor=#000000;direction=east;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="639" y="1095" width="480" height="10" as="geometry" />
                 </mxCell>
-                <mxCell id="33" value="TINGKAT KEYAKINAN" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#A0A0A0;fontSize=10;fontStyle=1;letterSpacing=0.1em;" vertex="1" parent="1">
-                    <mxGeometry x="639" y="1120" width="200" height="20" as="geometry"/>
+                <mxCell id="33" value="TINGKAT KEYAKINAN" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=10;fontStyle=1;letterSpacing=0.1em;" vertex="1" parent="1">
+                    <mxGeometry x="639" y="1120" width="200" height="20" as="geometry" />
                 </mxCell>
-                <mxCell id="34" value="0.8" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#A1A1A1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-                    <mxGeometry x="1069" y="1115" width="50" height="20" as="geometry"/>
+                <mxCell id="34" value="0.8" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="1069" y="1115" width="50" height="20" as="geometry" />
                 </mxCell>
-                <mxCell id="35" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E7E7E7;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="639" y="1150" width="480" height="8" as="geometry"/>
+                <mxCell id="35" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="639" y="1150" width="480" height="8" as="geometry" />
                 </mxCell>
-                <mxCell id="36" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="639" y="1150" width="384" height="8" as="geometry"/>
+                <mxCell id="36" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="639" y="1150" width="384" height="8" as="geometry" />
                 </mxCell>
             </root>
         </mxGraphModel>

@@ -1,88 +1,67 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="21.0.0" type="device">
-  <diagram id="admin_penyakit" name="Admin Lihat Penyakit">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-
-        <!-- Layout Sidebar -->
-        <mxCell id="sidebar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E6E6E6;" vertex="1" parent="1">
-          <mxGeometry width="256" height="800" as="geometry" />
-        </mxCell>
-        <mxCell id="side_title" value="Panel Admin" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="30" y="20" width="200" height="40" as="geometry" />
-        </mxCell>
-        
-        <!-- Sidebar Menu Items -->
-        <mxCell id="nav_dash" value="dashboard  Dasbor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#535353;align=left;spacingLeft=15;" vertex="1" parent="1">
-          <mxGeometry x="15" y="80" width="226" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="nav_disease" value="coronavirus  Penyakit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=none;fontColor=#151515;align=left;spacingLeft=15;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="15" y="125" width="226" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="nav_symptom" value="healing  Gejala" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#535353;align=left;spacingLeft=15;" vertex="1" parent="1">
-          <mxGeometry x="15" y="170" width="226" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="nav_user" value="group  Pengguna" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#535353;align=left;spacingLeft=15;" vertex="1" parent="1">
-          <mxGeometry x="15" y="215" width="226" height="40" as="geometry" />
-        </mxCell>
-
-        <!-- Main Content -->
-        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9F9F9;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="256" width="944" height="800" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="header" value="Kelola Penyakit" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=24;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="290" y="40" width="300" height="40" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="btn_add" value="Tambah Penyakit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;fontColor=#151515;fontStyle=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="40" width="160" height="40" as="geometry" />
-        </mxCell>
-
-        <!-- Table Card -->
-        <mxCell id="table_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E6E6E6;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="290" y="110" width="870" height="500" as="geometry" />
-        </mxCell>
-        
-        <!-- Table Header -->
-        <mxCell id="th_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9F9F9;strokeColor=#E6E6E6;" vertex="1" parent="1">
-          <mxGeometry x="290" y="110" width="870" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="th_1" value="ID" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="310" y="115" width="50" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="th_2" value="Nama" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="115" width="200" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="th_3" value="Nama Ilmiah" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="115" width="200" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="th_4" value="Aksi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="115" width="100" height="30" as="geometry" />
-        </mxCell>
-
-        <!-- Row 1 -->
-        <mxCell id="tr1_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#F3F3F3;" vertex="1" parent="1">
-          <mxGeometry x="290" y="150" width="870" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="tr1_1" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="310" y="160" width="50" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="tr1_2" value="Karat Putih (White Rust)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=13;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="160" width="200" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="tr1_3" value="Albugo ipomoeae-panduratae" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=13;fontStyle=2;" vertex="1" parent="1">
-          <mxGeometry x="600" y="160" width="200" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="tr1_btn_edit" value="Edit" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#5F5F5F;fontSize=13;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="160" width="40" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="tr1_btn_del" value="Hapus" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#5C5C5C;fontSize=13;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1050" y="160" width="50" height="30" as="geometry" />
-        </mxCell>
-
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram id="admin_penyakit" name="Admin Lihat Penyakit">
+        <mxGraphModel dx="792" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="sidebar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry width="256" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="side_title" value="Panel Admin" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="20" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nav_dash" value="dashboard  Dasbor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;align=left;spacingLeft=15;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="80" width="226" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nav_disease" value="coronavirus  Penyakit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;align=left;spacingLeft=15;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="125" width="226" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nav_symptom" value="healing  Gejala" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;align=left;spacingLeft=15;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="170" width="226" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nav_user" value="group  Pengguna" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;align=left;spacingLeft=15;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="215" width="226" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="256" width="944" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="header" value="Kelola Penyakit" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=24;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="40" width="300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="btn_add" value="Tambah Penyakit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="40" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="table_card" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="110" width="870" height="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="th_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="110" width="870" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="th_1" value="ID" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="115" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="th_2" value="Nama" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="115" width="600" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="th_4" value="Aksi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="115" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="tr1_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="150" width="870" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="tr1_1" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="160" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="tr1_2" value="Karat Putih (White Rust)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="160" width="600" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="tr1_btn_edit" value="Edit" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="160" width="40" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="tr1_btn_del" value="Hapus" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="160" width="50" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>

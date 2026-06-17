@@ -13,7 +13,6 @@ class Gejala(GejalaBase):
 
 class PenyakitBase(BaseModel):
     nama: str
-    nama_ilmiah: Optional[str] = None
     deskripsi: Optional[str] = None
     solusi: Optional[str] = None
     url_gambar: Optional[str] = None

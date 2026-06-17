@@ -1,69 +1,49 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="21.0.0" type="device">
-  <diagram id="admin_update_penyakit" name="Admin Update Penyakit">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-
-        <!-- Overlay Background -->
-        <mxCell id="overlay" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;fillOpacity=50;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry width="1200" height="800" as="geometry" />
-        </mxCell>
-
-        <!-- Modal Card -->
-        <mxCell id="modal" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="350" y="50" width="500" height="700" as="geometry" />
-        </mxCell>
-        
-        <mxCell id="title" value="Edit Penyakit" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=20;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="80" width="300" height="40" as="geometry" />
-        </mxCell>
-
-        <!-- Form Fields with Data -->
-        <mxCell id="lbl_nama" value="Nama Penyakit" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3F3F3F;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="140" width="150" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="in_nama" value="Karat Putih (White Rust)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D4D4D4;align=left;spacingLeft=10;" vertex="1" parent="1">
-          <mxGeometry x="380" y="165" width="440" height="40" as="geometry" />
-        </mxCell>
-
-        <mxCell id="lbl_latin" value="Nama Ilmiah" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3F3F3F;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="220" width="150" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="in_latin" value="Albugo ipomoeae-panduratae" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D4D4D4;align=left;spacingLeft=10;" vertex="1" parent="1">
-          <mxGeometry x="380" y="245" width="440" height="40" as="geometry" />
-        </mxCell>
-
-        <mxCell id="lbl_desc" value="Deskripsi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3F3F3F;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="300" width="150" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="in_desc" value="Karat Putih adalah penyakit yang disebabkan oleh oomycete Albugo..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D4D4D4;align=left;spacingLeft=10;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
-          <mxGeometry x="380" y="325" width="440" height="100" as="geometry" />
-        </mxCell>
-
-        <mxCell id="lbl_sol" value="Solusi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3F3F3F;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="440" width="150" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="in_sol" value="Segera cabut dan musnahkan daun atau bagian tanaman yang memiliki..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D4D4D4;align=left;spacingLeft=10;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
-          <mxGeometry x="380" y="465" width="440" height="100" as="geometry" />
-        </mxCell>
-
-        <mxCell id="lbl_img" value="URL Gambar" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3F3F3F;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="580" width="150" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="in_img" value="/static/img/karat-putih.png" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D4D4D4;align=left;spacingLeft=10;" vertex="1" parent="1">
-          <mxGeometry x="380" y="605" width="440" height="40" as="geometry" />
-        </mxCell>
-
-        <!-- Buttons -->
-        <mxCell id="btn_cancel" value="Batal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=none;fontColor=#535353;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="630" y="670" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="btn_save" value="Update" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;fontColor=#151515;fontStyle=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="720" y="670" width="100" height="40" as="geometry" />
-        </mxCell>
-
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram id="admin_update_penyakit" name="Admin Update Penyakit">
+        <mxGraphModel dx="792" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="overlay" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;fillOpacity=50;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry width="1200" height="800" as="geometry"/>
+                </mxCell>
+                 <mxCell id="modal" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="50" width="500" height="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="title" value="Edit Penyakit" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=20;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="80" width="300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_nama" value="Nama Penyakit" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="140" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="in_nama" value="Karat Putih (White Rust)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="165" width="440" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_desc" value="Deskripsi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="220" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="in_desc" value="Karat Putih adalah penyakit yang disebabkan oleh oomycete Albugo..." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;align=left;spacingLeft=10;verticalAlign=top;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="245" width="440" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_sol" value="Solusi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="360" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="in_sol" value="Segera cabut dan musnahkan daun atau bagian tanaman yang memiliki..." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;align=left;spacingLeft=10;verticalAlign=top;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="385" width="440" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_img" value="URL Gambar" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="500" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="in_img" value="/static/img/karat-putih.png" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="525" width="440" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="btn_cancel" value="Batal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="590" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="btn_save" value="Update" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="590" width="100" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>

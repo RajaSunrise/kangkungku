@@ -42,47 +42,38 @@ Berikut adalah tabel relasi lengkap antara penyakit/hama dan gejala beserta nila
 Berikut adalah detail deskripsi ilmiah dan solusi pengendalian untuk masing-masing hama dan penyakit tanaman kangkung:
 
 ### H01. Bekicot
-*   **Nama Ilmiah:** *Achatina fulica*
 *   **Deskripsi:** Bekicot (Achatina fulica) merupakan hama penting yang menyerang tanaman kangkung dengan memakan daun dan batang muda. Serangan biasanya terjadi secara masif pada malam hari atau kondisi lingkungan yang sangat lembab, meninggalkan lubang-lubang besar yang tidak beraturan serta jejak lendir mengkilap pada permukaan tanaman.
 *   **Solusi:** Lakukan pencarian secara manual pada malam hari untuk mengumpulkan dan memusnahkan bekicot secara langsung. Taburkan abu kayu, serbuk gergaji, pasir kasar, atau pecahan cangkang telur di sekeliling bedengan tanaman sebagai penghalang fisik agar bekicot tidak mendekat. Gunakan umpan siput (moluskisida) berbahan aktif metaldehida secara bijaksana dan sesuai dosis anjuran jika serangan sudah melebihi batas kendali.
 
 ### H02. Ulat Grayak
-*   **Nama Ilmiah:** *Spodoptera litura*
 *   **Deskripsi:** Ulat Grayak (Spodoptera litura) adalah larva serangga yang sangat rakus dan merusak daun kangkung secara berkelompok. Hama ini aktif memakan helaian daun mulai dari tepi hingga menyisakan tulang daunnya saja, terutama di malam hari, sehingga mengganggu proses fotosintesis secara drastis.
 *   **Solusi:** Lakukan sanitasi lahan secara rutin dengan membersihkan gulma yang dapat menjadi tempat persembunyian ulat grayak. Kumpulkan kelompok telur dan ulat kecil yang ditemukan pada permukaan bawah daun lalu musnahkan segera. Semprotkan insektisida nabati berbasis minyak mimba atau Beauveria bassiana secara merata di sore hari, atau gunakan insektisida kimia berbahan aktif deltametrin jika populasi hama sangat tinggi.
 
 ### H03. Kutu Daun
-*   **Nama Ilmiah:** *Aphidoidea*
 *   **Deskripsi:** Kutu Daun (Aphids) adalah serangga kecil penghisap cairan sel tanaman kangkung, biasanya mengelompok di bagian bawah daun atau pucuk muda. Serangan hama ini menyebabkan helaian daun mengkerut, melengkung, menguning, dan tanaman tumbuh kerdil, serta dapat menularkan penyakit virus lainnya.
 *   **Solusi:** Semprot tanaman kangkung menggunakan air bertekanan kuat secara rutin untuk meluruhkan koloni kutu daun dari permukaan daun. Aplikasikan sabun insektisida organik atau minyak mimba secara berkala pada bagian bawah daun yang terserang. Pasang perangkap kartu kuning lengket di sekitar lahan untuk memantau dan meminimalkan populasi kutu daun dewasa.
 
 ### H04. Ulat Keket
-*   **Nama Ilmiah:** *Agrius convolvuli*
 *   **Deskripsi:** Ulat Keket atau ulat tanduk merupakan larva berukuran besar dari ngengat Agrius convolvuli yang memakan daun kangkung dengan sangat cepat. Akibat gigitannya, daun kangkung dapat rusak parah dan bahkan menyisakan batangnya saja dalam beberapa hari jika tidak segera ditangani.
 *   **Solusi:** Lakukan pemantauan intensif pada pagi dan sore hari untuk menemukan ulat keket secara manual karena ukurannya yang besar memudahkan pengamatan fisik. Pungut ulat tersebut langsung dari batang kangkung dan musnahkan. Jika serangan meluas, semprot tanaman dengan insektisida hayati berbahan aktif Bacillus thuringiensis yang sangat efektif mengendalikan ulat daun.
 
 ### P01. Karat Putih
-*   **Nama Ilmiah:** *Albugo ipomoeae-panduratae*
 *   **Deskripsi:** Karat Putih adalah penyakit yang disebabkan oleh oomycete Albugo ipomoeae-panduratae. Penyakit ini menyerang daun kangkung dengan memicu bintik kuning di permukaan atas dan pustula putih berkapur di permukaan bawah daun, sehingga menurunkan kualitas panen secara signifikan.
 *   **Solusi:** Cabut dan musnahkan daun atau tanaman kangkung yang terinfeksi karat putih untuk memutus siklus penyebaran spora melalui angin. Atur jarak tanam kangkung minimal 15-20 cm untuk menjaga sirkulasi udara di sekitar tajuk daun tetap optimal. Aplikasikan fungisida berbasis sulfur secara berkala atau gunakan fungisida berbahan aktif tembaga oksida sesuai anjuran jika infeksi meluas.
 
 ### P02. Bercak Daun
-*   **Nama Ilmiah:** *Cercospora ipomoeae*
 *   **Deskripsi:** Penyakit bercak daun kangkung ditandai dengan munculnya noda atau bercak kecokelatan hingga kehitaman pada permukaan daun. Infeksi jamur ini berkembang sangat pesat pada cuaca hangat dan kelembaban udara yang tinggi, yang mengakibatkan daun layu dan gugur sebelum waktunya.
 *   **Solusi:** Pangkas daun yang menunjukkan gejala bercak kecokelatan dan jaga kebersihan area lahan dari serpihan sisa tanaman yang gugur. Hindari penyiraman di sore hari secara langsung pada daun dan lebih baik lakukan penyiraman pada area perakaran di pagi hari. Gunakan fungisida organik berbahan ekstrak bawang putih atau semprotkan fungisida mankozeb sesuai dosis anjuran.
 
 ### P03. Bakteri
-*   **Nama Ilmiah:** *Pseudomonas syringae*
 *   **Deskripsi:** Penyakit bakteri menyerang jaringan vaskular tanaman kangkung, menyebabkan batang membubur lunak, mengeluarkan lendir keruh dari jaringan yang terinfeksi, serta mengeluarkan aroma busuk yang sangat menyengat.
 *   **Solusi:** Segera cabut tanaman kangkung yang membusuk beserta tanah perakarannya lalu bakar di luar area budidaya untuk mencegah kontaminasi tanah. Pastikan sistem drainase lahan berjalan dengan baik sehingga tidak terjadi genangan air yang memicu perkembangbiakan bakteri patogen. Gunakan bakterisida berbahan aktif tembaga hidroksida untuk mensterilkan tanaman di sekitarnya.
 
 ### P04. Virus
-*   **Nama Ilmiah:** *Water spinach mosaic virus*
 *   **Deskripsi:** Penyakit virus mosaik kangkung ditandai dengan pola warna belang hijau tua dan hijau muda yang tidak teratur, daun menguning pekat, keriput, batang mengalami bercak-bercak, serta tanaman tumbuh sangat kerdil.
 *   **Solusi:** Eradikasi atau cabut dan bakar seluruh tanaman kangkung yang bergejala mosaik untuk mencegah penyebaran virus ke tanaman sehat lainnya. Kendalikan populasi serangga vektor penular seperti kutu daun dengan menyemprotkan sabun insektisida atau minyak mimba secara berkala. Selalu lakukan sterilisasi peralatan pertanian menggunakan alkohol sebelum digunakan berpindah tanaman.
 
 ### P05. Alga
-*   **Nama Ilmiah:** *Cephaleuros virescens*
 *   **Deskripsi:** Penyakit alga merah dipicu oleh organisme Cephaleuros virescens. Penyakit ini memicu bercak karat merah atau kelabu kehijauan pada daun kangkung, disertai dengan pertumbuhan rambut halus cokelat kemerahan di permukaannya.
 *   **Solusi:** Lakukan pemangkasan pada daun-daun kangkung yang tua atau bagian tanaman terbawah yang terlalu lembab untuk meminimalkan paparan spora alga. Pastikan lahan terpapar sinar matahari secara penuh and hindari tingkat kerapatan tanaman yang berlebihan. Lakukan penyemprotan fungisida berbahan aktif tembaga jika tingkat serangan alga merusak sebagian besar dedaunan.
 

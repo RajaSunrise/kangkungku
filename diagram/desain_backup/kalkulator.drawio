@@ -5,94 +5,94 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
-        <!-- Background -->
-        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F7;strokeColor=none;" vertex="1" parent="1">
+        
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry width="1200" height="1600" as="geometry" />
         </mxCell>
 
-        <!-- Navbar -->
-        <mxCell id="nav_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E1E1E1;strokeWidth=1;" vertex="1" parent="1">
+        
+        <mxCell id="nav_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry width="1200" height="64" as="geometry" />
         </mxCell>
-        <mxCell id="logo_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="logo_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="60" y="16" width="32" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="logo_icon" value="eco" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="logo_icon" value="eco" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=16;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="60" y="16" width="32" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="logo_text" value="KangkungKu" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="logo_text" value="KangkungKu" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=20;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="100" y="12" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="nav_links" value="Beranda    Diagnosa    Panduan    Ensiklopedia    Kalkulator" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=14;fontStyle=0;" vertex="1" parent="1">
+        <mxCell id="nav_links" value="Beranda    Diagnosa    Panduan    Ensiklopedia    Kalkulator" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=0;" vertex="1" parent="1">
           <mxGeometry x="350" y="12" width="500" height="40" as="geometry" />
         </mxCell>
 
-        <!-- Header Content -->
-        <mxCell id="title" value="Pengoptimal Nutrisi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=48;fontStyle=1;" vertex="1" parent="1">
+        
+        <mxCell id="title" value="Pengoptimal Nutrisi" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=48;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="60" y="120" width="800" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="desc" value="Dapatkan rekomendasi pupuk yang tepat berdasarkan metode budidaya dan luas lahan Anda." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#535353;fontSize=18;lineHeight=1.5;" vertex="1" parent="1">
+        <mxCell id="desc" value="Dapatkan rekomendasi pupuk yang tepat berdasarkan metode budidaya dan luas lahan Anda." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;lineHeight=1.5;" vertex="1" parent="1">
           <mxGeometry x="60" y="180" width="700" height="40" as="geometry" />
         </mxCell>
 
-        <!-- Parameter Card (Left) -->
-        <mxCell id="param_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E6E6E6;shadow=1;" vertex="1" parent="1">
+        
+        <mxCell id="param_card" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="60" y="260" width="600" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="param_title" value="PARAMETER" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=12;fontStyle=1;letterSpacing=0.1em;" vertex="1" parent="1">
+        <mxCell id="param_title" value="PARAMETER" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=12;fontStyle=1;letterSpacing=0.1em;" vertex="1" parent="1">
           <mxGeometry x="90" y="280" width="200" height="30" as="geometry" />
         </mxCell>
         
-        <!-- Luas Lahan Section -->
-        <mxCell id="luas_label_sec" value="Ukuran Lahan Budidaya" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#717171;fontSize=12;" vertex="1" parent="1">
+        
+        <mxCell id="luas_label_sec" value="Ukuran Lahan Budidaya" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="90" y="320" width="200" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="luas_label_main" value="Luas Permukaan Tanah" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="luas_label_main" value="Luas Permukaan Tanah" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=16;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="90" y="340" width="300" height="30" as="geometry" />
         </mxCell>
         
-        <mxCell id="luas_val_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#A1A1A1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="luas_val_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="500" y="330" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="luas_val_text" value="50 m²" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="luas_val_text" value="50 m²" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=20;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="500" y="330" width="130" height="40" as="geometry" />
         </mxCell>
 
-        <!-- Slider -->
-        <mxCell id="slider_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E7E7E7;strokeColor=none;" vertex="1" parent="1">
+        
+        <mxCell id="slider_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="90" y="400" width="540" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="slider_active" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="slider_active" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="90" y="400" width="100" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="slider_thumb" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A1A1A1;strokeWidth=2;shadow=1;" vertex="1" parent="1">
+        <mxCell id="slider_thumb" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="180" y="394" width="20" height="20" as="geometry" />
         </mxCell>
 
-        <!-- Rekomendasi Card (Right) -->
-        <mxCell id="rec_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A1A1A1;strokeWidth=1;shadow=1;" vertex="1" parent="1">
+        
+        <mxCell id="rec_card" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="700" y="260" width="440" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="rec_accent" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;gradientColor=#A1A1A1;gradientDirection=east;" vertex="1" parent="1">
+        <mxCell id="rec_accent" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;gradientColor=#A1A1A1;gradientDirection=east;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="700" y="260" width="440" height="4" as="geometry" />
         </mxCell>
-        <mxCell id="rec_title" value="REKOMENDASI" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=18;fontStyle=1;letterSpacing=0.05em;" vertex="1" parent="1">
+        <mxCell id="rec_title" value="REKOMENDASI" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;fontStyle=1;letterSpacing=0.05em;" vertex="1" parent="1">
           <mxGeometry x="730" y="290" width="200" height="40" as="geometry" />
         </mxCell>
 
-        <!-- Result Item Box -->
-        <mxCell id="res_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCFCFC;strokeColor=#E6E6E6;strokeDashArray=4 4;" vertex="1" parent="1">
+        
+        <mxCell id="res_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeDashArray=4 4;" vertex="1" parent="1">
           <mxGeometry x="730" y="350" width="380" height="100" as="geometry" />
         </mxCell>
         
-        <!-- Urea Item -->
-        <mxCell id="urea_icon_bg" value="N" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E7E7E7;strokeColor=none;fontColor=#5F5F5F;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+        
+        <mxCell id="urea_icon_bg" value="N" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="750" y="380" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="urea_name" value="Urea (Nitrogen)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="urea_name" value="Urea (Nitrogen)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="800" y="380" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="urea_val" value="250 g" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="urea_val" value="250 g" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=24;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="980" y="380" width="110" height="40" as="geometry" />
         </mxCell>
 

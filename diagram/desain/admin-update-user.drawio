@@ -27,10 +27,10 @@
           <mxGeometry x="380" y="195" width="440" height="40" as="geometry" />
         </mxCell>
 
-        <mxCell id="lbl_email" value="Email" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="lbl_status" value="Status" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=14;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="250" width="150" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="in_email" value="john@example.com" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;spacingLeft=10;" vertex="1" parent="1">
+        <mxCell id="in_status" value="Aktif" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="380" y="275" width="440" height="40" as="geometry" />
         </mxCell>
 

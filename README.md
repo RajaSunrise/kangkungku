@@ -83,7 +83,6 @@ erDiagram
     PENYAKIT {
         int id PK
         string nama
-        string nama_ilmiah
         text deskripsi
         text solusi
         string url_gambar
@@ -239,7 +238,6 @@ classDiagram
     class Penyakit {
         +int id
         +str nama
-        +str nama_ilmiah
         +str deskripsi
         +str solusi
         +str url_gambar
@@ -339,53 +337,79 @@ sequenceDiagram
 
 ## 7. Tabel Data Penyakit
 
-Daftar 8 penyakit yang dapat didiagnosa oleh sistem:
+Daftar 9 penyakit/hama yang dapat didiagnosa oleh sistem:
 
-| No | Kode | Nama Penyakit | Nama Ilmiah |
-|---|---|---|---|
-| 1 | P01 | Karat Putih (White Rust) | *Albugo ipomoeae-panduratae* |
-| 2 | P02 | Bercak Daun Cercospora | *Cercospora ipomoeae* |
-| 3 | P03 | Virus Mosaik Kangkung | *Water spinach mosaic virus* |
-| 4 | P04 | Layu Fusarium | *Fusarium oxysporum* |
-| 5 | P05 | Busuk Akar Pythium | *Pythium spp.* |
-| 6 | P06 | Busuk Batang Rhizoctonia | *Rhizoctonia solani* |
-| 7 | P07 | Embun Tepung (Powdery Mildew) | *Erysiphe spp.* |
-| 8 | P08 | Embun Bulu (Downy Mildew) | *Peronospora spp.* |
+| No | Kode | Nama | Kategori |
+|---|---|---|---|---|
+| 1 | P01 | Bekicot | Hama |
+| 2 | P02 | Ulat Grayak | Hama |
+| 3 | P03 | Kutu Daun | Hama |
+| 4 | P04 | Ulat Keket | Hama |
+| 5 | P05 | Karat Putih | Penyakit |
+| 6 | P06 | Bercak Daun | Penyakit |
+| 7 | P07 | Bakteri | Penyakit |
+| 8 | P08 | Virus | Penyakit |
+| 9 | P09 | Alga | Penyakit |
 
 ## 8. Tabel Data Gejala
 
-Daftar 15 gejala yang digunakan untuk diagnosa:
+Daftar 24 gejala yang digunakan untuk diagnosa:
 
-| No | Kode Gejala | Nama Gejala |
+| No | Kode | Nama Gejala |
 |---|---|---|
-| 1 | G001 | Bercak putih menonjol pada sisi bawah daun |
-| 2 | G002 | Bercak kuning pada sisi atas daun |
-| 3 | G003 | Daun melengkung atau terdistorsi |
-| 4 | G004 | Bercak bulat dengan pusat abu-abu/putih |
-| 5 | G005 | Bercak dengan tepi coklat tua/merah |
-| 6 | G006 | Pola mosaik hijau terang/gelap pada daun |
-| 7 | G007 | Pertumbuhan tanaman kerdil |
-| 8 | G008 | Daun bagian bawah menguning |
-| 9 | G009 | Tanaman layu pada siang hari, pulih malam hari |
-| 10 | G010 | Jaringan pembuluh batang berwarna coklat |
-| 11 | G011 | Akar berwarna coklat dan lembek |
-| 12 | G012 | Batang lunak dan gelap di dekat tanah |
-| 13 | G013 | Lesi cekung kemerahan pada batang |
-| 14 | G014 | Pertumbuhan berbulu halus abu-abu/ungu di bawah daun |
-| 15 | G015 | Serbuk putih pada permukaan daun |
+| 1 | G001 | Batang dan daun rusak |
+| 2 | G002 | Batang dan daun layu |
+| 3 | G003 | Batang dan daun busuk |
+| 4 | G004 | Daun berlubang |
+| 5 | G005 | Pinggir daun bergerigi |
+| 6 | G006 | Tanaman kerdil |
+| 7 | G007 | Daun melengkung |
+| 8 | G008 | Warna daun hijau muda dengan garis menyilang kuning |
+| 9 | G009 | Muncul bercak putih pada permukaan daun |
+| 10 | G010 | Muncul bercak kecokelatan hingga kehitaman pada permukaan daun |
+| 11 | G011 | Mengeluarkan lendir keruh |
+| 12 | G012 | Berbau busuk |
+| 13 | G013 | Keluar air pada batang |
+| 14 | G014 | Lengket jika disentuh |
+| 15 | G015 | Daun berwarna kuning pekat |
+| 16 | G016 | Batang mengalami bercak-bercak |
+| 17 | G017 | Daun menjadi seperti terbakar |
+| 18 | G018 | Bentuk daun menjadi tidak sempurna |
+| 19 | G019 | Daun layu |
+| 20 | G020 | Bercak berwarna kelabu kehijauan pada daun |
+| 21 | G021 | Pada permukaan tumbuh rambut berwarna cokelat kemerahan |
+| 22 | G022 | Daun dihinggapi lalat |
+| 23 | G023 | Batang dan daun kering |
+| 24 | G024 | Bercak karat merah pada daun |
 
 ## 8.1. Tabel Hubungan Penyakit dan Gejala
 
-| Penyakit | G001 | G002 | G003 | G004 | G005 | G006 | G007 | G008 | G009 | G010 | G011 | G012 | G013 | G014 | G015 |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| P01 | √ | √ | √ | | | | | | | | | | | | |
-| P02 | | | | √ | √ | | | √ | | | | | | | |
-| P03 | | | √ | | | √ | √ | | | | | | | | |
-| P04 | | | | | | | √ | √ | √ | √ | | | | | |
-| P05 | | | | | | | √ | | √ | | √ | | | | |
-| P06 | | | | | | | | | √ | | | √ | √ | | |
-| P07 | | | √ | | | | | | | | | | | | √ |
-| P08 | | √ | | | | | | √ | | | | | | √ | |
+| Gejala | P01 | P02 | P03 | P04 | P05 | P06 | P07 | P08 | P09 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| G001 | √ | √ | | √ | √ | √ | | | |
+| G002 | √ | | | | | | | | |
+| G003 | √ | | | | | | | | |
+| G004 | | √ | | √ | | | | | |
+| G005 | | √ | | | | | | | |
+| G006 | | | √ | | | | | | |
+| G007 | | | √ | | | | | | |
+| G008 | | | | √ | | | | | |
+| G009 | | | | | √ | | | | |
+| G010 | | | | | | √ | | | |
+| G011 | | | | | | | √ | | |
+| G012 | | | | | | | √ | | |
+| G013 | | | | | | | | | |
+| G014 | | | | | | | √ | | |
+| G015 | | | | | | | | | |
+| G016 | | | | | | | | √ | |
+| G017 | | | | | | | | √ | |
+| G018 | | | | | | | | √ | |
+| G019 | | | | | | | | | |
+| G020 | | | | | | | | | √ |
+| G021 | | | | | | | | | √ |
+| G022 | | | | | | | | | |
+| G023 | | | | | | | | | |
+| G024 | | | | | | | | | √ |
 
 ## 9. Tabel Basis Pengetahuan (Rule dan Bobot Pakar)
 
@@ -393,35 +417,30 @@ Berikut adalah daftar lengkap aturan diagnosa beserta nilai Certainty Factor (CF
 
 | No | Nama Penyakit | Kode Gejala | CF Pakar |
 |---|---|---|---|
-| 1 | Karat Putih (White Rust) | G01 | 0.9 |
-| 2 | Karat Putih (White Rust) | G02 | 0.7 |
-| 3 | Karat Putih (White Rust) | G03 | 0.5 |
-| 4 | Bercak Daun Cercospora | G04 | 0.8 |
-| 5 | Bercak Daun Cercospora | G05 | 0.8 |
-| 6 | Bercak Daun Cercospora | G08 | 0.4 |
-| 7 | Virus Mosaik Kangkung | G06 | 0.95 |
-| 8 | Virus Mosaik Kangkung | G03 | 0.6 |
-| 9 | Virus Mosaik Kangkung | G07 | 0.7 |
-| 10 | Layu Fusarium | G08 | 0.6 |
-| 11 | Layu Fusarium | G09 | 0.9 |
-| 12 | Layu Fusarium | G10 | 0.8 |
-| 13 | Layu Fusarium | G07 | 0.5 |
-| 14 | Busuk Akar Pythium | G11 | 0.9 |
-| 15 | Busuk Akar Pythium | G07 | 0.6 |
-| 16 | Busuk Akar Pythium | G09 | 0.5 |
-| 17 | Busuk Batang Rhizoctonia | G12 | 0.8 |
-| 18 | Busuk Batang Rhizoctonia | G13 | 0.9 |
-| 19 | Busuk Batang Rhizoctonia | G09 | 0.4 |
-| 20 | Bercak Daun Alternaria | G14 | 0.9 |
-| 21 | Bercak Daun Alternaria | G08 | 0.5 |
-| 22 | Bercak Daun Bakteri | G15 | 0.9 |
-| 23 | Bercak Daun Bakteri | G24 | 0.7 |
-| 24 | Bercak Daun Bakteri | G08 | 0.4 |
-| 25 | Embun Tepung (Powdery Mildew) | G16 | 0.95 |
-| 26 | Embun Tepung (Powdery Mildew) | G03 | 0.5 |
-| 27 | Embun Bulu (Downy Mildew) | G17 | 0.9 |
-| 28 | Embun Bulu (Downy Mildew) | G02 | 0.6 |
-| 29 | Embun Bulu (Downy Mildew) | G08 | 0.5 |
+| 1 | Bekicot | G001 | 1.0 |
+| 2 | Bekicot | G002 | 1.0 |
+| 3 | Bekicot | G003 | 1.0 |
+| 4 | Ulat Grayak | G001 | 1.0 |
+| 5 | Ulat Grayak | G004 | 1.0 |
+| 6 | Ulat Grayak | G005 | 1.0 |
+| 7 | Kutu Daun | G006 | 1.0 |
+| 8 | Kutu Daun | G007 | 1.0 |
+| 9 | Ulat Keket | G001 | 1.0 |
+| 10 | Ulat Keket | G004 | 1.0 |
+| 11 | Ulat Keket | G008 | 1.0 |
+| 12 | Karat Putih | G001 | 1.0 |
+| 13 | Karat Putih | G009 | 1.0 |
+| 14 | Bercak Daun | G001 | 1.0 |
+| 15 | Bercak Daun | G010 | 1.0 |
+| 16 | Bakteri | G011 | 1.0 |
+| 17 | Bakteri | G012 | 1.0 |
+| 18 | Bakteri | G014 | 1.0 |
+| 19 | Virus | G016 | 1.0 |
+| 20 | Virus | G017 | 1.0 |
+| 21 | Virus | G018 | 1.0 |
+| 22 | Alga | G020 | 1.0 |
+| 23 | Alga | G021 | 1.0 |
+| 24 | Alga | G024 | 1.0 |
 
 ## 10. Tabel Konversi Bobot Pengguna (User)
 
@@ -437,78 +456,90 @@ Pengguna dapat memasukkan tingkat keyakinan terhadap gejala yang dialami menggun
 
 ## 11. Perhitungan Certainty Factor (Simulasi)
 
-Nilai bobot pakar dalam sistem ini diperoleh dari hasil analisis data dan simulasi wawancara dengan pakar pertanian untuk memberikan nilai akurasi dalam mendiagnosa penyakit tanaman kangkung sehingga dapat memberikan nilai persentase kepercayaan.
+Metode Certainty Factor (CF) digunakan untuk menggambarkan tingkat keyakinan pakar terhadap suatu gejala yang mengindikasikan penyakit tertentu. Dalam sistem ini, seluruh bobot pakar bernilai **1.0** yang berarti setiap gejala yang terdaftar untuk suatu penyakit merupakan indikator yang sangat kuat.
 
-**Tabel 4.4 Nilai Bobot Pakar (Ringkasan)**
+Rumus dasar perhitungan:
 
-| No | Nama Penyakit | Gejala | Nilai Bobot (CF Pakar) |
-|---|---|---|:---:|
-| 1 | Karat Putih | Bercak putih menonjol (G01) | 0.9 |
-| | | Bercak kuning (G02) | 0.7 |
-| | | Daun melengkung (G03) | 0.5 |
-| 2 | Bercak Daun | Bercak bulat (G04) | 0.8 |
-| | | Tepi coklat tua (G05) | 0.8 |
-| | | Daun menguning (G08) | 0.4 |
+**CF(H,E) = CF(pakar) × CF(user)**
+
+Kemudian untuk kombinasi lebih dari satu gejala digunakan rumus:
+
+**CF_combine(CF_old, CF_new) = CF_old + CF_new × (1 - CF_old)**
+
+Setelah kombinasi seluruh gejala, hasil akhir dikalikan dengan rasio gejala yang cocok terhadap total gejala penyakit:
+
+**CF_akhir = CF_gabungan × (gejala_tercocok / total_gejala)**
 
 ---
 
-### 11.1. Kasus Diagnosa: Karat Putih "P001"
+### 11.1. Kasus Diagnosa: Bekicot (P01)
 
-**Tabel 4.5 Gejala dan Nilai Bobot Pakar P001**
+Seorang petani mengamati tanamannya dan memilih gejala berikut:
+
+**Tabel Gejala dan Nilai Bobot Pakar P01**
 
 | Gejala | Nilai Bobot Pakar |
-|---|:---:|
-| (G01) Bercak putih menonjol pada sisi bawah daun | 0.9 |
-| (G02) Bercak kuning pada sisi atas daun | 0.7 |
-| (G03) Daun melengkung atau terdistorsi | 0.5 |
+|---|---|
+| (G001) Batang dan daun rusak | 1.0 |
+| (G002) Batang dan daun layu | 1.0 |
+| (G003) Batang dan daun busuk | 1.0 |
 
-**Tabel 4.6 Nilai Bobot User P001**
+**Tabel Nilai Bobot User P01**
 
 | Gejala | Jawaban User | Bobot (CF User) |
-|---|---|:---:|
-| (G01) Bercak putih menonjol | Sangat Yakin | 1.0 |
-| (G02) Bercak kuning | Cukup Yakin | 0.6 |
-| (G03) Daun melengkung | Sedikit Yakin | 0.4 |
+|---|---|---|
+| (G001) Batang dan daun rusak | Yakin | 0.8 |
+| (G002) Batang dan daun layu | Cukup Yakin | 0.6 |
+| (G003) Batang dan daun busuk | Sedikit Yakin | 0.4 |
 
 Selanjutnya, bobot nilai yang dimasukkan pengguna akan dikalikan dengan bobot nilai dari pakar:
 
-*   **Gejala 1** = CF(user) * CF(pakar) = 1.0 * 0.9 = **0.9**
-*   **Gejala 2** = CF(user) * CF(pakar) = 0.6 * 0.7 = **0.42**
-*   **Gejala 3** = CF(user) * CF(pakar) = 0.4 * 0.5 = **0.2**
+*   **Gejala 1** = CF(user) × CF(pakar) = 0.8 × 1.0 = **0.8**
+*   **Gejala 2** = CF(user) × CF(pakar) = 0.6 × 1.0 = **0.6**
+*   **Gejala 3** = CF(user) × CF(pakar) = 0.4 × 1.0 = **0.4**
 
-Dikarenakan terdapat lebih dari satu gejala, maka untuk menentukan CF selanjutnya digunakan persamaan berikut:
+Karena terdapat lebih dari satu gejala, maka dilakukan kombinasi CF berurutan:
 
 1.  **CF_combine1(Gejala 1, Gejala 2)**
-    *   = CF_gejala1 + CF_gejala2 * (1 - CF_gejala1)
-    *   = 0.9 + 0.42 * (1 - 0.9)
-    *   = 0.9 + 0.42 * (0.1)
-    *   **CF_old1 = 0.942**
+    *   = CF_gejala1 + CF_gejala2 × (1 - CF_gejala1)
+    *   = 0.8 + 0.6 × (1 - 0.8)
+    *   = 0.8 + 0.6 × 0.2
+    *   **CF_old1 = 0.92**
 
 2.  **CF_combine2(CF_old1, Gejala 3)**
-    *   = CF_old1 + CF_gejala3 * (1 - CF_old1)
-    *   = 0.942 + 0.2 * (1 - 0.942)
-    *   = 0.942 + 0.2 * (0.058)
-    *   **CF_final = 0.9536**
+    *   = CF_old1 + CF_gejala3 × (1 - CF_old1)
+    *   = 0.92 + 0.4 × (1 - 0.92)
+    *   = 0.92 + 0.4 × 0.08
+    *   **CF_gabungan = 0.952**
 
-Selanjutnya hitung persentase keyakinan terhadap penyakit dengan persamaan berikut:
-*   **Persentase** = CF_final * 100
-*   = 0.9536 * 100
-*   = **95.36%**
+Kemudian hitung rasio kecocokan gejala:
+*   **Rasio** = gejala_tercocok / total_gejala = 3 / 3 = **1.0**
+
+Hitung CF akhir:
+*   **CF_akhir** = CF_gabungan × Rasio = 0.952 × 1.0 = **0.952**
+
+Selanjutnya hitung persentase keyakinan terhadap penyakit:
+*   **Persentase** = CF_akhir × 100
+*   = 0.952 × 100
+*   = **95.2%**
 
 ---
 
 ### 11.2. Perbandingan Hasil Kombinasi
 
-**Tabel 4.9 Perbandingan Hasil Kombinasi**
+Dengan input gejala yang sama (G001, G002, G003), mari bandingkan hasil untuk penyakit lain yang juga memiliki beberapa gejala yang sama:
 
-| Kode Penyakit | Nama Penyakit | Hasil Gabungan CF |
-|---|---|:---:|
-| P001 | Karat Putih (White Rust) | **95.36%** |
-| P002 | Bercak Daun Cercospora | 42.10% |
+**Perbandingan Hasil Kombinasi**
+
+| Kode Penyakit | Nama Penyakit | Gejala Cocok | CF Gabungan | Rasio | Hasil Akhir |
+|---|---|---|---|---|---|
+| P01 | Bekicot | G001, G002, G003 (3/3) | 0.952 | 1.0 | **95.2%** |
+| P02 | Ulat Grayak | G001 (1/3) | 0.8 | 0.333 | **26.7%** |
+| P05 | Karat Putih | G001 (1/2) | 0.8 | 0.5 | **40.0%** |
+| P06 | Bercak Daun | G001 (1/2) | 0.8 | 0.5 | **40.0%** |
 
 **Kesimpulan:**
-Dari tabel di atas, sistem akan membandingkan hasil penggabungan nilai CF dan sistem akan mengambil keputusan berdasarkan nilai penggabungan yang tertinggi. Maka dapat diketahui bahwa tanaman kangkung terserang penyakit **Karat Putih** dengan nilai kepastian sebesar **95.36%**.
-
+Dari tabel di atas, sistem akan membandingkan hasil penggabungan nilai CF dan mengambil keputusan berdasarkan nilai penggabungan yang tertinggi setelah dikalikan rasio kecocokan. Maka dapat diketahui bahwa tanaman kangkung terserang hama **Bekicot** dengan nilai kepastian sebesar **95.2%**.
 
 ## 12. Alur Antarmuka Pengguna (User Interface)
 
@@ -520,7 +551,7 @@ Dari tabel di atas, sistem akan membandingkan hasil penggabungan nilai CF dan si
     *   Tombol "Dapatkan Hasil" memproses data ke server.
 3.  **Halaman Hasil**:
     *   Menampilkan penyakit dengan persentase tertinggi.
-    *   Detail penyakit (Deskripsi, Nama Ilmiah, Gambar).
+    *   Detail penyakit (Deskripsi, Gambar).
     *   Solusi penanganan yang disarankan.
     *   Tabel rincian perhitungan gejala yang dipilih.
 
@@ -542,18 +573,17 @@ Berikut adalah struktur tabel-tabel yang digunakan dalam basis data sistem pakar
 | No | Field | Type | Size | Keterangan |
 |---|---|---|---|---|
 | 1 | id | Int | 11 | Identitas penyakit (Primary Key) |
-| 2 | nama | Varchar | 255 | Nama penyakit |
-| 3 | nama_ilmiah | Varchar | 255 | Nama ilmiah penyakit |
-| 4 | deskripsi | Text | - | Deskripsi lengkap penyakit |
-| 5 | solusi | Text | - | Solusi penanganan penyakit |
-| 6 | url_gambar | Varchar | 255 | Path atau URL gambar penyakit |
+| 2 | nama | Varchar | 35 | Nama penyakit |
+| 3 | deskripsi | Text | - | Deskripsi lengkap penyakit |
+| 4 | solusi | Text | - | Solusi penanganan penyakit |
+| 5 | url_gambar | Varchar | 255 | Path atau URL gambar penyakit |
 
 ### 14.2. Tabel: gejala
 | No | Field | Type | Size | Keterangan |
 |---|---|---|---|---|
 | 1 | id | Int | 11 | Identitas gejala (Primary Key) |
-| 2 | kode | Varchar | 10 | Kode unik gejala |
-| 3 | deskripsi | Varchar | 255 | Deskripsi gejala |
+| 2 | kode | Varchar | 35 | Kode unik gejala |
+| 3 | deskripsi | Varchar | 35 | Deskripsi gejala |
 | 4 | url_gambar | Varchar | 255 | Path atau URL gambar gejala |
 
 ### 14.3. Tabel: aturan
@@ -568,11 +598,11 @@ Berikut adalah struktur tabel-tabel yang digunakan dalam basis data sistem pakar
 | No | Field | Type | Size | Keterangan |
 |---|---|---|---|---|
 | 1 | id | Int | 11 | Identitas user (Primary Key) |
-| 2 | username | Varchar | 50 | Username untuk login |
-| 3 | hashed_password | Varchar | 255 | Password yang telah di-hash |
+| 2 | username | Varchar | 35 | Username untuk login |
+| 3 | hashed_password | Varchar | 64 | Password yang telah di-hash |
 | 4 | role | Varchar | 20 | Role pengguna (admin/user) |
 | 5 | is_active | Boolean | - | Status keaktifan akun |
-| 6 | alamat | Varchar | 255 | Alamat pengguna |
+| 6 | alamat | Text | - | Alamat pengguna |
 
 ### 14.5. Tabel: diagnosa_history
 | No | Field | Type | Size | Keterangan |

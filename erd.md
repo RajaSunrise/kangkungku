@@ -14,7 +14,6 @@ erDiagram
     PENYAKIT {
         int id PK
         string nama
-        string nama_ilmiah
         text deskripsi
         text solusi
         string url_gambar
@@ -40,7 +39,7 @@ erDiagram
         string hashed_password
         string role
         boolean is_active
-        string alamat
+        text alamat
     }
 
     DIAGNOSA_HISTORY {

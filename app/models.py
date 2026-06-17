@@ -7,11 +7,10 @@ class Penyakit(Base):
     __tablename__ = "penyakit"
 
     id = Column(Integer, primary_key=True, index=True)
-    nama = Column(String, index=True)
-    nama_ilmiah = Column(String, nullable=True)
+    nama = Column(String(35), index=True)
     deskripsi = Column(Text, nullable=True)
     solusi = Column(Text, nullable=True)
-    url_gambar = Column(String, nullable=True)
+    url_gambar = Column(String(255), nullable=True)
 
     aturan = relationship("Aturan", back_populates="penyakit")
 
@@ -20,9 +19,9 @@ class Gejala(Base):
     __tablename__ = "gejala"
 
     id = Column(Integer, primary_key=True, index=True)
-    kode = Column(String, unique=True, index=True)
-    deskripsi = Column(String, index=True)
-    url_gambar = Column(String, nullable=True)
+    kode = Column(String(35), unique=True, index=True)
+    deskripsi = Column(String(35), index=True)
+    url_gambar = Column(String(255), nullable=True)
 
     aturan = relationship("Aturan", back_populates="gejala")
 
@@ -42,11 +41,11 @@ class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    username = Column(String, unique=True, index=True)
-    hashed_password = Column(String)
-    role = Column(String, default="user")
+    username = Column(String(35), unique=True, index=True)
+    hashed_password = Column(String(64))
+    role = Column(String(20), default="user")
     is_active = Column(Boolean, default=True)
-    alamat = Column(String, nullable=True)
+    alamat = Column(Text, nullable=True)
 
 class DiagnosaHistory(Base):
     __tablename__ = "diagnosa_history"
@@ -57,7 +56,7 @@ class DiagnosaHistory(Base):
     faktor_kepastian = Column(Float)
     persentase = Column(Float)
     gejala_input = Column(Text) # JSON string of selected symptoms
-    created_at = Column(String) # Simple date string for simplicity
+    created_at = Column(String(50))
 
     user = relationship("User")
     penyakit = relationship("Penyakit")

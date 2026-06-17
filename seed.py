@@ -36,63 +36,54 @@ def tebar():
     data_penyakit = [
         {
             'nama': 'Bekicot',
-            'nama_ilmiah': 'Achatina fulica',
             'deskripsi': 'Bekicot (Achatina fulica) merupakan hama penting yang menyerang tanaman kangkung dengan memakan daun dan batang muda. Serangan biasanya terjadi secara masif pada malam hari atau kondisi lingkungan yang sangat lembab, meninggalkan lubang-lubang besar yang tidak beraturan serta jejak lendir mengkilap pada permukaan tanaman.',
             'solusi': 'Lakukan pencarian secara manual pada malam hari untuk mengumpulkan dan memusnahkan bekicot secara langsung. Taburkan abu kayu, serbuk gergaji, pasir kasar, atau pecahan cangkang telur di sekeliling bedengan tanaman sebagai penghalang fisik agar bekicot tidak mendekat. Gunakan umpan siput (moluskisida) berbahan aktif metaldehida secara bijaksana dan sesuai dosis anjuran jika serangan sudah melebihi batas kendali.',
             'url_gambar': '/static/img/alternaria.png'
         },
         {
             'nama': 'Ulat Grayak',
-            'nama_ilmiah': 'Spodoptera litura',
             'deskripsi': 'Ulat Grayak (Spodoptera litura) adalah larva serangga yang sangat rakus dan merusak daun kangkung secara berkelompok. Hama ini aktif memakan helaian daun mulai dari tepi hingga menyisakan tulang daunnya saja, terutama di malam hari, sehingga mengganggu proses fotosintesis secara drastis.',
             'solusi': 'Lakukan sanitasi lahan secara rutin dengan membersihkan gulma yang dapat menjadi tempat persembunyian ulat grayak. Kumpulkan kelompok telur dan ulat kecil yang ditemukan pada permukaan bawah daun lalu musnahkan segera. Semprotkan insektisida nabati berbasis minyak mimba atau Beauveria bassiana secara merata di sore hari, atau gunakan insektisida kimia berbahan aktif deltametrin jika populasi hama sangat tinggi.',
             'url_gambar': '/static/img/alternaria.png'
         },
         {
             'nama': 'Kutu Daun',
-            'nama_ilmiah': 'Aphidoidea',
             'deskripsi': 'Kutu Daun (Aphids) adalah serangga kecil penghisap cairan sel tanaman kangkung, biasanya mengelompok di bagian bawah daun atau pucuk muda. Serangan hama ini menyebabkan helaian daun mengkerut, melengkung, menguning, dan tanaman tumbuh kerdil, serta dapat menularkan penyakit virus lainnya.',
             'solusi': 'Semprot tanaman kangkung menggunakan air bertekanan kuat secara rutin untuk meluruhkan koloni kutu daun dari permukaan daun. Aplikasikan sabun insektisida organik atau minyak mimba secara berkala pada bagian bawah daun yang terserang. Pasang perangkap kartu kuning lengket di sekitar lahan untuk memantau dan meminimalkan populasi kutu daun dewasa.',
             'url_gambar': '/static/img/virus-mosaik.png'
         },
         {
             'nama': 'Ulat Keket',
-            'nama_ilmiah': 'Agrius convolvuli',
             'deskripsi': 'Ulat Keket atau ulat tanduk merupakan larva berukuran besar dari ngengat Agrius convolvuli yang memakan daun kangkung dengan sangat cepat. Akibat gigitannya, daun kangkung dapat rusak parah dan bahkan menyisakan batangnya saja dalam beberapa hari jika tidak segera ditangani.',
             'solusi': 'Lakukan pemantauan intensif pada pagi dan sore hari untuk menemukan ulat keket secara manual karena ukurannya yang besar memudahkan pengamatan fisik. Pungut ulat tersebut langsung dari batang kangkung dan musnahkan. Jika serangan meluas, semprot tanaman dengan insektisida hayati berbahan aktif Bacillus thuringiensis yang sangat efektif mengendalikan ulat daun.',
             'url_gambar': '/static/img/alternaria.png'
         },
         {
             'nama': 'Karat Putih',
-            'nama_ilmiah': 'Albugo ipomoeae-panduratae',
             'deskripsi': 'Karat Putih adalah penyakit yang disebabkan oleh oomycete Albugo ipomoeae-panduratae. Penyakit ini menyerang daun kangkung dengan memicu bintik kuning di permukaan atas dan pustula putih berkapur di permukaan bawah daun, sehingga menurunkan kualitas panen secara signifikan.',
             'solusi': 'Cabut dan musnahkan daun atau tanaman kangkung yang terinfeksi karat putih untuk memutus siklus penyebaran spora melalui angin. Atur jarak tanam kangkung minimal 15-20 cm untuk menjaga sirkulasi udara di sekitar tajuk daun tetap optimal. Aplikasikan fungisida berbasis sulfur secara berkala atau gunakan fungisida berbahan aktif tembaga oksida sesuai anjuran jika infeksi meluas.',
             'url_gambar': '/static/img/karat-putih.png'
         },
         {
             'nama': 'Bercak Daun',
-            'nama_ilmiah': 'Cercospora ipomoeae',
             'deskripsi': 'Penyakit bercak daun kangkung ditandai dengan munculnya noda atau bercak kecokelatan hingga kehitaman pada permukaan daun. Infeksi jamur ini berkembang sangat pesat pada cuaca hangat dan kelembaban udara yang tinggi, yang mengakibatkan daun layu dan gugur sebelum waktunya.',
             'solusi': 'Pangkas daun yang menunjukkan gejala bercak kecokelatan dan jaga kebersihan area lahan dari serpihan sisa tanaman yang gugur. Hindari penyiraman di sore hari secara langsung pada daun dan lebih baik lakukan penyiraman pada area perakaran di pagi hari. Gunakan fungisida organik berbahan ekstrak bawang putih atau semprotkan fungisida mankozeb sesuai dosis anjuran.',
             'url_gambar': '/static/img/Cercospora.png'
         },
         {
             'nama': 'Bakteri',
-            'nama_ilmiah': 'Pseudomonas syringae',
             'deskripsi': 'Penyakit bakteri menyerang jaringan vaskular tanaman kangkung, menyebabkan batang membubur lunak, mengeluarkan lendir keruh dari jaringan yang terinfeksi, serta mengeluarkan aroma busuk yang sangat menyengat.',
             'solusi': 'Segera cabut tanaman kangkung yang membusuk beserta tanah perakarannya lalu bakar di luar area budidaya untuk mencegah kontaminasi tanah. Pastikan sistem drainase lahan berjalan dengan baik sehingga tidak terjadi genangan air yang memicu perkembangbiakan bakteri patogen. Gunakan bakterisida berbahan aktif tembaga hidroksida untuk mensterilkan tanaman di sekitarnya.',
             'url_gambar': '/static/img/busuk-akar-pythium.png'
         },
         {
             'nama': 'Virus',
-            'nama_ilmiah': 'Water spinach mosaic virus',
             'deskripsi': 'Penyakit virus mosaik kangkung ditandai dengan pola warna belang hijau tua dan hijau muda yang tidak teratur, daun menguning pekat, keriput, batang mengalami bercak-bercak, serta tanaman tumbuh sangat kerdil.',
             'solusi': 'Eradikasi atau cabut dan bakar seluruh tanaman kangkung yang bergejala mosaik untuk mencegah penyebaran virus ke tanaman sehat lainnya. Kendalikan populasi serangga vektor penular seperti kutu daun dengan menyemprotkan sabun insektisida atau minyak mimba secara berkala. Selalu lakukan sterilisasi peralatan pertanian menggunakan alkohol sebelum digunakan berpindah tanaman.',
             'url_gambar': '/static/img/virus-mosaik.png'
         },
         {
             'nama': 'Alga',
-            'nama_ilmiah': 'Cephaleuros virescens',
             'deskripsi': 'Penyakit alga merah dipicu oleh organisme Cephaleuros virescens. Penyakit ini memicu bercak karat merah atau kelabu kehijauan pada daun kangkung, disertai dengan pertumbuhan rambut halus cokelat kemerahan di permukaannya.',
             'solusi': 'Lakukan pemangkasan pada daun-daun kangkung yang tua atau bagian tanaman terbawah yang terlalu lembab untuk meminimalkan paparan spora alga. Pastikan lahan terpapar sinar matahari secara penuh dan hindari tingkat kerapatan tanaman yang berlebihan. Lakukan penyemprotan fungisida berbahan aktif tembaga jika tingkat serangan alga merusak sebagian besar dedaunan.',
             'url_gambar': '/static/img/embun-bulu.png'

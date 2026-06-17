@@ -38,7 +38,6 @@
                         <span class="material-symbols-outlined text-xl">close</span>
                     </button>
                     <div class="absolute bottom-0 left-0 p-6">
-                        <p id="modal-ilmiah" class="text-primary font-medium italic text-sm mb-1"></p>
                         <h3 id="modal-nama" class="text-2xl sm:text-3xl font-black text-white tracking-tight"></h3>
                     </div>
                 </div>
@@ -97,7 +96,6 @@
                         <div class="p-5 flex flex-col flex-grow">
                             <div class="mb-3">
                                 <h3 class="text-xl font-bold text-text-main group-hover:text-primary-text transition-colors">${p.nama}</h3>
-                                <p class="text-sm text-text-muted italic font-medium">${p.nama_ilmiah || ''}</p>
                             </div>
                             <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
                                 <span class="inline-flex items-center gap-1 text-xs font-semibold text-text-muted uppercase tracking-wider">
@@ -120,7 +118,6 @@
             document.getElementById('modal-img').src = penyakit.url_gambar || 'https://via.placeholder.com/800x400';
             document.getElementById('modal-img').alt = penyakit.nama;
             document.getElementById('modal-nama').innerText = penyakit.nama;
-            document.getElementById('modal-ilmiah').innerText = penyakit.nama_ilmiah || '';
             document.getElementById('modal-deskripsi').innerText = penyakit.deskripsi || 'Deskripsi tidak tersedia.';
             document.getElementById('modal-solusi').innerText = penyakit.solusi || 'Solusi tidak tersedia.';
 

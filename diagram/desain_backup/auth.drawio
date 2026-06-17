@@ -5,52 +5,46 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
-        <!-- Background -->
-        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=none;" vertex="1" parent="1">
+        
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry width="1200" height="1000" as="geometry" />
         </mxCell>
 
-        <!-- Login Form -->
-        <mxCell id="login_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="200" width="450" height="600" as="geometry" />
+        
+        <mxCell id="login_card" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="450" height="500" as="geometry" />
         </mxCell>
-        <mxCell id="login_title" value="Masuk ke Akun Anda" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=28;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="125" y="250" width="400" height="50" as="geometry" />
+        <mxCell id="login_title" value="Masuk ke Akun Anda" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=28;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="125" y="240" width="400" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="login_email" value="Email / Username" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9F9F9;strokeColor=#D4D4D4;fontColor=#A2A2A2;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="150" y="350" width="350" height="50" as="geometry" />
+        <mxCell id="login_email" value="Username" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="150" y="320" width="350" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="login_pass" value="Password" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9F9F9;strokeColor=#D4D4D4;fontColor=#A2A2A2;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="150" y="430" width="350" height="50" as="geometry" />
+        <mxCell id="login_pass" value="Password" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="150" y="400" width="350" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="login_btn" value="Masuk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;fontColor=#151515;fontStyle=1;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="150" y="530" width="350" height="50" as="geometry" />
+        <mxCell id="login_btn" value="Masuk" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="150" y="500" width="350" height="50" as="geometry" />
         </mxCell>
 
-        <!-- Register Form -->
-        <mxCell id="reg_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="650" y="200" width="450" height="650" as="geometry" />
+        
+        <mxCell id="reg_card" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="650" y="200" width="450" height="500" as="geometry" />
         </mxCell>
-        <mxCell id="reg_title" value="Buat Akun Baru" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#151515;fontSize=28;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="675" y="250" width="400" height="50" as="geometry" />
+        <mxCell id="reg_title" value="Buat Akun Baru" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=28;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="675" y="240" width="400" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="reg_name" value="Nama Lengkap" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9F9F9;strokeColor=#D4D4D4;fontColor=#A2A2A2;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="700" y="330" width="350" height="50" as="geometry" />
+        <mxCell id="reg_username" value="Username" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="700" y="320" width="350" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="reg_username" value="Username" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9F9F9;strokeColor=#D4D4D4;fontColor=#A2A2A2;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="reg_alamat" value="Alamat" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="700" y="400" width="350" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="reg_email" value="Email" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9F9F9;strokeColor=#D4D4D4;fontColor=#A2A2A2;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="700" y="470" width="350" height="50" as="geometry" />
+        <mxCell id="reg_pass" value="Password" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="700" y="480" width="350" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="reg_alamat" value="Alamat Lahan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9F9F9;strokeColor=#D4D4D4;fontColor=#A2A2A2;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="700" y="540" width="350" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="reg_pass" value="Password" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9F9F9;strokeColor=#D4D4D4;fontColor=#A2A2A2;align=left;spacingLeft=15;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="700" y="610" width="350" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="reg_btn" value="Daftar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;strokeColor=none;fontColor=#151515;fontStyle=1;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="700" y="690" width="350" height="50" as="geometry" />
+        <mxCell id="reg_btn" value="Daftar" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="700" y="560" width="350" height="50" as="geometry" />
         </mxCell>
 
       </root>
