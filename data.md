@@ -1,133 +1,123 @@
 # Data Penyakit, Gejala, dan Bobot CF Pakar Tanaman Kangkung
 
-Dokumen ini berisi basis pengetahuan lengkap untuk diagnosis penyakit tanaman kangkung menggunakan metode **Certainty Factor (CF)**, yang mencakup 8 jenis penyakit, 15 gejala, deskripsi ilmiah, solusi penanganan, serta nilai bobot kepastian (CF Pakar).
+Dokumen ini berisi basis pengetahuan lengkap untuk diagnosis penyakit tanaman kangkung menggunakan metode **Certainty Factor (CF)**, yang mencakup 9 jenis hama dan penyakit, 24 gejala, deskripsi ilmiah, solusi pengendalian, serta nilai bobot kepastian (CF Pakar).
 
 ---
 
 ## 1. Tabel Hubungan Penyakit, Gejala, dan Bobot CF Pakar
 
-Berikut adalah tabel relasi lengkap antara penyakit dan gejala beserta nilai Certainty Factor (CF) yang ditentukan oleh pakar:
+Berikut adalah tabel relasi lengkap antara penyakit/hama dan gejala beserta nilai Certainty Factor (CF) yang ditentukan oleh pakar:
 
 | No | Nama Penyakit | Nama Gejala | Kode Gejala | Nilai Bobot (CF Pakar) |
 | :---: | :--- | :--- | :---: | :---: |
-| **1** | **Karat Putih** *(White Rust)* | Bercak putih menonjol pada sisi bawah daun | G01 / G001 | 0.9 |
-| | | Bercak kuning pada sisi atas daun | G02 / G002 | 0.7 |
-| | | Daun melengkung atau terdistorsi | G03 / G003 | 0.5 |
-| **2** | **Bercak Daun Cercospora** | Bercak bulat dengan pusat abu-abu/putih | G04 / G004 | 0.8 |
-| | | Bercak dengan tepi coklat tua/merah | G05 / G005 | 0.8 |
-| | | Daun bagian bawah menguning | G08 / G008 | 0.4 |
-| **3** | **Virus Mosaik Kangkung** | Pola mosaik hijau terang/gelap pada daun | G06 / G006 | 0.95 |
-| | | Pertumbuhan tanaman kerdil | G07 / G007 | 0.7 |
-| | | Daun melengkung atau terdistorsi | G03 / G003 | 0.6 |
-| **4** | **Layu Fusarium** | Tanaman layu pada siang hari, pulih malam hari | G09 / G009 | 0.9 |
-| | | Jaringan pembuluh batang berwarna coklat | G10 / G010 | 0.8 |
-| | | Daun bagian bawah menguning | G08 / G008 | 0.6 |
-| | | Pertumbuhan tanaman kerdil | G07 / G007 | 0.5 |
-| **5** | **Busuk Akar Pythium** | Akar berwarna coklat dan lembek | G11 / G011 | 0.9 |
-| | | Pertumbuhan tanaman kerdil | G07 / G007 | 0.6 |
-| | | Tanaman layu pada siang hari, pulih malam hari | G09 / G009 | 0.5 |
-| **6** | **Busuk Batang Rhizoctonia** | Lesi cekung kemerahan pada batang | G13 / G013 | 0.9 |
-| | | Batang lunak dan gelap di dekat tanah | G12 / G012 | 0.8 |
-| | | Tanaman layu pada siang hari, pulih malam hari | G09 / G009 | 0.4 |
-| **7** | **Embun Tepung** *(Powdery Mildew)* | Serbuk putih pada permukaan daun | G15 / G015 | 0.95 |
-| | | Daun melengkung atau terdistorsi | G03 / G003 | 0.5 |
-| **8** | **Embun Bulu** *(Downy Mildew)* | Pertumbuhan berbulu halus abu-abu/ungu di bawah daun | G14 / G014 | 0.9 |
-| | | Bercak kuning pada sisi atas daun | G02 / G002 | 0.6 |
-| | | Daun bagian bawah menguning | G08 / G008 | 0.5 |
+| **1** | **Bekicot** | Batang dan daun rusak | G001 | 1.0 |
+| | | Batang dan daun layu | G002 | 1.0 |
+| | | Batang dan daun busuk | G003 | 1.0 |
+| **2** | **Ulat Grayak** | Batang dan daun rusak | G001 | 1.0 |
+| | | Daun berlubang | G004 | 1.0 |
+| | | Pinggir daun bergerigi | G005 | 1.0 |
+| **3** | **Kutu Daun** | Tanaman kerdil | G006 | 1.0 |
+| | | Daun melengkung | G007 | 1.0 |
+| **4** | **Ulat Keket** | Batang dan daun rusak | G001 | 1.0 |
+| | | Daun berlubang | G004 | 1.0 |
+| | | Warna daun hijau muda dengan garis menyilang kuning | G008 | 1.0 |
+| **5** | **Karat Putih** | Batang dan daun rusak | G001 | 1.0 |
+| | | Muncul bercak putih pada permukaan daun | G009 | 1.0 |
+| **6** | **Bercak Daun** | Batang dan daun rusak | G001 | 1.0 |
+| | | Muncul bercak kecokelatan hingga kehitaman pada permukaan daun | G010 | 1.0 |
+| **7** | **Bakteri** | Mengeluarkan lendir keruh | G011 | 1.0 |
+| | | Berbau busuk | G012 | 1.0 |
+| | | Lengket jika disentuh | G014 | 1.0 |
+| **8** | **Virus** | Batang mengalami bercak-bercak | G016 | 1.0 |
+| | | Daun menjadi seperti terbakar | G017 | 1.0 |
+| | | Bentuk daun menjadi tidak sempurna | G018 | 1.0 |
+| **9** | **Alga** | Bercak berwarna kelabu kehijauan pada daun | G020 | 1.0 |
+| | | Pada permukaan tumbuh rambut berwarna cokelat kemerahan | G021 | 1.0 |
+| | | Bercak karat merah pada daun | G024 | 1.0 |
 
 ---
 
 ## 2. Master Data Penyakit
 
-Berikut adalah detail deskripsi ilmiah, gejala khas, dan solusi penanganan untuk masing-masing dari 8 penyakit tanaman kangkung:
+Berikut adalah detail deskripsi ilmiah dan solusi pengendalian untuk masing-masing hama dan penyakit tanaman kangkung:
 
-### P01. Karat Putih (White Rust)
+### H01. Bekicot
+*   **Nama Ilmiah:** *Achatina fulica*
+*   **Deskripsi:** Bekicot (Achatina fulica) merupakan hama penting yang menyerang tanaman kangkung dengan memakan daun dan batang muda. Serangan biasanya terjadi secara masif pada malam hari atau kondisi lingkungan yang sangat lembab, meninggalkan lubang-lubang besar yang tidak beraturan serta jejak lendir mengkilap pada permukaan tanaman.
+*   **Solusi:** Lakukan pencarian secara manual pada malam hari untuk mengumpulkan dan memusnahkan bekicot secara langsung. Taburkan abu kayu, serbuk gergaji, pasir kasar, atau pecahan cangkang telur di sekeliling bedengan tanaman sebagai penghalang fisik agar bekicot tidak mendekat. Gunakan umpan siput (moluskisida) berbahan aktif metaldehida secara bijaksana dan sesuai dosis anjuran jika serangan sudah melebihi batas kendali.
+
+### H02. Ulat Grayak
+*   **Nama Ilmiah:** *Spodoptera litura*
+*   **Deskripsi:** Ulat Grayak (Spodoptera litura) adalah larva serangga yang sangat rakus dan merusak daun kangkung secara berkelompok. Hama ini aktif memakan helaian daun mulai dari tepi hingga menyisakan tulang daunnya saja, terutama di malam hari, sehingga mengganggu proses fotosintesis secara drastis.
+*   **Solusi:** Lakukan sanitasi lahan secara rutin dengan membersihkan gulma yang dapat menjadi tempat persembunyian ulat grayak. Kumpulkan kelompok telur dan ulat kecil yang ditemukan pada permukaan bawah daun lalu musnahkan segera. Semprotkan insektisida nabati berbasis minyak mimba atau Beauveria bassiana secara merata di sore hari, atau gunakan insektisida kimia berbahan aktif deltametrin jika populasi hama sangat tinggi.
+
+### H03. Kutu Daun
+*   **Nama Ilmiah:** *Aphidoidea*
+*   **Deskripsi:** Kutu Daun (Aphids) adalah serangga kecil penghisap cairan sel tanaman kangkung, biasanya mengelompok di bagian bawah daun atau pucuk muda. Serangan hama ini menyebabkan helaian daun mengkerut, melengkung, menguning, dan tanaman tumbuh kerdil, serta dapat menularkan penyakit virus lainnya.
+*   **Solusi:** Semprot tanaman kangkung menggunakan air bertekanan kuat secara rutin untuk meluruhkan koloni kutu daun dari permukaan daun. Aplikasikan sabun insektisida organik atau minyak mimba secara berkala pada bagian bawah daun yang terserang. Pasang perangkap kartu kuning lengket di sekitar lahan untuk memantau dan meminimalkan populasi kutu daun dewasa.
+
+### H04. Ulat Keket
+*   **Nama Ilmiah:** *Agrius convolvuli*
+*   **Deskripsi:** Ulat Keket atau ulat tanduk merupakan larva berukuran besar dari ngengat Agrius convolvuli yang memakan daun kangkung dengan sangat cepat. Akibat gigitannya, daun kangkung dapat rusak parah dan bahkan menyisakan batangnya saja dalam beberapa hari jika tidak segera ditangani.
+*   **Solusi:** Lakukan pemantauan intensif pada pagi dan sore hari untuk menemukan ulat keket secara manual karena ukurannya yang besar memudahkan pengamatan fisik. Pungut ulat tersebut langsung dari batang kangkung dan musnahkan. Jika serangan meluas, semprot tanaman dengan insektisida hayati berbahan aktif Bacillus thuringiensis yang sangat efektif mengendalikan ulat daun.
+
+### P01. Karat Putih
 *   **Nama Ilmiah:** *Albugo ipomoeae-panduratae*
-*   **Deskripsi:** Karat Putih adalah penyakit yang disebabkan oleh oomycete *Albugo ipomoeae-panduratae*. Penyakit ini sangat umum terjadi pada tanaman kangkung, terutama di lingkungan dengan kelembaban tinggi dan sirkulasi udara yang buruk. Penyakit ini tidak hanya menyerang daun tetapi dapat menyebar ke batang jika tidak segera ditangani. Gejala awal dimulai dengan bintik kuning kecil di permukaan atas daun, yang kemudian diikuti oleh munculnya pustula putih berkapur di bagian bawah daun. Jika dibiarkan, tanaman akan mengalami hambatan pertumbuhan yang signifikan.
-*   **Solusi:**
-    *   **Tindakan Segera:** Segera cabut dan musnahkan daun atau bagian tanaman yang memiliki pustula putih untuk mencegah penyebaran spora melalui angin atau percikan air.
-    *   **Pengobatan:** Gunakan fungisida organik berbasis sulfur atau semprotan air rebusan daun sirih sebagai antiseptik alami. Jika serangan sudah mencapai lebih dari 30% area tanam, gunakan fungisida berbahan aktif tembaga oksida atau klorotalonil sesuai dosis anjuran.
-    *   **Pencegahan:** Atur jarak tanam minimal 15-20 cm untuk sirkulasi udara yang baik. Hindari penyiraman langsung pada daun di sore hari (lebih baik siram di area akar). Lakukan rotasi tanaman dengan jenis tanaman non-konvensional setiap 2 musim tanam.
+*   **Deskripsi:** Karat Putih adalah penyakit yang disebabkan oleh oomycete Albugo ipomoeae-panduratae. Penyakit ini menyerang daun kangkung dengan memicu bintik kuning di permukaan atas dan pustula putih berkapur di permukaan bawah daun, sehingga menurunkan kualitas panen secara signifikan.
+*   **Solusi:** Cabut dan musnahkan daun atau tanaman kangkung yang terinfeksi karat putih untuk memutus siklus penyebaran spora melalui angin. Atur jarak tanam kangkung minimal 15-20 cm untuk menjaga sirkulasi udara di sekitar tajuk daun tetap optimal. Aplikasikan fungisida berbasis sulfur secara berkala atau gunakan fungisida berbahan aktif tembaga oksida sesuai anjuran jika infeksi meluas.
 
-### P02. Bercak Daun Cercospora
+### P02. Bercak Daun
 *   **Nama Ilmiah:** *Cercospora ipomoeae*
-*   **Deskripsi:** Bercak daun ini disebabkan oleh jamur *Cercospora* yang berkembang pesat pada cuaca hangat dan lembab. Penyakit ini menyebabkan bercak nekrotik yang dapat menurunkan kapasitas fotosintesis tanaman secara drastis. Jika infeksi parah, seluruh daun dapat menguning dan gugur sebelum waktunya, yang berujung pada penurunan hasil panen yang signifikan. Jamur ini dapat bertahan hidup pada sisa-sisa tanaman di tanah selama berbulan-bulan.
-*   **Solusi:**
-    *   **Tindakan Segera:** Pangkas daun yang terinfeksi dan jangan biarkan jatuh ke tanah karena spora dapat bertahan di sisa tanaman.
-    *   **Pengobatan:** Aplikasikan fungisida sistemik berbahan aktif benomil atau mankozeb. Untuk solusi organik, gunakan ekstrak bawang putih yang diencerkan sebagai fungisida alami setiap 3 hari sekali.
-    *   **Pencegahan:** Pastikan lahan memiliki drainase yang baik agar air tidak menggenang. Jaga kebersihan lahan dari gulma yang bisa menjadi inang alternatif. Gunakan pupuk kalium yang cukup untuk memperkuat dinding sel tanaman terhadap serangan jamur.
+*   **Deskripsi:** Penyakit bercak daun kangkung ditandai dengan munculnya noda atau bercak kecokelatan hingga kehitaman pada permukaan daun. Infeksi jamur ini berkembang sangat pesat pada cuaca hangat dan kelembaban udara yang tinggi, yang mengakibatkan daun layu dan gugur sebelum waktunya.
+*   **Solusi:** Pangkas daun yang menunjukkan gejala bercak kecokelatan dan jaga kebersihan area lahan dari serpihan sisa tanaman yang gugur. Hindari penyiraman di sore hari secara langsung pada daun dan lebih baik lakukan penyiraman pada area perakaran di pagi hari. Gunakan fungisida organik berbahan ekstrak bawang putih atau semprotkan fungisida mankozeb sesuai dosis anjuran.
 
-### P03. Virus Mosaik Kangkung
+### P03. Bakteri
+*   **Nama Ilmiah:** *Pseudomonas syringae*
+*   **Deskripsi:** Penyakit bakteri menyerang jaringan vaskular tanaman kangkung, menyebabkan batang membubur lunak, mengeluarkan lendir keruh dari jaringan yang terinfeksi, serta mengeluarkan aroma busuk yang sangat menyengat.
+*   **Solusi:** Segera cabut tanaman kangkung yang membusuk beserta tanah perakarannya lalu bakar di luar area budidaya untuk mencegah kontaminasi tanah. Pastikan sistem drainase lahan berjalan dengan baik sehingga tidak terjadi genangan air yang memicu perkembangbiakan bakteri patogen. Gunakan bakterisida berbahan aktif tembaga hidroksida untuk mensterilkan tanaman di sekitarnya.
+
+### P04. Virus
 *   **Nama Ilmiah:** *Water spinach mosaic virus*
-*   **Deskripsi:** Virus ini merupakan salah satu ancaman paling serius karena tidak dapat diobati dengan pestisida. Virus mosaik biasanya ditularkan oleh serangga vektor seperti kutu daun (aphids) atau melalui alat pertanian yang tidak steril. Gejala yang paling khas adalah pola warna belang hijau tua dan muda yang tidak teratur pada daun, serta bentuk daun yang mengerut atau abnormal. Tanaman yang terinfeksi akan tumbuh sangat kerdil dan tidak layak dikonsumsi.
-*   **Solusi:**
-    *   **Tindakan Segera:** Cabut seluruh tanaman yang menunjukkan gejala mosaik hingga akarnya, masukkan ke dalam plastik, dan bakar di luar area lahan. JANGAN dijadikan kompos.
-    *   **Kontrol Vektor:** Fokus utama adalah membasmi kutu daun menggunakan sabun insektisida, minyak mimba (neem oil), atau insektisida berbahan aktif abamektin jika populasi serangga sangat tinggi.
-    *   **Pencegahan:** Selalu sterilisasi alat potong menggunakan alkohol 70% sebelum berpindah ke tanaman lain. Gunakan benih bersertifikat yang bebas virus. Pasang perangkap kuning berperekat untuk memantau keberadaan serangga vektor.
+*   **Deskripsi:** Penyakit virus mosaik kangkung ditandai dengan pola warna belang hijau tua dan hijau muda yang tidak teratur, daun menguning pekat, keriput, batang mengalami bercak-bercak, serta tanaman tumbuh sangat kerdil.
+*   **Solusi:** Eradikasi atau cabut dan bakar seluruh tanaman kangkung yang bergejala mosaik untuk mencegah penyebaran virus ke tanaman sehat lainnya. Kendalikan populasi serangga vektor penular seperti kutu daun dengan menyemprotkan sabun insektisida atau minyak mimba secara berkala. Selalu lakukan sterilisasi peralatan pertanian menggunakan alkohol sebelum digunakan berpindah tanaman.
 
-### P04. Layu Fusarium
-*   **Nama Ilmiah:** *Fusarium oxysporum*
-*   **Deskripsi:** Layu Fusarium adalah penyakit tular tanah (soil-borne) yang menyerang sistem pembuluh tanaman. Jamur ini menyumbat aliran air dan nutrisi dari akar ke daun, sehingga tanaman tampak layu meskipun tanah cukup basah. Ciri khasnya adalah tanaman layu saat terik matahari tetapi segar kembali pada malam hari, hingga akhirnya mati secara permanen. Jika batang dipotong melintang, akan terlihat cincin kecoklatan pada jaringan pembuluhnya.
-*   **Solusi:**
-    *   **Tindakan Segera:** Singkirkan tanaman mati beserta tanah di sekeliling perakarannya untuk meminimalisir penyebaran spora di tanah.
-    *   **Pengobatan Tanah:** Gunakan agen hayati *Trichoderma harzianum* yang dicampurkan ke dalam kompos atau tanah sebelum tanam untuk menekan pertumbuhan jamur jahat.
-    *   **Pencegahan:** Lakukan pengapuran tanah (dolomit) untuk menaikkan pH tanah menjadi 6.5-7.0, karena *Fusarium* menyukai tanah asam. Hindari penggunaan pupuk Urea berlebihan karena dapat memicu perkembangan jamur ini. Gunakan sistem irigasi yang tidak menyebabkan erosi tanah antar tanaman.
-
-### P05. Busuk Akar Pythium
-*   **Nama Ilmiah:** *Pythium spp.*
-*   **Deskripsi:** *Pythium* sering disebut sebagai 'penyakit rebah kecambah' atau 'busuk akar' yang sangat merusak pada kondisi tanah jenuh air (becek). Jamur ini menyerang akar halus kangkung, membuatnya membusuk dan tidak mampu menyerap nutrisi. Pada bibit muda, pangkal batang akan menjadi lunak dan tanaman akan rebah seketika. Pada tanaman dewasa, pertumbuhan akan berhenti total dan daun menguning pucat.
-*   **Solusi:**
-    *   **Tindakan Segera:** Hentikan penyiraman segera dan perbaiki saluran drainase agar tidak ada air menggenang.
-    *   **Pengobatan:** Gunakan fungisida khusus oomycetes berbahan aktif metalaksil atau propamokarb hidroklorida. Untuk pencegahan alami, pastikan media tanam sudah difermentasi sempurna sebelum digunakan.
-    *   **Pencegahan:** Pastikan benih ditanam pada kedalaman yang tepat (jangan terlalu dalam). Gunakan air siraman yang bersih (bukan air limbah atau air selokan yang terkontaminasi). Perkaya tanah dengan bahan organik untuk meningkatkan porositas tanah.
-
-### P06. Busuk Batang Rhizoctonia
-*   **Nama Ilmiah:** *Rhizoctonia solani*
-*   **Deskripsi:** Busuk batang Rhizoctonia adalah penyakit jamur tular tanah yang sering menyerang tanaman kangkung di lahan yang terlalu basah. Jamur ini menyerang pangkal batang, menciptakan lesi berwarna coklat kemerahan yang perlahan melingkari batang (girdling). Akibatnya, transportasi air terputus dan tanaman akan roboh atau mati mendadak. Penyakit ini sering muncul setelah hujan terus-menerus.
-*   **Solusi:**
-    *   **Tindakan Segera:** Segera kurangi frekuensi penyiraman dan lakukan pendangiran (penggemburan tanah) di sekitar batang untuk mengurangi kelembaban permukaan.
-    *   **Pengobatan:** Kocor pangkal batang dengan fungisida berbahan aktif benomil atau pcb (pencycuron). Secara organik, taburkan abu kayu di sekitar pangkal batang untuk menghambat jamur.
-    *   **Pencegahan:** Gunakan benih yang sehat dan telah diberi perlakuan (seed treatment). Jangan menanam kangkung terlalu rapat. Pastikan sisa-sisa tanaman dari musim sebelumnya telah dibersihkan sepenuhnya.
-
-### P07. Embun Tepung (Powdery Mildew)
-*   **Nama Ilmiah:** *Erysiphe spp.*
-*   **Deskripsi:** Embun tepung mudah dikenali dari lapisan putih seperti tepung atau bedak di permukaan atas daun. Penyakit ini unik karena justru sering berkembang pada kondisi udara kering namun dengan kelembaban tinggi di sekitar tanaman. Lapisan putih ini sebenarnya adalah koloni jamur yang menyerap nutrisi langsung dari sel epidermis daun, menyebabkan daun mengerut dan fotosintesis terhenti.
-*   **Solusi:**
-    *   **Tindakan Segera:** Semprot tanaman dengan air bertekanan kuat di pagi hari untuk merontokkan spora tepung secara fisik.
-    *   **Pengobatan:** Gunakan fungisida sistemik berbahan aktif tebukonazol. Secara organik, semprotan campuran susu cair dan air (rasio 1:9) sangat efektif karena protein dalam susu akan bereaksi dengan sinar matahari menjadi antiseptik bagi jamur ini.
-    *   **Pencegahan:** Tanam kangkung di lokasi yang mendapatkan sinar matahari penuh minimal 6-8 jam sehari. Jangan memberikan pupuk nitrogen terlalu tinggi karena jaringan tanaman yang terlalu sukulen lebih mudah diserang.
-
-### P08. Embun Bulu (Downy Mildew)
-*   **Nama Ilmiah:** *Peronospora spp.*
-*   **Deskripsi:** Downy mildew sering tertukar dengan powdery mildew, namun jamur ini tumbuh di bagian bawah daun dengan tekstur berbulu halus berwarna keunguan atau abu-abu. Di permukaan atas daun hanya terlihat bercak kuning pucat yang dibatasi oleh tulang daun (berbentuk menyudut). Penyakit ini sangat berbahaya pada cuaca dingin dan berkabut.
-*   **Solusi:**
-    *   **Tindakan Segera:** Buang segera daun yang menunjukkan bercak kuning menyudut. Perbaiki sirkulasi udara dengan membuang gulma di sekitar bedengan.
-    *   **Pengobatan:** Gunakan fungisida khusus oomycetes seperti Metalaksil atau Dimetomorf. Untuk cara organik, gunakan semprotan rebusan batang serai yang mengandung sitronela sebagai antijamur.
-    *   **Pencegahan:** Hindari menanam kangkung di area yang ternaungi atau selalu lembab. Pastikan sisa tanaman musim lalu dibakar untuk memutus siklus spora dorman.
+### P05. Alga
+*   **Nama Ilmiah:** *Cephaleuros virescens*
+*   **Deskripsi:** Penyakit alga merah dipicu oleh organisme Cephaleuros virescens. Penyakit ini memicu bercak karat merah atau kelabu kehijauan pada daun kangkung, disertai dengan pertumbuhan rambut halus cokelat kemerahan di permukaannya.
+*   **Solusi:** Lakukan pemangkasan pada daun-daun kangkung yang tua atau bagian tanaman terbawah yang terlalu lembab untuk meminimalkan paparan spora alga. Pastikan lahan terpapar sinar matahari secara penuh and hindari tingkat kerapatan tanaman yang berlebihan. Lakukan penyemprotan fungisida berbahan aktif tembaga jika tingkat serangan alga merusak sebagian besar dedaunan.
 
 ---
 
 ## 3. Master Data Gejala
 
-Berikut adalah daftar 15 gejala yang diidentifikasi pada tanaman kangkung beserta deskripsinya:
+Berikut adalah daftar 24 gejala yang diidentifikasi pada tanaman kangkung beserta deskripsinya:
 
 | No | Kode Gejala | Deskripsi Gejala |
 | :---: | :---: | :--- |
-| 1 | G01 / G001 | Bercak putih menonjol pada sisi bawah daun |
-| 2 | G02 / G002 | Bercak kuning pada sisi atas daun |
-| 3 | G03 / G003 | Daun melengkung atau terdistorsi |
-| 4 | G04 / G004 | Bercak bulat dengan pusat abu-abu/putih |
-| 5 | G05 / G005 | Bercak dengan tepi coklat tua/merah |
-| 6 | G06 / G006 | Pola mosaik hijau terang/gelap pada daun |
-| 7 | G07 / G007 | Pertumbuhan tanaman kerdil |
-| 8 | G08 / G008 | Daun bagian bawah menguning |
-| 9 | G09 / G009 | Tanaman layu pada siang hari, pulih malam hari |
-| 10 | G10 / G010 | Jaringan pembuluh batang berwarna coklat |
-| 11 | G11 / G011 | Akar berwarna coklat dan lembek |
-| 12 | G12 / G012 | Batang lunak dan gelap di dekat tanah |
-| 13 | G13 / G013 | Lesi cekung kemerahan pada batang |
-| 14 | G14 / G014 | Pertumbuhan berbulu halus abu-abu/ungu di bawah daun |
-| 15 | G15 / G015 | Serbuk putih pada permukaan daun |
+| 1 | G001 | Batang dan daun rusak |
+| 2 | G002 | Batang dan daun layu |
+| 3 | G003 | Batang dan daun busuk |
+| 4 | G004 | Daun berlubang |
+| 5 | G005 | Pinggir daun bergerigi |
+| 6 | G006 | Tanaman kerdil |
+| 7 | G007 | Daun melengkung |
+| 8 | G008 | Warna daun hijau muda dengan garis menyilang kuning |
+| 9 | G009 | Muncul bercak putih pada permukaan daun |
+| 10 | G010 | Muncul bercak kecokelatan hingga kehitaman pada permukaan daun |
+| 11 | G011 | Mengeluarkan lendir keruh |
+| 12 | G012 | Berbau busuk |
+| 13 | G013 | Keluar air pada batang |
+| 14 | G014 | Lengket jika disentuh |
+| 15 | G015 | Daun berwarna kuning pekat |
+| 16 | G016 | Batang mengalami bercak-bercak |
+| 17 | G017 | Daun menjadi seperti terbakar |
+| 18 | G018 | Bentuk daun menjadi tidak sempurna |
+| 19 | G019 | Daun layu |
+| 20 | G020 | Bercak berwarna kelabu kehijauan pada daun |
+| 21 | G021 | Pada permukaan tumbuh rambut berwarna cokelat kemerahan |
+| 22 | G022 | Daun dihinggapi lalat |
+| 23 | G023 | Batang dan daun kering |
+| 24 | G024 | Bercak karat merah pada daun |
 
 ---
 

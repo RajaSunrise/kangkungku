@@ -86,7 +86,6 @@ class TokenData(BaseModel):
 
 class UserBase(BaseModel):
     username: str
-    email: Optional[str] = None
     alamat: Optional[str] = None
 
 class UserCreate(UserBase):
@@ -94,7 +93,6 @@ class UserCreate(UserBase):
 
 class UserUpdate(BaseModel):
     username: Optional[str] = None
-    email: Optional[str] = None
     alamat: Optional[str] = None
     role: Optional[str] = None
     is_active: Optional[bool] = None

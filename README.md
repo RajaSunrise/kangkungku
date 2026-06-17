@@ -106,10 +106,10 @@ erDiagram
     USERS {
         int id PK
         string username
-        string email
         string hashed_password
         string role
         boolean is_active
+        string alamat
     }
 
     DIAGNOSA_HISTORY {
@@ -262,10 +262,10 @@ classDiagram
     class User {
         +int id
         +str username
-        +str email
         +str hashed_password
         +str role
         +bool is_active
+        +str alamat
     }
 
     class DiagnosaHistory {
@@ -569,11 +569,10 @@ Berikut adalah struktur tabel-tabel yang digunakan dalam basis data sistem pakar
 |---|---|---|---|---|
 | 1 | id | Int | 11 | Identitas user (Primary Key) |
 | 2 | username | Varchar | 50 | Username untuk login |
-| 3 | email | Varchar | 100 | Alamat email user |
-| 4 | hashed_password | Varchar | 255 | Password yang telah di-hash |
-| 5 | role | Varchar | 20 | Role pengguna (admin/user) |
-| 6 | is_active | Boolean | - | Status keaktifan akun |
-| 7 | alamat | Varchar | 255 | Alamat pengguna |
+| 3 | hashed_password | Varchar | 255 | Password yang telah di-hash |
+| 4 | role | Varchar | 20 | Role pengguna (admin/user) |
+| 5 | is_active | Boolean | - | Status keaktifan akun |
+| 6 | alamat | Varchar | 255 | Alamat pengguna |
 
 ### 14.5. Tabel: diagnosa_history
 | No | Field | Type | Size | Keterangan |

@@ -128,10 +128,6 @@ def create_user(user: schemas.UserCreate, db: Session = Depends(database.get_db)
     existing = crud.get_user_by_username(db, username=user.username)
     if existing:
         raise HTTPException(status_code=400, detail="Username sudah digunakan")
-    # Check if email already exists
-    existing_email = db.query(models.User).filter(models.User.email == user.email).first()
-    if existing_email:
-        raise HTTPException(status_code=400, detail="Email sudah digunakan")
     hashed_password = get_password_hash(user.password)
     return crud.create_user(db=db, user=user, hashed_password=hashed_password)
 
@@ -146,12 +142,6 @@ def update_user(user_id: int, user_data: schemas.UserUpdate, db: Session = Depen
         existing = crud.get_user_by_username(db, username=user_data.username)
         if existing:
             raise HTTPException(status_code=400, detail="Username sudah digunakan")
-    
-    # Check email uniqueness if changed
-    if user_data.email and user_data.email != db_user.email:
-        existing_email = db.query(models.User).filter(models.User.email == user_data.email).first()
-        if existing_email:
-            raise HTTPException(status_code=400, detail="Email sudah digunakan")
     
     hashed_pw = None
     if user_data.password:

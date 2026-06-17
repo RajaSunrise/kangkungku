@@ -1,5 +1,26 @@
 const API_URL = "";
 
+async function parseErrorResponse(response, defaultMsg) {
+    let errorMsg = defaultMsg;
+    try {
+        const error = await response.json();
+        if (error && error.detail) {
+            if (typeof error.detail === "string") {
+                errorMsg = error.detail;
+            } else if (Array.isArray(error.detail)) {
+                errorMsg = error.detail.map(err => err.msg || JSON.stringify(err)).join(", ");
+            } else if (typeof error.detail === "object") {
+                errorMsg = JSON.stringify(error.detail);
+            } else {
+                errorMsg = String(error.detail);
+            }
+        }
+    } catch (e) {
+        errorMsg = `${defaultMsg}: Server error (${response.status})`;
+    }
+    return errorMsg;
+}
+
 async function login(username, password) {
     const formData = new FormData();
     formData.append("username", username);
@@ -12,8 +33,8 @@ async function login(username, password) {
         });
 
         if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.detail || "Login failed");
+            const errorMsg = await parseErrorResponse(response, "Login failed");
+            throw new Error(errorMsg);
         }
 
         const data = await response.json();
@@ -34,19 +55,19 @@ async function login(username, password) {
     }
 }
 
-async function register(username, email, alamat, password) {
+async function register(username, alamat, password) {
     try {
         const response = await fetch(`${API_URL}/auth/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ username, email, alamat, password }),
+            body: JSON.stringify({ username, alamat, password }),
         });
 
         if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.detail || "Registration failed");
+            const errorMsg = await parseErrorResponse(response, "Registration failed");
+            throw new Error(errorMsg);
         }
 
         alert("Registration successful! Please login.");

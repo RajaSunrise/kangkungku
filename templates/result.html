@@ -112,9 +112,9 @@
                     <div class="p-8 md:p-10 bg-white">
                         <div class="flex items-center gap-3 mb-8">
                             <div class="p-2 rounded-lg bg-primary/10 text-primary-text">
-                                <span class="material-symbols-outlined text-2xl font-bold">healing</span>
+                                <span class="material-symbols-outlined text-2xl font-bold">settings_suggest</span>
                             </div>
-                            <h4 class="text-2xl font-black text-slate-900">Protokol Pemulihan</h4>
+                            <h4 class="text-2xl font-black text-slate-900">Solusi Pengendalian</h4>
                         </div>
                         <div id="solusi" class="space-y-6"></div>
                     </div>
@@ -232,57 +232,38 @@
                 const formatSolusi = (text) => {
                     if (!text) return 'Belum ada data pengobatan spesifik.';
                     
-                    const sections = [
-                        { label: 'Tindakan Segera', icon: 'emergency', color: 'bg-red-50 text-red-600 border-red-100', dot: 'bg-red-500', pattern: /\[TINDAKAN SEGERA\](.*?)(\[|$)/s },
-                        { label: 'Protokol Pengobatan', icon: 'medication', color: 'bg-blue-50 text-blue-600 border-blue-100', dot: 'bg-blue-500', pattern: /\[PENGOBATAN\](.*?)(\[|$)/s },
-                        { label: 'Kontrol Vektor', icon: 'pest_control', color: 'bg-purple-50 text-purple-600 border-purple-100', dot: 'bg-purple-500', pattern: /\[KONTROL VEKTOR\](.*?)(\[|$)/s },
-                        { label: 'Sanitasi Tanah', icon: 'grass', color: 'bg-amber-50 text-amber-600 border-amber-100', dot: 'bg-amber-500', pattern: /\[PENGOBATAN TANAH\](.*?)(\[|$)/s },
-                        { label: 'Strategi Pencegahan', icon: 'shield', color: 'bg-emerald-50 text-emerald-600 border-emerald-100', dot: 'bg-emerald-500', pattern: /\[PENCEGAHAN\](.*?)(\[|$)/s }
-                    ];
+                    // Ekstrak semua bagian teks dengan menghapus tag bracket [TAG]
+                    const cleanText = text.replace(/\[[A-Z\s]+\]/g, '|||');
+                    const parts = cleanText.split('|||').map(p => p.trim()).filter(p => p.length > 0);
 
-                    let html = '<div class="grid grid-cols-1 gap-6">';
-                    let foundAny = false;
-
-                    sections.forEach(sec => {
-                        const match = text.match(sec.pattern);
-                        if (match && match[1]) {
-                            foundAny = true;
-                            const content = match[1].trim();
-                            const points = content.split(/[.\n]+/).filter(p => p.trim().length > 5);
-
-                            html += `
-                                <div class="group rounded-2xl border border-slate-100 bg-white overflow-hidden transition-all hover:shadow-lg hover:border-slate-200">
-                                    <div class="px-6 py-4 ${sec.color.split(' ')[0]} flex items-center justify-between border-b border-slate-100">
-                                        <div class="flex items-center gap-3 font-black text-xs uppercase tracking-widest ${sec.color.split(' ')[1]}">
-                                            <span class="material-symbols-outlined text-xl">${sec.icon}</span>
-                                            ${sec.label}
-                                        </div>
-                                        <span class="flex h-2 w-2 rounded-full ${sec.dot}"></span>
-                                    </div>
-                                    <div class="p-6">
-                                        <ul class="space-y-4">
-                                            ${points.map(p => `
-                                                <li class="flex items-start gap-4 group/item">
-                                                    <div class="mt-1 flex-shrink-0 size-5 rounded-full bg-slate-50 flex items-center justify-center group-hover/item:bg-primary/10 transition-colors">
-                                                        <span class="material-symbols-outlined text-[10px] text-slate-400 group-hover/item:text-primary-text font-black">arrow_forward_ios</span>
-                                                    </div>
-                                                    <span class="text-sm text-slate-600 leading-relaxed font-medium">${p.trim()}.</span>
-                                                </li>
-                                            `).join('')}
-                                        </ul>
-                                    </div>
-                                </div>
-                            `;
-                        }
-                    });
-
-                    if (!foundAny) {
+                    if (parts.length === 0) {
                         return `
                             <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-slate-600 leading-relaxed font-medium">
                                 ${text}
                             </div>
                         `;
                     }
+
+                    // Tampilkan sebagai paragraf langsung tanpa bullet
+                    const paragraphsHtml = parts.map(p => {
+                        const cleanP = p.endsWith('.') ? p : p + '.';
+                        return `<p class="text-slate-600 leading-relaxed font-medium text-base mb-4 last:mb-0">${cleanP}</p>`;
+                    }).join('');
+
+                    let html = `
+                        <div class="group rounded-2xl border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-lg">
+                            <div class="p-6 md:p-8">
+                                <div class="space-y-4">
+                                    ${paragraphsHtml}
+                                </div>
+                                <div class="mt-6 pt-6 border-t border-slate-100">
+                                    <p class="text-sm text-slate-500 leading-relaxed font-medium">
+                                        <span class="font-bold text-slate-700 text-emerald-600">Rekomendasi Tindakan:</span> Lakukan langkah-langkah solusi pengendalian di atas secara berkelanjutan dan konsisten untuk memastikan penyakit teratasi sepenuhnya serta mencegah penularan ke tanaman kangkung lainnya.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
 
                     html += `
                         <div class="mt-4 p-6 rounded-2xl bg-slate-900 text-white relative overflow-hidden">
@@ -297,7 +278,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>`;
+                    `;
                     
                     return html;
                 };

@@ -46,7 +46,7 @@ e. Sistem menampilkan notifikasi sukses dan memperbarui tabel data pengguna.
 
 ### 2.1. Registrasi Akun Baru
 a. Pengguna membuka halaman formulir pendaftaran/registrasi.
-b. Pengguna mengisi data pendaftaran berupa username, email, alamat, dan password.
+b. Pengguna mengisi data pendaftaran berupa username, alamat, dan password.
 c. Sistem melakukan validasi dan memeriksa keunikan data ke database.
 d. Sistem menyimpan akun pengguna baru ke database.
 e. Sistem menampilkan notifikasi registrasi berhasil dan mengarahkan ke halaman login.

@@ -10,7 +10,7 @@
                 <mxCell id="masalah" value="Petani menemukan masalah pada&#10;tanaman kangkung" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" parent="lane_petani" vertex="1">
                     <mxGeometry x="103" y="105" width="180" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="lane_petani" source="amati" target="2">
+                <mxCell id="4" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="lane_petani" source="amati" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="amati" value="Mengamati gejala secara manual" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" parent="lane_petani" vertex="1">
@@ -25,13 +25,13 @@
                 <mxCell id="pakar_tersedia" value="Pakar tersedia?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;" parent="lane_petani" vertex="1">
                     <mxGeometry x="138" y="700" width="110" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="lane_petani" source="pakar_solusi_terap" target="tanaman_sembuh">
+                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="lane_petani" source="pakar_solusi_terap" target="tanaman_sembuh" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="pakar_solusi_terap" value="Petani menerapkan solusi&#10;penanganan" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" parent="lane_petani" vertex="1">
                     <mxGeometry x="310" y="965" width="180" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="lane_petani" source="tanaman_sembuh" target="12">
+                <mxCell id="13" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="lane_petani" source="tanaman_sembuh" target="12" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="404" y="1160" as="sourcePoint"/>
                         <mxPoint x="398.53968253968264" y="1203" as="targetPoint"/>
@@ -40,10 +40,10 @@
                 <mxCell id="tanaman_sembuh" value="Tanaman sembuh?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;" parent="lane_petani" vertex="1">
                     <mxGeometry x="346" y="1080" width="110" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="Mencatat gejala yang diamati" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;" vertex="1" parent="lane_petani">
+                <mxCell id="2" value="Mencatat gejala yang diamati" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;" parent="lane_petani" vertex="1">
                     <mxGeometry x="118" y="280" width="150" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="Mulai" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="lane_petani">
+                <mxCell id="3" value="Mulai" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane_petani" vertex="1">
                     <mxGeometry x="138" y="30" width="110" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;labelBackgroundColor=#FFFFFF;" parent="lane_petani" source="3" target="masalah" edge="1">
@@ -56,7 +56,7 @@
                         <mxPoint x="200" y="300" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="pakar_cari_mid" value="Mencari pakar pertanian /&#10;penyuluh lapangan" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" parent="lane_petani" vertex="1">
+                <mxCell id="pakar_cari_mid" value="&lt;span style=&quot;text-align: start; font-family: Arial;&quot;&gt;Identifikasi berdasarkan pengalaman&lt;/span&gt;" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" parent="lane_petani" vertex="1">
                     <mxGeometry x="310" y="383" width="180" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="e5" value="Ya" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane_petani" source="identifikasi_sendiri" target="pakar_cari_mid" edge="1">
@@ -67,13 +67,13 @@
                         <mxPoint x="397.5" y="530" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="6" value="Mencatat hasil identifikasi" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;" vertex="1" parent="lane_petani">
+                <mxCell id="6" value="Mencatat hasil identifikasi" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;" parent="lane_petani" vertex="1">
                     <mxGeometry x="328" y="475" width="145" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="lane_petani" source="pakar_akurat_mid" target="pakar_solusi_terap">
+                <mxCell id="10" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="lane_petani" source="pakar_akurat_mid" target="pakar_solusi_terap" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="Ya" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="10">
+                <mxCell id="11" value="Ya" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="10" vertex="1" connectable="0">
                     <mxGeometry x="-0.165" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -98,7 +98,7 @@
                 <mxCell id="pakar_tunggu" value="Menunggu jadwal&#10;kunjungan pakar" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" parent="lane_petani" vertex="1">
                     <mxGeometry x="102" y="890" width="180" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="lane_petani" source="pakar_ulangi" target="pakar_cari_petani">
+                <mxCell id="9" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="lane_petani" source="pakar_ulangi" target="pakar_cari_petani" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="300" y="910" as="sourcePoint"/>
                         <mxPoint x="350" y="860" as="targetPoint"/>
@@ -108,7 +108,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="12" value="Selesai" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="lane_petani">
+                <mxCell id="12" value="Selesai" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane_petani" vertex="1">
                     <mxGeometry x="344" y="1209" width="114" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="lane_pakar" value="PAKAR" style="swimlane;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#000000;align=center;" parent="1" vertex="1">

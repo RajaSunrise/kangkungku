@@ -1,0 +1,1606 @@
+Jurnal
+ISSN 2088-1770 (Print)
+ISSN 2503-3247 (Online)
+
+SAINTEKOM
+Sains, Teknologi, Komputer, dan Manajemen
+
+SISTEM PAKAR DIAGNOSIS HAMA DAN PENYAKIT PADA
+TANAMAN KANGKUNG MENGGUNAKAN METODE
+FORWARD CHAINING
+Iffan Ahmad Nasrulloh1, *Pradana Ananda Raharja2, Amalia Beladinna Arifa3
+1,2) Teknik Informatika, Institut Teknologi Telkom Purwokerto
+Jl. DI Panjaitan No.128, Karangreja, Purwokerto Kidul, Kec. Purwokerto Sel.,
+Kabupaten Banyumas, Jawa Tengah
+Email: 18102125@ittelkom-pwt.ac.id1, *pradana@ittelkom-pwt.ac.id2,
+amalia@ittelkom-pwt.ac.id3
+ABSTRACT
+The production of water spinach vegetable crops in 2020 in Central Java ranks 2nd in
+water spinach production, which is 29,108 tons. The amount of water in spinach production and
+the increased risk of being attacked by pests and diseases will be even more significant, and
+proper care is needed to improve the quality of water spinach. It takes an expert to convey
+knowledge about controlling pests and diseases that are good and right. From these problems,
+we developed a system to overcome the problem of water spinach plant disease. This expert
+system uses the forward chaining method. The results of this study are a pest and disease
+diagnosis system on water spinach using a website-based forward chaining method with
+accuracy testing using the confusion matrix method by testing 50 rules. Of 50 data, 45 are
+considered appropriate, and the results of 5 rules are not relevant, so the evaluation results of
+this expert system produce system accuracy with a percentage of 90%.
+Keywords: diagnosis, expert system, forward chaining, plant diseases, water spinach
+ABSTRAK
+Produksi tanaman sayuran kangkung tahun 2020 di Jawa Tengah menempati urutan ke2 sebagai produksi tanaman kangkung terbanyak yaitu sebesar 29.108 ton. Peningkatan jumlah
+produksi kangkung serta risiko untuk terkena serangan hama dan penyakit akan semakin besar
+dan diperlukan perawatan dengan baik dan benar untuk meningkatkan kualitas kangkung.
+Dibutuhkan seorang ahli untuk menyampaikan pengetahuan tentang cara pengendalian hama
+dan penyakit yang baik dan benar. Dari permasalahan tersebut dikembangkannya sistem pakar
+untuk mengatasi masalah penyakit tanaman kangkung, sistem pakar ini menggunakan metode
+forward chaining. Hasil dari penelitian ini adalah sistem pakar diagnosis hama dan penyakit
+pada tanaman kangkung menggunakan metode forward chaining berbasis website dengan
+pengujian akurasi menggunakan metode confusion matrix dengan menguji pada 50 rules, dan
+dari 50 rules terdapat 45 rules dinilai sesuai dan hasil 5 rules tidak sesuai. Sehingga hasil
+evaluasi sistem pakar ini menghasilkan akurasi sistem dengan persentase 90%.
+Kata kunci: diagnosa, sistem pakar, forward chaining, penyakit tanaman, kangkung
+
+146
+
+147
+
+STMIK Palangka Raya
+
+menyampaikan pengetahuan tentang cara
+
+1. PENDAHULUAN
+sayuran
+
+pengendalian yang baik dan benar. Tetapi
+
+kangkung tahun 2020 di Jawa Tengah
+
+dengan jumlah ahli pertanian yang terbatas,
+
+menempati urutan ke-2 sebagai produksi
+
+untuk membantu permasalahan petani dan
+
+tanaman kangkung terbanyak yaitu sebesar
+
+untuk konsultasi dengan seorang ahli
+
+29.108 ton (Produksi Tanaman Sayuran
+
+menjadi hambatan bagi petani karena
+
+2020, 2020), Indonesia juga mengekspor
+
+memerlukan
+
+tumbuhan hias sampai biji kangkung hingga
+
+(Mukhlisoh et al., 2016).
+
+tomat ke negara sekitar. Menteri Ketua
+
+Hama
+
+Produksi
+
+tanaman
+
+biaya,
+
+yang
+
+jarak
+
+dan
+
+waktu
+
+berpengaruh
+
+pada
+
+Bidang Perekonomian Airlangga Hartarto
+
+tumbuhan kangkung di antaranya bekicot
+
+(2021)
+
+(Achatina
+
+melakukan
+
+pengamatan
+
+dan
+
+ulat
+
+fulica),
+
+gerayak
+
+penghargaan terhadap pelepasan ekspor
+
+(Spodoptera), kutu daun (Aphidoidea) dan
+
+program florikultura dan benih sayuran
+
+ulat
+
+dengan
+
+tersebut yang bisa berakibat tumbuhan
+
+mengikuti
+
+acara
+
+pelepasan
+
+keket
+
+(Agrius
+
+convolvuli),
+
+hama
+
+di
+
+kangkung terkena penyakit. Penyakit pada
+
+Minaqu Home Nature, Jungle Fest Bogor.
+
+tumbuhan kangkung di antaranya karat
+
+Menurut Airlangga nilai ekspor florikultura
+
+putih, bercak daun, penyakit dikarenakan
+
+mengalami peningkatan pada 3 tahun
+
+bakteri, virus, dan alga (Maulana, 2018).
+
+terakhir. Pada tahun 2018 nilai ekspor
+
+Tujuan
+
+sebesar US$12,07 juta, tahun 2019 sebesar
+
+menerapkan metode Forward Chaining
+
+US$13,53 juta (naik 12,1%) dan pada tahun
+
+pada
+
+2020 secara signifikan naik cukup besar
+
+mendiagnosis penyakit dan hama pada
+
+menjadi US$19,98 juta (Yanwardhana,
+
+tumbuhan kangkung. Sistem ini dibuat
+
+2021). Ditarik kesimpulan berdasarkan data
+
+berbasis
+
+tersebut
+
+penelitian ini dapat membantu petani dan
+
+ekspor florikultura
+
+bahwa
+
+yang
+
+bertempat
+
+tanaman
+
+kangkung
+
+dalam
+sistem
+
+penelitian
+pakar
+
+website,
+
+ini
+
+untuk
+
+diharapkan
+
+adalah
+dapat
+
+dalam
+
+Cara
+
+masyarakat dalam melakukan pengendalian
+
+perawatan yang salah atau tidak sesuai
+
+terhadap hama dan penyakit pada tanaman
+
+dengan
+
+kangkung dengan baik dan benar.
+
+mengalami
+
+kenaikan
+
+standar
+
+produksi.
+
+yang
+
+ada,
+
+dapat
+
+mengakibatkan tanaman kangkung rentan
+
+Sistem berbasis komputer yang
+
+dapat
+
+dibangun berdasarkan fakta, pengetahuan,
+
+mengakibatkan hasil panen tidak bisa
+
+maupun penalaran yang dapat membantu
+
+maksimal, hasil penjualan rendah dan
+
+menyelesaikan suatu permasalahan disebut
+
+bahkan bisa mengakibatkan gagal panen
+
+sistem pakar (Wajidi & Nur, 2021). Sistem
+
+(Fitriani & Febrianto, 2020). Oleh karena
+
+pakar telah banyak digunakan memecahkan
+
+itu
+
+masalah di berbagai bidang, seperti bidang
+
+terkena
+
+hama
+
+dibutuhkan
+
+penyakit
+
+seorang
+
+dan
+
+ahli
+
+untuk
+
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+STMIK Palangka Raya
+
+pertanian,
+
+148
+
+perbankan
+
+pendidikan
+
+Berbasis Web” berdasarkan pengujian yang
+
+(Fitriani & Febrianto, 2020). Tujuan Sistem
+
+dilakukan dengan Black Box, aplikasi
+
+Pakar
+
+analisis
+
+adalah
+
+dan
+
+mentransfer
+
+kepakaran
+
+perancangan
+
+sistem
+
+pakar
+
+seorang pakar ke komputer, kemudian
+
+penentuan gaya belajar siswa ini layak
+
+melanjutkannya dari komputer ke orang
+
+digunakan dengan persentase 100% dan
+
+lain
+
+sedangkan
+
+dapat berfungsi dengan baik. Kemudian
+
+Seorang pakar atau ahli (human expert)
+
+penelitian lain terkait sistem pakar dengan
+
+adalah seorang individu yang memiliki
+
+metode
+
+kemampuan pemahaman yang superior dari
+
+mengidentifikasi modalitas belajar siswa
+
+suatu masalah (Mochammad, 2019).
+
+dengan benar tanpa harus berdiskusi dengan
+
+(yang
+
+bukan
+
+pakar),
+
+Hasil penelitian (Afandi & Sulistyo,
+2019) yang berjudul “Sistem Pakar Untuk
+
+forward
+
+mampu
+
+chaining
+
+ahli atau guru bimbingan konseling di
+sekolah (Kurniawan et al., 2019).
+
+Diagnosa Hama dan Penyakit Pada Bunga
+
+Berdasarkan masalah di atas, serta
+
+Krisan Menggunakan Forward Chaining”
+
+berdasarkan dari penelitian sebelumnya
+
+pembahasan dan perancangan pada sistem
+
+yang
+
+pakar diagnosa hama dan penyakit pada
+
+chaining belum ada yang meneliti tentang
+
+bunga krisan menghasilkan kesimpulan
+
+tanaman
+
+kangkung.
+
+bahwa Sistem dapat mendiagnosis penyakit
+
+tersebut,
+
+maka
+
+dan hama pada bunga krisan pada gejala-
+
+mengenai Sistem Pakar Diagnosis Hama
+
+gejala yang dialami dan menjadi input oleh
+
+dan Penyakit Pada Tanaman Kangkung
+
+para
+
+penelitian
+
+Menggunakan Metode Forward Chaining
+
+(Pakpahan & Doni, 2019) yang berjudul
+
+Berbasis Web. Dalam pembuatan sistem
+
+“Implementasi Metode Forward Chaining
+
+metode yang digunakan adalah Systems
+
+Untuk
+
+Organisme
+
+Development Life Cycle (SDLC), metode
+
+Pengganggu Tanaman (Opt) Kopi” Aplikasi
+
+ini meliputi analisa, desain, pengkodean,
+
+web
+
+pengujian dan pemeliharaan sistem.
+
+petani.
+
+Kemudian
+
+Mendiagnosis
+
+yang
+
+dirancang
+
+menghasilkan
+
+menggunakan
+
+metode
+
+forward
+
+Berdasarkan
+
+diperlukan
+
+hal
+
+penelitian
+
+pengujian bahwa implementasi metode
+forward chaining dapat membantu para
+petani
+
+kopi
+
+di
+
+lapangan
+
+untuk
+
+harus berkonsultasi langsung dengan ahli
+kopi.
+
+Kemudian
+
+Metodologi penelitian digunakan
+
+bisa
+
+melakukan diagnosis secara mandiri tanpa
+tanaman
+
+2. METODE
+
+penelitian
+
+(Waliyansyah et al., 2020) yang berjudul
+“Sistem Pakar Penentuan Gaya Belajar
+Siswa Dengan Metode Forward Chaining
+
+sebagai pedoman dalam melaksanakan
+penelitian
+
+karena
+
+merupakan
+
+langkah-
+
+langkah kerja (Kurniawan et al., 2019).
+Bentuk
+
+uraian
+
+kerangka
+
+kerja
+
+dalam
+
+penelitian ini diawali dengan pengumpulan
+data yang terdiri dari studi literatur dan
+wawancara kepada narasumber. Kemudian
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+149
+
+STMIK Palangka Raya
+
+teknik perancangan sistem yang terdiri dari
+
+Fakta yang dimasukkan pengguna
+
+perancangan sistem, pembuatan sistem, uji
+
+untuk
+
+coba dan implementasi.
+
+adalah mesin inferensi forward chaining
+
+Perancangan sistem terdiri dari
+sistem
+
+pakar
+
+Forward
+
+Chaining,
+
+mendapatkan
+
+sebuah
+
+keputusan
+
+(Aeni, 2018)(Sari et al., 2020). Fakta-fakta
+tersebut
+
+adalah
+
+gejala dari
+
+serangan
+
+pengumpulan data panyakit, menganalisa
+
+penyakit dan hama tanaman kangkung.
+
+metode
+
+Pembutan
+
+Dalam sistem pakar mengimplementasikan
+
+sistem terdiri dari pembuatan menggunakan
+
+pengetahuan atau keahlian seorang pakar
+
+(UML),
+
+untuk menjadikan sebuah kesimpulan atau
+
+Perancangan Database, dan perancangan
+
+keputusan (Hardani, 2020) (Ridwansyah et
+
+interface.
+
+al., 2021).
+
+2.1 Sistem pakar Forward Chaining
+
+2.2 Pengumpulan data penyakit
+
+Forward
+
+Unified
+
+Chaining,
+
+Modelling
+
+Forward
+proses
+
+yang
+
+Language
+
+merupakan
+
+Chaining
+
+data
+
+(data
+
+data-data hama dan penyakit tanaman
+
+2019)(Ibnu Akil,
+
+2017).
+
+kangkung yang akan digunakan dalam
+
+Proses pelacakan dimulai dari informasi
+
+penelitian. Penelitian ini akan melakukan
+
+masukan
+
+mencoba
+
+pengumpulan data untuk hama dan penyakit
+
+menggambarkan kesimpulan. Pelacakan ke
+
+tanaman kangkung seperti bekicot, ulat
+
+depan mencari fakta yang sesuai dengan
+
+grayak, kutu daun, ulat keket, karat putih,
+
+bagian IF dari aturan IF-THEN (Imron et
+
+bercat daun, bakteri, virus, alga.
+
+al., 2019) (Kusbianto et al., 2017). Kaidah
+
+2.3 Analisis Metode Forward Chaining
+
+driven)(Putra,
+
+dimotori
+
+Tahap ini dilakukan pengumpulan
+
+dan
+
+interpreter
+
+selanjutnya
+
+dalam
+
+forward
+
+Tahap
+
+chaining
+
+ini
+
+dilakukan
+
+analisa
+
+mencocokkan fakta dalam pangkalan data
+
+terhadap metode Forward Chaining dengan
+
+dalam situasi yang dinyatakan dalam bagian
+
+menentukan rules yang akan digunakan
+
+sebelah kiri atau kaidah IF. Bila fakta yang
+
+untuk menyelesaikan masalah dalam sistem
+
+ada dalam pangkalan data itu sudah sesuai
+
+pakar
+
+dengan kaidah IF, maka kaidah dieksitasi
+
+Chaining. Rules dibentuk dari data-data
+
+(Putri et al., 2015). Berikut Gambar 1
+
+hama dan penyakit tanaman kangkung yang
+
+proses
+
+telah dikumpulkan. Setelah rules terbentuk
+
+rancang
+
+bangun
+
+sistem
+
+pakar
+
+menggunakan metode Forward Chaining.
+
+menggunkan
+
+metode
+
+Forward
+
+kemudian dapat dibangun pohon keputusan.
+2.4 Pembuatan UML
+Perancangan sistem pakar diagnosis
+hama dan penyakit pada tanaman kangkung
+dirancang
+
+Gambar 1. Forward Chaining (Imron et al., 2019)
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+UML
+
+sebagai
+
+pemodelan.
+
+Tahapan perancangan UML menggunakan
+
+STMIK Palangka Raya
+
+150
+
+beberapa diagram yaitu Use Case Diagram,
+
+pembuatan rules dari jenis hama dan
+
+Activity Diagram, Sequence Diagram, dan
+
+penyakit hingga pembentukan aturan dan
+
+Class Diagram.
+
+penerapan metode forward chaining seperti
+
+2.5 Perancangan Database
+
+pada Tabel 1.
+
+Perancangan database sistem pakar
+diagnosis hama dan penyakit tanaman
+
+Tabel 1. Jenis Hama Dan Penyakit
+Kode Jenis Hama & Penyakit
+
+kangkung ini menggunakan database My
+
+H01
+H02
+H03
+H04
+P01
+P02
+P03
+P04
+P05
+
+(MySQL).
+
+Structured Query Language
+
+Tabel strukturnya yaitu tabel admin, tabel
+diagnosis, tabel gejala, tabel konsultasi,
+tabel relasi, dan tabel hasil.
+2.6 Perancangan Interface
+Proses perancangan interface ini
+merupakan
+
+acuan
+
+untuk
+
+Bekicot
+Ulat Grayak
+Kutu Daun
+Ulat Keket
+Karat Putih
+Bercak Daun
+Bakteri
+Virus
+Alga
+
+membangun
+
+Setelah jenis hama dan penyakit,
+
+aplikasi yang akan penulis buat. Adapun
+
+selanjutnya adalah gejala pada tanaman
+
+struktur rancangan interface ini yaitu
+
+kangkung. Kemudian dimasukkan ke dalam
+
+halaman utama, halaman admin, halaman
+
+rules yang menyajikan barisan aturan-
+
+data konsultasi, dan halaman konsultasi.
+
+aturan yang digunakan untuk diagnosis
+
+3. HASIL DAN PEMBAHASAN
+Bab hasil dan pembahasan berisi
+penjelasan tentang hal implementasi sistem
+
+hama dan penyakit tanaman kangkung
+seperti pada Tabel 2.
+Tabel 2. Gejala Hama Dan Penyakit
+
+pakar diagnosis hama dan penyakit tanaman
+
+Kode
+G001
+G002
+G003
+G004
+G005
+G006
+G007
+
+kangkung.
+
+G008
+
+dan analisis hasil implementasi terkait
+pembangunan sistem pakar diagnosis hama
+dan
+
+penyakit
+
+tanaman
+
+kangkung
+
+menggunakan forward chaining. Berikut
+adalah implementasi pembangunan sistem
+
+3.1.
+
+Rules
+Sebelum
+
+G009
+membangun
+
+aplikasi
+
+sistem pakar, terlebih dahulu mengetahui
+rules atau aturan-aturan yang merupakan
+ekstraksi dari pengetahuan pakar. Pada
+langkah ini akan dijelaskan perancangan
+
+G010
+G011
+G012
+G013
+G014
+G015
+G016
+
+Gejala
+Batang dan daun rusak
+Batang dan daun layu
+Batang dan daun busuk
+Daun berlubang
+Pinggir daun bergerigi
+Tanaman kerdil
+Daun melengkung
+Warna daun hijau muda dengan
+garis menyilang kuning
+Muncul
+bercak
+putih
+pada
+permukaan daun
+Muncul bercak kecokelatan hingga
+kehitaman pada permukaan daun
+Mengeluarkan lendir keruh
+Berbau busuk
+Keluar air pada batang
+Lengket jika disentuh
+Daun berwarna kuning pekat
+Batang mengalami bercak-bercak
+
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+151
+
+STMIK Palangka Raya
+
+Kode
+Gejala
+G017 Daun menjadi seperti terbakar
+Bentuk daun menjadi tidak
+G018
+sempurna
+G019 Daun layu
+Bercak berwarna kelabu kehijauan
+G020
+pada daun
+Pada permukaan tumbuh rambut
+G021
+berwarna cokelat kemerahan
+G022 Daun dihinggapi lalat
+G023 Batang dan daun kering
+G024 Bercak karat merah pada daun
+
+Tabel 3. Pembentukan Aturan
+Kode
+
+Gejala
+
+Kode
+Hama &
+Penyakit
+
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+
+G001, G002, G003
+G001, G004, G005
+G006, G007
+G001, G004, G008
+G001, G009
+G001, G010
+G011, G012, G014
+G016, G017, G018
+G020, G021, G024
+
+H01
+H02
+H03
+H04
+P01
+P02
+P03
+P04
+P05
+
+3.2.
+
+proses menyusun dan mencocokkan fakta-
+
+Pembuatan UML
+UML pada penelitian ini
+
+terdiri
+
+fakta antara gejala dan hama penyakit
+
+dari use case diagram seperti pada Gambar
+
+seperti pada Tabel 3.
+
+2, activiy diagram seperti pada Gambar 3,
+
+Tahap pembentukan aturan adalah
+
+sequence diagram seperti pada Gambar 4,
+dan class diagram seperti pada Gambar 5.
+
+Gambar 2. Use Case Diagram
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+STMIK Palangka Raya
+
+152
+
+Gambar 3. Activity Diagram
+
+Gambar 4. Sequence Diagram
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+153
+
+STMIK Palangka Raya
+
+Gambar 5. Class Diagram
+3.3.
+
+sistem aplikasi sistem pakar ini sendiri
+
+Implementasi Antarmuka
+Pada implementasi antarmuka atau
+
+interface dijelaskan mengenai tampilantampilan yang berada dalam sistem pakar
+berbasis website ini. Tampilan antarmuka
+ini
+
+merupakan
+
+implementasi
+
+dari
+
+perancangan pada bahasan sebelumnya.
+Berikut implementasi interface halaman
+utama seperti pada Gambar 6.
+
+mengambil foto petani kangkung sebagai
+latar belakang halaman utama karena
+berhubungan dengan topik penelitian tugas
+akhir ini diambil. Pada header aplikasi
+terdapat tombol beranda dan log in. Tombol
+beranda
+
+berfungsi
+
+untuk
+
+menampilkan
+
+halaman utama, sedangkan tombol log in
+berguna untuk pengguna masuk ke sistem
+sesuai dengan level user yang sudah
+ditentukan dalam hal ini masuk sebagai
+user petani atau sebagai user admin.
+Selanjutnya halaman admin muncul
+ketika user log in dahulu sebagai admin.
+Didalam halaman admin terdapat beberapa
+menu navigasi seperti hama dan penyakit,
+
+Gambar 6. Halaman Utama
+Pada Gambar 6 merupakan halaman
+utama, yaitu halaman pertama kali yang
+akan muncul di sistem ketika pengguna
+mengakses sistem pakar ini. Background
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+gejala, pengetahuan, aturan, laporan, dan
+log out. Yang digunakan admin untuk
+menambah data, berikut Gambar 7 tampilan
+halaman admin.
+
+STMIK Palangka Raya
+
+154
+
+3.4.
+
+Pengujian
+Pada
+
+langkah
+
+pengujian
+
+akan
+
+dilakukan serangkaian pengujian untuk
+memastikan bahwa aplikasi yang dibuat
+telah sesuai dengan desain dan fungsi.
+Pengujian akurasi dilakukan menggunakan
+
+Gambar 7. Halaman Admin
+Halaman selanjutnya adalah data
+konsultasi. Pada halaman isi data konsultasi
+user atau petani yang akan melakukan
+
+metode confusion matrix untuk mengetahui
+kelayakan sistem pakar hama penyakit
+tanaman kangkung.
+Untuk
+
+konsultasi akan diarahkan untuk mengisi
+data
+
+konsultasi
+
+merekam
+
+data
+
+dengan
+
+tujuan
+
+untuk
+
+yang
+
+sewaktu-waktu
+
+diperlukan kembali. Berikut Gambar 8
+
+mengukur
+
+suatu
+
+metode klasifikasi digunakan salah satu
+metode yaitu Confusion Matrix (Karsito &
+Susanti, 2019)(Syamsudin et al., 2020).
+Pengukuran
+
+halaman data konsultasi.
+
+kinerja
+
+kinerja
+
+menggunakan
+
+confusion matrix, terdapat empat sebutan
+sebagai perwakilan hasil proses klasifikasi.
+Keempat istilah tersebut
+
+adalah
+
+True
+
+Positive (TP), True Negative (TN), False
+Positive (FP) dan False Negative (FN).
+Nilai True Negative (TN) merupakan
+jumlah data negatif yang terdeteksi dengan
+Gambar 8. Halaman Data Konsultasi
+Halaman selanjutnya user diminta
+untuk memilih serangkaian pilihan gejala
+yang
+
+mungkin
+
+dialami.
+
+Akhir
+
+sesi
+
+konsultasi akan ditampilkan hasil diagnosis
+hama penyakit yang mungkin menyerang
+tanaman kangkung seperti pada Gambar 9.
+
+benar, sedangkan False Positive (FP)
+merupakan data negatif namun terdeteksi
+sebagai
+
+data
+
+positif,
+
+pada
+
+dasarnya
+
+confusion matrix mengandung informasi
+yang membandingkan hasil klasifikasi yang
+dilakukan
+
+oleh
+
+sistem
+
+dengan
+
+hasil
+
+klasifikasi yang seharusnya (Karsito &
+Susanti, 2019)(Nurjumala et al., 2022).
+Berikut Persamaan (1) dari confusion
+matrix (Budiyantara et al., 2020)(Saputri &
+Ermatita, 2019).
+Accuracy =
+
+x 100%
+
+(1)
+
+Pada tahap pengujian dilakukan
+Gambar 9. Halaman Konsultasi
+
+pengujian kepakaran dan sistem dengan
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+155
+
+STMIK Palangka Raya
+
+menguji pada 50 rules, dan dari 50 rules
+
+penyakit tanaman yang telah didiagnosis
+
+hasil 5 kurang sesuai dan 45 rules dinilai
+
+terdapat pada Tabel 6.
+
+sesuai. Berikut contoh hasil pengujiannya
+dapat dilihat pada Tabel 4.
+
+Jenis Identifikasi
+Penyakit yang sesuai
+dengan diagnosis
+pakar
+
+Tabel 4. Contoh Tabel Hasil Pengujian
+Rules True Positive
+No
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+Tabel 6. Pengujian Confusion Matrix
+
+Rules True Positive
+G001 AND G002 AND G003
+G001 AND G004 AND G005
+G006 AND G007
+G001 AND G004 AND G008
+G001 ABD G009
+G001 AND G010
+G011 AND G012 AND G014
+G016 AND G017 AND G018
+G020 AND G021 AND G024
+
+Accuracy
+
+TP
+
+TN
+
+FN
+
+FP
+
+45
+
+0
+
+0
+
+5
+
+x 100%
+
+=
+=
+
+x 100%
+
+= 90%
+Berdasarkan
+
+hasil
+
+perbandingan
+
+data uji dan sistem dapat ketetapan bahwa
+
+Tabel 4 adalah contoh tabel hasil
+
+tingkat akurasi sistem sebesar 90%. Akurasi
+
+pengujian Rules True Positif. G0XX adalah
+
+sistem dapat dijadikan sebagai acuan untuk
+
+gejala
+
+yang
+
+mendiagnosis hama dan penyakit tanaman
+
+dimasukkan user saat proses pencarian
+
+kangkung dengan metode yang sama tapi
+
+fakta
+
+berbeda objek dengan penelitian terdahulu.
+
+pada
+atau
+
+tanaman
+gejala
+
+kangkung
+dan
+
+menuju
+
+ke
+
+kesimpulan.
+Tabel 5 pengujian dengan hasil
+false positive. Ketika proses pencarian fakta
+atau gejala dan menuju kesimpulan, namun
+kesimpulan dari sistem berbeda dengan
+
+4. SIMPULAN
+Berdasarkan hasil penelitian proses
+pembuatan
+
+sistem
+
+pakar
+
+dengan
+
+perancangan sistem menggunakan bahasa
+pemodelan UML, dari hasil implementasi
+
+pakar.
+
+dan pengujian sistem menunjukkan bahwa
+Tabel 5. Tabel Pengujian False Positive
+No
+1.
+2.
+3.
+4.
+5.
+
+Rules False Positive
+G001 AND G002 AND G010
+G001 AND G002 AND G009 AND
+G016
+G001 AND G020 AND G021 AND
+G024
+G011 AND G012 AND G016 AND
+G018
+G001 AND G004 AND G009 AND
+G016 AND G018
+
+Pengujian akurasi menggunakan
+confusion matrix pada hasil identifikasi
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+uji akurasi dari 50 rules yang ada pada
+hama dan penyakit tanaman kangkung, 45
+dinyatakan benar dan 5 dinyatakan kurang
+sesuai, sehingga pengujian akurasi tersebut
+mendapatkan nilai akurasi sebesar 90%.
+
+DAFTAR PUSTAKA
+Aeni, K. (2018). Penerapan Metode Forward
+Chaining Pada Sistem Pakar Untuk
+Diagnosa Hama Dan Penyakit Padi.
+Intensif,
+2(1),
+79.
+
+STMIK Palangka Raya
+
+156
+
+https://doi.org/10.29407/intensif.v2i1.11
+841.
+
+544.
+https://doi.org/10.33087/jiubj.v19i3.742
+
+Afandi, H., & Sulistyo, D. A. (2019). Sistem
+Pakar Untuk Diagnosa Hama dan
+Penyakit
+Pada
+Bunga
+Krisan
+Menggunakan Forward Chaining.
+Jurnal Ilmiah Teknologi Informasi Asia,
+13(2),
+101.
+https://doi.org/10.32815/jitika.v13i2.40
+9.
+
+Karsito, & Susanti, S. (2019). Klasifikasi
+Kelayakan Peserta Pengajuan Kredit
+Rumah Dengan Algoritma Naïve Bayes
+di Perumahan Azzura Residencia.
+Jurnal Teknologi Pelita Bangsa, 9, 43–
+48.
+
+Budiyantara, A., Irwansyah, I., Prengki, E.,
+Pratama, P. A., & Wiliani, N. (2020).
+Komparasi Algoritma Decision Tree,
+Naive Bayes dan K-Nearest Neighbor
+untuk Memprediksi Mahasiswa Lulus
+Tepat Waktu. JITK (Jurnal Ilmu
+Pengetahuan
+Dan
+Teknologi
+Komputer),
+5(2),
+265–270.
+https://doi.org/10.33480/jitk.v5i2.1214.
+Fitriani, M. A., & Febrianto, D. C. (2020).
+Penerapan Sistem Pakar untuk Diagnosa
+Penyakit dan Hama Tanaman Cabai
+dengan Metode Forward Chaining.
+Sainteks,
+16(2),
+159–164.
+https://doi.org/10.30595/st.v16i2.7133
+Hardani, S. (2020). Diagnosa Penyakit
+Diabetes Dengan Metode Forward
+Chaining.
+JITK
+(Jurnal
+Ilmu
+Pengetahuan
+Dan
+Teknologi
+Komputer),
+5(2),
+231–236.
+https://doi.org/10.33480/jitk.v5i2.1132.
+Ibnu Akil. (2017). Analisa Efektifitas Metode
+Forward Chaining dan Backward
+Chaining Pada Sistem Pakar. Jurnal
+Pilar Nusa Mandiri, 13(1), 35.
+Imron, I., Afidah, M. N., Nurhayati, M. S.,
+Sulistiyah, S., & Fatmawati, F. (2019).
+Sistem Pakar Diagnosa Kerusakan
+Mesin Sepeda Motor Transmission
+Automatic dengan Metode Forward
+Chaining Studi Kasus: AHASS 00955
+Mitra
+Perdana.
+Jurnal
+Ilmiah
+Universitas Batanghari Jambi, 19(3),
+
+Kurniawan, A., Sumijan, & Jufriadif Na’am.
+(2019). Sistem Pakar Identifikasi
+Modalitas Belajar Siswa Menggunakan
+Metode Forward Chaining. Jurnal
+RESTI (Rekayasa Sistem Dan Teknologi
+Informasi),
+3(3),
+518–523.
+https://doi.org/10.29207/resti.v3i3.1166
+Kusbianto, D., Ardiansyah, R., & Hamadi, D.
+A. (2017). Implementasi Sistem Pakar
+Forward Chaining Untuk Identifikasi
+Dan Tindakan Perawatan Jerawat
+Wajah. Jurnal Informatika Polinema,
+4(1),
+71.
+https://doi.org/10.33795/jip.v4i1.147
+Maulana, D. (2018). Raih Untung Dari
+Budidaya Kangkung. Trans Idea
+Publishing.
+Mochammad, H. W. (2019). No Title.
+Binus.Ac.Id.
+https://binus.ac.id/bandung/2019/11/sist
+em-pakar-pada-era-industri-4-0
+Mukhlisoh, N. A., Wibowo, N. S., & Irawan,
+T. B. (2016). Penerapan Metode
+Forward Chaining dalam Sistem Pakar
+untuk Menentukan Diagnosa Hama dan
+Penyakit Tanaman Tomat. Jurnal
+Ilmiah
+Inovasi,
+15(1),
+4–8.
+https://doi.org/10.25047/jii.v15i1.49
+Nurjumala, A., Prasetyo, N. A., & Utomo, H.
+W. (2022). Sistem Pakar Diagnosis
+Penyakit Rhinitis Menggunakan Metode
+Forward Chaining Berbasis Web.
+Jurnal Riset Komputer), 9(1), 2407–
+389.
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+157
+
+STMIK Palangka Raya
+
+https://doi.org/10.30865/jurikom.v9i1.3
+815
+Pakpahan, A. V., & Doni, D. (2019).
+Implementasi
+Metode
+Forward
+Chaining
+untuk
+Mendiagnosis
+Organisme Pengganggu Tanaman (Opt)
+Kopi. Simetris: Jurnal Teknik Mesin,
+Elektro Dan Ilmu Komputer, 10(1),
+117–126.
+https://doi.org/10.24176/simet.v10i1.28
+00
+Produksi Tanaman Sayuran 2020. (2020).
+Badan
+Pusat
+Statistik.
+https://www.bps.go.id/indicator/55/61/1
+/produksi-tanaman-sayuran
+Putra, H. W. (2019). Sistem Pakar Diagnosis
+Penyakit Ginjal Dengan Metode
+Forward Chaining. Jurnal Sains Dan
+Informatika,
+5(1),
+7.
+https://doi.org/10.22216/jsi.v5i1.4081
+Putri, A. T., Santoso, B. S., Izzatillah, M., &
+Senjaya, R. (2015). Sistem Pakar
+Rekomendasi dan Larangan Makanan
+Berdasarkan Jenis Penyakit dengan
+Metode Forward Chaining. Citee 2015,
+September, 18–23.
+Ridwansyah, R., Faizah, S., & Achyani, Y. E.
+(2021). Mengidentifikasi Jenis Virus
+Menggunakan Sistem Pakar Berbasis
+Metode Forward Chaining. Paradigma
+- Jurnal Komputer Dan Informatika,
+23(1),
+49–54.
+https://doi.org/10.31294/p.v23i1.10048
+Saputri, S. D., & Ermatita, E. (2019). Credit
+Scoring
+Kelayakan
+Debitur
+Menggunakan Metode Hybrid ANN
+Backpropagation dan TOPSIS. Jurnal
+RESTI (Rekayasa Sistem Dan Teknologi
+Informasi),
+3(1),
+73–78.
+https://doi.org/10.29207/resti.v3i1.847
+Sari, W. E., Maria, E., & Santoso, R. K.
+(2020). Deteksi Penyakit Dan Hama
+Jurnal Saintekom, Vol.12, No.2, September 2022
+
+Tanaman Pepaya Menggunakan Metode
+Forward Chaining dan Best First
+Search.
+JOINTECS (Journal of
+Information Technology and Computer
+Science),
+5(3),
+185.
+https://doi.org/10.31328/jointecs.v5i3.1
+483
+Syamsudin, D., Halundaka, Y. C. D., &
+Nugroho, A. (2020). Prediksi Status
+Konsumen
+Produk
+Celana
+Menggunakan Naïve Bayes. JOINTECS
+(Journal of Information Technology and
+Computer
+Science),
+5(3),
+177.
+https://doi.org/10.31328/jointecs.v5i3.1
+435
+Wajidi, F., & Nur, D. N. (2021). Sistem Pakar
+Diagnosis Penyakit Stunting pada Balita
+menggunakan
+Metode
+Forward
+Chaining.
+Jurnal
+Informatika
+Universitas Pamulang, 6(2), 401–407.
+Waliyansyah, R. R., Novita, M., & Aditasar,
+L. P. (2020). Sistem Pakar Penentuan
+Gaya Belajar Siswa Dengan Metode
+Forward Chaining Berbasis Web. IT
+Journal Research and Development,
+5(1),
+32–44.
+https://doi.org/10.25299/itjrd.2020.vol5(
+1).4740
+Yanwardhana, E. (2021). Tanaman Hias &
+Benih Kangkung-Tomat RI Laris di
+Malaysia.
+CNBC
+Indonesia.
+https://www.cnbcindonesia.com/news/
+20210507121134-4-244051/toptanaman-hias-benih-kangkung-tomatri-laris-di-malaysia
+
+

@@ -1,3 +1,24 @@
+async function parseErrorResponse(response, defaultMsg) {
+    let errorMsg = defaultMsg;
+    try {
+        const error = await response.json();
+        if (error && error.detail) {
+            if (typeof error.detail === "string") {
+                errorMsg = error.detail;
+            } else if (Array.isArray(error.detail)) {
+                errorMsg = error.detail.map(err => err.msg || JSON.stringify(err)).join(", ");
+            } else if (typeof error.detail === "object") {
+                errorMsg = JSON.stringify(error.detail);
+            } else {
+                errorMsg = String(error.detail);
+            }
+        }
+    } catch (e) {
+        errorMsg = `${defaultMsg}: Server error (${response.status})`;
+    }
+    return errorMsg;
+}
+
 let deleteCallback = null;
 
 function showDeleteModal(description, callback) {
@@ -786,8 +807,8 @@ async function createRule(event) {
         });
 
         if (!response.ok) {
-            const err = await response.json();
-            throw new Error(err.detail || "Gagal menambah aturan");
+            const errorMsg = await parseErrorResponse(response, "Gagal menambah aturan");
+            throw new Error(errorMsg);
         }
 
         closeModal();
@@ -870,8 +891,8 @@ async function updateRule(event, id) {
         });
 
         if (!response.ok) {
-            const err = await response.json();
-            throw new Error(err.detail || "Gagal memperbarui aturan");
+            const errorMsg = await parseErrorResponse(response, "Gagal memperbarui aturan");
+            throw new Error(errorMsg);
         }
 
         closeModal();
@@ -892,8 +913,8 @@ async function deleteRule(id) {
             });
 
             if (!response.ok) {
-                const err = await response.json();
-                throw new Error(err.detail || "Gagal menghapus aturan");
+                const errorMsg = await parseErrorResponse(response, "Gagal menghapus aturan");
+                throw new Error(errorMsg);
             }
             loadRules();
         } catch (error) {
@@ -919,14 +940,13 @@ async function loadUsers() {
                     <tr>
                         <th class="px-6 py-3">ID</th>
                         <th class="px-6 py-3">Username</th>
-                        <th class="px-6 py-3">Email</th>
                         <th class="px-6 py-3">Role</th>
                         <th class="px-6 py-3">Status</th>
                         <th class="px-6 py-3">Aksi</th>
                     </tr>
                 </thead>
                 <tbody id="users-table-body" class="divide-y divide-gray-100">
-                    <tr><td colspan="6" class="px-6 py-4 text-center">Memuat...</td></tr>
+                    <tr><td colspan="5" class="px-6 py-4 text-center">Memuat...</td></tr>
                 </tbody>
             </table>
         </div>
@@ -942,7 +962,7 @@ async function loadUsers() {
         tbody.innerHTML = "";
 
         if (users.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="6" class="px-6 py-8 text-center text-gray-400">Belum ada pengguna.</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="5" class="px-6 py-8 text-center text-gray-400">Belum ada pengguna.</td></tr>';
             return;
         }
 
@@ -959,7 +979,6 @@ async function loadUsers() {
             tr.innerHTML = `
                 <td class="px-6 py-4 text-gray-400 font-mono text-xs">${u.id}</td>
                 <td class="px-6 py-4 font-bold">${u.username}</td>
-                <td class="px-6 py-4 text-gray-500">${u.email || '-'}</td>
                 <td class="px-6 py-4">${roleBadge}</td>
                 <td class="px-6 py-4">${statusBadge}</td>
                 <td class="px-6 py-4">
@@ -991,8 +1010,8 @@ function showAddUserModal() {
                     <input type="text" name="username" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="Masukkan username">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium mb-1">Email</label>
-                    <input type="email" name="email" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="contoh@email.com">
+                    <label class="block text-sm font-medium mb-1">Alamat</label>
+                    <input type="text" name="alamat" class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="Masukkan alamat (opsional)">
                 </div>
                 <div>
                     <label class="block text-sm font-medium mb-1">Password</label>
@@ -1020,7 +1039,7 @@ async function createUser(event) {
     const form = event.target;
     const data = {
         username: form.username.value,
-        email: form.email.value,
+        alamat: form.alamat.value,
         password: form.password.value
     };
 
@@ -1035,8 +1054,8 @@ async function createUser(event) {
         });
 
         if (!response.ok) {
-            const err = await response.json();
-            throw new Error(err.detail || "Gagal menambah user");
+            const errorMsg = await parseErrorResponse(response, "Gagal menambah user");
+            throw new Error(errorMsg);
         }
 
         // If role is set, update it separately since UserCreate doesn't have role
@@ -1090,8 +1109,8 @@ function showEditUserModal(data) {
                     <input type="text" name="username" value="${data.username}" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium mb-1">Email</label>
-                    <input type="email" name="email" value="${data.email || ''}" class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                    <label class="block text-sm font-medium mb-1">Alamat</label>
+                    <input type="text" name="alamat" value="${data.alamat || ''}" class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
                 </div>
                 <div>
                     <label class="block text-sm font-medium mb-1">Password Baru <span class="text-gray-400 font-normal">(kosongkan jika tidak diubah)</span></label>
@@ -1126,7 +1145,7 @@ async function updateUser(event, id) {
     const form = event.target;
     const data = {
         username: form.username.value,
-        email: form.email.value,
+        alamat: form.alamat.value,
         role: form.role.value,
         is_active: form.is_active.value === 'true'
     };
@@ -1147,8 +1166,8 @@ async function updateUser(event, id) {
         });
 
         if (!response.ok) {
-            const err = await response.json();
-            throw new Error(err.detail || "Gagal memperbarui user");
+            const errorMsg = await parseErrorResponse(response, "Gagal memperbarui user");
+            throw new Error(errorMsg);
         }
 
         closeModal();
@@ -1169,8 +1188,8 @@ async function deleteUser(id) {
             });
 
             if (!response.ok) {
-                const err = await response.json();
-                throw new Error(err.detail || "Gagal menghapus user");
+                const errorMsg = await parseErrorResponse(response, "Gagal menghapus user");
+                throw new Error(errorMsg);
             }
             loadUsers();
         } catch (error) {

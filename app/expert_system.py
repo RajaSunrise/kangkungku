@@ -22,6 +22,8 @@ def hitung_diagnosa(gejala_pengguna: List[GejalaPengguna], semua_aturan: List[At
 
     for penyakit_id, daftar_aturan in aturan_per_penyakit.items():
         cf_gabungan = 0.0
+        gejala_tercocok = 0
+        total_gejala_penyakit = len(daftar_aturan)
 
         for aturan in daftar_aturan:
             if aturan.gejala_id in map_gejala_pengguna:
@@ -32,11 +34,13 @@ def hitung_diagnosa(gejala_pengguna: List[GejalaPengguna], semua_aturan: List[At
                 cf_saat_ini = cf_pakar * cf_pengguna
 
                 # Gabungkan menggunakan rumus CF: CF_baru = CF_lama + CF_saat_ini * (1 - CF_lama)
-
                 if cf_saat_ini > 0:
                     cf_gabungan = cf_gabungan + cf_saat_ini * (1 - cf_gabungan)
+                    gejala_tercocok += 1
 
-        if cf_gabungan > 0:
-            hasil[penyakit_id] = cf_gabungan
+        if cf_gabungan > 0 and total_gejala_penyakit > 0:
+            # Kalikan dengan rasio gejala yang cocok untuk representasi akurat kecocokan aturan
+            rasio_cocok = gejala_tercocok / total_gejala_penyakit
+            hasil[penyakit_id] = cf_gabungan * rasio_cocok
 
     return hasil
