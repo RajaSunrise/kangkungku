@@ -1,4 +1,5 @@
 import os
+import shutil
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -9,6 +10,14 @@ load_dotenv()
 
 # Default to SQLite, but support Postgres via env var
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./expert_system.db")
+
+# Workaround for Vercel read-only filesystem with SQLite
+if "sqlite" in SQLALCHEMY_DATABASE_URL and os.environ.get("VERCEL"):
+    src_db = "expert_system.db"
+    dest_db = "/tmp/expert_system.db"
+    if os.path.exists(src_db) and not os.path.exists(dest_db):
+        shutil.copy2(src_db, dest_db)
+    SQLALCHEMY_DATABASE_URL = f"sqlite:///{dest_db}"
 
 # Only use check_same_thread for SQLite
 connect_args = {"check_same_thread": False} if "sqlite" in SQLALCHEMY_DATABASE_URL else {}
