@@ -31,13 +31,14 @@
             <div class="relative bg-white rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:max-w-2xl w-full border border-slate-100 flex flex-col max-h-[90vh]">
                 
                 <!-- Modal Header with Image -->
-                <div class="relative h-48 sm:h-64 shrink-0">
-                    <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent"></div>
-                    <button onclick="tutupDetail()" class="absolute top-4 right-4 size-8 rounded-full bg-black/20 text-white flex items-center justify-center hover:bg-black/40 backdrop-blur-sm transition-colors">
+                <div id="modal-img-wrap" class="relative h-48 sm:h-64 shrink-0 flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100">
+                    <img id="modal-img" src="" alt="" class="w-full h-full object-cover absolute inset-0" onerror="this.classList.add('hidden');document.getElementById('modal-img-fallback').classList.remove('hidden');">
+                    <span id="modal-img-fallback" class="material-symbols-outlined text-7xl text-emerald-300 hidden">coronavirus</span>
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent pointer-events-none"></div>
+                    <button onclick="tutupDetail()" class="absolute top-4 right-4 size-8 rounded-full bg-black/20 text-white flex items-center justify-center hover:bg-black/40 backdrop-blur-sm transition-colors z-30">
                         <span class="material-symbols-outlined text-xl">close</span>
                     </button>
-                    <div class="absolute bottom-0 left-0 p-6">
+                    <div class="absolute bottom-0 left-0 p-6 z-20">
                         <h3 id="modal-nama" class="text-2xl sm:text-3xl font-black text-white tracking-tight"></h3>
                     </div>
                 </div>
@@ -85,8 +86,15 @@
                 wadah.innerHTML = dataPenyakitGlobal.map(p => `
                     <article class="group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 flex flex-col h-full">
                         <div class="relative h-48 overflow-hidden">
+                            <div id="img-wrap-${p.id}" class="w-full h-full">
+                                ${p.url_gambar
+                                    ? `<img alt="${p.nama}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="${p.url_gambar}" onerror="document.getElementById('img-wrap-${p.id}').innerHTML='<div class=\\'flex items-center justify-center w-full h-full bg-gradient-to-br from-green-50 to-emerald-100\\'><span class=\\'material-symbols-outlined text-6xl text-emerald-300\\'>coronavirus</span></div>'" />`
+                                    : `<div class="flex items-center justify-center w-full h-full bg-gradient-to-br from-green-50 to-emerald-100">
+                                    <span class="material-symbols-outlined text-6xl text-emerald-300">coronavirus</span>
+                                </div>`
+                                }
+                            </div>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60"></div>
-                            <img alt="${p.nama}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="${p.url_gambar || 'https://via.placeholder.com/400'}" />
                             <div class="absolute top-3 right-3 z-20">
                                 <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-amber-100 text-amber-800">
                                     Penyakit
@@ -115,8 +123,17 @@
             const penyakit = dataPenyakitGlobal.find(p => p.id === id);
             if (!penyakit) return;
 
-            document.getElementById('modal-img').src = penyakit.url_gambar || 'https://via.placeholder.com/800x400';
-            document.getElementById('modal-img').alt = penyakit.nama;
+            var modalImg = document.getElementById('modal-img');
+            var modalFallback = document.getElementById('modal-img-fallback');
+            if (penyakit.url_gambar) {
+                modalImg.src = penyakit.url_gambar;
+                modalImg.classList.remove('hidden');
+                modalFallback.classList.add('hidden');
+            } else {
+                modalImg.classList.add('hidden');
+                modalFallback.classList.remove('hidden');
+            }
+            modalImg.alt = penyakit.nama;
             document.getElementById('modal-nama').innerText = penyakit.nama;
             document.getElementById('modal-deskripsi').innerText = penyakit.deskripsi || 'Deskripsi tidak tersedia.';
             document.getElementById('modal-solusi').innerText = penyakit.solusi || 'Solusi tidak tersedia.';
