@@ -23,10 +23,10 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="54" value="Membuka Halaman Registrasi/Daftar" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="280" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="270" y="280" width="120" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="55" value="Menampilkan Menu Register/Daftar" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="548" y="280" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="548" y="280" width="122" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="56" value="Memasukan Username, Email dan Password" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="270" y="400" width="120" height="60" as="geometry"/>
